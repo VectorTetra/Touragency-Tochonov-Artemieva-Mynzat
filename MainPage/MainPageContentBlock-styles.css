@@ -1,0 +1,103 @@
+*{
+	font-family: sans-serif;
+	min-width: 0;
+	min-height: 0;
+	/* overflow-x: hidden; */
+}
+.touristReviewStarsDateRow{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.flex-box-column{
+	display: flex;
+	flex-direction: column;
+}
+#content-block-container{
+	display: flex;
+	flex-direction: row;
+	max-height: 900px;
+	/* overflow-y: hidden; */
+	margin-top: 10px;
+}
+#news-block-container{
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid red; */
+	flex: 0.5 1 300px;
+}
+#touristsReviews-block-container{
+	display: flex;
+	flex-direction: column;
+	flex: 0.5 1 300px;
+	padding: 0 0.3rem;
+	margin-left: 15px;
+	/* border: 2px solid green; */
+}
+#toursTable-block-container{
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid blue; */
+}
+.news{
+	display: flex;
+	flex-direction: column;
+	text-wrap:pretty;
+}
+#news-block-list{
+	padding: 0px 5px;
+}
+#news-block-caption{
+	font-size: 1.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#reviews-block-caption{
+	font-size: 1.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#toursTableBlockList{
+	border-spacing:0;
+	border: 2px solid rgb(74, 77, 255);
+}
+.ToursTableBlockTableRow > td{
+	border: 1px solid rgb(74, 77, 255);
+}
+.ToursTableBlockTableRow{
+
+}
+.TableRowDatesCell{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-size: 0.7rem;	
+	padding: 0 0.5rem;
+}
+.TableRowRouteCell{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 0.7rem;
+}
+.TableRowRouteString{
+	font-size: 0.55rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-wrap:stable;
+	max-width: 90%;
+	padding: 0.25rem 0;
+}
+.boldUserNameReviewCaption{
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+.touristReviewCaptionRow{
+	font-size: 0.9rem;
+}
+.touristReviewTextRow{
+	font-size: 0.6rem;
+}

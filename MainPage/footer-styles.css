@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+}
+
+.reasons-footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex: 1 0 auto;
+    margin: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.reasons-info {
+    margin: 15px;
+    text-align: center;
+}
+
+.dot {
+    height: 85px;
+    width: 85px;
+    background-color: #f3a005;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.special-offers-info {
+    margin: 35px;
+    text-align: center;
+}
+
+.special-offers-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex: 1 0 auto;
+    margin: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}

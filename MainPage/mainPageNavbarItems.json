@@ -1,0 +1,75 @@
+{
+	"navbarItems":[
+		{
+			"caption":"Тури",
+			"mainHref":null,
+			"submenu":
+			[
+				{"subItemCaption":"Тури по Україні", "href":"#"},
+				{"subItemCaption":"Тури з Європи", "href":"#"},
+				{"subItemCaption":"Автобусні тури", "href":"#"},
+				{"subItemCaption":"Авіа тури", "href":"#"},
+				{"subItemCaption":"Круїзи", "href":"#"},
+				{"subItemCaption":"Екзотика", "href":"#"},
+				{"subItemCaption":"Зимові розваги", "href":"#"},
+				{"subItemCaption":"Новорічні тури", "href":"#"},
+				{"subItemCaption":"Відпочинок на морі", "href":"#"},
+				{"subItemCaption":"День Валентина", "href":"#"},
+				{"subItemCaption":"Карнавал", "href":"#"},
+				{"subItemCaption":"Травневі свята", "href":"#"},
+				{"subItemCaption":"Парк тюльпанів Кьокенхоф", "href":"#"}
+			]
+		},
+		{
+			"caption":"Країни",
+			"mainHref":null,
+			"submenu":
+			[
+				{"subItemCaption":"Європа", "href":"#"},
+				{"subItemCaption":"Азія", "href":"#"},
+				{"subItemCaption":"Північна Америка", "href":"#"},
+				{"subItemCaption":"Південна Америка", "href":"#"},
+				{"subItemCaption":"Африка", "href":"#"},
+				{"subItemCaption":"Австралія і Океанія", "href":"#"},
+				{"subItemCaption":"Усі країни", "href":"#"}
+			]
+		},
+		{
+			"caption":"Туристам",
+			"mainHref":null,
+			"submenu":
+			[
+				{"subItemCaption":"Список документів", "href":"#"},
+				{"subItemCaption":"Питання і відповіді", "href":"#"},
+				{"subItemCaption":"Страхування", "href":"#"},
+				{"subItemCaption":"Публічні договори і оферти", "href":"#"}
+			]
+		},
+		{
+			"caption":"Готелі",
+			"mainHref":"#",
+			"submenu":null
+		},
+		{
+			"caption":"Про компанію",
+			"mainHref":null,
+			"submenu":
+			[
+				{"subItemCaption":"Про нас", "href":"#"},
+				{"subItemCaption":"Новини", "href":"#"},
+				{"subItemCaption":"Контакти", "href":"#"}
+			]
+		},
+		{
+			"caption":"Відгуки",
+			"mainHref":null,
+			"submenu":
+			[
+				{"subItemCaption":"Всі відгуки", "href":"#"},
+				{"subItemCaption":"Відгуки по країнами", "href":"#"},
+				{"subItemCaption":"Відгуки по турам", "href":"#"},
+				{"subItemCaption":"Як написати відгук", "href":"#"}
+			]
+		}
+	]
+}

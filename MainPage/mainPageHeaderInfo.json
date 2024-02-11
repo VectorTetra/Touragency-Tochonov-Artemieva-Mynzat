@@ -1,0 +1,69 @@
+{
+	"headerData":
+	{
+		"touragencyLogo":
+		{
+			"width":"200",
+			"height":"200",
+			"url":"./images/HeaderTouragencyLogo.png"
+		},
+		"touragencySign":
+		{
+			"agencyName":"Магія мандрів",
+			"agencySlogan":"Мандруючи, ми розширюємо свій світ"
+		},
+		"backgrImage":{
+			"url":"./images/header-backgrImage.jpg",
+			"width":"1300",
+			"height":"400"
+		},
+		"contactList":{
+			"workSchedule":["Пн - Пт 08:00 - 19:00","Сб - Нд 09:00-17:00"],
+			"phones":["0-800-12-34-56","+38 (044) 123-45-67"],
+			"networks":
+			[
+				{
+					"iconUrl":"./images/LogoViber.png",
+					"href":"https://www.viber.com/ua/",
+					"alt":"Viber"
+				},
+				{
+					"iconUrl":"./images/LogoWhatsapp.png",
+					"href":"https://www.whatsapp.com/",
+					"alt":"Whatsapp"
+				},
+				{
+					"iconUrl":"./images/LogoTelegram.png",
+					"href":"https://telegram.org/",
+					"alt":"Telegram"
+				},
+				{
+					"iconUrl":"./images/LogoInstagram.png",
+					"href":"https://www.instagram.com/",
+					"alt":"Instagram"
+				},
+				{
+					"iconUrl":"./images/LogoMessenger.png",
+					"href":"https://www.messenger.com/?locale=ua",
+					"alt":"Messenger"
+				}				
+			]
+		},
+		"loginIcon":
+		{
+			"url":"./images/login-icon.png",
+			"width":"50",
+			"height":"50"
+		},
+		"logoutIcon":
+		{
+			"url":"./images/logout-icon.png",
+			"width":"50",
+			"height":"50"
+		},
+		"userData":{
+			"name":"Віктор Точонов",
+			"email":"viktochonov@gmail.com"
+		}
+	}
+}
