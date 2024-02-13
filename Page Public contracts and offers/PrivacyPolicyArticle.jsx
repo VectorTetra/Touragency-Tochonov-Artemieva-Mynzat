@@ -1,5 +1,5 @@
 function PrivacyPolicyArticle(props) {
-
+	console.log(props);
 	return (
 		props.articleData.statType === "Article" ? 
 		<section>
