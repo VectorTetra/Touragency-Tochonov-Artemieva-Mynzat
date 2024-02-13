@@ -3,7 +3,7 @@ function PrivacyPolicy(props) {
 		<div id="policy-block">
 			{
 				props.policy.map(item => {
-					item.type == "Article" ?  <PrivacyPolicyArticle articleData={item} />  :
+					item.type === "Article" ?  <PrivacyPolicyArticle articleData={item} />  :
 					 
 					<section>
 						<h6>{item.caption}</h6>
