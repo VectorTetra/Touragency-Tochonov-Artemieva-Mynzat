@@ -1,13 +1,15 @@
 function PrivacyPolicyArticle(props) {
 	console.log(props.articleData.articleStatements);
 
-	const articStatems = props.articleData.articleStatements.map(item => 
-		<li className="article">
-			
-				<b>{item.number}</b> {item.text}
-			
-		</li>		
-	)
+	if(props.articleData.articleStatements !== null){
+		const articStatems = props.articleData.articleStatements.map(item => 
+			<li className="article">
+				
+					<b>{item.number}</b> {item.text}
+				
+			</li>		
+		)
+	}
 
 	return (
 		props.articleData.statType === "Article" ? 
