@@ -1,4 +1,5 @@
 function PrivacyPolicyArticle(props) {
+	
 	return (
 		<section>
 			<h6>{props.caption}</h6>
