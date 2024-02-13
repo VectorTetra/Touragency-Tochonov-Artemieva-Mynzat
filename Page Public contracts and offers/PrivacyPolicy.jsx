@@ -2,7 +2,10 @@ function PrivacyPolicy(props) {
 	return (
 		<div id="policy-block">
 			{
-				props.policy.map(item => 
+				console.log("props policy",props.policy)
+			}
+			{
+				props.policy.map(item =>
 					{item.statType === "Article" ?  <PrivacyPolicyArticle articleData={item} />  :
 					 
 					<section>
