@@ -1,21 +1,21 @@
 function PrivacyPolicyArticle(props) {
 	console.log(props.articleData.articleStatements);
+
+	const articStatems = props.articleData.articleStatements.map(item => 
+		<li className="article">
+			<p>
+				<b>{item.number}</b> {item.text}
+			</p>
+		</li>		
+	)
+
 	return (
 		props.articleData.statType === "Article" ? 
 		<section>
 			<h6>{props.articleData.caption}</h6>
 			<ul>
 				{
-					props.articleData.articleStatements.map(item => 
-						<li className="article">
-							<p>
-								<b>{item.number}</b> {item.text}
-							</p>
-						</li>
-						// item.sublist !== null ? 
-						// 	<PrivacyPolicyArticleSublist sublist={item.sublist} /> : null
-						
-					)
+					articStatems
 				}
 			</ul>
 		</section> 
