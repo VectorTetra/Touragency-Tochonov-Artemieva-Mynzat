@@ -7,6 +7,7 @@ function PrivacyPolicyArticle(props) {
 			<ul>
 				{
 					props.articleData.articleStatements.map(item => {
+						console.log(item);
 						<li className="article"><b>{item.number}</b> {item.text}</li>
 						// item.sublist !== null ? 
 						// 	<PrivacyPolicyArticleSublist sublist={item.sublist} /> : null
