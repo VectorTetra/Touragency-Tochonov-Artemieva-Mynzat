@@ -1,0 +1,6 @@
+.article{
+	list-style-image: url("../images/ArticleMarkerDarkBlue.png");
+}
+.subArticle{
+	list-style-image: url("../images/ArticleMarkerGreen.png");
+}
