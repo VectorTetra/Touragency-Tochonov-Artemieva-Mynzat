@@ -10,7 +10,7 @@ function PrivacyPolicy(props) {
 							<p>{item.text}</p>
 						</section>
 					}
-
+					console.log(item);
 
 
 
