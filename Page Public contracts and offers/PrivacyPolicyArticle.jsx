@@ -1,5 +1,5 @@
 function PrivacyPolicyArticle(props) {
-	console.log(props);
+	console.log(props.articleData.articleStatements);
 	return (
 		props.articleData.statType === "Article" ? 
 		<section>
@@ -7,7 +7,6 @@ function PrivacyPolicyArticle(props) {
 			<ul>
 				{
 					props.articleData.articleStatements.map(item => {
-						console.log(item);
 						<li className="article">
 							<p>
 								<b>{item.number}</b> {item.text}
