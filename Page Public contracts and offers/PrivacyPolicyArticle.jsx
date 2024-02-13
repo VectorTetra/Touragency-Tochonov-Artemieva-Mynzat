@@ -3,9 +3,9 @@ function PrivacyPolicyArticle(props) {
 
 	const articStatems = props.articleData.articleStatements.map(item => 
 		<li className="article">
-			<p>
+			
 				<b>{item.number}</b> {item.text}
-			</p>
+			
 		</li>		
 	)
 
