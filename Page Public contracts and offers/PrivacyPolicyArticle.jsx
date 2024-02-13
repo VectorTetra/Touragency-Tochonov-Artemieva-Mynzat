@@ -7,11 +7,11 @@ function PrivacyPolicyArticle(props) {
 			<ul>
 				{
 					props.articleData.articleStatements.map(item => 
-						{return <li className="article">
+						<li className="article">
 							<p>
 								<b>{item.number}</b> {item.text}
 							</p>
-						</li>	}					
+						</li>		
 					)
 				}
 			</ul>
