@@ -19,5 +19,5 @@
     transition: background-color .3s,opacity .5s,visibility .5s;
 }
 .BackToTopButton:hover{
-    bottom: 5px;
+    bottom: 50px;
 }
