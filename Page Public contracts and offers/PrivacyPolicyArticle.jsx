@@ -1,31 +1,28 @@
 function PrivacyPolicyArticle(props) {
 	console.log(props.articleData.articleStatements);
-	let articStatems;
-	if (props.articleData.statType === "Article") {
-		articStatems = props.articleData.articleStatements.map(item =>
-			<li className="article">
-				<b>{item.number}</b> {item.text}
-			</li>
-		)
-	}
-
 	return (
-		props.articleData.statType === "Article" ?
-			<section>
-				<h6>{props.articleData.caption}</h6>
-				<ul>
-					{
-						articStatems
-					}
-				</ul>
-			</section>
-			:
-			<section>
-				<h6>{props.articleData.caption}</h6>
+		props.articleData.statType === "Article" ? 
+		<section>
+			<h6>{props.articleData.caption}</h6>
+			<ul>
 				{
-					props.articleData.text.map(parag => <p>{parag}</p>)
+					props.articleData.articleStatements.map(item => 
+						{return <li className="article">
+							<p>
+								<b>{item.number}</b> {item.text}
+							</p>
+						</li>	}					
+					)
 				}
-			</section>
+			</ul>
+		</section> 
+		:
+		<section>
+			<h6>{props.articleData.caption}</h6>
+			{
+				props.articleData.text.map(parag => <p>{parag}</p>)
+			}
+		</section>
 
 	)
 }
