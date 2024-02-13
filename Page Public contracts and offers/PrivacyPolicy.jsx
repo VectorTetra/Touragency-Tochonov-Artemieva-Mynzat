@@ -12,6 +12,7 @@ function PrivacyPolicy(props) {
 						}
 					</section>;
 					console.log(item);
+					console.log(item.statType === "Article");
 					
 				})
 			}
