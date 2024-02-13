@@ -8,8 +8,8 @@ function PrivacyPolicyArticle(props) {
 				{
 					props.articleData.articleStatements.map(item => {
 						<li className="article"><b>{item.number}</b> {item.text}</li>
-						item.sublist !== null ? 
-							<PrivacyPolicyArticleSublist sublist={item.sublist} /> : null
+						// item.sublist !== null ? 
+						// 	<PrivacyPolicyArticleSublist sublist={item.sublist} /> : null
 						}
 					)
 				}
