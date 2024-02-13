@@ -15,7 +15,7 @@
     right: 20px;
     bottom: 60px;
     z-index: 3;
-    opacity: 0;
+    opacity: 1;
     transition: background-color .3s,opacity .5s,visibility .5s;
 }
 .BackToTopButton:hover{
