@@ -9,7 +9,7 @@ function PrivacyPolicy(props) {
 						<h6>{item.caption}</h6>
 						<p>{item.text}</p>
 					</section>;
-					console.log(item.statType);
+					console.log(item);
 					
 				})
 			}
