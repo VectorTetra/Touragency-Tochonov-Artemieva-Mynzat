@@ -1,7 +1,7 @@
 function PrivacyPolicyArticle(props) {
 	console.log(props.articleData.articleStatements);
 	let articStatems;
-	if (props.articleData.articleStatements !== null) {
+	if (props.articleData.statType === "Article") {
 		articStatems = props.articleData.articleStatements.map(item =>
 			<li className="article">
 				<b>{item.number}</b> {item.text}
