@@ -8,9 +8,9 @@ function PrivacyPolicy(props) {
 					<section>
 						<h6>{item.caption}</h6>
 						<p>{item.text}</p>
-					</section>
-					
+					</section>;
 					console.log(item.type);
+					
 				})
 			}
 		</div>
