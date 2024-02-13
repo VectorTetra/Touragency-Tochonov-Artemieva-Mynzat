@@ -7,7 +7,9 @@ function PrivacyPolicy(props) {
 					 
 					<section>
 						<h6>{item.caption}</h6>
-						<p>{item.text}</p>
+						{
+							item.text.map(parag=> <p>{parag}</p>)
+						}
 					</section>;
 					console.log(item);
 					
