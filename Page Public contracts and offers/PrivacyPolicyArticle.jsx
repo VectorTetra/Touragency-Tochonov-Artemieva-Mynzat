@@ -1,9 +1,9 @@
 function PrivacyPolicyArticle(props) {
 
 	return (
-		item.statType === "Article" ? 
+		props.articleData.statType === "Article" ? 
 		<section>
-			<h6>{props.caption}</h6>
+			<h6>{props.articleData.caption}</h6>
 			<ul>
 				{
 					props.articleData.articleStatements.map(item => {
@@ -18,9 +18,9 @@ function PrivacyPolicyArticle(props) {
 		</section> 
 		:
 		<section>
-			<h6>{item.caption}</h6>
+			<h6>{props.articleData.caption}</h6>
 			{
-				item.text.map(parag => <p>{parag}</p>)
+				props.articleData.text.map(parag => <p>{parag}</p>)
 			}
 		</section>
 
