@@ -6,7 +6,7 @@ function PrivacyPolicyArticle(props) {
 			<h6>{props.articleData.caption}</h6>
 			<ul>
 				{
-					props.articleData.articleStatements.map(item => {
+					props.articleData.articleStatements.map(item => 
 						<li className="article">
 							<p>
 								<b>{item.number}</b> {item.text}
@@ -14,7 +14,7 @@ function PrivacyPolicyArticle(props) {
 						</li>
 						// item.sublist !== null ? 
 						// 	<PrivacyPolicyArticleSublist sublist={item.sublist} /> : null
-						}
+						
 					)
 				}
 			</ul>
