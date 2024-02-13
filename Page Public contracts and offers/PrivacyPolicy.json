@@ -2,7 +2,7 @@
 	"Policy": [
 		{
 			"caption": "ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ ТОВ “ТУРОПЕРАТОР “МАГІЯ МАНДРІВ” ”",
-			"type": "PlainText",
+			"statType": "PlainText",
 			"text": [
 				"Вітаємо на нашому веб-сайті. Ми піклуємося про конфіденційність своїх клієнтів і вважаємо своїм обов'язком поважати та оберігати їх персональні дані.",
 				"ТОВ «Туроператор «МАГІЯ МАНДРІВ» (далі – Магія мандрів) приділяє велику увагу захисту персональних даних своїх користувачів. Користувачі нашого веб-сайту можуть переглядати сторінки сайту не повідомляючи про себе ніяких персональних даних. Однак, для надання послуг, пов'язаних із замовленням послуг, що представлені на сайті, нам потрібні Ваші контактні дані для того, щоб ми могли зв'язатися з Вами, підтвердити замовлення і надати замовлені послуги відповідно до чинного законодавства.",
@@ -11,7 +11,7 @@
 		},
 		{
 			"caption": "1. ВИЗНАЧЕННЯ ТЕРМІНІВ",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "1.1.",
@@ -49,7 +49,7 @@
 		},
 		{
 			"caption": "2. ЗАГАЛЬНІ ПОЛОЖЕННЯ",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "2.1.",
@@ -71,7 +71,7 @@
 		},
 		{
 			"caption": "3. ПРЕДМЕТ ПОЛІТИКИ КОНФІДЕНЦІЙНОСТІ",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "3.1.",
@@ -145,7 +145,7 @@
 		},
 		{
 			"caption": "4. МЕТА ЗБОРУ ПЕРСОНАЛЬНОЇ ІНФОРМАЦІЇ КОРИСТУВАЧА",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "4.1.",
@@ -219,7 +219,7 @@
 		},
 		{
 			"caption": "5. ЗАГАЛЬНІ ПОЛОЖЕННЯ",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "5.1.",
@@ -249,7 +249,7 @@
 		},
 		{
 			"caption": "6. ЗОБОВ'ЯЗАННЯ СТОРІН",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "6.1.",
@@ -287,7 +287,7 @@
 		},
 		{
 			"caption": "7. ВІДПОВІДАЛЬНІСТЬ СТОРІН",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "7.1.",
@@ -313,7 +313,7 @@
 		},
 		{
 			"caption": "8. БЕЗПЕКА",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "8.1.",
@@ -322,7 +322,7 @@
 		},
 		{
 			"caption": "9. ВИРІШЕННЯ СПОРІВ",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "9.1.",
@@ -345,7 +345,7 @@
 		},
 		{
 			"caption": "10. ДОДАТКОВІ УМОВИ",
-			"type": "Article",
+			"statType": "Article",
 			"articleStatements": [
 				{
 					"number": "10.1.",
