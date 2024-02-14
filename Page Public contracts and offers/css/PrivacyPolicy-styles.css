@@ -1,0 +1,14 @@
+.articleList{
+	list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
+}
+.subArticleList{
+	list-style-image: url(../../images/ArticleMarkerGreen20px.png);
+}
+.articleCaption{
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 700;
+}
+#policy-block{
+	padding: 0 1rem;
+}

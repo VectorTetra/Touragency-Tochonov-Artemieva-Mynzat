@@ -5,7 +5,7 @@
 }
 @font-face {
 	font-family: "MyCustomStroke";
-	src: url("./fonts/IsamiRiDisplayBold.ttf");
+	src: url("../../fonts/IsamiRiDisplayBold.ttf");
 }
 #mainPageFooter3{
 	display: flex;
@@ -27,7 +27,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url("./images/BlueHills.jpg");
+	background-image: url("../../images/BlueHills.jpg");
 	/* object-fit: contain; */
 	background-size:cover;
 	border-radius:  0 0 20px 20px;

@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Main Page Header</title>
+    <title>Турагенство Т.А.М.</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="MainPageHeader-styles.css" type="text/css">
-    <link rel="stylesheet" href="MainPageContentBlock-styles.css" type="text/css">
-    <link rel="stylesheet" href="MainPageFooter3-styles.css" type="text/css">
-    <link rel="stylesheet" href="MainPageNavbar-styles.css" type="text/css">
-	<link rel="stylesheet" href="search-styles.css" type="text/css">
-	<link rel="stylesheet" href="footer-styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/MainPageHeader-styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/MainPageContentBlock-styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/MainPageFooter3-styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/MainPageNavbar-styles.css" type="text/css">
+	<link rel="stylesheet" href="./css/search-styles.css" type="text/css">
+	<link rel="stylesheet" href="./css/footer-styles.css" type="text/css">
 </head>
 <body>
     
@@ -20,95 +20,93 @@
 <!-- =================================== Хедер головної сторінки ================================ -->
 
 	<!-- 0. Компонент, шапка головної сторінки сайту -->
-    <script type="text/babel" src="MainPageHeader.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/MainPageHeader.jsx"></script>
 	<!-- 1. Компонент, вертикальний flex-список для перерахув. номерів телефонів, графіку роботи, соцмереж і т.д.  -->
-    <script type="text/babel" src="MainPageHeaderContactList.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/MainPageHeaderContactList.jsx"></script>
 	<!-- 1. Компонент, логотип турагенства  -->
-    <script type="text/babel" src="MainPageHeaderLogo.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/MainPageHeaderLogo.jsx"></script>
 	<!-- 1. Компонент, назва і слоган турагенства  -->
-    <script type="text/babel" src="MainPageHeaderTouragencySign.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/MainPageHeaderTouragencySign.jsx"></script>
 	<!-- 2. Компонент, рядок списку MainPageHeaderContactList, панель для іконок соцмереж з посиланнями-->
-    <script type="text/babel" src="MainPageHeaderNetworksBar.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/MainPageHeaderNetworksBar.jsx"></script>
 	<!-- 3. Компонент, іконка соцмережі з посиланням-->
-    <script type="text/babel" src="SocialNetworkIconRef.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/SocialNetworkIconRef.jsx"></script>
 	<!-- 1. Компонент, кнопка Увійти-->
-    <script type="text/babel" src="LoginButton.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/LoginButton.jsx"></script>
 	<!-- 1. Компонент, відображає особ. інформ. користувача, коли він зайшов в систему-->
-    <script type="text/babel" src="UserGreetings.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/UserGreetings.jsx"></script>
 	<!-- 1. Компонент, кнопка Вийти-->
-    <script type="text/babel" src="LogoutButton.jsx"></script>
+    <script type="text/babel" src="./jsx-Header/LogoutButton.jsx"></script>
 <!-- ============================================================================================ -->
 <!-- =========================== Навігаційна панель головної сторінки =========================== -->  
 
 	<!-- 0. Компонент, нав.панель головної сторінки сайту -->
-	<script type="text/babel" src="MainPageNavbar.jsx"></script>
+	<script type="text/babel" src="./jsx-Navbar/MainPageNavbar.jsx"></script>
 	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
-	<script type="text/babel" src="MainPageNavbarItem.jsx"></script>
-	<!-- 2. Компонент, випадаючий список пункту нав.панелі головної сторінки сайту  -->
-	<script type="text/babel" src="MainPageNavbarItemDropdownList.jsx"></script> 
+	<script type="text/babel" src="./jsx-Navbar/MainPageNavbarItem.jsx"></script>
 
 <!-- ============================================================================================ -->
 <!-- ========================== Блок Пошуку ===================================================== -->
 
-	<script type="text/babel" src="MainPageSearch.jsx"></script>
-    <script type="text/babel" src="SearchBar.jsx"></script>
-    <script type="text/babel" src="SearchBarWhere.jsx"></script>
-    <script type="text/babel" src="SearchBarFrom.jsx"></script>
-    <script type="text/babel" src="SearchBarDate.jsx"></script>
-    <script type="text/babel" src="SearchBarDuration.jsx"></script>
-    <script type="text/babel" src="SearchBarTourists.jsx"></script>
-    <script type="text/babel" src="SearchBarSubmitButton.jsx"></script>
+	<script type="text/babel" src="./jsx-Search/MainPageSearch.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBar.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBarWhere.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBarFrom.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBarDate.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBarDuration.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBarTourists.jsx"></script>
+    <script type="text/babel" src="./jsx-Search/SearchBarSubmitButton.jsx"></script>
 
 <!-- ============================================================================================ -->
 <!-- ========================== Основний контент-блок головної сторінки ========================= -->
 
 	<!-- 0. Компонент, Основний контент-блок головної сторінки сайту -->
-	<script type="text/babel" src="MainPageContentBlock.jsx"></script>
+	<script type="text/babel" src="./jsx-ContentBlock/MainPageContentBlock.jsx"></script>
 	<!-- 1. Компонент, блок з новинами на головній сторінці сайту -->
-    <script type="text/babel" src="NewsBlock.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/NewsBlock.jsx"></script>
 	<!-- 2. Компонент, заголовок блоку з новинами на головній сторінці сайту -->
-    <script type="text/babel" src="NewsBlockCaption.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/NewsBlockCaption.jsx"></script>
 	<!-- 2. Компонент, список з новинами на головній сторінці сайту -->
-    <script type="text/babel" src="NewsBlockList.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/NewsBlockList.jsx"></script>
 	<!-- 3. Компонент, новина у списку новин на головній сторінці сайту -->
-    <script type="text/babel" src="News.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/News.jsx"></script>
 	<!-- 1. Компонент, блок таблиці турів на головній сторінці сайту -->
-    <script type="text/babel" src="ToursTableBlock.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/ToursTableBlock.jsx"></script>
 	<!-- 2. Компонент, заголовок блоку таблиці турів на головній сторінці сайту -->
-    <script type="text/babel" src="ToursTableBlockCaption.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/ToursTableBlockCaption.jsx"></script>
 	<!-- 2. Компонент, таблиця турів на головній сторінці сайту -->
-    <script type="text/babel" src="ToursTableBlockList.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/ToursTableBlockList.jsx"></script>
 	<!-- 2. Компонент, рядок у таблиці турів на головній сторінці сайту -->
-    <script type="text/babel" src="ToursTableBlockTableRow.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/ToursTableBlockTableRow.jsx"></script>
 	<!-- 1. Компонент, блок відгуків на головній сторінці сайту -->
-    <script type="text/babel" src="TouristsReviewsBlock.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/TouristsReviewsBlock.jsx"></script>
 	<!-- 2. Компонент, заголовок блоку відгуків на головній сторінці сайту -->
-    <script type="text/babel" src="TouristsReviewsCaption.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/TouristsReviewsCaption.jsx"></script>
 	<!-- 2. Компонент, відгук туриста на головній сторінці сайту -->
-    <script type="text/babel" src="TouristReview.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/TouristReview.jsx"></script>
 	<!-- 3. Компонент, оцінка туриста у відгуку (зірочка) -->
-    <script type="text/babel" src="Star.jsx"></script>
+    <script type="text/babel" src="./jsx-ContentBlock/Star.jsx"></script>
 
 <!-- ============================================================================================ -->
 <!-- ================================= Футер-1|2 головної сторінки ================================ -->
 
-<script type="text/babel" src="MainPageReasonsFooter.jsx"></script>
-    <script type="text/babel" src="ReasonsInfoWrapper.jsx"></script>
-    <script type="text/babel" src="MainPageSOFooter.jsx"></script>
-    <script type="text/babel" src="SOInfoWrapper.jsx"></script>
-    <script type="text/babel" src="ReasonsCaption.jsx"></script>
-    <script type="text/babel" src="SOCaption.jsx"></script>
-    <script type="text/babel" src="ReasonsBlock.jsx"></script>
-    <script type="text/babel" src="SOBlock.jsx"></script>
+	<script type="text/babel" src="./jsx-Footer-1-2/MainPageReasonsFooter.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/ReasonsInfoWrapper.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/MainPageSOFooter.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/SOInfoWrapper.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/ReasonsCaption.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/SOCaption.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/ReasonsBlock.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-1-2/SOBlock.jsx"></script>
 
 <!-- ============================================================================================ -->
 <!-- ================================= Футер-3 головної сторінки ================================ -->
 	<!-- 0. Компонент, футер-3 головної сторінки -->
-    <script type="text/babel" src="MainPageFooter3.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-3/MainPageFooter3.jsx"></script>
 	<!-- 1. Компонент, flex-box зі слоганом -->
-    <script type="text/babel" src="MainPageFooter3Slogan.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-3/MainPageFooter3Slogan.jsx"></script>
 	<!-- 1. Компонент, flex-box із формою підписки на розсилку  -->
-    <script type="text/babel" src="MainPageFooter3SubscriptionForm.jsx"></script>
+    <script type="text/babel" src="./jsx-Footer-3/MainPageFooter3SubscriptionForm.jsx"></script>
 
 <!-- ============================================================================================ -->
 <!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
@@ -122,45 +120,45 @@
 		let SearchBarData;
 		let FooterData;
 		Promise.all([
-			fetch('./mainPageHeaderInfo.json').
+			fetch('./json/mainPageHeaderInfo.json').
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading header data from JSON file <================================
 				headerData = data.headerData; 
 			})),
-			fetch('./mainPageNavbarItems.json').
+			fetch('./json/mainPageNavbarItems.json').
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading navbarItems from JSON file <================================
 				navbarItems = data.navbarItems; 
 			})),
-			fetch('./news.json').
+			fetch('./json/news.json').
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading news from JSON file <================================
 				newsArray = data; 
 				console.log('newsArray : ',newsArray);
 			})),
-			fetch('./tours.json').
+			fetch('./json/tours.json').
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading tours from JSON file <================================
 				toursArray = data; 
 				console.log('toursArray : ',toursArray);
 			})),
-			fetch('./reviews.json').
+			fetch('./json/reviews.json').
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading reviews from JSON file <================================
 				reviewsArray = data; 
 				console.log('reviewsArray : ',reviewsArray);
 			})),
-			fetch('./SearchBarInfo.json').
+			fetch('./json/SearchBarInfo.json').
             then(resp => resp.json()).
             then((data => {
                 SearchBarData = data.SearchBarData;
             })),
-			fetch('./MainPageFooterInfo.json').
+			fetch('./json/MainPageFooterInfo.json').
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading news from JSON file <================================

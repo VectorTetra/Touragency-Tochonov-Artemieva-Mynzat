@@ -8,8 +8,6 @@
 #mainPageHeader{
 	display: flex;
 	flex-direction: row;
-	/* background-image: url('./images/header-backgrImage.jpg'); */
-	/* background-color: rgb(26, 5, 146); */
 	background-image: linear-gradient(to right, rgb(255, 225, 0),rgb(255, 164, 45));
 	max-height: 400px;
 	width: auto;
