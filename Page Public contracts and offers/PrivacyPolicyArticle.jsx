@@ -7,7 +7,7 @@ function PrivacyPolicyArticle(props) {
 			<ul>
 				{
 					props.articleData.articleStatements.map(item => 
-						<li className="article">
+						<li key={item.number} className="article">
 							<p>
 								<b>{item.number}</b> {item.text}
 							</p>
