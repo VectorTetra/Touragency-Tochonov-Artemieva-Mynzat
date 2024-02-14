@@ -7,14 +7,16 @@ function PrivacyPolicyArticle(props) {
 			<ul>
 				{
 					props.articleData.articleStatements.map(item => 
-						<li key={item.number} className="article">
+						{let isSublist = item.sublist;
+						return <li key={item.number} className="article">
 							<p>
 								<b>{item.number}</b> {item.text}
 							</p>
 							{
-								(item.sublist !== undefined) ? <PrivacyPolicyArticleSublist sublist={item.sublist}/> : null 
+								(isSublist !== undefined) ? <PrivacyPolicyArticleSublist sublist={item.sublist}/> : null 
 							}
-						</li>		
+						</li>	
+						}	
 					)
 				}
 			</ul>
