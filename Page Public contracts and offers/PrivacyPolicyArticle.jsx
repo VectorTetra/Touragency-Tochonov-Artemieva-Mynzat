@@ -23,7 +23,7 @@ function PrivacyPolicyArticle(props) {
 		</section> 
 		:
 		<section>
-			<h6>{props.articleData.caption}</h6>
+			<p className="articleCaption">{props.articleData.caption}</p>
 			{
 				props.articleData.text.map(parag => <p>{parag}</p>)
 			}
