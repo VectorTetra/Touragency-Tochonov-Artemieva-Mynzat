@@ -12,7 +12,7 @@ function PrivacyPolicyArticle(props) {
 								<b>{item.number}</b> {item.text}
 							</p>
 							{
-								(item.sublist.length > 0) ? <PrivacyPolicyArticleSublist sublist={item.sublist}/> : null 
+								(item.sublist !== undefined) ? <PrivacyPolicyArticleSublist sublist={item.sublist}/> : null 
 							}
 						</li>		
 					)
