@@ -4,11 +4,11 @@ function PrivacyPolicyArticle(props) {
 		props.articleData.statType === "Article" ? 
 		<section>
 			<h6>{props.articleData.caption}</h6>
-			<ul>
+			<ul className="articleList">
 				{
 					props.articleData.articleStatements.map(item => 
 						{let isSublist = item.sublist;
-						return <li key={item.number} className="article">
+						return <li key={item.number} >
 							<p>
 								<b>{item.number}</b> {item.text}
 							</p>

@@ -1,7 +1,8 @@
-.article::marker{
-	/* list-style-image: url("../images/ArticleMarkerDarkBlue.png"); */
-	content:  url("../images/ArticleMarkerDarkBlue.png");
+.articleList{
+	list-style-image: url("../images/ArticleMarkerDarkBlue.png");
+	/* content:  url("../images/ArticleMarkerDarkBlue.png"); */
 }
-.subArticle::marker{
-	content: url("../images/ArticleMarkerGreen.png");
+.subArticleList{
+	list-style-image: url("../images/ArticleMarkerGreen.png");
+	/* content: url("../images/ArticleMarkerGreen.png"); */
 }
