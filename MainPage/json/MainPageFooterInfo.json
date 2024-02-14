@@ -3,17 +3,17 @@
     {
         "Reasons":[
             {
-                "img":"../images/feerie---homepage (17)_0.png",
+                "img":"../../images/feerie---homepage (17)_0.png",
                 "header":"20 років в туризмі",
                 "parag":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus magna vitae leo mollis, a accumsan est tristique. Quisque at nisi nec ex accumsan dictum. Nulla id ex magna. Integer id est nec dui rutrum lacinia nec a justo. Sed vulputate massa vel ultricies commodo. Morbi ullamcorper turpis vitae feugiat lobortis. Proin euismod quam sed ante aliquam, sed consectetur sem efficitur. "
             },
             {
-                "img":"../images/feerie---homepage_18_.png",
+                "img":"../../images/feerie---homepage_18_.png",
                 "header":"Якість в усьому",
                 "parag":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus magna vitae leo mollis, a accumsan est tristique. Quisque at nisi nec ex accumsan dictum. Nulla id ex magna. Integer id est nec dui rutrum lacinia nec a justo. Sed vulputate massa vel ultricies commodo. Morbi ullamcorper turpis vitae feugiat lobortis. Proin euismod quam sed ante aliquam, sed consectetur sem efficitur. "
             },
             {
-                "img":"../images/feerie---homepage_19_.png",
+                "img":"../../images/feerie---homepage_19_.png",
                 "header":"Найкращі гіди",
                 "parag":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus magna vitae leo mollis, a accumsan est tristique. Quisque at nisi nec ex accumsan dictum. Nulla id ex magna. Integer id est nec dui rutrum lacinia nec a justo. Sed vulputate massa vel ultricies commodo. Morbi ullamcorper turpis vitae feugiat lobortis. Proin euismod quam sed ante aliquam, sed consectetur sem efficitur. "
             }
@@ -21,19 +21,19 @@
         "SpecialOffers":
         [
             {
-                "img":"../images/2-3_0.png",
+                "img":"../../images/2-3_0.png",
                 "header":"Тури у розстрочку"
             },
             {
-                "img":"../images/feerie---homepage_20_.png",
+                "img":"../../images/feerie---homepage_20_.png",
                 "header":"Знижки для постійних клієнтів"
             },
             {
-                "img":"../images/rann.jpg",
+                "img":"../../images/rann.jpg",
                 "header":"Раннє бронювання"
             },
             {
-                "img":"../images/samolet_0.jpg",
+                "img":"../../images/samolet_0.jpg",
                 "header":"Подарункові сертифікати"
             }
         ],

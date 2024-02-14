@@ -5,7 +5,7 @@
 		{
 			"width":"200",
 			"height":"200",
-			"url":"../images/HeaderTouragencyLogo.png"
+			"url":"../../images/HeaderTouragencyLogo.png"
 		},
 		"touragencySign":
 		{
@@ -13,7 +13,7 @@
 			"agencySlogan":"Мандруючи, ми розширюємо свій світ"
 		},
 		"backgrImage":{
-			"url":"../images/header-backgrImage.jpg",
+			"url":"../../images/header-backgrImage.jpg",
 			"width":"1300",
 			"height":"400"
 		},
@@ -23,27 +23,27 @@
 			"networks":
 			[
 				{
-					"iconUrl":"../images/LogoViber.png",
+					"iconUrl":"../../images/LogoViber.png",
 					"href":"https://www.viber.com/ua/",
 					"alt":"Viber"
 				},
 				{
-					"iconUrl":"../images/LogoWhatsapp.png",
+					"iconUrl":"../../images/LogoWhatsapp.png",
 					"href":"https://www.whatsapp.com/",
 					"alt":"Whatsapp"
 				},
 				{
-					"iconUrl":"../images/LogoTelegram.png",
+					"iconUrl":"../../images/LogoTelegram.png",
 					"href":"https://telegram.org/",
 					"alt":"Telegram"
 				},
 				{
-					"iconUrl":"../images/LogoInstagram.png",
+					"iconUrl":"../../images/LogoInstagram.png",
 					"href":"https://www.instagram.com/",
 					"alt":"Instagram"
 				},
 				{
-					"iconUrl":"../images/LogoMessenger.png",
+					"iconUrl":"../../images/LogoMessenger.png",
 					"href":"https://www.messenger.com/?locale=ua",
 					"alt":"Messenger"
 				}				
@@ -51,13 +51,13 @@
 		},
 		"loginIcon":
 		{
-			"url":"../images/login-icon.png",
+			"url":"../../images/login-icon.png",
 			"width":"50",
 			"height":"50"
 		},
 		"logoutIcon":
 		{
-			"url":"../images/logout-icon.png",
+			"url":"../../images/logout-icon.png",
 			"width":"50",
 			"height":"50"
 		},
