@@ -4,7 +4,7 @@ function PrivacyPolicyArticleSublist(props) {
 			<ul>
 				{
 					props.sublist.map(item => {
-						<li className="subArticle"> <b>{item.number}</b>{item.text}</li>
+						<li key={item.number} className="subArticle"> <b>{item.number}</b>{item.text}</li>
 					}
 					)
 				}
