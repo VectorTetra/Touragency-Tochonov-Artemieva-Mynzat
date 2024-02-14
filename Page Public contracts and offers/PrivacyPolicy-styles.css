@@ -3,9 +3,9 @@
 }
 .subArticleList{
 	list-style-image: url(../images/ArticleMarkerGreen20px.png);
-	
 }
-
-/* .articleList li::marker ,  .subArticleList li::marker{
-	font-size: 0.8em;
-} */
+.articleCaption{
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 700;
+}

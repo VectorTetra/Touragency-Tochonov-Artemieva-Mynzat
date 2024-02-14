@@ -3,7 +3,7 @@ function PrivacyPolicyArticle(props) {
 	return (
 		props.articleData.statType === "Article" ? 
 		<section>
-			<h6>{props.articleData.caption}</h6>
+			<p className="articleCaption">{props.articleData.caption}</p>
 			<ul className="articleList">
 				{
 					props.articleData.articleStatements.map(item => 
