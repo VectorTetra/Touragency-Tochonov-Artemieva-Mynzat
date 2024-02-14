@@ -11,6 +11,9 @@ function PrivacyPolicyArticle(props) {
 							<p>
 								<b>{item.number}</b> {item.text}
 							</p>
+							{
+								(item.sublist !== null) ? <PrivacyPolicyArticleSublist sublist={item.sublist}/> : null 
+							}
 						</li>		
 					)
 				}

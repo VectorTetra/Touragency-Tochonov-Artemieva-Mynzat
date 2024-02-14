@@ -1,6 +1,5 @@
 function PrivacyPolicyArticleSublist(props) {
 	return (
-		<li>
 			<ul>
 				{
 					props.sublist.map(item => {
@@ -9,6 +8,5 @@ function PrivacyPolicyArticleSublist(props) {
 					)
 				}
 			</ul>
-		</li>
 	)
 }
