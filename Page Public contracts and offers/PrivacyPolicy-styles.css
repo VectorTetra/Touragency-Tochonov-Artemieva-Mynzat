@@ -1,6 +1,7 @@
-.article{
-	list-style-image: url("../images/ArticleMarkerDarkBlue.png");
+.article::marker{
+	/* list-style-image: url("../images/ArticleMarkerDarkBlue.png"); */
+	content:  url("../images/ArticleMarkerDarkBlue.png");
 }
-.subArticle{
-	list-style-image: url("../images/ArticleMarkerGreen.png");
+.subArticle::marker{
+	content: url("../images/ArticleMarkerGreen.png");
 }

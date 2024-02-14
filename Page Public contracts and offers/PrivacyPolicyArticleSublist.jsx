@@ -3,7 +3,7 @@ function PrivacyPolicyArticleSublist(props) {
 			<ul>
 				{
 					props.sublist.map(item =>
-						<li key={crypto.randomUUID()} className="subArticle"> <b>{item.number}</b>{item.text}</li>
+						<li key={crypto.randomUUID()} className="subArticle"> <b>{item.number}</b> {item.text}</li>
 					
 					)
 				}
