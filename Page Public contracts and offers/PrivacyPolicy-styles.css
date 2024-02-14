@@ -1,9 +1,9 @@
-.articleList li{
+.articleList{
 	list-style-image: url(../images/ArticleMarkerDarkBlue.png);
 	/* list-style-type: none; */
 	/* content:  url("../images/ArticleMarkerDarkBlue.png"); */
 }
-.subArticleList li{
+.subArticleList{
 	list-style-image: url(../images/ArticleMarkerGreen.png);
 	/* list-style-type: none; */
 	/* content: url("../images/ArticleMarkerGreen.png"); */
