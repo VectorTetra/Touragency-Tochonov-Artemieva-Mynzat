@@ -1,0 +1,82 @@
+/* 
+#documentList{}
+
+.documentList-mainCaption{}
+
+.documentList-caption1{}
+
+.documentList-caption2{}
+
+.documentList-dateAuthorContainer{}
+.documentList-Date{}
+.documentList-Author{}
+
+.documentList-imageContainer{}
+.documentList-image{}
+
+.documentList-listContainer{}
+.documentList-list{}
+.documentList-listItem{}
+.documentList-subList{}
+.documentList-subListItem{}
+
+.documentList-paragraph{
+}
+*/
+
+#documentList{
+	display: flex;
+	padding: 10px 10px;
+	flex-direction: column;
+}
+
+.documentList-mainCaption
+{
+	display: flex;
+	font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.documentList-caption1
+{
+	display: flex;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.documentList-caption2
+{
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.documentList-dateAuthorContainer
+{
+	display: flex;
+}
+.documentList-Date
+{
+	font-size: 12px;
+}
+.documentList-Author
+{
+	font-size: 16px;
+}
+
+.documentList-imageContainer
+{
+	display: flex;
+	object-fit: contain;
+}
+.documentList-image{}
+
+.documentList-listContainer
+{
+	display: flex;
+}
+.documentList-list{}
+.documentList-listItem{}
+.documentList-subList{}
+.documentList-subListItem{}
+
+.documentList-paragraph{
+	display: flex;
+}
