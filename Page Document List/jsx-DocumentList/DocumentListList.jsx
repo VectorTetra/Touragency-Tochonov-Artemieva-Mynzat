@@ -4,10 +4,11 @@ function DocumentListList(props) {
 			<ul className="documentList-list">
 				{
 					props.data.listItems.map(item => {
+						console.log(item.subList);
 						if (item.subList !== null) {
 							return
 							(<li className="documentList-listItem">
-								{/* {item.text} */}
+								{item.text}
 								<ul className="documentList-subList">
 									{item.subList.map(subItem => <li className="documentList-subListItem">{subItem.text}</li>)}
 								</ul>
