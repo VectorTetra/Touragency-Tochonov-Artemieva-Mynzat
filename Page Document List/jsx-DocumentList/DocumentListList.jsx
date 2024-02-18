@@ -17,7 +17,7 @@ function DocumentListList(props) {
 						}
 						else {
 							return (
-								<li className="documentList-listItem">
+								<li key={crypto.randomUUID()} className="documentList-listItem">
 									{item.text}
 								</li>
 							)
