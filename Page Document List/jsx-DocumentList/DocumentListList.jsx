@@ -14,12 +14,7 @@ function DocumentListList(props) {
 						}
 						else {
 							return
-							(<li className="documentList-listItem" key={crypto.randomUUID()}>
-								{item.text}
-								<ul className="documentList-subList">
-									{item.subList.map(subItem => <li key={crypto.randomUUID()} className="documentList-subListItem">{subItem.text}</li>)}
-								</ul>
-							</li>
+							(<DocumentListListItemWithSubitems data={item}></DocumentListListItemWithSubitems>
 							)
 						}
 					}
