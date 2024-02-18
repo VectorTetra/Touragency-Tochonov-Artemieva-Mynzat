@@ -39,18 +39,22 @@
 .documentList-caption1
 {
 	display: flex;
+	margin: 25px 0 0 0;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .documentList-caption2
 {
 	display: flex;
+	margin: 24px 0 0 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 .documentList-dateAuthorContainer
 {
 	display: flex;
+	flex-direction: column;
+    font-style: italic;
 }
 .documentList-Date
 {
@@ -65,14 +69,20 @@
 {
 	display: flex;
 	object-fit: contain;
+	margin: 20px 0 0 0;
+	justify-content: center;
 }
-.documentList-image{}
+.documentList-image{
+	border-radius: 50px;
+}
 
 .documentList-listContainer
 {
 	display: flex;
 }
-.documentList-list{}
+.documentList-list{
+	margin: 20px 0 0 0;
+}
 .documentList-listItem{}
 .documentList-subList{}
 .documentList-subListItem{}
