@@ -26,7 +26,7 @@
 
 #documentList{
 	display: flex;
-	padding: 10px 10px;
+	padding: 10px 40px 20px 40px;
 	flex-direction: column;
 }
 
