@@ -5,16 +5,15 @@ function DocumentListList(props) {
 				{
 					props.data.listItems.map(item => {
 						console.log(item.subList);
-						{let isSublist = item.subList;
+						{
+							let isSublist = item.subList;
 							return <li key={crypto.randomUUID()} >
-								<p>
-									{item.text}
-								</p>
+								{item.text}
 								{
-									(isSublist !== null) ? <DocumentListListItemWithSubitems data={item}/> : null 
+									(isSublist !== null) ? <DocumentListListItemWithSubitems data={item} /> : null
 								}
-							</li>	
-						}	
+							</li>
+						}
 						// if (item.subList === null) {
 						// 	return (
 						// 		<li key={crypto.randomUUID()} className="documentList-listItem">
