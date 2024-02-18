@@ -7,10 +7,10 @@ function DocumentListList(props) {
 						console.log(item.subList);
 						if (item.subList !== null) {
 							return
-							(<li className="documentList-listItem">
+							(<li className="documentList-listItem" key={crypto.randomUUID()}>
 								{item.text}
 								<ul className="documentList-subList">
-									{item.subList.map(subItem => <li className="documentList-subListItem">{subItem.text}</li>)}
+									{item.subList.map(subItem => <li key={crypto.randomUUID()} className="documentList-subListItem">{subItem.text}</li>)}
 								</ul>
 							</li>
 							)
