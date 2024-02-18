@@ -14,18 +14,6 @@ function DocumentListList(props) {
 								}
 							</li>
 						}
-						// if (item.subList === null) {
-						// 	return (
-						// 		<li key={crypto.randomUUID()} className="documentList-listItem">
-						// 			{item.text}
-						// 		</li>
-						// 	)
-						// }
-						// else {
-						// 	return
-						// 	(<DocumentListListItemWithSubitems data={item}></DocumentListListItemWithSubitems>
-						// 	)
-						// }
 					}
 					)
 				}
