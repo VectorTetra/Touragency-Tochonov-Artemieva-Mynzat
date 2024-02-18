@@ -74,6 +74,7 @@
 }
 .documentList-image{
 	border-radius: 50px;
+	min-height: 400px;
 }
 
 .documentList-listContainer
