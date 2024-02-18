@@ -84,20 +84,17 @@
 #loginButton{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
-	background-color: lime;
-	color: black;
-	border-radius: 10px;
-	min-width: 100px;
-	align-items: center;
-	align-self: center;
-	padding: 5px 10px;
-	transition: 1s;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    min-width: 100px;
+    align-items: center;
+    align-self: center;
+    padding: 5px 10px;
+    transition: 1s;
+	color: black;	
 	/*==========================================================================*/
 	background: linear-gradient(#00ff15, #00ff15) padding-box,
               linear-gradient(45deg, rgb(0, 59, 0), rgb(0, 59, 0)) border-box;
-	border: 5px solid transparent;
-	border-radius: 50px;
 	/*==========================================================================*/
 
 }
@@ -115,22 +112,17 @@
 #logoutButton{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
-	background-color: rgb(138, 0, 0);
+    justify-content: space-evenly;
 	color: white;
-	border-radius: 10px;
-	min-width: 100px;
-	align-items: center;
-	align-self: center;
-	padding: 5px 10px;
-	transition: 1s;
+    border-radius: 10px;
+    min-width: 100px;
+    align-items: center;
+    align-self: center;
+    padding: 5px 10px;
+    transition: 1s;
 	/*==========================================================================*/
-	background: linear-gradient(#ff0000, #ff0000) padding-box,
-              linear-gradient(45deg, rgb(5, 0, 0), rgb(0, 0, 0)) border-box;
-	border: 5px solid transparent;
-	border-radius: 50px;
+    background: linear-gradient(#ff0000, #ff0000) padding-box, linear-gradient(45deg, rgb(5, 0, 0), rgb(0, 0, 0)) border-box;
 	/*==========================================================================*/
-	
 }
 #logoutButton:hover{
 	transform: scale(1.1);
