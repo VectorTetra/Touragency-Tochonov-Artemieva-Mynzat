@@ -1,5 +1,5 @@
 function MainPageHeader(props){
-	const [isLogined, setIsLogined] = React.useState(true);
+	const [isLogined, setIsLogined] = React.useState(false);
 	React.useEffect(() => {
 		console.log("MainPageHeaderProps",props.headerData.touragencyLogo);
 	  },[]);

@@ -52,14 +52,14 @@
 		"loginIcon":
 		{
 			"url":"../images/login-icon.png",
-			"width":"50",
-			"height":"50"
+			"width":"20",
+			"height":"20"
 		},
 		"logoutIcon":
 		{
 			"url":"../images/logout-icon.png",
-			"width":"50",
-			"height":"50"
+			"width":"20",
+			"height":"20"
 		},
 		"userData":{
 			"name":"Віктор Точонов",

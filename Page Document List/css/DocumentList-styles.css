@@ -1,0 +1,94 @@
+/* 
+#documentList{}
+
+.documentList-mainCaption{}
+
+.documentList-caption1{}
+
+.documentList-caption2{}
+
+.documentList-dateAuthorContainer{}
+.documentList-Date{}
+.documentList-Author{}
+
+.documentList-imageContainer{}
+.documentList-image{}
+
+.documentList-listContainer{}
+.documentList-list{}
+.documentList-listItem{}
+.documentList-subList{}
+.documentList-subListItem{}
+
+.documentList-paragraph{
+}
+*/
+
+#documentList{
+	display: flex;
+	padding: 10px 40px 20px 40px;
+	flex-direction: column;
+}
+
+.documentList-mainCaption
+{
+	display: flex;
+	font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.documentList-caption1
+{
+	display: flex;
+	margin: 25px 0 0 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.documentList-caption2
+{
+	display: flex;
+	margin: 24px 0 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.documentList-dateAuthorContainer
+{
+	display: flex;
+	flex-direction: column;
+    font-style: italic;
+}
+.documentList-Date
+{
+	font-size: 12px;
+}
+.documentList-Author
+{
+	font-size: 16px;
+}
+
+.documentList-imageContainer
+{
+	display: flex;
+	object-fit: contain;
+	margin: 20px 0 0 0;
+	justify-content: center;
+}
+.documentList-image{
+	border-radius: 50px;
+	min-height: 400px;
+}
+
+.documentList-listContainer
+{
+	display: flex;
+}
+.documentList-list{
+	margin: 20px 0 0 0;
+}
+.documentList-listItem{}
+.documentList-subList{}
+.documentList-subListItem{}
+
+.documentList-paragraph{
+	display: flex;
+	margin: 20px 0 0 0;
+}
