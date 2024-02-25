@@ -43,7 +43,7 @@
 }
 .touragencySign-1{
 	font-family: fantasy;
-    font-size: clamp(3vmin,3vmax,5vw);
+    font-size: clamp(3vmin,3vmax,4.5vw);
     font-weight: 500;
     font-style: normal;
     color: blue;
@@ -67,6 +67,7 @@
 	color: blue;
 	/* flex-grow: 1; */
 	text-wrap: nowrap;
+	font-weight: 800;
 }
 /* =====================> MainPageHeaderNetworksBar Styles<===================== */
 #mainPageHeaderNetworksBar{
@@ -153,4 +154,7 @@
 	justify-content: space-around;
 	flex: 0.6 0 auto;
 	font-size: clamp(1vmax,1.75vw,2vmax);
+	margin: 0 10px 0 0;
+	padding: 0 10px;
+	font-weight: 800;
 }
