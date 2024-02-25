@@ -75,9 +75,9 @@
 
 }
 .networkItem-1{
-	width: 30px;
-	height: 30px;
-	object-fit: contain;
+	width: clamp(15px,2.5vw,30px);
+   aspect-ratio: 1 / 1;
+    object-fit: contain;
 }
 .networkItem-1:hover{
 	transform: scale(1.3);
