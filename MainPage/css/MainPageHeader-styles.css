@@ -66,6 +66,7 @@
 	font-size: clamp(1vmin,1.75vw,5vmin);
 	color: blue;
 	/* flex-grow: 1; */
+	text-wrap: nowrap;
 }
 /* =====================> MainPageHeaderNetworksBar Styles<===================== */
 #mainPageHeaderNetworksBar{
