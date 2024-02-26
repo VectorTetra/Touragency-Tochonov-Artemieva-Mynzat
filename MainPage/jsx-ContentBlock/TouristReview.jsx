@@ -15,7 +15,7 @@ class TouristReview extends React.Component{
 	}
 	render(){
 		return(
-			<div className="touristsReviews-block-container">
+			<div className="touristReview">
 				<div className="boldUserNameReviewCaption">{this.props.userName}</div>
 				<div className="touristReviewStarsDateRow">
 					<div>{this.drawStars()}</div>	
