@@ -4,6 +4,10 @@
 	min-height: 0;
 	/* overflow-x: hidden; */
 }
+a{
+	text-decoration: none;
+	transition: 1s;
+}
 .touristReviewStarsDateRow{
 	display: flex;
 	flex-direction: row;
@@ -44,6 +48,11 @@
 	display: flex;
 	flex-direction: column;
 	text-wrap:pretty;
+	font-weight: 600;
+}
+.news a:hover {
+    color: hotpink;
+    transition: 1s;
 }
 #news-block-list{
 	padding: 0px 5px;
