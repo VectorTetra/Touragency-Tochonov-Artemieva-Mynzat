@@ -63,6 +63,7 @@
 #toursTableBlockList{
 	border-spacing:0;
 	border: 2px solid rgb(74, 77, 255);
+	border-radius: 20px;
 }
 #toursTableBlockList tr:nth-child(even) {
     background-color: lightgoldenrodyellow;
@@ -97,14 +98,14 @@
     color: hotpink;
     transition: 1s;
 }
-.TableRowRouteString{
-	font-size: 0.55rem;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	text-wrap:stable;
-	max-width: 90%;
-	padding: 0.25rem 0;
+.TableRowRouteString {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-wrap: pretty;
+    max-width: 90%;
+    padding: 0.25rem 0;
 }
 .boldUserNameReviewCaption{
 	font-weight: bold;
