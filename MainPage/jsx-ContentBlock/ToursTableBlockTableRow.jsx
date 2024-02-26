@@ -12,7 +12,7 @@ class ToursTableBlockTableRow extends React.Component{
 				</td>
 				<td>
 					<div className="TableRowRouteCell">
-						<a href={this.props.url}>
+						<a href={this.props.url} className="TableRowRouteCellAnchor">
 						{
 							this.props.tourCaptions.map(item => <div>{item}</div>)
 						}

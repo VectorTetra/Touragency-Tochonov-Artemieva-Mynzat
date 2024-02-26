@@ -88,6 +88,9 @@
 	padding: 0 0.7rem;
 	transition: 1s;
 }
+.TableRowRouteCellAnchor{
+	text-align: center;
+}
 .TableRowRouteCell a:hover {
     color: hotpink;
     transition: 1s;
