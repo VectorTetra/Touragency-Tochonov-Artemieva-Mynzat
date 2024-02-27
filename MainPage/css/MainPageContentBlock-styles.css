@@ -132,6 +132,7 @@ a{
 .touristReviewTextRow{
 	font-size: 0.6rem;
 	font-style: italic;
+	margin-top: 10px;
 }
 .reviewStar{
 	width: 20px;
@@ -358,6 +359,7 @@ a{
 	}
 	.touristReviewTextRow {
 		font-size: 1.5vh;
+		margin-top: 1.5vh;
 	}
 	.boldUserNameReviewCaption {
 		font-weight: bold;
