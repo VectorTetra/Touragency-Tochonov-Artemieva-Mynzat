@@ -273,6 +273,40 @@ a{
 	}
 }
 @media (pointer: coarse) and (orientation: portrait){
+	#content-block-container {
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+		flex-wrap: wrap;
+		max-height: min-content;
+		justify-content: space-evenly;
+	}
+	#toursTable-block-container {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 600px;
+	}
+	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {
+		font-size: 2.5vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		font-weight: 800;
+		margin: 0 0 10px 0;
+		text-wrap: nowrap;
+	}
+	#touristsReviews-block-container {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 100%;
+		padding: 0;
+		margin: 15px 15px 0 15px;
+		flex-wrap: wrap;
+		min-width: 100%;
+		align-items: center;
+		order: 2;
+	}
 	.news {
 		font-size: 1.5vh;
 	}
@@ -306,27 +340,6 @@ a{
 		text-wrap: pretty;
 		max-width: 90%;
 		padding: 0.25rem 0;
-	}
-	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {
-		font-size: 2.5vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		font-weight: 800;
-		margin: 0 0 10px 0;
-		text-wrap: nowrap;
-	}
-	#touristsReviews-block-container {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 100%;
-		padding: 0;
-		margin: 15px 15px 0 15px;
-		flex-wrap: wrap;
-		min-width: 100%;
-		align-items: center;
-		order: 2;
 	}
 	.touristReviewCaptionRow {
 		font-size: 1.8vh;
