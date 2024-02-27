@@ -66,13 +66,7 @@ a{
 #news-block-list{
 	padding: 0px 5px;
 }
-#news-block-caption{
-	font-size: 1.8rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#reviews-block-caption{
+#news-block-caption ,#toursTable-block-caption, #reviews-block-caption{
 	font-size: 1.8rem;
 	display: flex;
 	justify-content: center;
@@ -137,7 +131,7 @@ a{
 }
 
 @media (945px < width < 1100px){
-	/* #reviews-block-caption {
+	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {
 		font-size: 2.5rem;
 		display: flex;
 		justify-content: center;
@@ -146,73 +140,7 @@ a{
 		font-weight: 800;
 		margin: 0 0 10px 0;
 	}
-	#content-block-container {
-		display: flex;
-		flex-direction: row;
-		margin-top: 10px;
-		flex-wrap: wrap;
-		max-height: min-content;
-		justify-content: space-evenly;
-	}
-	#toursTable-block-container {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 600px;
-	}
-	#news-block-container {
-		display: flex;
-		flex-direction: column;
-		flex: 0.5 1 300px;
-		margin-right: 15px;
-		max-width: 300px;
-	}
-	#touristsReviews-block-container {
-		display: flex;
-		flex-direction: row;
-		flex: 0 1 50%;
-		padding: 0;
-		margin: 0;
-		flex-wrap: wrap;
-		min-width: 100%;
-		margin-top: 15px;
-		align-items: center;
-	}
-	.touristReview {
-		display: flex;
-		flex-direction: column;
-		max-width: 46vw;
-		margin: auto;
-	}
-	.boldUserNameReviewCaption {
-		font-weight: bold;
-		font-size: 1.2rem;
-	}
-	.touristReviewStarsDateRow {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.touristReviewCaptionRow {
-		font-size: 1.1rem;
-	}
-	.touristReviewTextRow {
-		font-size: 0.9rem;
-	}
-	#touristsReviews-block-container .touristReview:nth-child(even) {
-		padding: 0 1vw 0 0;
-	}
-	#touristsReviews-block-container .touristReview:nth-child(odd) {
-		padding-left: 0 0 0 1vw;
-	} */
-	#reviews-block-caption {
-		font-size: 2.5rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		font-weight: 800;
-		margin: 0 0 10px 0;
-	}
+	
 	#content-block-container {
 		display: flex;
 		flex-direction: row;
@@ -276,7 +204,7 @@ a{
 	}
 }
 @media (width <= 945px){
-	#reviews-block-caption {
+	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {
 		font-size: 2.5rem;
 		display: flex;
 		justify-content: center;
