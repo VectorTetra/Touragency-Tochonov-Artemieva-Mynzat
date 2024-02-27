@@ -242,9 +242,11 @@ a{
 		flex-direction: column;
 		/* border: 2px solid red; */
 		flex: 1 1 300px;
-		padding: 0 15px;
 		min-width: 100%;
 		order: 1;
+	}
+	.news{
+		padding: 0 15px;
 	}
 	#touristsReviews-block-container {
 		display: flex;
