@@ -280,7 +280,7 @@ a{
 @media (pointer: coarse) and (orientation: portrait){
 	#content-block-container {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		margin: 10px 2vw 1vh 2vw;
 		flex-wrap: wrap;
 		max-height: min-content;
@@ -376,7 +376,7 @@ a{
 @media (pointer: coarse) and (orientation: landscape){
 	#content-block-container {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		margin: 10px 2vh 1vw 2vh;
 		flex-wrap: wrap;
 		max-height: min-content;
