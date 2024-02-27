@@ -392,7 +392,7 @@ a{
 		flex-direction: column;
 		flex: 1 1 100%;
 		padding: 0;
-		/* margin: 15px 15px 0 15px; */
+		margin: 15px 15px 0 15px;
 		flex-wrap: wrap;
 		min-width: 100%;
 		align-items: center;
@@ -406,7 +406,7 @@ a{
 		order: 1;
 	}
 	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {
-		font-size: 3vw;
+		font-size: 5vw;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -417,10 +417,10 @@ a{
 	}
 	
 	.news {
-		font-size: 1.5vw;
+		font-size: 2vw;
 	}
 	.news a {
-		font-size: 2vw;
+		font-size: 2.5vw;
 	}
 	.ToursTableBlockTableRow {
 		flex-direction: column;
@@ -434,15 +434,15 @@ a{
 		padding: 0 0.5rem;
 		text-wrap: nowrap;
 		font-weight: 600;
-		font-size: 1.8vw;
+		font-size: 2.5vw;
 	}
 	.TableRowRouteCellAnchor {
 		text-align: center;
 		font-weight: 800;
-		font-size: 2vw;
+		font-size: 2.5vw;
 	}
 	.TableRowRouteString {
-		font-size: 1.3vw;
+		font-size: 1.9vw;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -451,22 +451,22 @@ a{
 		padding: 0.25rem 0;
 	}
 	.touristReviewCaptionRow {
-		font-size: 1.8vw;
+		font-size: 2.5vw;
 	}
 	.touristReviewTextRow {
-		font-size: 1.5vw;
+		font-size: 2vw;
 		margin-top: 1.5vw;
 	}
 	.boldUserNameReviewCaption {
 		font-weight: bold;
-		font-size: 2vw;
+		font-size: 3vw;
 	}
 	.touristReviewStarsDateRow{
-		font-size: 1.8vw;
+		font-size: 2.5vw;
 	}
 	.reviewStar{
-		width: 1.8vw;
-		height: 1.8vw;
+		width: 2.5vw;
+		height: 2.5vw;
 	}
 }
 /* 
