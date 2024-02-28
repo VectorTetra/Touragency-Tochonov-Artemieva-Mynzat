@@ -1,7 +1,9 @@
 function MainPageHeaderLogo(props){
 	return(
 		<div id="mainPageHeaderLogoContainer">
-			<img id="mainPageHeaderLogo" src={props.logoUrl} alt="logo"/>
+			<a href="../MainPage/index.html">
+				<img id="mainPageHeaderLogo" src={props.logoUrl} alt="logo"/>
+			</a>
 		</div>
 	)
 }
