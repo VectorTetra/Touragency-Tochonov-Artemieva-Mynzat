@@ -22,6 +22,7 @@
 	font-family: "MyCustomStroke";
 	background-color: #f8f8f8;
 	border-radius: 20px 20px 0 0;
+	text-wrap: nowrap;
 }
 #mainPageFooter3SubscriptionForm{
 	display: flex;
@@ -68,9 +69,9 @@
 		width: 150%;
 		line-height: 1.75rem;
 		/* font-size: 1.75rem; */
-		font-size: clamp(2rem,4vmax,12vmin);
+		font-size: clamp(2rem,3vmax,12vmin);
 		max-width: 80vw;
-		height:min-content;
+		height: 4vmax;
 		padding: 1vmin;
 	}
 	#subscForm > input[type="submit"] {
@@ -78,6 +79,19 @@
 		background-color: yellow;
 		width: 150%;
 		font-size: clamp(2rem,2.5vmax,7vmin);
+		height: 4.5vmax;
+	}
+	#mainPageFooter3Slogan {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		font-size: clamp(2.5rem,5vmax,7vmin);
+		color: red;
+		font-family: "MyCustomStroke";
+		background-color: #f8f8f8;
+		border-radius: 20px 20px 0 0;
+		/* text-align: center; */
+		text-wrap: nowrap;
 	}
 }
 @media (pointer: coarse) and (orientation: landscape)
@@ -85,7 +99,7 @@
 	#mainPageFooter3Slogan{
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content:stretch;
 		font-size: clamp(2.5rem,3.5vmax,7vmin);
 		color: red;
 		font-family: "MyCustomStroke";
