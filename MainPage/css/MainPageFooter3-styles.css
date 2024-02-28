@@ -68,7 +68,7 @@
 		width: 150%;
 		line-height: 1.75rem;
 		/* font-size: 1.75rem; */
-		font-size: clamp(2rem,5vmax,12vmin);
+		font-size: clamp(2rem,4vmax,12vmin);
 		max-width: 80vw;
 		height:min-content;
 		padding: 1vmin;
@@ -77,7 +77,7 @@
 		color: black;
 		background-color: yellow;
 		width: 150%;
-		/* font-size: clamp(2rem,7vmax,12vmin); */
+		font-size: clamp(2rem,2.5vmax,7vmin);
 	}
 }
 @media (pointer: coarse) and (orientation: landscape)
