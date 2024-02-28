@@ -59,6 +59,6 @@
 #subscFormCaption{
 	color: rgb(85, 0, 124);
 	font-weight: 700;
-	margin: 20px 0;
+	margin: 20px 8vmin;
 	font-size: clamp(2rem,3vmax,5vmin);
 }
