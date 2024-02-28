@@ -4,6 +4,6 @@ class Star extends React.Component{
 	}
 
 	render(){
-		return(<img src={this.props.url} alt="*" width={this.props.width} height={this.props.height}/>)
+		return(<img className="reviewStar" src={this.props.url} alt="*"/>)
 	}
 }

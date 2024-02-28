@@ -4,7 +4,7 @@ class ToursTableBlockCaption extends React.Component{
 	}
 	render(){
 		return(
-			<div id="news-block-caption">
+			<div id="toursTable-block-caption">
 				{this.props.caption}
 			</div>
 		)
