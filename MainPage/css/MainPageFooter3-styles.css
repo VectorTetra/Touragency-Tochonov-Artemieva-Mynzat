@@ -99,7 +99,7 @@
 	#mainPageFooter3Slogan{
 		display: flex;
 		flex-direction: row;
-		justify-content:stretch;
+		justify-content:center;
 		font-size: clamp(2.5rem,3.5vmax,7vmin);
 		color: red;
 		font-family: "MyCustomStroke";
