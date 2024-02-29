@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+.container hr {
+    width: 95%;
+    border: none;
+    height: 3px;
+    background-color: blue;
+}
+
+.headtable {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.headtable2 {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+
+.headtable li{
+    text-align: justify;
+}
+
+
+.browntext {
+    color: brown;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.blutext {
+    color: rgb(45, 51, 204);
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+li strong {
+    font-weight: bold;
+}
+
+.oldturist{
+    width: 80%;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(173, 198, 241);
+    color: rgb(207, 57, 16);
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.download{
+    text-align: right;
+    margin-right: 30px;
+}
+.download a{
+    color: rgb(207, 57, 16);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.download img{
+   width: 7%;
+   height: 7%;
+}
+
+.Vuso{
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.Vuso a{
+    color: rgb(37, 7, 98);
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.Vuso a:hover {
+    color: red;
+}
