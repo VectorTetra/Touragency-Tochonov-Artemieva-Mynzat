@@ -1,0 +1,13 @@
+.article-wrapper {
+    display: block;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#about-us-img {
+    width: 380px;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}
+

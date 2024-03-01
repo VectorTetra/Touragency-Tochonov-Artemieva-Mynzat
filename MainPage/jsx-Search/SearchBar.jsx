@@ -8,6 +8,7 @@ function SearchBar(props)
                 <SearchBarDuration Duration={props.SearchBarData.Duration.Duration}></SearchBarDuration>
                 <SearchBarTourists Tourists={props.SearchBarData.NumberOfTourists.Tourists}></SearchBarTourists>
                 <SearchBarSubmitButton></SearchBarSubmitButton>
+                
         </div>
     )
 }

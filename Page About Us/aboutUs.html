@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
+    <link rel="stylesheet" href="AboutUs-styles.css" type="text/css">
+    <link rel="stylesheet" href="../MainPage/css/MainPageFooter3-styles.css" type="text/css">
+</head>
+<body>
+    <div id="app"></div>
+	<!-- ============================================================================================ -->
+	<!-- =================================== Хедер ================================================== -->
+
+	<!-- 0. Компонент, шапка головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeader.jsx"></script>
+	<!-- 1. Компонент, вертикальний flex-список для перерахув. номерів телефонів, графіку роботи, соцмереж і т.д.  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderContactList.jsx"></script>
+	<!-- 1. Компонент, логотип турагенства  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderLogo.jsx"></script>
+	<!-- 1. Компонент, назва і слоган турагенства  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderTouragencySign.jsx"></script>
+	<!-- 2. Компонент, рядок списку MainPageHeaderContactList, панель для іконок соцмереж з посиланнями-->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderNetworksBar.jsx"></script>
+	<!-- 3. Компонент, іконка соцмережі з посиланням-->
+	<script type="text/babel" src="../MainPage/jsx-Header/SocialNetworkIconRef.jsx"></script>
+	<!-- 1. Компонент, кнопка Увійти-->
+	<script type="text/babel" src="../MainPage/jsx-Header/LoginButton.jsx"></script>
+	<!-- 1. Компонент, відображає особ. інформ. користувача, коли він зайшов в систему-->
+	<script type="text/babel" src="../MainPage/jsx-Header/UserGreetings.jsx"></script>
+	<!-- 1. Компонент, кнопка Вийти-->
+	<script type="text/babel" src="../MainPage/jsx-Header/LogoutButton.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- =========================== Навігаційна панель ============================================= -->
+
+	<!-- 0. Компонент, нав.панель головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbar.jsx"></script>
+	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbarItem.jsx"></script>
+    <!-- ============================================================================================ -->
+	<!-- =========================== Про нас ======================================================== -->
+
+    <script type="text/babel" src="AboutUsArticle.jsx"></script>
+
+    <!-- ============================================================================================ -->
+    <!-- ================================= Футер-3 головної сторінки ================================ -->
+	<!-- 0. Компонент, футер-3 головної сторінки -->
+    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3.jsx"></script>
+	<!-- 1. Компонент, flex-box зі слоганом -->
+    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3Slogan.jsx"></script>
+	<!-- 1. Компонент, flex-box із формою підписки на розсилку  -->
+    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3SubscriptionForm.jsx"></script>
+
+
+    <script type="text/babel">
+		let headerData;
+		let navbarItems;
+        let FooterData;
+		Promise.all([
+			fetch('../MainPage/json/mainPageHeaderInfo.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading header data from JSON file <================================
+					headerData = data.headerData;
+				})),
+			fetch('../MainPage/json/mainPageNavbarItems.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading navbarItems from JSON file <================================
+					navbarItems = data.navbarItems;
+				})),
+			fetch('../MainPage/json/MainPageFooterInfo.json').
+			then(resp => resp.json()).
+			then((data => {
+				//=======================> Reading news from JSON file <================================
+				FooterData = data.FooterData; 
+				
+			}))
+		]).then(
+			() => {
+				const rootNode = document.getElementById("app");
+				const root = ReactDOM.createRoot(rootNode);
+				root.render(
+					<React.StrictMode>
+						<div>
+							<MainPageHeader headerData={headerData} />
+							<MainPageNavbar navbarItems={navbarItems} />
+                            <AboutUsArticle/>
+                            <MainPageFooter3/>
+						</div>
+					</React.StrictMode>
+				);
+			}
+		)
+	</script>
+</body>
+</html>

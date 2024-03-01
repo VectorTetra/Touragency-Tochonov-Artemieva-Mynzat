@@ -16,6 +16,25 @@
         "NumberOfTourists":
         {
             "Tourists":["1 дорослий", "2 дорослих", "3 дорослих"]
-        }
+        },
+        "Hotels":
+        {
+            "Stars":["1*", "2*", "3*", "4*", "5*"],
+            "Food":["OB", "BB", "HB", "FB", "AI", "UAI"],
+            "Services":["СПА", "Аквапарк", "Анімація", "Безкоштовний Wi-Fi", "Дайвінг", "Басейн"]
+        },
+        "Transport":["Авіапереліт", "Автобус", "Без транспорту"],
+        "Prices":
+        {
+            "Min":2500,
+            "Max":500000
+        },
+        "HotelCategoryCaption":"Категорії готеля",
+        "FoodCaption":"Харчування",
+        "TransportCaption":"Трансопт",
+        "HotelRewiesCaption":"Оцінки готелю",
+        "HotelPriceCaption":"Ціна, грн",
+        "ServicesCaption":"Послуги"
+        
     }
 }
