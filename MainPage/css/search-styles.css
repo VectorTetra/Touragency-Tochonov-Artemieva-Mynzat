@@ -58,7 +58,7 @@ input {
     }
 }
 
-@media (max-width: 800px) and (min-width: 500px)
+@media (max-width: 800px) and (min-width: 500px) and (orientation: portrait)
 {   
     .search-bar-wrapper {
         display: flex;
@@ -114,7 +114,7 @@ input {
     }
 }
 
-@media (max-width: 500px)
+@media (max-width: 500px) and (orientation: portrait)
 {   
     .search-bar-wrapper {
         display: flex;
