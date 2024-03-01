@@ -51,14 +51,14 @@
 }
 #subscForm > input[type="submit"] {
     color: black;
-    background-color: yellow;
+    background-color: #ff6700;
     width: 150%;
     height: min-content;
 }
 #subscFormCaption{
 	color: rgb(85, 0, 124);
 	font-weight: 700;
-	margin: 20px 8vmin;
+	margin: 20px 8vmin 0px;
 	font-size: clamp(2rem,3vmax,5vmin);
 }
 @media (pointer: coarse) and (orientation: portrait)
@@ -76,7 +76,7 @@
 	}
 	#subscForm > input[type="submit"] {
 		color: black;
-		background-color: yellow;
+		background-color: #ff6700;
 		width: 150%;
 		font-size: clamp(2rem,2.5vmax,7vmin);
 		height: 4.5vmax;
