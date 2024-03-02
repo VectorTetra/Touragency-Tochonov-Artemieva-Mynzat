@@ -39,10 +39,10 @@
 			"mainHref":null,
 			"submenu":
 			[
-				{"subItemCaption":"Список документів", "href":"#"},
-				{"subItemCaption":"Питання і відповіді", "href":"#"},
-				{"subItemCaption":"Страхування", "href":"#"},
-				{"subItemCaption":"Публічні договори і оферти", "href":"#"}
+				{"subItemCaption":"Список документів", "href":"../Page%20Document%20List/documentList.html"},
+				{"subItemCaption":"Питання і відповіді", "href":"../Page%20QuestionAndAnswers/QuestionsandAnswers.html"},
+				{"subItemCaption":"Страхування", "href":"../PageInsurance/Insurance.html"},
+				{"subItemCaption":"Публічні договори і оферти", "href":"../Page%20Public%20contracts%20and%20offers/publicContractsAndOffers.html"}
 			]
 		},
 		{
