@@ -10,25 +10,31 @@
     cursor: pointer;
     white-space: nowrap;
     text-indent: 100%;
-    /* width: 30px;
+    width: 30px;
     height: 30px;
     right: 20px;
-    bottom: 60px; */
-    width: 5vmin;
-    aspect-ratio: 1 / 1;
-    right: 3.5vmin;
-    bottom: 7vmin;
+    bottom: 60px;
     z-index: 3;
     opacity: 1;
     transition: background-color .3s,opacity .5s,visibility .5s;
 }
 @media (pointer: coarse) and (orientation: portrait)
 {
-
+    .BackToTopButton{
+        width: 10vmin;
+        aspect-ratio: 1 / 1;
+        right: 3.5vmin;
+        bottom: 7vmin;
+    }
 }
 @media (pointer: coarse) and (orientation: landscape)
 {
-
+    .BackToTopButton{
+        width: 10vmin;
+        aspect-ratio: 1 / 1;
+        right: 3.5vmin;
+        bottom: 7vmin;
+    }
 }
 .BackToTopButton:hover{
    transform: scale(1.1);
