@@ -14,10 +14,10 @@
     height: 30px;
     right: 20px;
     bottom: 60px; */
-    width: 5vmax;
+    width: 5vmin;
     aspect-ratio: 1 / 1;
-    right: 3.5vmax;
-    bottom: 7vmax;
+    right: 3.5vmin;
+    bottom: 7vmin;
     z-index: 3;
     opacity: 1;
     transition: background-color .3s,opacity .5s,visibility .5s;
