@@ -10,16 +10,18 @@
 </head>
 <body>
   <div id="app"></div>
+
   <script type="text/babel" src="./jsx-registration/RegistrationPage.jsx"></script>
   <script type="text/babel" src="./jsx-registration/registrationItem.jsx"></script>
+
   <script type="text/babel">
     let registrationData;
     Promise.all([
-      fetch('./json/RegistrationPage.json').
-      then(resp => resp.json()).
-      then(data => {
-        registrationData = data.RegistrationPageData;
-      })
+			fetch('./json/RegistrationPage.json').
+				then(resp => resp.json()).
+				then((data => {
+					registrationData = data.RegistrationPageData;
+				}))
     ]).then(
       ()=>{
         const rootNode = document.getElementById("app");    

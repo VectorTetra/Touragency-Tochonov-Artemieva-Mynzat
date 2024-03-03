@@ -6,7 +6,7 @@ function RegistrationPage(props){
 
                 {
                     props.RegistrationInfo.map(item => 
-                    <registrationItem name={item.name} type={item.type} text={item.Text} placeHolder={item.PlaceHolder}/>)
+                    <RegistrationItem name={item.name} type={item.type} text={item.Text} placeHolder={item.PlaceHolder}/>)
                 }
 
                 <p>Створюючи аккаунт ви походжуєтесь на <a href="#">Умови та Конфіденційність</a> сайту.</p>

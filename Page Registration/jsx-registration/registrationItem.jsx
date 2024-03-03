@@ -1,4 +1,4 @@
-function registrationItem(props)
+function RegistrationItem(props)
 {
     return(
         <div class="registration-item">
