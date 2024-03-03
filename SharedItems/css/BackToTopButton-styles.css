@@ -22,7 +22,7 @@
 {
     .BackToTopButton{
         width: 10vmin;
-        aspect-ratio: 1 / 1;
+        height: 10vmin;
         right: 3.5vmin;
         bottom: 7vmin;
     }
@@ -31,7 +31,7 @@
 {
     .BackToTopButton{
         width: 10vmin;
-        aspect-ratio: 1 / 1;
+        height: 10vmin;
         right: 3.5vmin;
         bottom: 7vmin;
     }
