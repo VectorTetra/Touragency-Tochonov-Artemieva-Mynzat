@@ -1,0 +1,42 @@
+{
+    "RegistrationPageData":{
+        "RegistrationInfo":[
+            {
+                "name":"name",
+                "type":"text",
+                "Text":"ПІБ",
+                "PlaceHolder":"Ваше повне ім'я"
+            },
+            {
+                "name":"nickname",
+                "type":"text",
+                "Text":"Псевдонім",
+                "PlaceHolder":"Ваш псевдонім"
+            },
+            {
+                "name":"email",
+                "type":"email",
+                "Text":"Email",
+                "PlaceHolder":"Ваш Email"
+            },
+            {
+                "name":"phone",
+                "type":"text",
+                "Text":"Номер Телефону",
+                "PlaceHolder":"Ваш номер телефону"
+            },
+            {
+                "name":"psw",
+                "type":"password",
+                "Text":"Пароль",
+                "PlaceHolder":"Ведіть пароль"
+            },
+            {
+                "name":"psw-repeat",
+                "type":"password",
+                "Text":"Повторіть пароль",
+                "PlaceHolder":"Повторний пароль"
+            }
+        ]
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="RegistrationPageStyles.css" type="text/css">
+  <title>Реєстрація</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel" src="./jsx-registration/RegistrationPage.jsx"></script>
+  <script type="text/babel" src="./jsx-registration/registrationItem.jsx"></script>
+  <script type="text/babel">
+    let registrationData;
+    Promise.all([
+      fetch('./json/RegistrationPage.json').
+      then(resp => resp.json()).
+      then(data => {
+        registrationData = data.RegistrationPageData;
+      })
+    ]).then(
+      ()=>{
+        const rootNode = document.getElementById("app");    
+				const root = ReactDOM.createRoot(rootNode);
+        root.render(
+          <React.StrictMode>
+            <RegistrationPage RegistrationInfo={registrationData.RegistrationInfo}></RegistrationPage>
+          </React.StrictMode>
+        )
+      }
+    )
+  </script>
+</body>
+</html>
