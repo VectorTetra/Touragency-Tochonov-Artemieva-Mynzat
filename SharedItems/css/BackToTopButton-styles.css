@@ -10,14 +10,27 @@
     cursor: pointer;
     white-space: nowrap;
     text-indent: 100%;
-    width: 30px;
+    /* width: 30px;
     height: 30px;
     right: 20px;
-    bottom: 60px;
+    bottom: 60px; */
+    width: 5vmax;
+    aspect-ratio: 1 / 1;
+    right: 3.5vmax;
+    bottom: 7vmax;
     z-index: 3;
     opacity: 1;
     transition: background-color .3s,opacity .5s,visibility .5s;
 }
+@media (pointer: coarse) and (orientation: portrait)
+{
+
+}
+@media (pointer: coarse) and (orientation: landscape)
+{
+
+}
 .BackToTopButton:hover{
-    bottom: 50px;
+   transform: scale(1.1);
+   background-color: blueviolet;
 }
