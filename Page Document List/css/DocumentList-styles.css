@@ -110,4 +110,15 @@
 	.documentList-paragraph{
 		font-size: 3dvh;
 	}
+	.documentList-Date
+	{
+		font-size: 1.5dvh;
+	}
+	.documentList-Author
+	{
+		font-size: 1.75dvh;
+	}
+	.documentList-list{
+		font-size: 3dvh;
+	}
 }
