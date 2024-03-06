@@ -99,7 +99,7 @@
 	display: flex;
 	margin: 20px 0 0 0;
 }
-@media (pointer: coarse) {
+@media (pointer: coarse) and (orientation: portrait) {
 
 	.documentList-mainCaption{
 		font-size: 5dvh;
@@ -132,5 +132,40 @@
 	.documentList-subListItem{
 		list-style-image: url(../../images/ArticleMarkerGreen40px.png);	
 		padding-left: 15px;
+	}
+}
+@media (pointer: coarse) and (orientation: landscape) {
+
+	.documentList-mainCaption{
+		font-size: 3dvw;
+	}
+	.documentList-caption1
+	{
+		font-size: 2.7dvw;
+	}
+	.documentList-caption2{
+		font-size: 2.4dvw;
+	}
+	.documentList-paragraph{
+		font-size: 1.8dvw;
+	}
+	.documentList-Date
+	{
+		font-size: 0.9dvw;
+	}
+	.documentList-Author
+	{
+		font-size: 1.05dvw;
+	}
+	.documentList-list{
+		font-size: 1.5dvw;
+	}
+	.documentList-listItem{
+		list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
+		padding-left: 7.5px;
+	}
+	.documentList-subListItem{
+		list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);	
+		padding-left: 7.5px;
 	}
 }
