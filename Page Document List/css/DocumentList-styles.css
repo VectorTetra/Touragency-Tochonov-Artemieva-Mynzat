@@ -72,9 +72,12 @@
 	margin: 20px 0 0 0;
 	justify-content: center;
 }
-.documentList-image{
-	border-radius: 50px;
-	min-height: 400px;
+.documentList-image {
+    border-radius: clamp(10px, 3vmin, 50px);
+    /* min-height: 400px; */
+    width: 90vw;
+    aspect-ratio: 2.7 / 1;
+    /* max-height: 70vmin;*/
 }
 
 .documentList-listContainer
