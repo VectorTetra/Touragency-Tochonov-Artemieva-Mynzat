@@ -95,3 +95,19 @@
 	display: flex;
 	margin: 20px 0 0 0;
 }
+@media (pointer: coarse) and (orientation: portrait) {
+
+	.documentList-mainCaption{
+		font-size: 5dvh;
+	}
+	.documentList-caption1
+	{
+		font-size: 4.5dvh;
+	}
+	.documentList-caption2{
+		font-size: 4dvh;
+	}
+	.documentList-paragraph{
+		font-size: 3dvh;
+	}
+}
