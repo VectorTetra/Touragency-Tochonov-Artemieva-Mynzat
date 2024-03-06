@@ -87,9 +87,13 @@
 .documentList-list{
 	margin: 20px 0 0 0;
 }
-.documentList-listItem{}
+.documentList-listItem{
+	list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
+}
 .documentList-subList{}
-.documentList-subListItem{}
+.documentList-subListItem{
+	list-style-image: url(../../images/ArticleMarkerGreen20px.png);
+}
 
 .documentList-paragraph{
 	display: flex;

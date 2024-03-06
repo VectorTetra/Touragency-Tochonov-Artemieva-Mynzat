@@ -7,7 +7,7 @@ function DocumentListList(props) {
 						console.log(item.subList);
 						{
 							let isSublist = item.subList;
-							return <li key={crypto.randomUUID()} >
+							return <li key={crypto.randomUUID()} className="documentList-listItem"  >
 								{item.text}
 								{
 									(isSublist !== null) ? <DocumentListListItemWithSubitems data={item} /> : null
