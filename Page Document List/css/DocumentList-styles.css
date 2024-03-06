@@ -147,7 +147,7 @@
 		font-size: 2.4dvw;
 	}
 	.documentList-paragraph{
-		font-size: 1.8dvw;
+		font-size: 1.5dvw;
 	}
 	.documentList-Date
 	{
@@ -165,7 +165,7 @@
 		padding-left: 7.5px;
 	}
 	.documentList-subListItem{
-		list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);	
+		list-style-image: url(../../images/ArticleMarkerGreen20px.png);	
 		padding-left: 7.5px;
 	}
 }
