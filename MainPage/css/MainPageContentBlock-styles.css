@@ -316,8 +316,8 @@ a{
 		align-items: center;
 		width: 100%;
 		font-weight: 800;
-		margin: 2vh 0 2vh 0;
-		text-wrap: nowrap;
+		margin: 2vh 1vh 2vh 1vh;
+		text-wrap: wrap;
 	}
 	
 	.news {

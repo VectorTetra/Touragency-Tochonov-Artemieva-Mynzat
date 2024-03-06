@@ -64,7 +64,7 @@
 		},
 		{
 			"objType":"image",
-			"url":"https://t4.ftcdn.net/jpg/02/65/26/83/360_F_265268314_LmykO3vrtzmh3TQbBdnxj9vUczqqJXCU.jpg"
+			"url":"../images/DocumentList-BountyBeach112233.jpg"
 		},
 		{
 			"objType":"caption-2",
@@ -144,7 +144,7 @@
 		},
 		{
 			"objType":"image",
-			"url":"https://24tv.ua/resources/photos/news/202208/2118218.jpg?v=1659702814000&w=840&h=472&fit=cover&output=webp&q=50"
+			"url":"../images/DocumentList-Passports112233.jpg"
 		},
 		{
 			"objType":"caption-1",
@@ -154,7 +154,7 @@
 			"objType":"list",
 			"listItems":[
 				{
-					"text":"Вивчіть законодавство країни, в яку вирушайте.",
+					"text":"Вивчіть законодавство країни, в яку вирушаєте.",
 					"subList":null
 				},
 				{

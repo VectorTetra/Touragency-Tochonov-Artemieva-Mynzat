@@ -72,9 +72,12 @@
 	margin: 20px 0 0 0;
 	justify-content: center;
 }
-.documentList-image{
-	border-radius: 50px;
-	min-height: 400px;
+.documentList-image {
+    border-radius: clamp(10px, 3vmin, 50px);
+    /* min-height: 400px; */
+    width: 90vw;
+    aspect-ratio: 2.7 / 1;
+    /* max-height: 70vmin;*/
 }
 
 .documentList-listContainer
@@ -84,11 +87,85 @@
 .documentList-list{
 	margin: 20px 0 0 0;
 }
-.documentList-listItem{}
+.documentList-listItem{
+	list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
+}
 .documentList-subList{}
-.documentList-subListItem{}
+.documentList-subListItem{
+	list-style-image: url(../../images/ArticleMarkerGreen20px.png);	
+}
 
 .documentList-paragraph{
 	display: flex;
 	margin: 20px 0 0 0;
+}
+@media (pointer: coarse) and (orientation: portrait) {
+
+	.documentList-mainCaption{
+		font-size: 5vmax;
+	}
+	.documentList-caption1
+	{
+		font-size: 4.5vmax;
+	}
+	.documentList-caption2{
+		font-size: 4vmax;
+	}
+	.documentList-paragraph{
+		font-size: 3vmax;
+	}
+	.documentList-Date
+	{
+		font-size: 1.5vmax;
+	}
+	.documentList-Author
+	{
+		font-size: 1.75vmax;
+	}
+	.documentList-list{
+		font-size: 2.5vmax;
+	}
+	.documentList-listItem{
+		list-style-image: url(../../images/ArticleMarkerDarkBlue40px.png);
+		padding-left: 15px;
+	}
+	.documentList-subListItem{
+		list-style-image: url(../../images/ArticleMarkerGreen40px.png);	
+		padding-left: 15px;
+	}
+}
+@media (pointer: coarse) and (orientation: landscape) {
+
+	.documentList-mainCaption{
+		font-size: 3.75vmax;
+	}
+	.documentList-caption1
+	{
+		font-size: 3.375vmax;
+	}
+	.documentList-caption2{
+		font-size: 3vmax;
+	}
+	.documentList-paragraph{
+		font-size: 1.875vmax;
+	}
+	.documentList-Date
+	{
+		font-size: 1.125vmax;
+	}
+	.documentList-Author
+	{
+		font-size: 1.3125vmax;
+	}
+	.documentList-list{
+		font-size: 1.875vmax;
+	}
+	.documentList-listItem{
+		list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
+		padding-left: 7.5px;
+	}
+	.documentList-subListItem{
+		list-style-image: url(../../images/ArticleMarkerGreen20px.png);	
+		padding-left: 7.5px;
+	}
 }
