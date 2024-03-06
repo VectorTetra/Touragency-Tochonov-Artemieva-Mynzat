@@ -126,9 +126,9 @@
 		font-size: 2.5dvh;
 	}
 	.documentList-listItem{
-		list-style-image: url(../../images/ArticleMarkerDarkBlue.png);
+		list-style-image: url(../../images/ArticleMarkerDarkBlue40px.png);
 	}
 	.documentList-subListItem{
-		list-style-image: url(../../images/ArticleMarkerGreen.png);	
+		list-style-image: url(../../images/ArticleMarkerGreen40px.png);	
 	}
 }
