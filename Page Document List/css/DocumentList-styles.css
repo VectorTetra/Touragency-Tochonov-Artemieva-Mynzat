@@ -99,7 +99,7 @@
 	display: flex;
 	margin: 20px 0 0 0;
 }
-@media (pointer: coarse) and (orientation: portrait) {
+@media (pointer: coarse) {
 
 	.documentList-mainCaption{
 		font-size: 5dvh;
