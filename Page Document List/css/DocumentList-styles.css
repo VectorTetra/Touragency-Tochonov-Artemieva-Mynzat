@@ -102,28 +102,28 @@
 @media (pointer: coarse) and (orientation: portrait) {
 
 	.documentList-mainCaption{
-		font-size: 5dvh;
+		font-size: 5vmax;
 	}
 	.documentList-caption1
 	{
-		font-size: 4.5dvh;
+		font-size: 4.5vmax;
 	}
 	.documentList-caption2{
-		font-size: 4dvh;
+		font-size: 4vmax;
 	}
 	.documentList-paragraph{
-		font-size: 3dvh;
+		font-size: 3vmax;
 	}
 	.documentList-Date
 	{
-		font-size: 1.5dvh;
+		font-size: 1.5vmax;
 	}
 	.documentList-Author
 	{
-		font-size: 1.75dvh;
+		font-size: 1.75vmax;
 	}
 	.documentList-list{
-		font-size: 2.5dvh;
+		font-size: 2.5vmax;
 	}
 	.documentList-listItem{
 		list-style-image: url(../../images/ArticleMarkerDarkBlue40px.png);
@@ -137,28 +137,28 @@
 @media (pointer: coarse) and (orientation: landscape) {
 
 	.documentList-mainCaption{
-		font-size: 3.75dvw;
+		font-size: 3.75vmax;
 	}
 	.documentList-caption1
 	{
-		font-size: 3.375dvw;
+		font-size: 3.375vmax;
 	}
 	.documentList-caption2{
-		font-size: 3dvw;
+		font-size: 3vmax;
 	}
 	.documentList-paragraph{
-		font-size: 1.875dvw;
+		font-size: 1.875vmax;
 	}
 	.documentList-Date
 	{
-		font-size: 1.125dvw;
+		font-size: 1.125vmax;
 	}
 	.documentList-Author
 	{
-		font-size: 1.3125dvw;
+		font-size: 1.3125vmax;
 	}
 	.documentList-list{
-		font-size: 1.875dvw;
+		font-size: 1.875vmax;
 	}
 	.documentList-listItem{
 		list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
