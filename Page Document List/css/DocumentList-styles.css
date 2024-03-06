@@ -137,28 +137,28 @@
 @media (pointer: coarse) and (orientation: landscape) {
 
 	.documentList-mainCaption{
-		font-size: 3dvw;
+		font-size: 4.5dvw;
 	}
 	.documentList-caption1
 	{
-		font-size: 2.7dvw;
+		font-size: 4.05dvw;
 	}
 	.documentList-caption2{
-		font-size: 2.4dvw;
+		font-size: 3.6dvw;
 	}
 	.documentList-paragraph{
-		font-size: 1.5dvw;
+		font-size: 2.25dvw;
 	}
 	.documentList-Date
 	{
-		font-size: 0.9dvw;
+		font-size: 1.35dvw;
 	}
 	.documentList-Author
 	{
-		font-size: 1.05dvw;
+		font-size: 1.575dvw;
 	}
 	.documentList-list{
-		font-size: 1.5dvw;
+		font-size: 2.25dvw;
 	}
 	.documentList-listItem{
 		list-style-image: url(../../images/ArticleMarkerDarkBlue20px.png);
