@@ -127,10 +127,10 @@
 	}
 	.documentList-listItem{
 		list-style-image: url(../../images/ArticleMarkerDarkBlue40px.png);
-		padding-left: 40px;
+		padding-left: 15px;
 	}
 	.documentList-subListItem{
 		list-style-image: url(../../images/ArticleMarkerGreen40px.png);	
-		padding-left: 40px;
+		padding-left: 15px;
 	}
 }
