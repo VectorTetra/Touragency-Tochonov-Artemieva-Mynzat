@@ -92,7 +92,7 @@
 }
 .documentList-subList{}
 .documentList-subListItem{
-	list-style-image: url(../../images/ArticleMarkerGreen20px.png);
+	list-style-image: url(../../images/ArticleMarkerGreen20px.png);	
 }
 
 .documentList-paragraph{
@@ -123,6 +123,12 @@
 		font-size: 1.75dvh;
 	}
 	.documentList-list{
-		font-size: 3dvh;
+		font-size: 2.5dvh;
+	}
+	.documentList-listItem{
+		list-style-image: url(../../images/ArticleMarkerDarkBlue.png);
+	}
+	.documentList-subListItem{
+		list-style-image: url(../../images/ArticleMarkerGreen.png);	
 	}
 }
