@@ -1,0 +1,92 @@
+{
+    "contacts": [
+        {
+            "objType": "logo",
+            "text": "Наші контакти"
+        },
+        {
+            "objType": "List",
+            "listItems": [
+                {
+                    "text": "Офіс компанії Магія Мандрів",
+                    "subList": [
+                        {
+                            "text": "м. Київ, вул. Басейна, 5а"
+                        },
+                        {
+                            "text": "Email: office@magiyamandriv.ua"
+                        }
+                    ]
+                },
+                {
+                    "text": "Години роботи офісу:",
+                    "subList": [
+                        {
+                            "text": "Пн - Пт: з 08-00 до 19-00"
+                        },
+                        {
+                            "text": "Сб - Нд: з 09-00 до 17-00"
+                        }
+                    ]
+                },
+                {
+                    "text": "Телефон офісу:",
+                    "subList": [
+                        {
+                            "text": "(0) 800-12-34-56"
+                        },
+                        {
+                            "text": "+38 (044) 123-45-67"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "objType": "ListMessenger",
+            "listItems": [
+                {
+                    "text": "Ми у соцмережах",
+                    "subList": [
+                        {
+                            "iconUrl": "../images/LogoWhatsapp.png",
+                            "href": "https://www.whatsapp.com/",
+                            "alt": "Whatsapp"
+                        },
+                        {
+                            "iconUrl": "../images/LogoViber.png",
+                            "href": "https://www.viber.com/ua/",
+                            "alt": "Viber"
+                        },
+                        {
+                            "iconUrl": "../images/LogoTelegram.png",
+                            "href": "https://telegram.org/",
+                            "alt": "Telegram"
+                        },
+                        {
+                            "iconUrl": "../images/LogoInstagram.png",
+                            "href": "https://www.instagram.com/",
+                            "alt": "Instagram"
+                        },
+                        {
+                            "iconUrl": "../images/LogoMessenger.png",
+                            "href": "https://www.messenger.com/?locale=ua",
+                            "alt": "Messenger"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "objType": "map",
+            "width": "800",
+            "height": "500",
+            "style=": "border:0;",
+            "allowfullscreen": "",
+            "loading": "lazy",
+            "referrerpolicy": "no-referrer-when-downgrade",
+            "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9820885691443!2d30.520330312317842!3d50.44143428789418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ceff9d5da9a9%3A0xec2792bc33d77da!2zNUEsINGD0LsuINCR0LDRgdGB0LXQudC90LDRjywgNdCQLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1709227358824!5m2!1sru!2sua"
+        }
+    ]
+}
