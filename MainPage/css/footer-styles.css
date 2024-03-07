@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
 }
 
-@media (min-width: 900px)
+@media (min-width: 900px) and (not (pointer: coarse))
 {
     .info-wrapper {
         display: flex;
@@ -32,7 +32,7 @@ body {
         margin-right: 100px;
     }
 }
-@media (max-width: 900px) 
+@media (max-width: 900px) and (not (pointer: coarse))
 {
     .info-wrapper {
         display: flex;
@@ -65,7 +65,8 @@ body {
     }
 }
 
-@media (orientation: portrait) and (cursor: coarse) {
+@media (cursor: coarse) and (orientation: portrait) 
+{
     .info-wrapper {
         display: flex;
         flex-wrap: wrap;
