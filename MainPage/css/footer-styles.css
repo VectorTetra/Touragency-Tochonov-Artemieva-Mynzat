@@ -32,7 +32,7 @@ body {
         margin-right: 100px;
     }
 }
-@media (max-width: 900px) and (orientation: portrait)
+@media (max-width: 900px) 
 {
     .info-wrapper {
         display: flex;
@@ -65,6 +65,37 @@ body {
     }
 }
 
+@media (orientation: portrait) and (cursor: coarse) {
+    .info-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 0 auto;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .reasons-footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex: 1 0 auto;
+        margin: 30px;
+    }
+    
+    .special-offers-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex: 1 0 auto;
+        margin: 30px;
+    }
+
+    .special-offers-info {
+        margin: 35px;
+        text-align: center;
+        width: 175px;
+    }
+}
 
 
 .reasons-info {
