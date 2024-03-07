@@ -9,15 +9,7 @@
 				{"subItemCaption":"Тури з Європи", "href":"#"},
 				{"subItemCaption":"Автобусні тури", "href":"#"},
 				{"subItemCaption":"Авіа тури", "href":"#"},
-				{"subItemCaption":"Круїзи", "href":"#"},
-				{"subItemCaption":"Екзотика", "href":"#"},
-				{"subItemCaption":"Зимові розваги", "href":"#"},
-				{"subItemCaption":"Новорічні тури", "href":"#"},
-				{"subItemCaption":"Відпочинок на морі", "href":"#"},
-				{"subItemCaption":"День Валентина", "href":"#"},
-				{"subItemCaption":"Карнавал", "href":"#"},
-				{"subItemCaption":"Травневі свята", "href":"#"},
-				{"subItemCaption":"Парк тюльпанів Кьокенхоф", "href":"#"}
+				{"subItemCaption":"Відпочинок на морі", "href":"#"}
 			]
 		},
 		{
@@ -55,9 +47,9 @@
 			"mainHref":null,
 			"submenu":
 			[
-				{"subItemCaption":"Про нас", "href":"#"},
+				{"subItemCaption":"Про нас", "href":"../Page%20About%20Us/aboutUs.html"},
 				{"subItemCaption":"Новини", "href":"#"},
-				{"subItemCaption":"Контакти", "href":"#"}
+				{"subItemCaption":"Контакти", "href":"../PageContacts/Contacts.html"}
 			]
 		},
 		{
@@ -67,8 +59,7 @@
 			[
 				{"subItemCaption":"Всі відгуки", "href":"#"},
 				{"subItemCaption":"Відгуки по країнами", "href":"#"},
-				{"subItemCaption":"Відгуки по турам", "href":"#"},
-				{"subItemCaption":"Як написати відгук", "href":"#"}
+				{"subItemCaption":"Відгуки по турам", "href":"#"}
 			]
 		}
 	]
