@@ -114,7 +114,7 @@ input {
     }
 }
 
-@media (orientation: portrait)
+@media (orientation: portrait) and (pointer: coarse)
 {   
     .search-bar-wrapper {
         display: flex;
@@ -122,8 +122,8 @@ input {
         background: rgba(74, 77, 255, 0.75);
         color: white;
         border-radius: 10px;
-        min-height: 400px;
-        max-height: 1500px;
+        min-height: 275px;
+        max-height: 735px;
         width: 90%;
         justify-content: center;
         margin: auto;
@@ -156,11 +156,11 @@ input {
         margin-top: 5px;
         text-align: left;
         flex-direction: column;
-        width: 310px
+        width: 410px
     }
 
     select {
-        width: 300px;
+        width: 400px;
         height: 35px;
         margin: 5px;
     }
