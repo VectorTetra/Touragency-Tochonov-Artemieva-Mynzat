@@ -31,6 +31,25 @@ body {
         margin-left: 100px;
         margin-right: 100px;
     }
+
+    .special-offers-info {
+        margin: 35px;
+        text-align: center;
+        width: 175px;
+    }
+
+    .reasons-info {
+        margin: 15px;
+        text-align: center;
+    }
+
+    .dot {
+        height: 85px;
+        width: 85px;
+        background-color: #f3a005;
+        border-radius: 50%;
+        display: inline-block;
+    }
 }
 @media (width <= 900px) and (not (pointer: coarse))
 {
@@ -63,6 +82,19 @@ body {
         text-align: center;
         width: 175px;
     }
+
+    .dot {
+        height: 85px;
+        width: 85px;
+        background-color: #f3a005;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .reasons-info {
+        margin: 15px;
+        text-align: center;
+    }
 }
 
 @media (pointer: coarse) and (orientation: portrait) 
@@ -71,8 +103,6 @@ body {
         display: flex;
         flex-wrap: wrap;
         flex: 1 0 auto;
-        justify-content: center;
-        align-items: center;
         font-size: 0.9rem;
         
     }
@@ -89,43 +119,50 @@ body {
         flex-direction: column;
         height: auto;
         flex: 1 0 auto;
-        margin: 30px;
     }
 
     .special-offers-info {
-        margin: 35px;
+        margin-top: 35px;
+        margin-right: 5px;
+        margin-left: 5px;
         text-align: center;
         width: 175px;
     }
-    .reasons-caption {
+    .reasons-caption .special-offers-caption {
         font-size: 2.5rem;
     }
 
-    .info-caption {
+    .info-caption .SOCaption {
         font-size: 1.5rem;
     }
 
     .info-paragraph {
         font-size: 0.9rem;
     }
+
+    .SOImage {
+        width: 90px;
+        height: auto;
+    }
+    
+    .dot {
+        height: 105px;
+        width: 105px;
+        background-color: #f3a005;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .reasons-info {
+        margin: 15px;
+        text-align: center;
+    }
 }
 
 
-.reasons-info {
-    margin: 15px;
-    text-align: center;
-}
 
-.dot {
-    height: 85px;
-    width: 85px;
-    background-color: #f3a005;
-    border-radius: 50%;
-    display: inline-block;
-}
 
-.special-offers-info {
-    margin: 35px;
-    text-align: center;
-}
+
+
+
 
