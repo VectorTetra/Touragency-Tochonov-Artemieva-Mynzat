@@ -3,10 +3,22 @@
     {
         "RegistrationInfo":[
             {
+                "name":"surname",
+                "type":"text",
+                "Text":"Призвіще",
+                "PlaceHolder":"Ваше прізвище"
+            },
+            {
                 "name":"name",
                 "type":"text",
-                "Text":"ПІБ",
+                "Text":"Ім'я",
                 "PlaceHolder":"Ваше повне ім'я"
+            },
+            {
+                "name":"middlename",
+                "type":"text",
+                "Text":"По-батькові",
+                "PlaceHolder":"По-батькові"
             },
             {
                 "name":"nickname",
