@@ -104,7 +104,8 @@ body {
         flex-wrap: wrap;
         flex: 1 0 auto;
         font-size: 0.9rem;
-        
+        justify-content: center;
+        align-items: center;
     }
     .reasons-footer-wrapper {
         display: flex;
@@ -112,6 +113,8 @@ body {
         height: auto;
         flex: 1 0 auto;
         margin: 30px;
+        justify-content: center;
+        align-items: center;
     }
     
     .special-offers-wrapper {
@@ -119,6 +122,8 @@ body {
         flex-direction: column;
         height: auto;
         flex: 1 0 auto;
+        justify-content: center;
+        align-items: center;
     }
 
     .special-offers-info {
