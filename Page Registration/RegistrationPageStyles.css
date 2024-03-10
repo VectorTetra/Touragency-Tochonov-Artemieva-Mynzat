@@ -133,7 +133,7 @@
   .signin {
     background-color: #f1f1f1;
     text-align: center;
-    width: 100%;
+    width: 96%;
   }
 
   #termsText
@@ -151,7 +151,7 @@
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
   }
-  
+
   .container {
     background-color: white;
     display: flex;
