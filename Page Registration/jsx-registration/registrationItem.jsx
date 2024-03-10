@@ -11,6 +11,7 @@ function RegistrationItem(props)
                 )
                 
             }
+            <br/>
             <span class="inv-span"></span>
         </div>
     )
