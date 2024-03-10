@@ -79,7 +79,6 @@ body {
   }
   
   .registration-item {
-    margin: auto;
     width: 95%;
     flex-direction: column;
   }
