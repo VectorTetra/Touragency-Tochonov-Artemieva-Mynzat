@@ -9,7 +9,7 @@ function RegistrationPage(props){
                     <RegistrationItem name={item.name} type={item.type} text={item.Text} placeHolder={item.PlaceHolder}/>)
                 }
 
-                <p>Створюючи аккаунт ви походжуєтесь на <a href="#">Умови та Конфіденційність</a> сайту.</p>
+                <p id="termsText">Створюючи аккаунт ви походжуєтесь на <a href="#">Умови та Конфіденційність</a> сайту.</p>
                 <button type="submit" class="registerbtn">Зареєструватися</button>
             </div>
             <div class="container signin">

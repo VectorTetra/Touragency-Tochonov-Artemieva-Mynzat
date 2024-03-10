@@ -1,13 +1,15 @@
 
-body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
-	overflow-x: hidden;
-	background-image: linear-gradient(to left, rgb(255, 250, 212),rgb(252, 208, 150));
-}
 
 @media (not (pointer: coarse)){
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-image: linear-gradient(to left, rgb(255, 250, 212),rgb(252, 208, 150));
+  }
+
   .container {
     padding: 16px;
     background-color: white;
@@ -68,16 +70,23 @@ body {
 }
 @media (pointer: coarse) and (orientation: portrait)
 {
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
     background-color: white;
+    padding: 5px;
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 97%;
     margin: auto; 
     justify-content: center;
-    
+    align-items: center;
   }
   
   .registration-item {
@@ -117,20 +126,32 @@ body {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 88%;
+    width: 90%;
     opacity: 0.9;
     border-radius: 10px;
   }
   .signin {
     background-color: #f1f1f1;
     text-align: center;
+    width: 100%;
   }
 
+  #termsText
+  {
+    text-align: center;
+  }
 
 }
 
 @media (pointer: coarse) and (orientation: landscape)
 {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+  
   .container {
     background-color: white;
     display: flex;
