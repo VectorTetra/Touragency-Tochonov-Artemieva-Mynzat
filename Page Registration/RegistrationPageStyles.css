@@ -69,13 +69,15 @@ body {
 @media (pointer: coarse) and (orientation: portrait)
 {
   .container {
-    padding: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     margin: auto; 
     justify-content: center;
+    
   }
   
   .registration-item {
@@ -84,7 +86,7 @@ body {
   }
   
   input[type=text], input[type=password], input[type=email] {
-    width: 85%;
+    width: 90%;
     padding: 15px;
     margin: 5px 0 0px 0;
     display: inline-block;
@@ -126,14 +128,75 @@ body {
 
 
 }
-  .registerbtn:hover {
-    opacity: 1;
+
+@media (pointer: coarse) and (orientation: landscape)
+{
+  .container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .registration-item {
+    width: 85%;
+    flex-direction: column;
+    
+  }
+  
+  input[type=text], input[type=password], input[type=email] {
+    width: 96%;
+    padding: 15px;
+    margin: 5px 0 0px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
   }
   
   
-  a {
-    color: dodgerblue;
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
   }
   
+  .inv-span{
+    color: red;
+    margin: 20px;
+  }
+  
+  .registerbtn {
+    background-color: rgba(74, 77, 255, 0.9);
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 88%;
+    opacity: 0.9;
+    border-radius: 10px;
+  }
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+}
+
+ .registerbtn:hover {
+   opacity: 1;
+ }
  
-  
+ 
+ a {
+   color: dodgerblue;
+ }
+ 
+
+ 

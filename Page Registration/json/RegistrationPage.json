@@ -5,7 +5,7 @@
             {
                 "name":"surname",
                 "type":"text",
-                "Text":"Призвіще",
+                "Text":"Прізвище",
                 "PlaceHolder":"Ваше прізвище"
             },
             {
@@ -42,7 +42,7 @@
                 "name":"psw",
                 "type":"password",
                 "Text":"Пароль",
-                "PlaceHolder":"Ведіть пароль"
+                "PlaceHolder":"Введіть пароль"
             },
             {
                 "name":"psw-repeat",
