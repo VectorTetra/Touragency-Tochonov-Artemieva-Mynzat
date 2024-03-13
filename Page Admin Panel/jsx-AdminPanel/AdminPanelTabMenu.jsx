@@ -8,6 +8,7 @@ class AdminPanelTabMenu extends React.Component {
 	}
 
 	sendDataToAdminPanel(TabInfo) {
+		this.setState({ isDropdownListVisible: false })
 		this.props.sendDataToAdminPanelComponent(TabInfo);
 	}
 
