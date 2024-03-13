@@ -8,9 +8,13 @@ class DropdownList extends React.Component {
 	}
 	render() {
 		return (
-			<div id="dropdownList">
+			<div id="dropdownList" style={{ display: this.props.isVisible ? 'relative' : 'none' }}>
 				{this.props.tabs.map(it => (
-					<DropdownItem iconSrc={it.tabIconUrl} name={it.name} sendDataToDropdownListComponent={this.sendDataToAdminPanelTabMenu}/>
+					<DropdownItem
+						iconSrc={it.tabIconUrl}
+						name={it.name}
+						sendDataToDropdownListComponent={this.sendDataToAdminPanelTabMenu}
+					/>
 				))}
 			</div>
 		);

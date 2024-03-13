@@ -27,3 +27,27 @@ a{
 .dropdownItem{
 	
 }
+.dropdownCaption
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	max-width: 30vw;
+	border: 2px solid steelblue;
+	border-radius: 20px;
+	background-color: #c90ae3;
+	color: white;
+	padding: 10px 0px;
+	margin: 10px;
+}
+.dropdownCaptionIcon
+{
+	width: 7vh;
+    aspect-ratio: 1 / 1;
+}
+.dropdownCaptionName
+{
+	font-size: 5vh;
+    font-family: sans-serif;
+}
