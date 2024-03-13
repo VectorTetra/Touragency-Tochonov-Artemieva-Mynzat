@@ -1,5 +1,4 @@
 function MainPageHeaderLogo(props){
-	
 	function sendDataToDropdownList(){
 		props.sendDataToDropdownListComponent({
 			"name":props.name,

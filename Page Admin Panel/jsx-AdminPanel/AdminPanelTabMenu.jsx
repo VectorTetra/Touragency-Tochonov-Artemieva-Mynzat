@@ -2,7 +2,8 @@ class AdminPanelTabMenu extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isDropdownListVisible: false
+			isDropdownListVisible: false,
+			currentTab: this.props.tabs[0]
 		};
 		this.sendDataToAdminPanel = this.sendDataToAdminPanel.bind(this);
 	}
@@ -17,6 +18,7 @@ class AdminPanelTabMenu extends React.Component {
 			<div id="adminPanelTabMenu">
 				<DropdownCaption id="adminPanelTabTogglerDropdownCaption" 
 					onClick={() => this.setState({ isDropdownListVisible: !this.state.isDropdownListVisible })} 
+					currentTab={this.state.currentTab}
 				/>
 				{this.state.isDropdownListVisible && <DropdownList tabs={this.props.tabs} sendDataToAdminPanelTabMenuComponent={this.sendDataToAdminPanel}/>}
 				
