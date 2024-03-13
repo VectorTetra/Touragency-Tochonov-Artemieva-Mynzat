@@ -13,8 +13,8 @@ function DropdownCaption(props){
 	return (
 		<div>
 			<div className="dropdownCaption" onClick={handleClick}>
-				<img src={state.currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
-				<div className="dropdownCaptionName">{state.currentTab.name}</div>
+				<img src={currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
+				<div className="dropdownCaptionName">{currentTab.name}</div>
 			</div>
 			{
 				(isDropdownListVisible === true) ?
