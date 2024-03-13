@@ -26,11 +26,27 @@ a{
 #adminPanel
 {
 }
-#adminPanelTabContainer{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+#adminPanelTabContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    position: sticky;
+    top: 14vh;
+    position: absolute;
+    /* flex: 1 1 600px; */
+    min-width: 100vw;
+}
+.tabContainerImg {
+    height: max-content;
+}
+.tabContainerCaption {
+    font-weight: 900;
+    font-size: 5vh;
+    /* width: 100vw; */
+    text-align: center;
+    font-family: cursive;
 }
 #adminPanelTabMenu{
 
