@@ -6,7 +6,7 @@ class AdminPanel extends React.Component {
 	}
 	setDataFromTab = (data) => 
 	{
-		this.targetClubRef.current.setState({ 
+		this.targetClubRef.setState({ 
 			name: data.name,
 			tabIconUrl:data.tabIconUrl
 		});
