@@ -22,7 +22,10 @@ a{
 
 }
 #dropdownList{
-
+	border-left: 2px solid steelblue;
+	border-right: 2px solid steelblue;
+	border-radius: 20px;
+	max-width: 30vw;
 }
 .dropdownItem{
 	
@@ -50,4 +53,23 @@ a{
 {
 	font-size: 5vh;
     font-family: sans-serif;
+}
+.dropdownItem
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #9feff5;
+	color: black;
+	padding: 10px 0px;
+	margin: 10px;
+}
+.dropdownItemIcon{
+	width: 7vh;
+	aspect-ratio: 1 / 1;
+}
+.dropdownItemName{
+	font-size: 5vh;
+	font-family: sans-serif;
 }
