@@ -6,6 +6,7 @@ function DropdownCaption(props){
 		setCurrentTab(TabInfo);
 		setDropdownListVisible(false);
 		props.sendDataToAdminPanelTabMenuComponent(TabInfo);
+		console.log("currentTab: ", TabInfo);
 	}
 	function handleClick() {
 		setDropdownListVisible(!isDropdownListVisible);
@@ -21,7 +22,7 @@ function DropdownCaption(props){
 				<DropdownList tabs={props.tabs} 
 					sendDataToDropdownCaptionComponent={sendDataToAdminPanelTabMenu}
 					isVisible={isDropdownListVisible}
-					currentTab={props.currentTab}
+					currentTab={currentTab}
 				/>
 				: null
 			}
