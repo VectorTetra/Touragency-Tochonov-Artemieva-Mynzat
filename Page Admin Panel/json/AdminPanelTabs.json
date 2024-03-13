@@ -1,0 +1,40 @@
+{
+	"tabs": [
+		{
+			"name": "Новини",
+			"tabIconUrl": "../images/AdminPanel-Images/news.png"
+		},
+		{
+			"name": "Люди",
+			"tabIconUrl": "../images/AdminPanel-Images/people.png"
+		},
+		{
+			"name": "Країни",
+			"tabIconUrl": "../images/AdminPanel-Images/countries.png"
+		},
+		{
+			"name": "Міста",
+			"tabIconUrl": "../images/AdminPanel-Images/cities.png"
+		},
+		{
+			"name": "Курорти",
+			"tabIconUrl": "../images/AdminPanel-Images/resorts.png"
+		},
+		{
+			"name": "Відгуки",
+			"tabIconUrl": "../images/AdminPanel-Images/reviews.png"
+		},
+		{
+			"name": "Тури",
+			"tabIconUrl": "../images/AdminPanel-Images/tours.png"
+		},
+		{
+			"name": "Готелі",
+			"tabIconUrl": "../images/AdminPanel-Images/hotels.png"
+		},
+		{
+			"name": "Облікові записи",
+			"tabIconUrl": "../images/AdminPanel-Images/accounts.png"
+		}
+	]
+}
