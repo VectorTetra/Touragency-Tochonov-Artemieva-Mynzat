@@ -1,7 +1,8 @@
 function AdminPanelTabContainer (props) {
 	return (
 		<div id="adminPanelTabContainer">
-			{/* JSX code for the admin panel tab container */}
+			<img src={state.tabIconUrl} alt={state.name} className="tabContainerImg"/>
+			<div className="tabContainerCaption">{state.name}</div>
 		</div>
 	);
 }

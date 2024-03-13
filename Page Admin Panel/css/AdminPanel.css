@@ -14,12 +14,23 @@ ul{
 a{
 	text-decoration: none;
 }
-
+.tabContainerCaption
+{
+	font-weight: 900;
+	font-size: 5vh;
+}
+.tabContainerImg
+{
+	height: 80vh;
+}
 #adminPanel
 {
 }
 #adminPanelTabContainer{
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 #adminPanelTabMenu{
 
