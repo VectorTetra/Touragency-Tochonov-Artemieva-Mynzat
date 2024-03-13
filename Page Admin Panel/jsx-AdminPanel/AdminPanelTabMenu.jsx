@@ -18,6 +18,7 @@ class AdminPanelTabMenu extends React.Component {
 				<DropdownCaption id="adminPanelTabTogglerDropdownCaption" 
 					currentTab={this.state.currentTab}
 					sendDataToAdminPanelTabMenuComponent={this.sendDataToAdminPanel}
+					tabs={this.props.tabs}
 				/>
 				
 				
