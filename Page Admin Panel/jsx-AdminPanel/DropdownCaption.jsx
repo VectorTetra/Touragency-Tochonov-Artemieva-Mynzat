@@ -3,7 +3,7 @@ function DropdownCaption(props){
 
 	function sendDataToAdminPanelTabMenu(TabInfo) {
 		setDropdownListVisible(false);
-		this.props.sendDataToAdminPanelTabMenuComponent(TabInfo);
+		props.sendDataToAdminPanelTabMenuComponent(TabInfo);
 	}
 	return (
 		<div>
@@ -11,7 +11,7 @@ function DropdownCaption(props){
 				<img src={props.currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
 				<div className="dropdownCaptionName">{props.currentTab.name}</div>
 			</div>
-			<DropdownList tabs={this.props.tabs} 
+			<DropdownList tabs={props.tabs} 
 				sendDataToDropdownCaptionComponent={this.sendDataToAdminPanel}
 				isVisible={isDropdownListVisible}
 			/>
