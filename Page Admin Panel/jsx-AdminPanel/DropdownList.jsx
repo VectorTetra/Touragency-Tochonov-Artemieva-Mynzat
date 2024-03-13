@@ -13,6 +13,7 @@ class DropdownList extends React.Component {
 		return (
 			<div id="dropdownList" >
 				{this.props.tabs.map(it => (
+					(this.props.currentTab.name === it.name) ? null :
 					<DropdownItem iconSrc={it.tabIconUrl} name={it.name} 
 					sendDataToDropdownListComponent={this.sendDataToDropdownCaption}/>
 				))}

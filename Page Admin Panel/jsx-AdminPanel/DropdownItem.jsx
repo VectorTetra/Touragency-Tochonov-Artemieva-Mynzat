@@ -7,8 +7,8 @@ function DropdownItem(props){
 	}
 	return(
 		<div className="dropdownItem" onClick={sendDataToDropdownList}>
-				<img src={props.iconSrc} alt={props.name} className="dropdownItemIcon" />
-				<div className="dropdownItemName">{props.name}</div>
+			<img src={props.iconSrc} alt={props.name} className="dropdownItemIcon" />
+			<div className="dropdownItemName">{props.name}</div>
 		</div>
 	)
 }

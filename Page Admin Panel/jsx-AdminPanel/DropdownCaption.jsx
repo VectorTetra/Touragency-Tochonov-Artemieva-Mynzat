@@ -1,7 +1,9 @@
 function DropdownCaption(props){
 	const [isDropdownListVisible, setDropdownListVisible] = React.useState(false);
+	const [currentTab, setCurrentTab] = React.useState(props.tabs[0]);
 
 	function sendDataToAdminPanelTabMenu(TabInfo) {
+		setCurrentTab(TabInfo);
 		setDropdownListVisible(false);
 		props.sendDataToAdminPanelTabMenuComponent(TabInfo);
 	}
@@ -11,14 +13,15 @@ function DropdownCaption(props){
 	return (
 		<div>
 			<div className="dropdownCaption" onClick={handleClick}>
-				<img src={props.currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
-				<div className="dropdownCaptionName">{props.currentTab.name}</div>
+				<img src={state.currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
+				<div className="dropdownCaptionName">{state.currentTab.name}</div>
 			</div>
 			{
 				(isDropdownListVisible === true) ?
 				<DropdownList tabs={props.tabs} 
 					sendDataToDropdownCaptionComponent={sendDataToAdminPanelTabMenu}
 					isVisible={isDropdownListVisible}
+					currentTab={props.currentTab}
 				/>
 				: null
 			}

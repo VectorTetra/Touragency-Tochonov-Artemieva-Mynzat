@@ -21,28 +21,31 @@ a{
 #adminPanelTabMenu{
 
 }
-#dropdownList{
-	border-left: 2px solid steelblue;
-	border-right: 2px solid steelblue;
-	border-radius: 20px;
-	max-width: 30vw;
+#dropdownList {
+    /* border-left: 2px solid steelblue; */
+    /* border-right: 2px solid steelblue; */
+    border: 2px solid lightsteelblue;
+    border-radius: 20px;
+    max-width: 30vw;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
 }
 .dropdownItem{
 	
 }
-.dropdownCaption
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
-	max-width: 30vw;
-	border: 2px solid steelblue;
-	border-radius: 20px;
-	background-color: #c90ae3;
-	color: white;
-	padding: 10px 0px;
-	margin: 10px;
+.dropdownCaption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 30vw;
+    border: 2px solid steelblue;
+    border-radius: 20px;
+    background-color: #c90ae3;
+    color: white;
+    padding: 10px 0px;
+    margin: 10px 10px 0 10px;
 }
 .dropdownCaptionIcon
 {
@@ -63,7 +66,14 @@ a{
 	background-color: #9feff5;
 	color: black;
 	padding: 10px 0px;
-	margin: 10px;
+	margin: 10px 0px;
+}
+.dropdownItem:last-child {
+    border-radius: 0 0 20px 20px;
+    border-bottom: none;
+}
+.dropdownItem:first-child {
+    border-radius: 20px 20px 0 0;
 }
 .dropdownItemIcon{
 	width: 7vh;
