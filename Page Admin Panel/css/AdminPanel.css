@@ -51,6 +51,7 @@ a{
 {
 	width: 7vh;
     aspect-ratio: 1 / 1;
+	margin-left: 1vh;
 }
 .dropdownCaptionName
 {
