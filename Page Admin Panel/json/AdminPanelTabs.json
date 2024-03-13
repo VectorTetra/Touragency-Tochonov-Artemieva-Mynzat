@@ -1,6 +1,10 @@
 {
 	"tabs": [
 		{
+			"name": "Акаунти",
+			"tabIconUrl": "../images/AdminPanel-Images/accounts.png"
+		},
+		{
 			"name": "Відгуки",
 			"tabIconUrl": "../images/AdminPanel-Images/reviews.png"
 		},
@@ -27,10 +31,6 @@
 		{
 			"name": "Новини",
 			"tabIconUrl": "../images/AdminPanel-Images/news.png"
-		},
-		{
-			"name": "Облікові записи",
-			"tabIconUrl": "../images/AdminPanel-Images/accounts.png"
 		},
 		{
 			"name": "Тури",
