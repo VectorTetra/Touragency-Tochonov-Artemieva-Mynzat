@@ -32,7 +32,7 @@
 			then(resp => resp.json()).
 			then((data => {
 				//=======================> Reading tabs data from JSON file <================================
-				adminPanelTabsData = data; 
+				adminPanelTabsData = data.tabs; 
 				console.log(adminPanelTabsData);
 			}))
 		]).then(
