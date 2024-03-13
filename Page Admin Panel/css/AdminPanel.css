@@ -19,10 +19,7 @@ a{
 	font-weight: 900;
 	font-size: 5vh;
 }
-.tabContainerImg
-{
-	height: 80vh;
-}
+
 #adminPanel
 {
 }
@@ -39,14 +36,14 @@ a{
     min-width: 100vw;
 }
 .tabContainerImg {
-    height: 70vh;
+    height: max-content;
 }
 .tabContainerCaption {
     font-weight: 900;
     font-size: 5vh;
     /* width: 100vw; */
     text-align: center;
-    font-family: cursive;
+    font-family: monospace;
 }
 #adminPanelTabMenu{
 
@@ -112,4 +109,19 @@ a{
     font-size: 3.5vh;
     font-family: sans-serif;
     margin: 1vh;
+}
+@media (pointer: coarse) and (orientation: portrait) {
+	.dropdownCaption {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		align-items: center;
+		min-width: 380px;
+		border: 2px solid steelblue;
+		border-radius: 20px 20px 0 0;
+		background-color: #c90ae3;
+		color: white;
+		padding: 10px 0px;
+		margin: 10px 10px 0 10px;
+	}
 }
