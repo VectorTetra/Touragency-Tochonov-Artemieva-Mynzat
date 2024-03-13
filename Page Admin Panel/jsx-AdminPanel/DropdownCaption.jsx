@@ -5,9 +5,12 @@ function DropdownCaption(props){
 		setDropdownListVisible(false);
 		props.sendDataToAdminPanelTabMenuComponent(TabInfo);
 	}
+	function handleClick() {
+		setDropdownListVisible(!isDropdownListVisible);
+	}
 	return (
 		<div>
-			<div className="dropdownCaption" onClick={props.onClick}>
+			<div className="dropdownCaption" onClick={handleClick}>
 				<img src={props.currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
 				<div className="dropdownCaptionName">{props.currentTab.name}</div>
 			</div>
