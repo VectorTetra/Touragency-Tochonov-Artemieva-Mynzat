@@ -116,12 +116,20 @@ a{
 		flex-direction: row;
 		justify-content: left;
 		align-items: center;
-		min-width: 380px;
+		min-width: 97vw;
 		border: 2px solid steelblue;
 		border-radius: 20px 20px 0 0;
 		background-color: #c90ae3;
 		color: white;
 		padding: 10px 0px;
 		margin: 10px 10px 0 10px;
+	}
+	#dropdownList {
+		border: 2px solid lightsteelblue;
+		border-radius: 0 0 20px 20px;
+		min-width: 97vw;
+		margin: 0 10px;
+		display: flex;
+		flex-direction: column;
 	}
 }
