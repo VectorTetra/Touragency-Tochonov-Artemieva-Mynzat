@@ -4,6 +4,7 @@ class DropdownList extends React.Component {
 		this.sendDataToDropdownCaption = this.sendDataToDropdownCaption.bind(this);
 		this.state = {isVisible: this.props.isVisible};
 		console.log("DropdownList",this.props);
+		console.log("DropdownList",this.state);
 	}
 	sendDataToDropdownCaption(TabInfo) {
 		this.props.sendDataToDropdownCaptionComponent(TabInfo);
