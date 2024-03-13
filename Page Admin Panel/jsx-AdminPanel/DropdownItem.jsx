@@ -2,7 +2,7 @@ function DropdownItem(props){
 	function sendDataToDropdownList(){
 		props.sendDataToDropdownListComponent({
 			"name":props.name,
-			"tabIconUrl":props.tabIconUrl
+			"tabIconUrl":props.iconSrc
 		});
 	}
 	return(
