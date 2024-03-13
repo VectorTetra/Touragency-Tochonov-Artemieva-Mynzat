@@ -39,7 +39,7 @@ a{
     min-width: 100vw;
 }
 .tabContainerImg {
-    height: max-content;
+    height: 80vh;
 }
 .tabContainerCaption {
     font-weight: 900;
