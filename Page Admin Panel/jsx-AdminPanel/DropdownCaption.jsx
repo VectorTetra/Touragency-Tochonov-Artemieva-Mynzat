@@ -14,10 +14,14 @@ function DropdownCaption(props){
 				<img src={props.currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
 				<div className="dropdownCaptionName">{props.currentTab.name}</div>
 			</div>
-			<DropdownList tabs={props.tabs} 
-				sendDataToDropdownCaptionComponent={sendDataToAdminPanelTabMenu}
-				isVisible={isDropdownListVisible}
-			/>
+			{
+				(isDropdownListVisible === true) ?
+				<DropdownList tabs={props.tabs} 
+					sendDataToDropdownCaptionComponent={sendDataToAdminPanelTabMenu}
+					isVisible={isDropdownListVisible}
+				/>
+				: null
+			}
 		</div>
 	);
 };
