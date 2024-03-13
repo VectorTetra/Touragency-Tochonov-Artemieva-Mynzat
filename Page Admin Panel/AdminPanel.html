@@ -31,7 +31,7 @@
 			fetch('./json/AdminPanelTabs.json').
 			then(resp => resp.json()).
 			then((data => {
-				//=======================> Reading header data from JSON file <================================
+				//=======================> Reading tabs data from JSON file <================================
 				adminPanelTabsData = data; 
 			}))
 		]).then(
@@ -41,7 +41,7 @@
 				root.render(
 					<React.StrictMode>
 						<div>
-							<AdminPanel tabs={data}/>
+							<AdminPanel tabs={adminPanelTabsData}/>
 						</div>
 					</React.StrictMode> 
 				);
