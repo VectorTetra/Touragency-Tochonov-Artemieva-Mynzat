@@ -12,7 +12,7 @@ function DropdownCaption(props){
 				<div className="dropdownCaptionName">{props.currentTab.name}</div>
 			</div>
 			<DropdownList tabs={props.tabs} 
-				sendDataToDropdownCaptionComponent={this.sendDataToAdminPanel}
+				sendDataToDropdownCaptionComponent={sendDataToAdminPanelTabMenu}
 				isVisible={isDropdownListVisible}
 			/>
 		</div>
