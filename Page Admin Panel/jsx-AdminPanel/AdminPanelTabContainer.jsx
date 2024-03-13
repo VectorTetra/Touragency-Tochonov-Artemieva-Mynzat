@@ -1,8 +1,15 @@
-function AdminPanelTabContainer (props) {
-	return (
-		<div id="adminPanelTabContainer">
-			<img src={state.tabIconUrl} alt={state.name} className="tabContainerImg"/>
-			<div className="tabContainerCaption">{state.name}</div>
-		</div>
-	);
+class AdminPanelTabContainer extends React.Component {
+	constructor(props) 
+	{
+		super(props);
+
+	}
+	render() {
+		return (
+			<div id="adminPanelTabContainer">
+				<img src={this.state.tabIconUrl} alt={this.state.name} className="tabContainerImg"/>
+				<div className="tabContainerCaption">{this.state.name}</div>
+			</div>
+		);
+	}
 }
