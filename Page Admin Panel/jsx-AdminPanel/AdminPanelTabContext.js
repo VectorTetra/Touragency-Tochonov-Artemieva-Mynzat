@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext} from 'react';
 
 let AdminPanelTabContext = React.createContext({
 	"tabs":[], 
