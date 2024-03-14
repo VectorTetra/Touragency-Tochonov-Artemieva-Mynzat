@@ -4,7 +4,7 @@
 import { createContext } from "react";
 
 export default function AdminPanel (props) {
-	export const TabContext = createContext(
+	const TabContext = createContext(
 		{
 			"tabs":props.tabs, 
 			"activeTab":props.tabs[0],
