@@ -3,19 +3,23 @@
 // Це дозволить уникнути props-drilling
 import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function AdminPanel (props) {
-	return (
-		<div id="adminPanel">
-			{/* {
-				console.log("AdminPanelTabContext: ", AdminPanelTabContext)
-			} */}
-			<AdminPanelTabContext.Provider value={{
-			"tabs":props.tabs, 
-			"activeTab":props.tabs[0],
-			"isDropdownListVisible":false
-			}}>
-				<AdminPanelTabMenu/>
-				<AdminPanelTabContainer/>
+	function AdminPanel(props) {
+		return (
+			<AdminPanelTabContext.Provider
+				value={{
+					"tabs": props.tabs,
+					"activeTab": props.tabs[0],
+					"isDropdownListVisible": false,
+				}}
+			>
+				<div id="adminPanel">
+					{/* {
+						console.log("AdminPanelTabContext: ", AdminPanelTabContext)
+					} */}
+					<AdminPanelTabMenu />
+					<AdminPanelTabContainer />
+				</div>
 			</AdminPanelTabContext.Provider>
-		</div>
-	);
+		);
+	}
 }
