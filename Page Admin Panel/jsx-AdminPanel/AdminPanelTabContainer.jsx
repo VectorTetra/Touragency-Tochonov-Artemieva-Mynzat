@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AdminPanelTabContext } from "./AdminPanelTabContext";
+import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function AdminPanelTabContainer(props) {
 	const {AdminPanelTabContainerTabContext, setAdminPanelTabContainerTabContext} = useContext(AdminPanelTabContext);
 	return (

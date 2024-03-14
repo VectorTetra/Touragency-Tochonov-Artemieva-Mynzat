@@ -1,7 +1,7 @@
 // Ми зможемо використовувати цей TabContext , щоб використовувати його змінні замість state
 // Для цього використаємо useContext
 import React, { useContext } from 'react';
-import { AdminPanelTabContext } from "./AdminPanelTabContext";
+import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function DropdownCaption(props){
 
 	const {DropdownCaptionTabContext, setDropdownCaptionTabContext} = useContext(AdminPanelTabContext);
