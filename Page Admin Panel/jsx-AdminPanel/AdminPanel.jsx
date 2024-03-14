@@ -5,9 +5,9 @@ import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function AdminPanel (props) {
 	return (
 		<div id="adminPanel">
-			{
+			{/* {
 				console.log("AdminPanelTabContext: ", AdminPanelTabContext)
-			}
+			} */}
 			<AdminPanelTabContext.Provider value={{
 			"tabs":props.tabs, 
 			"activeTab":props.tabs[0],
