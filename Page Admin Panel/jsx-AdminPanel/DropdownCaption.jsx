@@ -5,7 +5,7 @@ function DropdownCaption(props){
 
 	const {DropdownCaptionTabContext, setDropdownCaptionTabContext} = useContext(TabContext);
 	function handleClick() {
-		setDropdownCaptionTabContext({...DropdownCaptionTabContext, isDropdownListVisible: !DropdownCaptionTabContext.isDropdownListVisible})
+		setDropdownCaptionTabContext({...DropdownCaptionTabContext, "isDropdownListVisible": !DropdownCaptionTabContext.isDropdownListVisible})
 	}
 	return (
 		<div>

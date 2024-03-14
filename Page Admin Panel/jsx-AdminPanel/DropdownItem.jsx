@@ -4,11 +4,11 @@ function DropdownItem(props){
 	function handleClick() {
 		setDropdownItemTabContext(
 			{...DropdownItemTabContext,
-			activeTab:{
+			"activeTab":{
 				"name": props.name,
 				"tabIconUrl": props.iconSrc
 			},
-			isDropdownListVisible: false})
+			"isDropdownListVisible": false})
 	}
 	return(
 		<div className="dropdownItem" onClick={handleClick}>

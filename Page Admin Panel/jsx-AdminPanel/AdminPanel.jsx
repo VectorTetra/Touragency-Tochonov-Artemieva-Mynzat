@@ -14,9 +14,9 @@ const AdminPanel = (props) => {
 	return (
 		<div id="adminPanel">
 			<TabContext.Provider value={{
-			tabs:props.tabs, 
-			activeTab:props.tabs[0],
-			isDropdownListVisible:false
+			"tabs":props.tabs, 
+			"activeTab":props.tabs[0],
+			"isDropdownListVisible":false
 			}}>
 				<AdminPanelTabMenu/>
 				<AdminPanelTabContainer/>
