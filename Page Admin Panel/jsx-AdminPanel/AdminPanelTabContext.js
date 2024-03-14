@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const AdminPanelTabContext = React.createContext({
+let AdminPanelTabContext = React.createContext({
 	"tabs":[], 
 	"activeTab":{},
 	"isDropdownListVisible":false
 	});
+
+export default AdminPanelTabContext;
