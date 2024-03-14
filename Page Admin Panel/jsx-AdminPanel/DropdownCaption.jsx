@@ -1,5 +1,6 @@
 // Ми зможемо використовувати цей TabContext , щоб використовувати його змінні замість state
 // Для цього використаємо useContext
+import { useContext } from 'react';
 import {TabContext} from './AdminPanel.jsx';
 function DropdownCaption(props){
 

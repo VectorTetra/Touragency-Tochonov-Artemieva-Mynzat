@@ -3,8 +3,8 @@
 // Це дозволить уникнути props-drilling
 import { createContext } from "react";
 
-const AdminPanel = (props) => {
-	const TabContext = createContext(
+export default function AdminPanel (props) {
+	export const TabContext = createContext(
 		{
 			"tabs":props.tabs, 
 			"activeTab":props.tabs[0],
