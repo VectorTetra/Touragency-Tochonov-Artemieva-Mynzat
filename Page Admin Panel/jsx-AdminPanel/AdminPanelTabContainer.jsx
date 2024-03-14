@@ -1,15 +1,10 @@
-class AdminPanelTabContainer extends React.Component {
-	constructor(props) 
-	{
-		super(props);
-		this.state = {name: this.props.tabs[0].name, tabIconUrl: this.props.tabs[0].tabIconUrl};
-	}
-	render() {
-		return (
-			<div id="adminPanelTabContainer">
-				<img src={this.state.tabIconUrl} alt={this.state.name} className="tabContainerImg"/>
-				<div className="tabContainerCaption">{this.state.name}</div>
-			</div>
-		);
-	}
+import {TabContext} from './AdminPanel.jsx';
+function AdminPanelTabContainer(props) {
+	const {AdminPanelTabContainerTabContext, setAdminPanelTabContainerTabContext} = useContext(TabContext);
+	return (
+		<div id="adminPanelTabContainer">
+			<img src={AdminPanelTabContainerTabContext.tabIconUrl} alt={AdminPanelTabContainerTabContext.name} className="tabContainerImg" />
+			<div className="tabContainerCaption">{AdminPanelTabContainerTabContext.name}</div>
+		</div>
+	);
 }

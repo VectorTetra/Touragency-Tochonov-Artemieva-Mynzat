@@ -1,23 +1,26 @@
-class AdminPanel extends React.Component {
-	constructor(props) {
-		super(props);
-		this.TabContainerRef = React.createRef();
-		this.setDataFromTab = this.setDataFromTab.bind(this);
-	}
-	setDataFromTab = (data) => 
-	{
-		this.TabContainerRef.current.setState({ 
-			name: data.name,
-			tabIconUrl:data.tabIconUrl
+// Використання контексту для передачі даних між компонентами без 
+// прямого виклику методів батьківського компонента в дочірній компоненті
+// Це дозволить уникнути props-drilling
+import { createContext } from "react";
+
+const AdminPanel = (props) => {
+	const TabContext = createContext(
+		{
+			"tabs":props.tabs, 
+			"activeTab":props.tabs[0],
+			"isDropdownListVisible":false
 		});
-	}
-	render() 
-	{
-		return (
-			<div id="adminPanel">
-				<AdminPanelTabMenu sendDataToAdminPanelComponent={this.setDataFromTab} tabs={this.props.tabs}/>
-				<AdminPanelTabContainer ref={this.TabContainerRef} tabs={this.props.tabs}/>
-			</div>
-		)
-	}
+
+	return (
+		<div id="adminPanel">
+			<TabContext.Provider value={{
+			tabs:props.tabs, 
+			activeTab:props.tabs[0],
+			isDropdownListVisible:false
+			}}>
+				<AdminPanelTabMenu/>
+				<AdminPanelTabContainer/>
+			</TabContext.Provider>
+		</div>
+	);
 }
