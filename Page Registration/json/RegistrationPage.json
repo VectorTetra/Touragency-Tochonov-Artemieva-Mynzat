@@ -6,49 +6,59 @@
                 "name":"surname",
                 "type":"text",
                 "Text":"Прізвище",
-                "PlaceHolder":"Ваше прізвище"
+                "PlaceHolder":"Ваше прізвище",
+                "pattern":"[A-Za-zА-Яа-я]"
             },
             {
                 "name":"name",
                 "type":"text",
                 "Text":"Ім'я",
-                "PlaceHolder":"Ваше повне ім'я"
+                "PlaceHolder":"Ваше повне ім'я",
+                "pattern":"[A-Za-zА-Яа-я]"
             },
             {
                 "name":"middlename",
                 "type":"text",
                 "Text":"По-батькові",
-                "PlaceHolder":"По-батькові"
+                "PlaceHolder":"По-батькові",
+                "pattern":"[A-Za-zА-Яа-я]"
+
             },
             {
                 "name":"nickname",
                 "type":"text",
                 "Text":"Псевдонім",
-                "PlaceHolder":"Ваш псевдонім"
+                "PlaceHolder":"Ваш псевдонім",
+                "pattern":"[A-Za-zА-Яа-я]"
             },
             {
                 "name":"email",
                 "type":"email",
                 "Text":"Email",
-                "PlaceHolder":"Ваш Email"
+                "PlaceHolder":"Ваш Email",
+                "pattern":"^[A-Za-z.-_]{3,}@[A-Za-z]+.[A-Za-z]+$"
+
             },
             {
                 "name":"phone",
                 "type":"text",
                 "Text":"Номер Телефону",
-                "PlaceHolder":"Ваш номер телефону"
+                "PlaceHolder":"+38 (xxx) xxx xx xx",
+                "pattern":"^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$"
             },
             {
                 "name":"psw",
                 "type":"password",
                 "Text":"Пароль",
-                "PlaceHolder":"Введіть пароль"
+                "PlaceHolder":"Введіть пароль",
+                "pattern":"[A-Za-z0-9]"
             },
             {
                 "name":"psw-repeat",
                 "type":"password",
                 "Text":"Повторіть пароль",
-                "PlaceHolder":"Повторний пароль"
+                "PlaceHolder":"Повторний пароль",
+                "pattern":"[A-Za-z0-9]"
             }
         ]
     }
