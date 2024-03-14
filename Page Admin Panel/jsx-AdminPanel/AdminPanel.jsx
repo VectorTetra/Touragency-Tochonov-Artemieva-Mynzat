@@ -1,27 +1,18 @@
 // Використання контексту для передачі даних між компонентами без 
 // прямого виклику методів батьківського компонента в дочірній компоненті
 // Це дозволить уникнути props-drilling
-import { createContext } from "react";
-
+import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function AdminPanel (props) {
-	const TabContext = createContext(
-		{
-			"tabs":props.tabs, 
-			"activeTab":props.tabs[0],
-			"isDropdownListVisible":false
-		});
-
 	return (
 		<div id="adminPanel">
-			<TabContext.Provider value={{
+			<AdminPanelTabContext.Provider value={{
 			"tabs":props.tabs, 
 			"activeTab":props.tabs[0],
 			"isDropdownListVisible":false
 			}}>
 				<AdminPanelTabMenu/>
 				<AdminPanelTabContainer/>
-			</TabContext.Provider>
+			</AdminPanelTabContext.Provider>
 		</div>
 	);
 }
-export default TabContext;

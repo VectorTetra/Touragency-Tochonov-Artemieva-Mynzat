@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import {TabContext} from './AdminPanel.jsx';
+import React, { useContext } from 'react';
+import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function DropdownItem(props){
-	const {DropdownItemTabContext, setDropdownItemTabContext} = useContext(TabContext);
+	const {DropdownItemTabContext, setDropdownItemTabContext} = useContext(AdminPanelTabContext);
 	function handleClick() {
 		setDropdownItemTabContext(
 			{...DropdownItemTabContext,
