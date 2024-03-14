@@ -4,7 +4,7 @@
 import React, { useContext } from "react";
 import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
 function AdminPanel (props) {
-	const {AdminPanelContext, setAdminPanelContext} = useContext(AdminPanelTabContext);
+	const {AdminPanelContext, setAdminPanelContext} = React.useContext(AdminPanelTabContext);
 	return (
 		<div id="adminPanel">
 			{
