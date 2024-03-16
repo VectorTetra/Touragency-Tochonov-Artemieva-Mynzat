@@ -8,7 +8,7 @@ function AuthenticationPage(props)
                     props.AuthenticationInfo.map(item => 
                     <AuthenticationItem name={item.name} type={item.type} text={item.Text} placeHolder={item.PlaceHolder}/>)
                 }
-                <button type="submit" class="registerbtn">Ввійти</button>
+                <button type="submit" class="loginbtn">Ввійти</button>
         </div>
         <div class="container signin">
             <p>Немає аккаунту? <a href="#">Зареєструватися</a></p>
