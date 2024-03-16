@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AuthenticationStyles.css" type="text/css">
     <title>Login</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    
+    <div id="app"></div>
+
+  <script type="text/babel" src="./jsx-authentication/AuthenticationPage.jsx"></script>
+  <script type="text/babel" src="./jsx-authentication/AuthenticationItem.jsx"></script>
+
+  <script type="text/babel">
+    let authenticationData;
+    Promise.all([
+			fetch('./json/AuthenticationInfo.json').
+				then(resp => resp.json()).
+				then((data => {
+					authenticationData = data.AuthenticationPageData;
+				}))
+    ]).then(
+      ()=>{
+        const rootNode = document.getElementById("app");    
+				const root = ReactDOM.createRoot(rootNode);
+        root.render(
+          <React.StrictMode>
+            <AuthenticationPage AuthenticationInfo={authenticationData.AuthenticationInfo}></AuthenticationPage>
+          </React.StrictMode>
+        )
+      }
+    )
+  </script>
 </body>
 </html>

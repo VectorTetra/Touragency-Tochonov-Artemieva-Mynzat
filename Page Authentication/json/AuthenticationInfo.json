@@ -1,0 +1,19 @@
+{
+    "AuthenticationPageData":
+    {
+        "AuthenticationInfo":[
+            {
+                "name":"login",
+                "type":"text",
+                "Text":"Введіть email, телефон або нікнейм туріста",
+                "PlaceHolder":"email, номер телефона або нікнейм"
+            },
+            {
+                "name":"password",
+                "type":"password",
+                "Text":"Пароль",
+                "PlaceHolder":"Введіть пароль"
+            }
+        ]
+    }
+}
