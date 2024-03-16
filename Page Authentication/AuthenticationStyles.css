@@ -1,0 +1,230 @@
+@media (not (pointer: coarse)){
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+        background-image: linear-gradient(to left, rgb(255, 250, 212),rgb(252, 208, 150));
+      }
+
+    .container {
+      padding: 16px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin: auto; 
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 95%;
+        padding: 15px;
+        margin: 5px 0 0px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    .inv-span{
+      color: red;
+      margin: 20px;
+    }
+
+    .loginbtn {
+      background-color: rgba(74, 77, 255, 0.9);
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      border-radius: 10px;
+    }
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    #app
+    {
+        justify-content: center;
+        align-items: center;
+        padding-top: 70px;
+    }
+}
+
+@media (pointer: coarse) and (orientation: portrait)
+{
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+      }
+    
+    .container {
+      background-color: white;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      width: 97%;
+      margin: auto; 
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .login-item {
+      width: 95%;
+      flex-direction: column;
+    }
+    
+    input[type=text], input[type=password], input[type=email] {
+      width: 90%;
+      padding: 15px;
+      margin: 5px 0 0px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    
+    .inv-span{
+      color: red;
+      margin: 20px;
+    }
+    
+    .loginbtn {
+      background-color: rgba(74, 77, 255, 0.9);
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 90%;
+      opacity: 0.9;
+      border-radius: 10px;
+    }
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+      width: 97%;
+    }
+
+    #app
+    {
+        justify-content: center;
+        align-items: center;
+        padding-top: 130px;
+    }
+}
+
+@media (pointer: coarse) and (orientation: landscape)
+{
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        overflow-x: hidden;
+      }
+    
+      .container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto; 
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .login-item {
+        width: 85%;
+        flex-direction: column;
+        
+      }
+      
+      input[type=text], input[type=password], input[type=email] {
+        width: 96%;
+        padding: 15px;
+        margin: 5px 0 0px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+      
+      input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      
+      
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+      
+      .inv-span{
+        color: red;
+        margin: 20px;
+      }
+      
+      .loginbtn {
+        background-color: rgba(74, 77, 255, 0.9);
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 88%;
+        opacity: 0.9;
+        border-radius: 10px;
+      }
+      .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+    #app
+    {
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+}
+.loginbtn:hover {
+    opacity: 1;
+  }
+  
+  
+  a {
+    color: dodgerblue;
+  }
+  
