@@ -13,31 +13,31 @@ function CountryEditForm(props){
 	// }
 	return (
 		<div id="countryEditForm">
-			<form name="countryEditForm" style="border:1px solid black;border-radius:5px;">
+			<form name="countryEditForm" style={{border: '1px solid black', borderRadius: '5px'}}>
 				<input type="hidden" name="Id" value="0" />
-				<table style="width:100%;">
+				<table style={{width: '100%'}}>
 					<tr>
 						<td>
-							<div style="padding:0 15px 0 15px;">
-								<label for="firstName">Назва країни:</label>
-								<input class="form-control" name="firstName" required/>
+							<div style={{padding: '0 15px 0 15px'}}>
+								<label htmlFor="firstName">Назва країни:</label>
+								<input className="form-control" name="firstName" required/>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<div style="padding:0 15px 0 15px;">
-								<label for="login">URL до зображення прапора країни:</label>
-								<input class="form-control" name="login" required/>
+							<div style={{padding: '0 15px 0 15px'}}>
+								<label htmlFor="login">URL до зображення прапора країни:</label>
+								<input className="form-control" name="login" required/>
 							</div>
 						</td>
 					</tr>
 				</table>
-				<div class="panel-body" style="margin:15px 0 15px 15px;">
-					<a id="userFormSubmit" class="btn btn-primary">Зберегти</a>
-					<a id="userFormReset" class="btn btn-primary">Очистити</a>
+				<div className="panel-body" style={{margin: '15px 0 15px 15px'}}>
+					<a id="userFormSubmit" className="btn btn-primary">Зберегти</a>
+					<a id="userFormReset" className="btn btn-primary">Очистити</a>
 				</div>
 			</form>
 		</div>
-	);
+	);	
 };
