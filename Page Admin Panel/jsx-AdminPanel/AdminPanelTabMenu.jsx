@@ -1,3 +1,5 @@
+import React from "react";
+import DropdownCaption from "./DropdownCaption";
 function AdminPanelTabMenu(props) {
 	return (
 		<div id="adminPanelTabMenu">
@@ -5,3 +7,4 @@ function AdminPanelTabMenu(props) {
 		</div>
 	);
 }
+export default AdminPanelTabMenu;

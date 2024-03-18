@@ -2,6 +2,7 @@
 // Для цього використаємо useContext
 import React, { useContext } from 'react';
 import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
+import DropdownList from "./DropdownList.jsx";
 function DropdownCaption(props){
 
 	const {DropdownCaptionTabContext, setDropdownCaptionTabContext} = useContext(AdminPanelTabContext);
@@ -22,3 +23,4 @@ function DropdownCaption(props){
 		</div>
 	);
 };
+export default DropdownCaption;

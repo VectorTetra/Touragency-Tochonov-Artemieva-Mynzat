@@ -9,3 +9,4 @@ function AdminPanelTabContainer(props) {
 		</div>
 	);
 }
+export default AdminPanelTabContainer;

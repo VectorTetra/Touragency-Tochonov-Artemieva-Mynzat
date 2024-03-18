@@ -18,3 +18,4 @@ function DropdownItem(props){
 		</div>
 	)
 }
+export default DropdownItem;

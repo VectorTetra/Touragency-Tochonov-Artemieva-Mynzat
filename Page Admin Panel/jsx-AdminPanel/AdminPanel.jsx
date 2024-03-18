@@ -1,7 +1,9 @@
 // Використання контексту для передачі даних між компонентами без 
 // прямого виклику методів батьківського компонента в дочірній компоненті
 // Це дозволить уникнути props-drilling
-import { AdminPanelTabContext } from "./AdminPanelTabContext.js";
+import { AdminPanelTabContext } from "./AdminPanelTabContext.jsx";
+import  AdminPanelTabMenu from "./AdminPanelTabMenu.jsx";
+import  AdminPanelTabContainer  from "./AdminPanelTabContainer.jsx";
 function AdminPanel (props) {
 	function AdminPanel(props) {
 		return (
