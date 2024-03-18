@@ -4,4 +4,4 @@ const emptyTabContext = {
 	"activeTab":{},
 	"isDropdownListVisible":false
 	};
-export const AdminPanelTabContext = createContext(emptyTabContext);
+export const AdminPanelTabContext = React.createContext(emptyTabContext);
