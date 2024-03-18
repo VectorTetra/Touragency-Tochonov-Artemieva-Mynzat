@@ -22,7 +22,7 @@ function FrameCountryToolbar(props){
 				</div>
 			</div>
 			<div id="frameCountryToolbarButtons">
-				<button className="btn btn-green" onClick={}>Додати</button>
+				<button className="btn btn-green">Додати</button>
 			</div>
 		</div>
 	);
