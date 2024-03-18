@@ -7,8 +7,9 @@ class AdminPanelTabContainer extends React.Component {
 	render() {
 		return (
 			<div id="adminPanelTabContainer">
-				<img src={this.state.tabIconUrl} alt={this.state.name} className="tabContainerImg"/>
-				<div className="tabContainerCaption">{this.state.name}</div>
+				{
+					(this.state.name === "Країни") ? <FrameCountry />: null
+				}
 			</div>
 		);
 	}
