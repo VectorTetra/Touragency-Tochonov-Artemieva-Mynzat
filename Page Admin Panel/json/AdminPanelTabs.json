@@ -125,6 +125,214 @@
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/120px-Flag_of_Bhutan.svg.png"
 				},
 				{
+					"Name": "Вануату",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/134px-Flag_of_Vanuatu.svg.png"
+				},
+				{
+					"Name": "Ватикан",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_the_Vatican_City_%282001%E2%80%932023%29.svg/80px-Flag_of_the_Vatican_City_%282001%E2%80%932023%29.svg.png"
+				},
+				{
+					"Name": "Велика Британія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/134px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
+				},
+				{
+					"Name": "В'єтнам",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/120px-Flag_of_Vietnam.svg.png"
+				},
+				{
+					"Name": "Вірменія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/160px-Flag_of_Armenia.svg.png"
+				},
+				{
+					"Name": "Венесуела",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/120px-Flag_of_Venezuela.svg.png"
+				},
+				{
+					"Name": "Габон",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/107px-Flag_of_Gabon.svg.png"
+				},
+				{
+					"Name": "Гаїті",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/134px-Flag_of_Haiti.svg.png"
+				},
+				{
+					"Name": "Гаяна",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/134px-Flag_of_Guyana.svg.png"
+				},
+				{
+					"Name": "Гамбія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/120px-Flag_of_The_Gambia.svg.png"
+				},
+				{
+					"Name": "Гана",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/120px-Flag_of_Ghana.svg.png"
+				},
+				{
+					"Name": "Гватемала",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/128px-Flag_of_Guatemala.svg.png"
+				},
+				{
+					"Name": "Гвінея",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/120px-Flag_of_Guinea.svg.png"
+				},
+				{
+					"Name": "Гвінея-Бісау",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/160px-Flag_of_Guinea-Bissau.svg.png"
+				},
+				{
+					"Name": "Гондурас",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/160px-Flag_of_Honduras.svg.png"
+				},
+				{
+					"Name": "Гренада",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/134px-Flag_of_Grenada.svg.png"
+				},
+				{
+					"Name": "Греція",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/120px-Flag_of_Greece.svg.png"
+				},
+				{
+					"Name": "Грузія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/120px-Flag_of_Georgia.svg.png"
+				},
+				{
+					"Name": "Данія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/106px-Flag_of_Denmark.svg.png"
+				},
+				{
+					"Name": "Джибуті",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/120px-Flag_of_Djibouti.svg.png"
+				},
+				{
+					"Name": "Домініка",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/160px-Flag_of_Dominica.svg.png"
+				},
+				{
+					"Name": "Домініканська Республіка",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/120px-Flag_of_the_Dominican_Republic.svg.png"
+				},
+				{
+					"Name": "Еквадор",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/120px-Flag_of_Ecuador.svg.png"
+				},
+				{
+					"Name": "Екваторіальна Гвінея",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/120px-Flag_of_Equatorial_Guinea.svg.png"
+				},
+				{
+					"Name": "Еритрея",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/160px-Flag_of_Eritrea.svg.png"
+				},
+				{
+					"Name": "Естонія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/126px-Flag_of_Estonia.svg.png"
+				},
+				{
+					"Name": "Ефіопія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/160px-Flag_of_Ethiopia.svg.png"
+				},
+				{
+					"Name": "Єгипет",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/120px-Flag_of_Egypt.svg.png"
+				},
+				{
+					"Name": "Ємен",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/120px-Flag_of_Yemen.svg.png"
+				},
+				{
+					"Name": "Замбія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/120px-Flag_of_Zambia.svg.png"
+				},
+				{
+					"Name": "Зімбабве",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/160px-Flag_of_Zimbabwe.svg.png"
+				},
+				{
+					"Name": "Ізраїль",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/110px-Flag_of_Israel.svg.png"
+				},
+				{
+					"Name": "Індія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/120px-Flag_of_India.svg.png"
+				},
+				{
+					"Name": "Індонезія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/120px-Flag_of_Indonesia.svg.png"
+				},
+				{
+					"Name": "Ірак",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/120px-Flag_of_Iraq.svg.png"
+				},
+				{
+					"Name": "Ірландія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/160px-Flag_of_Ireland.svg.png"
+				},
+				{
+					"Name": "Ісландія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/111px-Flag_of_Iceland.svg.png"
+				},
+				{
+					"Name": "Іспанія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/120px-Flag_of_Spain.svg.png"
+				},
+				{
+					"Name": "Італія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/120px-Flag_of_Italy.svg.png"
+				},
+				{
+					"Name": "Йорданія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/160px-Flag_of_Jordan.svg.png"
+				},
+				{
+					"Name": "Кабо-Верде",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/136px-Flag_of_Cape_Verde.svg.png"
+				},
+				{
+					"Name": "Казахстан",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/160px-Flag_of_Kazakhstan.svg.png"
+				},
+				{
+					"Name": "Камбоджа",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/125px-Flag_of_Cambodia.svg.png"
+				},
+				{
+					"Name": "Камерун",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/120px-Flag_of_Cameroon.svg.png"
+				},
+				{
+					"Name": "Канада",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/160px-Flag_of_Canada.svg.png"
+				},
+				{
+					"Name": "Катар",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/204px-Flag_of_Qatar.svg.png"
+				},
+				{
+					"Name": "Кенія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/120px-Flag_of_Kenya.svg.png"
+				},
+				{
+					"Name": "Кіпр",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/120px-Flag_of_Cyprus.svg.png"
+				},
+				{
+					"Name": "Киргизстан",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/134px-Flag_of_Kyrgyzstan.svg.png"
+				},
+				{
+					"Name": "Кірибаті",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/160px-Flag_of_Kiribati.svg.png"
+				},
+				{
+					"Name": "Китайська Народна Республіка (КНР)",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/120px-Flag_of_the_People%27s_Republic_of_China.svg.png"
+				},
+				{
+					"Name": "Колумбія",
+					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/120px-Flag_of_Colombia.svg.png"
+				},
+				{
 					"Name": "Комори",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/134px-Flag_of_the_Comoros.svg.png"
 				},
