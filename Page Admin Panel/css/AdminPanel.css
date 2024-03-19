@@ -29,11 +29,11 @@ a{
     justify-content: center;
     align-items: center;
     z-index: -1;
-    position: sticky;
     top: 14vh;
+    left: 2.5vw;
     position: absolute;
-    /* flex: 1 1 600px; */
-    min-width: 100vw;
+    min-width: 95vw;
+    margin: 15px auto;
 }
 .tabContainerImg {
     height: max-content;
