@@ -17,7 +17,7 @@
 	color: #fff;
 	font-weight: 700;
 	font-family: sans-serif;
-	font-size: 4vmin;
+	font-size: 3vmin;
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
@@ -36,7 +36,7 @@
 	color: #fff;
 	font-weight: 700;
 	font-family: sans-serif;
-	font-size: 4vmin;
+	font-size: 3vmin;
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
@@ -55,7 +55,7 @@
 	color: #fff;
 	font-weight: 700;
 	font-family: sans-serif;
-	font-size: 4vmin;
+	font-size: 3vmin;
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
@@ -122,19 +122,13 @@
 }
 
 .countryListItemFlagImg {
-	object-fit: cover;
-	/* max-width: 8vw; */
-	/* min-width: 100px; */
-	/* max-width: 7vmax; */
-	/* max-height: 7vmax; */
-	/* min-height: 10vmin; */
-	/* aspect-ratio: 1 / 0.66; */
-	margin-right: 3vw;
-	border: 1px solid;
-	width: 100px;
-	aspect-ratio: auto 50 / 35;
-	height: 70px;
-	align-self: center;
+    object-fit: cover;
+    margin-right: 3vw;
+    border: 1px solid;
+    width: 100px;
+	min-width: 100px;
+    height: auto;
+    align-self: center;
 }
 
 .countryListItemStatContainer {
@@ -149,15 +143,17 @@
 	line-height: 4vmin;
 	max-width: 30vmin;
 	align-self: center;
-	margin-right: 3vmin;
+	padding-right: 3vmin;
+	word-break: break-word;
 }
 
 .countryListItemFormButtonBar {
     /* margin-left: 3vmin; */
     /* margin-right: 3vw; */
     display: flex;
+	justify-content: flex-end;
     /* flex: 1 0 auto; */
-    width: 50%;
+    min-width: 50%;
 }
 
 #countryList {
