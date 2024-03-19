@@ -46,8 +46,8 @@
 }
 
 .form-editbutton {
-	background: #001aff;
-	border-radius: 1vh;
+    background: #001aff;
+    border-radius: 1vh;
     color: #fff;
     font-weight: 700;
     font-family: sans-serif;
@@ -60,6 +60,7 @@
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    margin-right: 2vh;
 }
 
 .countryEditFormRow {
@@ -119,12 +120,17 @@
     object-fit: contain;
     max-width: 5vw;
     margin-right: 3vw;
+	border: 1px solid;
 }
 
 .countryListItemNameDiv {
-	font-size: 3vmin;
-	font-weight: 1000;
+    font-size: 3vmin;
+    font-weight: 1000;
+    text-wrap: wrap;
+    line-height: 4vh;
+    max-width: 30vw;
 }
+
 .countryListItemFormButtonBar{
 	margin-left: auto;
 	margin-right: 3vw;
