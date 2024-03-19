@@ -117,23 +117,26 @@
 }
 
 .countryListItemFlagImg {
-    object-fit: contain;
-    max-width: 5vw;
+    object-fit: cover;
+    max-width: 10vw;
+    min-width: 3vw;
     margin-right: 3vw;
-	border: 1px solid;
+    border: 1px solid;
 }
 
 .countryListItemNameDiv {
-    font-size: 3vmin;
+    font-size: 4vmin;
     font-weight: 1000;
     text-wrap: wrap;
     line-height: 4vh;
     max-width: 30vw;
+    align-self: center;
 }
 
-.countryListItemFormButtonBar{
-	margin-left: auto;
-	margin-right: 3vw;
+.countryListItemFormButtonBar {
+    margin-left: auto;
+    margin-right: 3vw;
+    display: flex;
 }
 
 #countryList {

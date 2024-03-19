@@ -1,7 +1,7 @@
 function CountryListItem(props) {
 	return (
 		<div className="countryListItem">
-			<div>
+			<div style={{"display": "flex"}}>
 				<img className="countryListItemFlagImg" src={props.country.FlagUrl} alt={props.country.Name} />
 				<div className="countryListItemNameDiv">{props.country.Name}</div>
 			</div>
