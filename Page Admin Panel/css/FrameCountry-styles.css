@@ -166,12 +166,11 @@
 {
 	.countryListItemNameDiv {
 		font-size: clamp(3vmax, 6vmin, 8vmax);
-		font-weight: 1000;
-		text-wrap: pretty;
 		line-height: 8vmin;
-		align-self: center;
 		padding-right: 3vmin;
-		word-break: break-word;
 	}
-
+	.form-savebutton, .form-clearbutton, .form-editbutton {
+		font-size: 6vmin;
+		padding: 2vmin 5vmin;
+	}
 }
