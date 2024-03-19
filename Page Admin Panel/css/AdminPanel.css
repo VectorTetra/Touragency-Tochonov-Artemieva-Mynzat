@@ -125,6 +125,7 @@ a{
 		color: white;
 		padding: 10px 0px;
 		margin: 10px 10px 0 10px;
+		height: 7vh;
 	}
 	#dropdownList {
 		border: 2px solid lightsteelblue;
@@ -133,6 +134,20 @@ a{
 		margin: 0 10px;
 		display: flex;
 		flex-direction: column;
+	}
+	#adminPanelTabContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: -1;
+		top: 9vh;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		min-width: auto;
+		/* margin: 15px auto; */
 	}
 }
 @media (pointer: coarse) and (orientation: landscape) {
@@ -148,6 +163,7 @@ a{
 		color: white;
 		padding: 10px 0px;
 		margin: 10px 10px 0 10px;
+		height: 7vh;
 	}
 	#dropdownList {
 		border: 2px solid lightsteelblue;
@@ -156,5 +172,19 @@ a{
 		margin: 0 10px;
 		display: flex;
 		flex-direction: column;
+	}
+	#adminPanelTabContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: -1;
+		top: 13vh;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		min-width: auto;
+		/* margin: 15px auto; */
 	}
 }
