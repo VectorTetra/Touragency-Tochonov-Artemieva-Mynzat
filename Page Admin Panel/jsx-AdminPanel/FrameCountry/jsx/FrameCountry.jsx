@@ -7,10 +7,10 @@ function FrameCountry(props){
 
 	return (
 		<div id="frameCountry">
-			<FrameCountryHeader quantity={searchRef.getState().quantity ? searchRef.getState().quantity : 0} />
+			<FrameCountryHeader quantity={searchRef.getQuantity() ? searchRef.getQuantity() : 0} />
 			<CountryEditForm />
 			<CountrySearchBar tab={props.tab} searchRef={searchRef} />
-			<CountryList countries={searchRef.getState().countries ? searchRef.getState().countries : []} />
+			<CountryList countries={searchRef.getCountries() ? searchRef.getCountries().countries : []} />
 		</div>
 	);
 };
