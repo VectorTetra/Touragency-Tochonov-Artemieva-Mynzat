@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 class AdminPanelTabContainer extends React.Component {
 	constructor(props) 
 	{
@@ -9,14 +10,17 @@ class AdminPanelTabContainer extends React.Component {
 		let countryTab = this.props.tabs.find(el => el.name === "Країни");
 
 		return (
-			<div id="adminPanelTabContainer">
-				{
-					(this.state.name === "Країни") ? (
-						// Передайте його як проп в FrameCountry
-						<FrameCountry tab={countryTab} />
-					) : null
-				}
-			</div>
+			<Suspense fallback={<Loading />}>
+				<div id="adminPanelTabContainer">
+					{
+						(this.state.name === "Країни") ? (
+							// Передайте його як проп в FrameCountry
+							<FrameCountry tab={countryTab} />
+						) : null
+					}
+				</div>
+        	</Suspense>
+			
 		);
 	}
 }
