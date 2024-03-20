@@ -6,9 +6,9 @@ function CitySearchBar(props) {
 	const [cities, setCities] = React.useState([]);
 
 	// Список всіх міст
-	const allCities = [];
+	const allCities = props.tab.countries.flatMap(country => country.Cities);
 	React.useEffect(() => {
-		allCities = props.tab.countries.flatMap(country => country.Cities);
+		//allCities = props.tab.countries.flatMap(country => country.Cities);
     	setCities(allCities);
 		const totalCities = allCities.length;
 		setQuantity(totalCities);
