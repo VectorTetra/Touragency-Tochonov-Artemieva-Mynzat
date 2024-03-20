@@ -1,14 +1,12 @@
 function CityEditForm(props) {
-	{
-		console.log("CityEditForm countries", props.countries)
-	}
+	console.log("CityEditForm countries", props.countries)
 	return (
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<div className="countryEditFormRow">
 				<label htmlFor="countrySelect">Країна:</label>
 				<select className="countryEditFormInput" name="countrySelect" required>
 					<option value="" disabled selected>Виберіть країну</option>
-					{props.countries.map((country, index) => {
+					{props.countries?.map((country, index) => {
 						return <option key={index} value={crypto.randomUUID()}>
 							<div className="countryListItemStatContainer">
 								<img className="countryListItemFlagImg" src={country.FlagUrl} alt={country.Name} />
