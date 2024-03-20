@@ -2,8 +2,8 @@ function CountrySearchBar(props) {
 	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
 	const [countries, setCountries] = React.useState(props.tab.countries);
 	React.useEffect(() => {
-		console.log("CountrySearchBar countries", countries);
-	}, [countries]);
+		console.log("CountrySearchBar props", props);
+	}, []);
 	const handleInput = (event) => {
 		console.log("CountrySearchBar countries", countries);
 		if (event.target.value === "") {
