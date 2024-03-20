@@ -6,7 +6,7 @@ function FrameCountryHeader(props){
 					Країни
 				</div>
 				<div id="frameCountryToolbarQuantity">
-					{props.tab.countries.length} 
+					{props.quantity} 
 				</div>
 			</div>
 		</div>
