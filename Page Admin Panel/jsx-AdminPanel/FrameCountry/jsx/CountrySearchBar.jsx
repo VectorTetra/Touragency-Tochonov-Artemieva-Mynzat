@@ -1,9 +1,11 @@
-function CountrySearchBar (props) {
+function CountrySearchBar(props) {
 	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
 	const [countries, setCountries] = React.useState(props.tab.countries);
-
+	React.useEffect(() => {
+		console.log("CountrySearchBar props", props);
+	}, []);
 	const handleInput = (event) => {
-		if	(event.target.value === "") {
+		if (event.target.value === "") {
 			setCountries(props.tab.countries);
 			setQuantity(props.tab.countries.length);
 			return;
@@ -15,7 +17,7 @@ function CountrySearchBar (props) {
 
 	return (
 		<div className="countryEditFormRow searchBarRow">
-			<input className="countryEditFormInput" name="searchBar" value="" placeholder="Введіть назву країни"  onInput={handleInput} />
+			<input className="countryEditFormInput" name="searchBar" value="" placeholder="Введіть назву країни" onInput={handleInput} />
 		</div>
 	);
 };
