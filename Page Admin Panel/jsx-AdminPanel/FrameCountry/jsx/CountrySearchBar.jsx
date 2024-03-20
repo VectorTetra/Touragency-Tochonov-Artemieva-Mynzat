@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CountrySearchBar = () => {
 	return (
 		<input
@@ -8,5 +6,3 @@ const CountrySearchBar = () => {
 		/>
 	);
 };
-
-export default CountrySearchBar;
