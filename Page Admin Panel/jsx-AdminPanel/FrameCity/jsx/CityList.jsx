@@ -3,8 +3,7 @@ function CityList(props){
 		<div id="cityList">
 			{
 				props.countries.map((country, index) => {
-					return country.Cities.map((city, index) => {
-						if(props.cities.some(c => c.name === city.Name) === true)
+					return country.Cities.map((city, indext) => {
 						return <CityListItem key={crypto.randomUUID()} country={country} city={city}/>
 					})
 				})
