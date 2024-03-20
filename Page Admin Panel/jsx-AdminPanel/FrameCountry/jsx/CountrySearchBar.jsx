@@ -15,7 +15,7 @@ function CountrySearchBar(props) {
 		setCountries(filteredCountries);
 		setQuantity(filteredCountries.length);
 	};
-
+	getState = () => this.state;
 	return (
 		<div className="countryEditFormRow searchBarRow">
 			<input className="countryEditFormInput" name="searchBar" value="" placeholder="Введіть назву країни" onInput={handleInput} />
