@@ -22,22 +22,27 @@
 					"Cities": [
 						{
 							"Name": "Сідней",
+							"CountryName": "Австралія",
 							"Resorts": []
 						},
 						{
 							"Name": "Мельбурн",
-							"Resorts": []
-						},
-						{
-							"Name": "Брісбен",
+							"CountryName": "Австралія",
 							"Resorts": []
 						},
 						{
 							"Name": "Перт",
+							"CountryName": "Австралія",
 							"Resorts": []
 						},
 						{
 							"Name": "Аделаїда",
+							"CountryName": "Австралія",
+							"Resorts": []
+						},
+						{
+							"Name": "Брісбен",
+							"CountryName": "Австралія",
 							"Resorts": []
 						}
 					]
@@ -48,22 +53,27 @@
 					"Cities": [
 						{
 							"Name": "Відень",
+							"CountryName": "Австрія",
 							"Resorts": []
 						},
 						{
 							"Name": "Грац",
+							"CountryName": "Австрія",
 							"Resorts": []
 						},
 						{
 							"Name": "Лінц",
+							"CountryName": "Австрія",
 							"Resorts": []
 						},
 						{
 							"Name": "Зальцбург",
+							"CountryName": "Австрія",
 							"Resorts": []
 						},
 						{
 							"Name": "Інсбрук",
+							"CountryName": "Австрія",
 							"Resorts": []
 						}
 					]
@@ -74,22 +84,27 @@
 					"Cities": [
 						{
 							"Name": "Баку",
+							"CountryName": "Азербайджан",
 							"Resorts": []
 						},
 						{
 							"Name": "Гянджа",
+							"CountryName": "Азербайджан",
 							"Resorts": []
 						},
 						{
 							"Name": "Сумгаїт",
+							"CountryName": "Азербайджан",
 							"Resorts": []
 						},
 						{
 							"Name": "Мінгечаур",
+							"CountryName": "Азербайджан",
 							"Resorts": []
 						},
 						{
 							"Name": "Шекі",
+							"CountryName": "Азербайджан",
 							"Resorts": []
 						}
 					]
@@ -100,22 +115,27 @@
 					"Cities": [
 						{
 							"Name": "Тирана",
+							"CountryName": "Албанія",
 							"Resorts": []
 						},
 						{
 							"Name": "Дуррес",
+							"CountryName": "Албанія",
 							"Resorts": []
 						},
 						{
 							"Name": "Влора",
+							"CountryName": "Албанія",
 							"Resorts": []
 						},
 						{
 							"Name": "Шкодра",
+							"CountryName": "Албанія",
 							"Resorts": []
 						},
 						{
 							"Name": "Елбасан",
+							"CountryName": "Албанія",
 							"Resorts": []
 						}
 					]
@@ -126,24 +146,30 @@
 					"Cities": [
 						{
 							"Name": "Алжир",
+							"CountryName": "Алжир",
 							"Resorts": []
 						},
 						{
 							"Name": "Оран",
+							"CountryName": "Алжир",
 							"Resorts": []
 						},
 						{
 							"Name": "Константина",
+							"CountryName": "Алжир",
 							"Resorts": []
 						},
 						{
 							"Name": "Аннаба",
+							"CountryName": "Алжир",
 							"Resorts": []
 						},
 						{
 							"Name": "Батна",
+							"CountryName": "Алжир",
 							"Resorts": []
 						}
+					
 					]
 				},
 				{
@@ -152,22 +178,27 @@
 					"Cities": [
 						{
 							"Name": "Луанда",
+							"CountryName": "Ангола",
 							"Resorts": []
 						},
 						{
 							"Name": "Лобіто",
+							"CountryName": "Ангола",
 							"Resorts": []
 						},
 						{
 							"Name": "Хуамбо",
+							"CountryName": "Ангола",
 							"Resorts": []
 						},
 						{
 							"Name": "Кабінда",
+							"CountryName": "Ангола",
 							"Resorts": []
 						},
 						{
 							"Name": "Сумбе",
+							"CountryName": "Ангола",
 							"Resorts": []
 						}
 					]
@@ -175,25 +206,30 @@
 				{
 					"Name": "Андорра",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/114px-Flag_of_Andorra.svg.png",
-					"Cities": [
+						"Cities": [	
 						{
 							"Name": "Андорра-ла-Велья",
+							"CountryName": "Андорра",
 							"Resorts": []
 						},
 						{
 							"Name": "Ескальдес-Енгордань",
-							"Resorts": []
-						},
-						{
-							"Name": "Ла-Массана",
+							"CountryName": "Андорра",
 							"Resorts": []
 						},
 						{
 							"Name": "Енкамп",
+							"CountryName": "Андорра",
 							"Resorts": []
 						},
 						{
 							"Name": "Сант-Жулія-де-Лорія",
+							"CountryName": "Андорра",
+							"Resorts": []
+						},
+						{
+							"Name": "Ла-Массана",
+							"CountryName": "Андорра",
 							"Resorts": []
 						}
 					]
@@ -201,25 +237,30 @@
 				{
 					"Name": "Антигуа і Барбуда",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/120px-Flag_of_Antigua_and_Barbuda.svg.png",
-					"Cities": [
+					"Cities": [	
 						{
 							"Name": "Сент-Джонс",
+							"CountryName": "Антигуа і Барбуда",
 							"Resorts": []
 						},
 						{
-							"Name": "Барбуда",
+							"Name": "Алл-Сентс",
+							"CountryName": "Антигуа і Барбуда",
 							"Resorts": []
 						},
 						{
-							"Name": "Болан",
+							"Name": "Ліберті-Гров",
+							"CountryName": "Антигуа і Барбуда",
 							"Resorts": []
 						},
 						{
-							"Name": "Кодрінгтон",
+							"Name": "Паріш-Грінвіл",
+							"CountryName": "Антигуа і Барбуда",
 							"Resorts": []
 						},
 						{
-							"Name": "Фрімантл",
+							"Name": "Сент-Полс",
+							"CountryName": "Антигуа і Барбуда",
 							"Resorts": []
 						}
 					]
@@ -230,22 +271,27 @@
 					"Cities": [
 						{
 							"Name": "Буенос-Айрес",
+							"CountryName": "Аргентина",
 							"Resorts": []
 						},
 						{
 							"Name": "Кордова",
+							"CountryName": "Аргентина",
 							"Resorts": []
 						},
 						{
 							"Name": "Росаріо",
+							"CountryName": "Аргентина",
 							"Resorts": []
 						},
 						{
 							"Name": "Мендоса",
+							"CountryName": "Аргентина",
 							"Resorts": []
 						},
 						{
 							"Name": "Санта-Фе",
+							"CountryName": "Аргентина",
 							"Resorts": []
 						}
 					]
@@ -253,25 +299,30 @@
 				{
 					"Name": "Афганістан",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/160px-Flag_of_the_Taliban.svg.png",
-					"Cities": [
+					"Cities": [	
 						{
 							"Name": "Кабул",
+							"CountryName": "Афганістан",
 							"Resorts": []
 						},
 						{
 							"Name": "Кандагар",
+							"CountryName": "Афганістан",
 							"Resorts": []
 						},
 						{
-							"Name": "Мазар-і-Шариф",
+							"Name": "Мазар-і-Шаріф",
+							"CountryName": "Афганістан",
 							"Resorts": []
 						},
 						{
 							"Name": "Газні",
+							"CountryName": "Афганістан",
 							"Resorts": []
 						},
 						{
 							"Name": "Джалалабад",
+							"CountryName": "Афганістан",
 							"Resorts": []
 						}
 					]
@@ -280,16 +331,30 @@
 					"Name": "Багамські Острови",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/160px-Flag_of_the_Bahamas.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Нассау",
+							"CountryName": "Багамські Острови",
 							"Resorts": []
 						},
 						{
 							"Name": "Фріпорт",
+							"CountryName": "Багамські Острови",
 							"Resorts": []
 						},
 						{
 							"Name": "Марш-Гарбор",
+							"CountryName": "Багамські Острови",
+							"Resorts": []
+						},
+						{
+							"Name": "Люсія",
+							"CountryName": "Багамські Острови",
+							"Resorts": []
+						},
+						{
+							"Name": "Фрітавн",
+							"CountryName": "Багамські Острови",
 							"Resorts": []
 						}
 					]
@@ -298,24 +363,30 @@
 					"Name": "Бангладеш",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/134px-Flag_of_Bangladesh.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Дакка",
+							"CountryName": "Бангладеш",
 							"Resorts": []
 						},
 						{
 							"Name": "Читтагонг",
+							"CountryName": "Бангладеш",
 							"Resorts": []
 						},
 						{
 							"Name": "Кхулна",
+							"CountryName": "Бангладеш",
 							"Resorts": []
 						},
 						{
 							"Name": "Раджшахі",
+							"CountryName": "Бангладеш",
 							"Resorts": []
 						},
 						{
 							"Name": "Силхет",
+							"CountryName": "Бангладеш",
 							"Resorts": []
 						}
 					]
@@ -324,24 +395,30 @@
 					"Name": "Барбадос",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/120px-Flag_of_Barbados.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Бриджтаун",
+							"CountryName": "Барбадос",
 							"Resorts": []
 						},
 						{
-							"Name": "Спайтстаун",
+							"Name": "Спікстаун",
+							"CountryName": "Барбадос",
 							"Resorts": []
 						},
 						{
 							"Name": "Оістінс",
+							"CountryName": "Барбадос",
 							"Resorts": []
 						},
 						{
 							"Name": "Хоултон",
+							"CountryName": "Барбадос",
 							"Resorts": []
 						},
 						{
-							"Name": "Кінгстаун",
+							"Name": "Бріджтаун",
+							"CountryName": "Барбадос",
 							"Resorts": []
 						}
 					]
@@ -350,24 +427,30 @@
 					"Name": "Бахрейн",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/134px-Flag_of_Bahrain.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Манама",
+							"CountryName": "Бахрейн",
 							"Resorts": []
 						},
 						{
 							"Name": "Мухаррак",
+							"CountryName": "Бахрейн",
 							"Resorts": []
 						},
 						{
 							"Name": "Рифа",
+							"CountryName": "Бахрейн",
 							"Resorts": []
 						},
 						{
 							"Name": "Хамад-Таун",
+							"CountryName": "Бахрейн",
 							"Resorts": []
 						},
 						{
 							"Name": "Ал-Мухаррак",
+							"CountryName": "Бахрейн",
 							"Resorts": []
 						}
 					]
@@ -376,24 +459,30 @@
 					"Name": "Білорусь",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/160px-Flag_of_Belarus.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Мінськ",
+							"CountryName": "Білорусь",
 							"Resorts": []
 						},
 						{
 							"Name": "Гомель",
+							"CountryName": "Білорусь",
 							"Resorts": []
 						},
 						{
 							"Name": "Могілев",
+							"CountryName": "Білорусь",
 							"Resorts": []
 						},
 						{
-							"Name": "Вітебськ",
+							"Name": "Віцебськ",
+							"CountryName": "Білорусь",
 							"Resorts": []
 						},
 						{
 							"Name": "Гродно",
+							"CountryName": "Білорусь",
 							"Resorts": []
 						}
 					]
@@ -402,24 +491,30 @@
 					"Name": "Беліз",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/134px-Flag_of_Belize.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Бельмопан",
+							"CountryName": "Беліз",
 							"Resorts": []
 						},
 						{
-							"Name": "Беліз-Сіті",
+							"Name": "Бельіз-Сіті",
+							"CountryName": "Беліз",
 							"Resorts": []
 						},
 						{
 							"Name": "Сан-Ігнасіо",
+							"CountryName": "Беліз",
 							"Resorts": []
 						},
 						{
-							"Name": "Ориндж-Уок",
+							"Name": "Оранж-Уок",
+							"CountryName": "Беліз",
 							"Resorts": []
 						},
 						{
 							"Name": "Дангріга",
+							"CountryName": "Беліз",
 							"Resorts": []
 						}
 					]
@@ -428,24 +523,30 @@
 					"Name": "Бельгія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/92px-Flag_of_Belgium.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Брюссель",
+							"CountryName": "Бельгія",
 							"Resorts": []
 						},
 						{
 							"Name": "Антверпен",
+							"CountryName": "Бельгія",
 							"Resorts": []
 						},
 						{
 							"Name": "Гент",
+							"CountryName": "Бельгія",
 							"Resorts": []
 						},
 						{
 							"Name": "Льєж",
+							"CountryName": "Бельгія",
 							"Resorts": []
 						},
 						{
-							"Name": "Брюгге",
+							"Name": "Шарлеруа",
+							"CountryName": "Бельгія",
 							"Resorts": []
 						}
 					]
@@ -454,24 +555,30 @@
 					"Name": "Бенін",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/120px-Flag_of_Benin.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Порто-Ново",
+							"CountryName": "Бенін",
 							"Resorts": []
 						},
 						{
 							"Name": "Котону",
+							"CountryName": "Бенін",
 							"Resorts": []
 						},
 						{
 							"Name": "Абомей-Калаві",
+							"CountryName": "Бенін",
 							"Resorts": []
 						},
 						{
 							"Name": "Джакотоме",
+							"CountryName": "Бенін",
 							"Resorts": []
 						},
 						{
 							"Name": "Локосса",
+							"CountryName": "Бенін",
 							"Resorts": []
 						}
 					]
@@ -480,24 +587,30 @@
 					"Name": "Болгарія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/134px-Flag_of_Bulgaria.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Софія",
+							"CountryName": "Болгарія",
 							"Resorts": []
 						},
 						{
 							"Name": "Пловдив",
+							"CountryName": "Болгарія",
 							"Resorts": []
 						},
 						{
 							"Name": "Варна",
+							"CountryName": "Болгарія",
 							"Resorts": []
 						},
 						{
 							"Name": "Бургас",
+							"CountryName": "Болгарія",
 							"Resorts": []
 						},
 						{
 							"Name": "Русе",
+							"CountryName": "Болгарія",
 							"Resorts": []
 						}
 					]
@@ -506,24 +619,30 @@
 					"Name": "Болівія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/118px-Flag_of_Bolivia.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Сукре",
+							"CountryName": "Болівія",
 							"Resorts": []
 						},
 						{
 							"Name": "Ла-Пас",
+							"CountryName": "Болівія",
 							"Resorts": []
 						},
 						{
 							"Name": "Санта-Крус-де-ла-Сьєрра",
+							"CountryName": "Болівія",
 							"Resorts": []
 						},
 						{
 							"Name": "Кочабамба",
+							"CountryName": "Болівія",
 							"Resorts": []
 						},
 						{
 							"Name": "Оруро",
+							"CountryName": "Болівія",
 							"Resorts": []
 						}
 					]
@@ -532,24 +651,30 @@
 					"Name": "Боснія і Герцеговина",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/160px-Flag_of_Bosnia_and_Herzegovina.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Сараєво",
+							"CountryName": "Боснія і Герцеговина",
 							"Resorts": []
 						},
 						{
 							"Name": "Баня-Лука",
+							"CountryName": "Боснія і Герцеговина",
 							"Resorts": []
 						},
 						{
 							"Name": "Тузла",
+							"CountryName": "Боснія і Герцеговина",
 							"Resorts": []
 						},
 						{
-							"Name": "Зеніца",
+							"Name": "Зеніце",
+							"CountryName": "Боснія і Герцеговина",
 							"Resorts": []
 						},
 						{
 							"Name": "Мостар",
+							"CountryName": "Боснія і Герцеговина",
 							"Resorts": []
 						}
 					]
@@ -558,24 +683,30 @@
 					"Name": "Ботсвана",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/120px-Flag_of_Botswana.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Габороне",
+							"CountryName": "Ботсвана",
 							"Resorts": []
 						},
 						{
 							"Name": "Франсістаун",
+							"CountryName": "Ботсвана",
 							"Resorts": []
 						},
 						{
 							"Name": "Молепололе",
+							"CountryName": "Ботсвана",
 							"Resorts": []
 						},
 						{
 							"Name": "Серова",
+							"CountryName": "Ботсвана",
 							"Resorts": []
 						},
 						{
 							"Name": "Маун",
+							"CountryName": "Ботсвана",
 							"Resorts": []
 						}
 					]
@@ -584,24 +715,30 @@
 					"Name": "Бразилія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/114px-Flag_of_Brazil.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Бразиліа",
+							"CountryName": "Бразилія",
 							"Resorts": []
 						},
 						{
 							"Name": "Сан-Паулу",
+							"CountryName": "Бразилія",
 							"Resorts": []
 						},
 						{
 							"Name": "Ріо-де-Жанейро",
+							"CountryName": "Бразилія",
 							"Resorts": []
 						},
 						{
 							"Name": "Сальвадор",
+							"CountryName": "Бразилія",
 							"Resorts": []
 						},
 						{
 							"Name": "Форталеза",
+							"CountryName": "Бразилія",
 							"Resorts": []
 						}
 					]
@@ -610,24 +747,30 @@
 					"Name": "Бруней",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/160px-Flag_of_Brunei.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Бандар-Сері-Бегаван",
+							"CountryName": "Бруней",
 							"Resorts": []
 						},
 						{
 							"Name": "Куала-Белайт",
+							"CountryName": "Бруней",
 							"Resorts": []
 						},
 						{
 							"Name": "Серіа",
+							"CountryName": "Бруней",
 							"Resorts": []
 						},
 						{
 							"Name": "Тутонг",
+							"CountryName": "Бруней",
 							"Resorts": []
 						},
 						{
-							"Name": "Бангар",
+							"Name": "Бандар-Сері-Бегаван",
+							"CountryName": "Бруней",
 							"Resorts": []
 						}
 					]
@@ -636,24 +779,30 @@
 					"Name": "Буркіна-Фасо",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/120px-Flag_of_Burkina_Faso.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Уагадугу",
+							"CountryName": "Буркіна-Фасо",
 							"Resorts": []
 						},
 						{
 							"Name": "Бобо-Діуласо",
+							"CountryName": "Буркіна-Фасо",
 							"Resorts": []
 						},
 						{
 							"Name": "Кудугу",
+							"CountryName": "Буркіна-Фасо",
 							"Resorts": []
 						},
 						{
 							"Name": "Банфора",
+							"CountryName": "Буркіна-Фасо",
 							"Resorts": []
 						},
 						{
-							"Name": "Дедугу",
+							"Name": "Кая",
+							"CountryName": "Буркіна-Фасо",
 							"Resorts": []
 						}
 					]
@@ -662,24 +811,30 @@
 					"Name": "Бурунді",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/134px-Flag_of_Burundi.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Бужумбура",
+							"CountryName": "Бурунді",
 							"Resorts": []
 						},
 						{
 							"Name": "Мурузі",
+							"CountryName": "Бурунді",
 							"Resorts": []
 						},
 						{
-							"Name": "Няконга",
+							"Name": "Нямітанга",
+							"CountryName": "Бурунді",
 							"Resorts": []
 						},
 						{
 							"Name": "Рутана",
+							"CountryName": "Бурунді",
 							"Resorts": []
 						},
 						{
 							"Name": "Гітега",
+							"CountryName": "Бурунді",
 							"Resorts": []
 						}
 					]
@@ -688,24 +843,30 @@
 					"Name": "Бутан",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/120px-Flag_of_Bhutan.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Тхімпху",
+							"CountryName": "Бутан",
 							"Resorts": []
 						},
 						{
 							"Name": "Паро",
+							"CountryName": "Бутан",
 							"Resorts": []
 						},
 						{
 							"Name": "Пунакха",
+							"CountryName": "Бутан",
 							"Resorts": []
 						},
 						{
 							"Name": "Джакарта",
+							"CountryName": "Бутан",
 							"Resorts": []
 						},
 						{
 							"Name": "Самтсе",
+							"CountryName": "Бутан",
 							"Resorts": []
 						}
 					]
@@ -714,24 +875,30 @@
 					"Name": "Вануату",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/134px-Flag_of_Vanuatu.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Порт-Віла",
+							"CountryName": "Вануату",
 							"Resorts": []
 						},
 						{
 							"Name": "Луганвіль",
+							"CountryName": "Вануату",
 							"Resorts": []
 						},
 						{
-							"Name": "Лакаторо",
+							"Name": "Санма",
+							"CountryName": "Вануату",
 							"Resorts": []
 						},
 						{
-							"Name": "Сара",
+							"Name": "Тафеа",
+							"CountryName": "Вануату",
 							"Resorts": []
 						},
 						{
-							"Name": "Ленакел",
+							"Name": "Малампа",
+							"CountryName": "Вануату",
 							"Resorts": []
 						}
 					]
@@ -742,6 +909,7 @@
 					"Cities": [
 						{
 							"Name": "Ватикан",
+							"CountryName": "Ватикан",
 							"Resorts": []
 						}
 					]
@@ -750,24 +918,30 @@
 					"Name": "Велика Британія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/134px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Лондон",
-							"Resorts": []
-						},
-						{
-							"Name": "Манчестер",
-							"Resorts": []
-						},
-						{
-							"Name": "Ліверпуль",
+							"CountryName": "Велика Британія",
 							"Resorts": []
 						},
 						{
 							"Name": "Бірмінгем",
+							"CountryName": "Велика Британія",
+							"Resorts": []
+						},
+						{
+							"Name": "Ліверпуль",
+							"CountryName": "Велика Британія",
+							"Resorts": []
+						},
+						{
+							"Name": "Манчестер",
+							"CountryName": "Велика Британія",
 							"Resorts": []
 						},
 						{
 							"Name": "Лідс",
+							"CountryName": "Велика Британія",
 							"Resorts": []
 						}
 					]
@@ -776,24 +950,30 @@
 					"Name": "В'єтнам",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/120px-Flag_of_Vietnam.svg.png",
 					"Cities": [
+						
 						{
 							"Name": "Ханой",
+							"CountryName": "В'єтнам",
 							"Resorts": []
 						},
 						{
 							"Name": "Хошимін",
+							"CountryName": "В'єтнам",
 							"Resorts": []
 						},
 						{
-							"Name": "Хайфонг",
-							"Resorts": []
-						},
-						{
-							"Name": "Хує",
+							"Name": "Хайфон",
+							"CountryName": "В'єтнам",
 							"Resorts": []
 						},
 						{
 							"Name": "Дананг",
+							"CountryName": "В'єтнам",
+							"Resorts": []
+						},
+						{
+							"Name": "Нячанг",
+							"CountryName": "В'єтнам",
 							"Resorts": []
 						}
 					]
@@ -802,282 +982,77 @@
 					"Name": "Вірменія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/160px-Flag_of_Armenia.svg.png",
 					"Cities": [
-						{
-							"Name": "Єреван",
-							"Resorts": []
-						},
-						{
-							"Name": "Гюмрі",
-							"Resorts": []
-						},
-						{
-							"Name": "Ванадзор",
-							"Resorts": []
-						},
-						{
-							"Name": "Ечміадзін",
-							"Resorts": []
-						},
-						{
-							"Name": "Хор Вірап",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Венесуела",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/120px-Flag_of_Venezuela.svg.png",
 					"Cities": [
-						{
-							"Name": "Каракас",
-							"Resorts": []
-						},
-						{
-							"Name": "Маракай",
-							"Resorts": []
-						},
-						{
-							"Name": "Валенсія",
-							"Resorts": []
-						},
-						{
-							"Name": "Баркісімето",
-							"Resorts": []
-						},
-						{
-							"Name": "Марацайбо",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Габон",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/107px-Flag_of_Gabon.svg.png",
 					"Cities": [
-						{
-							"Name": "Лібревіль",
-							"Resorts": []
-						},
-						{
-							"Name": "Порт-Жантіль",
-							"Resorts": []
-						},
-						{
-							"Name": "Франсвіль",
-							"Resorts": []
-						},
-						{
-							"Name": "Ойем",
-							"Resorts": []
-						},
-						{
-							"Name": "Моандо",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гаїті",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/134px-Flag_of_Haiti.svg.png",
 					"Cities": [
-						{
-							"Name": "Порт-о-Пренс",
-							"Resorts": []
-						},
-						{
-							"Name": "Кап-Аїсєн",
-							"Resorts": []
-						},
-						{
-							"Name": "Ле-Кей",
-							"Resorts": []
-						},
-						{
-							"Name": "Леоган",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гаяна",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/134px-Flag_of_Guyana.svg.png",
 					"Cities": [
-						{
-							"Name": "Джорджтаун",
-							"Resorts": []
-						},
-						{
-							"Name": "Нью-Амстердам",
-							"Resorts": []
-						},
-						{
-							"Name": "Лінден",
-							"Resorts": []
-						},
-						{
-							"Name": "Коррівтон",
-							"Resorts": []
-						},
-						{
-							"Name": "Махаіка",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гамбія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/120px-Flag_of_The_Gambia.svg.png",
 					"Cities": [
-						{
-							"Name": "Банжул",
-							"Resorts": []
-						},
-						{
-							"Name": "Серекунда",
-							"Resorts": []
-						},
-						{
-							"Name": "Брикама",
-							"Resorts": []
-						},
-						{
-							"Name": "Бакау",
-							"Resorts": []
-						},
-						{
-							"Name": "Ламін",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гана",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/120px-Flag_of_Ghana.svg.png",
 					"Cities": [
-						{
-							"Name": "Аккра",
-							"Resorts": []
-						},
-						{
-							"Name": "Кумасі",
-							"Resorts": []
-						},
-						{
-							"Name": "Тамале",
-							"Resorts": []
-						},
-						{
-							"Name": "Тема",
-							"Resorts": []
-						},
-						{
-							"Name": "Такораді",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гватемала",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/128px-Flag_of_Guatemala.svg.png",
 					"Cities": [
-						{
-							"Name": "Гватемала",
-							"Resorts": []
-						},
-						{
-							"Name": "Куетзальтенанго",
-							"Resorts": []
-						},
-						{
-							"Name": "Ескінтла",
-							"Resorts": []
-						},
-						{
-							"Name": "Куеретаро",
-							"Resorts": []
-						},
-						{
-							"Name": "Сантіаго-Атітлан",
-							"Resorts": []
-						}
+					
 					]
 				},
 				{
 					"Name": "Гвінея",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/120px-Flag_of_Guinea.svg.png",
 					"Cities": [
-						{
-							"Name": "Конакрі",
-							"Resorts": []
-						},
-						{
-							"Name": "Нзерекоре",
-							"Resorts": []
-						},
-						{
-							"Name": "Канкан",
-							"Resorts": []
-						},
-						{
-							"Name": "Кісідугу",
-							"Resorts": []
-						},
-						{
-							"Name": "Лабе",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гвінея-Бісау",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/160px-Flag_of_Guinea-Bissau.svg.png",
 					"Cities": [
-						{
-							"Name": "Бісау",
-							"Resorts": []
-						},
-						{
-							"Name": "Бафата",
-							"Resorts": []
-						},
-						{
-							"Name": "Бісора",
-							"Resorts": []
-						},
-						{
-							"Name": "Болам",
-							"Resorts": []
-						},
-						{
-							"Name": "Канкан",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Гондурас",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/160px-Flag_of_Honduras.svg.png",
 					"Cities": [
-						{
-							"Name": "Тегусігальпа",
-							"Resorts": []
-						},
-						{
-							"Name": "Сан-Педро-Сула",
-							"Resorts": []
-						},
-						{
-							"Name": "Чолутека",
-							"Resorts": []
-						},
-						{
-							"Name": "Ла-Сейба",
-							"Resorts": []
-						},
-						{
-							"Name": "Трухильо",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1089,78 +1064,21 @@
 					"Name": "Греція",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/120px-Flag_of_Greece.svg.png",
 					"Cities": [
-						{
-							"Name": "Афіни",
-							"Resorts": []
-						},
-						{
-							"Name": "Салоніки",
-							"Resorts": []
-						},
-						{
-							"Name": "Пірей",
-							"Resorts": []
-						},
-						{
-							"Name": "Ларіса",
-							"Resorts": []
-						},
-						{
-							"Name": "Іракліон",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Грузія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/120px-Flag_of_Georgia.svg.png",
 					"Cities": [
-						{
-							"Name": "Тбілісі",
-							"Resorts": []
-						},
-						{
-							"Name": "Кутаїсі",
-							"Resorts": []
-						},
-						{
-							"Name": "Руставі",
-							"Resorts": []
-						},
-						{
-							"Name": "Батумі",
-							"Resorts": []
-						},
-						{
-							"Name": "Зугдіді",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Данія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/106px-Flag_of_Denmark.svg.png",
 					"Cities": [
-						{
-							"Name": "Копенгаген",
-							"Resorts": []
-						},
-						{
-							"Name": "Орхус",
-							"Resorts": []
-						},
-						{
-							"Name": "Оденсе",
-							"Resorts": []
-						},
-						{
-							"Name": "Аалборг",
-							"Resorts": []
-						},
-						{
-							"Name": "Фредеріксберг",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1172,52 +1090,14 @@
 					"Name": "Домініка",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/160px-Flag_of_Dominica.svg.png",
 					"Cities": [
-						{
-							"Name": "Розо",
-							"Resorts": []
-						},
-						{
-							"Name": "Портсмут",
-							"Resorts": []
-						},
-						{
-							"Name": "Маріго",
-							"Resorts": []
-						},
-						{
-							"Name": "Бріджтаун",
-							"Resorts": []
-						},
-						{
-							"Name": "Сент-Джонс",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Домініканська Республіка",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/120px-Flag_of_the_Dominican_Republic.svg.png",
 					"Cities": [
-						{
-							"Name": "Санто-Домінго",
-							"Resorts": []
-						},
-						{
-							"Name": "Сантіаго-де-лос-Кабальєрос",
-							"Resorts": []
-						},
-						{
-							"Name": "Сан-Франсіско-де-Макоріс",
-							"Resorts": []
-						},
-						{
-							"Name": "Ла-Романа",
-							"Resorts": []
-						},
-						{
-							"Name": "Сан-Педро-де-Макоріс",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1239,26 +1119,7 @@
 					"Name": "Естонія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/126px-Flag_of_Estonia.svg.png",
 					"Cities": [
-						{
-							"Name": "Таллінн",
-							"Resorts": []
-						},
-						{
-							"Name": "Тарту",
-							"Resorts": []
-						},
-						{
-							"Name": "Нарва",
-							"Resorts": []
-						},
-						{
-							"Name": "Пярну",
-							"Resorts": []
-						},
-						{
-							"Name": "Кохтла-Ярве",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1270,26 +1131,7 @@
 					"Name": "Єгипет",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/120px-Flag_of_Egypt.svg.png",
 					"Cities": [
-						{
-							"Name": "Каїр",
-							"Resorts": []
-						},
-						{
-							"Name": "Александрія",
-							"Resorts": []
-						},
-						{
-							"Name": "Гіза",
-							"Resorts": []
-						},
-						{
-							"Name": "Шарм-ель-Шейх",
-							"Resorts": []
-						},
-						{
-							"Name": "Луксор",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1311,26 +1153,7 @@
 					"Name": "Ізраїль",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/110px-Flag_of_Israel.svg.png",
 					"Cities": [
-						{
-							"Name": "Єрусалим",
-							"Resorts": []
-						},
-						{
-							"Name": "Тель-Авів",
-							"Resorts": []
-						},
-						{
-							"Name": "Хайфа",
-							"Resorts": []
-						},
-						{
-							"Name": "Рішон-ле-Ціон",
-							"Resorts": []
-						},
-						{
-							"Name": "Петах-Тіква",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1355,26 +1178,7 @@
 					"Name": "Ірландія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/160px-Flag_of_Ireland.svg.png",
 					"Cities": [
-						{
-							"Name": "Дублін",
-							"Resorts": []
-						},
-						{
-							"Name": "Корк",
-							"Resorts": []
-						},
-						{
-							"Name": "Голуей",
-							"Resorts": []
-						},
-						{
-							"Name": "Лімерік",
-							"Resorts": []
-						},
-						{
-							"Name": "Вотерфорд",
-							"Resorts": []
-						}
+						
 
 					]
 				},
@@ -1382,78 +1186,21 @@
 					"Name": "Ісландія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/111px-Flag_of_Iceland.svg.png",
 					"Cities": [
-						{
-							"Name": "Рейк'явік",
-							"Resorts": []
-						},
-						{
-							"Name": "Копавогур",
-							"Resorts": []
-						},
-						{
-							"Name": "Хафнарфьордур",
-							"Resorts": []
-						},
-						{
-							"Name": "Акюрейрі",
-							"Resorts": []
-						},
-						{
-							"Name": "Гардабаер",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Іспанія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/120px-Flag_of_Spain.svg.png",
 					"Cities": [
-						{
-							"Name": "Мадрид",
-							"Resorts": []
-						},
-						{
-							"Name": "Барселона",
-							"Resorts": []
-						},
-						{
-							"Name": "Валенсія",
-							"Resorts": []
-						},
-						{
-							"Name": "Севілья",
-							"Resorts": []
-						},
-						{
-							"Name": "Сарагоса",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Італія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/120px-Flag_of_Italy.svg.png",
 					"Cities": [
-						{
-							"Name": "Рим",
-							"Resorts": []
-						},
-						{
-							"Name": "Мілан",
-							"Resorts": []
-						},
-						{
-							"Name": "Неаполь",
-							"Resorts": []
-						},
-						{
-							"Name": "Турин",
-							"Resorts": []
-						},
-						{
-							"Name": "Палермо",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1470,26 +1217,7 @@
 					"Name": "Казахстан",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/160px-Flag_of_Kazakhstan.svg.png",
 					"Cities": [
-						{
-							"Name": "Алмати",
-							"Resorts": []
-						},
-						{
-							"Name": "Нур-Султан",
-							"Resorts": []
-						},
-						{
-							"Name": "Шымкент",
-							"Resorts": []
-						},
-						{
-							"Name": "Караганда",
-							"Resorts": []
-						},
-						{
-							"Name": "Актобе",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1501,52 +1229,14 @@
 					"Name": "Камерун",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/120px-Flag_of_Cameroon.svg.png",
 					"Cities": [
-						{
-							"Name": "Яунде",
-							"Resorts": []
-						},
-						{
-							"Name": "Дуала",
-							"Resorts": []
-						},
-						{
-							"Name": "Баменда",
-							"Resorts": []
-						},
-						{
-							"Name": "Гаруа",
-							"Resorts": []
-						},
-						{
-							"Name": "Маруа",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Канада",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/160px-Flag_of_Canada.svg.png",
 					"Cities": [
-						{
-							"Name": "Оттава",
-							"Resorts": []
-						},
-						{
-							"Name": "Торонто",
-							"Resorts": []
-						},
-						{
-							"Name": "Монреаль",
-							"Resorts": []
-						},
-						{
-							"Name": "Ванкувер",
-							"Resorts": []
-						},
-						{
-							"Name": "Калгарі",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1563,26 +1253,7 @@
 					"Name": "Кіпр",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/120px-Flag_of_Cyprus.svg.png",
 					"Cities": [
-						{
-							"Name": "Нікосія",
-							"Resorts": []
-						},
-						{
-							"Name": "Ларнака",
-							"Resorts": []
-						},
-						{
-							"Name": "Лімасол",
-							"Resorts": []
-						},
-						{
-							"Name": "Пафос",
-							"Resorts": []
-						},
-						{
-							"Name": "Айя-Напа",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1599,26 +1270,7 @@
 					"Name": "Китайська Народна Республіка (КНР)",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/120px-Flag_of_the_People%27s_Republic_of_China.svg.png",
 					"Cities": [
-						{
-							"Name": "Пекін",
-							"Resorts": []
-						},
-						{
-							"Name": "Шанхай",
-							"Resorts": []
-						},
-						{
-							"Name": "Гуанчжоу",
-							"Resorts": []
-						},
-						{
-							"Name": "Шеньчжень",
-							"Resorts": []
-						},
-						{
-							"Name": "Тяньцзінь",
-							"Resorts": []
-						}
+					
 					]
 				},
 				{
@@ -1675,26 +1327,7 @@
 					"Name": "Латвія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/160px-Flag_of_Latvia.svg.png",
 					"Cities": [
-						{
-							"Name": "Рига",
-							"Resorts": []
-						},
-						{
-							"Name": "Даугавпілс",
-							"Resorts": []
-						},
-						{
-							"Name": "Лієпая",
-							"Resorts": []
-						},
-						{
-							"Name": "Єлгава",
-							"Resorts": []
-						},
-						{
-							"Name": "Юрмала",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1706,26 +1339,7 @@
 					"Name": "Литва",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/134px-Flag_of_Lithuania.svg.png",
 					"Cities": [
-						{
-							"Name": "Вільнюс",
-							"Resorts": []
-						},
-						{
-							"Name": "Каунас",
-							"Resorts": []
-						},
-						{
-							"Name": "Клайпеда",
-							"Resorts": []
-						},
-						{
-							"Name": "Шяуляй",
-							"Resorts": []
-						},
-						{
-							"Name": "Паневежис",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1747,44 +1361,14 @@
 					"Name": "Ліхтенштейн",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/134px-Flag_of_Liechtenstein.svg.png",
 					"Cities": [
-						{
-							"Name": "Вадуц",
-							"Resorts": []
-						},
-						{
-							"Name": "Шан",
-							"Resorts": []
-						},
-						{
-							"Name": "Тризенберг",
-							"Resorts": []
-						},
-						{
-							"Name": "Ешен",
-							"Resorts": []
-						},
-						{
-							"Name": "Маур",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Люксембург",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/134px-Flag_of_Luxembourg.svg.png",
 					"Cities": [
-						{
-							"Name": "Люксембург",
-							"Resorts": []
-						},
-						{
-							"Name": "Еш-сюр-Альзетт",
-							"Resorts": []
-						},
-						{
-							"Name": "Дікірх",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1806,26 +1390,7 @@
 					"Name": "Північна Македонія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/160px-Flag_of_North_Macedonia.svg.png",
 					"Cities": [
-						{
-							"Name": "Скоп'є",
-							"Resorts": []
-						},
-						{
-							"Name": "Куманово",
-							"Resorts": []
-						},
-						{
-							"Name": "Битола",
-							"Resorts": []
-						},
-						{
-							"Name": "Прилеп",
-							"Resorts": []
-						},
-						{
-							"Name": "Тетово",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1852,26 +1417,7 @@
 					"Name": "Мальта",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/120px-Flag_of_Malta.svg.png",
 					"Cities": [
-						{
-							"Name": "Валлетта",
-							"Resorts": []
-						},
-						{
-							"Name": "Бірзеббуджа",
-							"Resorts": []
-						},
-						{
-							"Name": "Моста",
-							"Resorts": []
-						},
-						{
-							"Name": "П'єта",
-							"Resorts": []
-						},
-						{
-							"Name": "Біркіркара",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1888,26 +1434,7 @@
 					"Name": "Мексика",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/140px-Flag_of_Mexico.svg.png",
 					"Cities": [
-						{
-							"Name": "Мехіко",
-							"Resorts": []
-						},
-						{
-							"Name": "Гвадалахара",
-							"Resorts": []
-						},
-						{
-							"Name": "Монтеррей",
-							"Resorts": []
-						},
-						{
-							"Name": "Пуебла",
-							"Resorts": []
-						},
-						{
-							"Name": "Толука",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1924,26 +1451,7 @@
 					"Name": "Молдова",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/160px-Flag_of_Moldova.svg.png",
 					"Cities": [
-						{
-							"Name": "Кишинів",
-							"Resorts": []
-						},
-						{
-							"Name": "Тирасполь",
-							"Resorts": []
-						},
-						{
-							"Name": "Бельці",
-							"Resorts": []
-						},
-						{
-							"Name": "Бендери",
-							"Resorts": []
-						},
-						{
-							"Name": "Рибниця",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -1990,26 +1498,7 @@
 					"Name": "Нідерланди",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/120px-Flag_of_the_Netherlands.svg.png",
 					"Cities": [
-						{
-							"Name": "Амстердам",
-							"Resorts": []
-						},
-						{
-							"Name": "Роттердам",
-							"Resorts": []
-						},
-						{
-							"Name": "Гаага",
-							"Resorts": []
-						},
-						{
-							"Name": "Утрехт",
-							"Resorts": []
-						},
-						{
-							"Name": "Ейндховен",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2021,26 +1510,7 @@
 					"Name": "Німеччина",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/134px-Flag_of_Germany.svg.png",
 					"Cities": [
-						{
-							"Name": "Берлін",
-							"Resorts": []
-						},
-						{
-							"Name": "Гамбург",
-							"Resorts": []
-						},
-						{
-							"Name": "Мюнхен",
-							"Resorts": []
-						},
-						{
-							"Name": "Кельн",
-							"Resorts": []
-						},
-						{
-							"Name": "Франкфурт",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2052,52 +1522,14 @@
 					"Name": "Норвегія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/110px-Flag_of_Norway.svg.png",
 					"Cities": [
-						{
-							"Name": "Осло",
-							"Resorts": []
-						},
-						{
-							"Name": "Берген",
-							"Resorts": []
-						},
-						{
-							"Name": "Ставангер",
-							"Resorts": []
-						},
-						{
-							"Name": "Тронхейм",
-							"Resorts": []
-						},
-						{
-							"Name": "Драммен",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Об'єднані Арабські Емірати (OAE)",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/160px-Flag_of_the_United_Arab_Emirates.svg.png",
 					"Cities": [
-						{
-							"Name": "Абу-Дабі",
-							"Resorts": []
-						},
-						{
-							"Name": "Дубай",
-							"Resorts": []
-						},
-						{
-							"Name": "Шарджа",
-							"Resorts": []
-						},
-						{
-							"Name": "Аджман",
-							"Resorts": []
-						},
-						{
-							"Name": "Рас-аль-Хайма",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2149,52 +1581,14 @@
 					"Name": "Польща",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/128px-Flag_of_Poland.svg.png",
 					"Cities": [
-						{
-							"Name": "Варшава",
-							"Resorts": []
-						},
-						{
-							"Name": "Краків",
-							"Resorts": []
-						},
-						{
-							"Name": "Лодзь",
-							"Resorts": []
-						},
-						{
-							"Name": "Вроцлав",
-							"Resorts": []
-						},
-						{
-							"Name": "Познань",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Португалія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/120px-Flag_of_Portugal.svg.png",
 					"Cities": [
-						{
-							"Name": "Лісабон",
-							"Resorts": []
-						},
-						{
-							"Name": "Порту",
-							"Resorts": []
-						},
-						{
-							"Name": "Віла-Нова-де-Гайя",
-							"Resorts": []
-						},
-						{
-							"Name": "Амадора",
-							"Resorts": []
-						},
-						{
-							"Name": "Брага",
-							"Resorts": []
-						}
+					
 					]
 				},
 				{
@@ -2206,26 +1600,7 @@
 					"Name": "Румунія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/120px-Flag_of_Romania.svg.png",
 					"Cities": [
-						{
-							"Name": "Бухарест",
-							"Resorts": []
-						},
-						{
-							"Name": "Ясси",
-							"Resorts": []
-						},
-						{
-							"Name": "Клуж-Напока",
-							"Resorts": []
-						},
-						{
-							"Name": "Тімішоара",
-							"Resorts": []
-						},
-						{
-							"Name": "Констанца",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2242,26 +1617,7 @@
 					"Name": "Сан-Марино",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/107px-Flag_of_San_Marino.svg.png",
 					"Cities": [
-						{
-							"Name": "Сан-Марино",
-							"Resorts": []
-						},
-						{
-							"Name": "Серревалле",
-							"Resorts": []
-						},
-						{
-							"Name": "Борго-Маджоре",
-							"Resorts": []
-						},
-						{
-							"Name": "Фаенца",
-							"Resorts": []
-						},
-						{
-							"Name": "Домано",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2308,26 +1664,7 @@
 					"Name": "Сербія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/120px-Flag_of_Serbia.svg.png",
 					"Cities": [
-						{
-							"Name": "Белград",
-							"Resorts": []
-						},
-						{
-							"Name": "Нови-Сад",
-							"Resorts": []
-						},
-						{
-							"Name": "Ніш",
-							"Resorts": []
-						},
-						{
-							"Name": "Крагуєвач",
-							"Resorts": []
-						},
-						{
-							"Name": "Суботиця",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2344,52 +1681,14 @@
 					"Name": "Словаччина",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/120px-Flag_of_Slovakia.svg.png",
 					"Cities": [
-						{
-							"Name": "Братислава",
-							"Resorts": []
-						},
-						{
-							"Name": "Кошице",
-							"Resorts": []
-						},
-						{
-							"Name": "Прешов",
-							"Resorts": []
-						},
-						{
-							"Name": "Жилина",
-							"Resorts": []
-						},
-						{
-							"Name": "Нітра",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Словенія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/160px-Flag_of_Slovenia.svg.png",
 					"Cities": [
-						{
-							"Name": "Любляна",
-							"Resorts": []
-						},
-						{
-							"Name": "Марибор",
-							"Resorts": []
-						},
-						{
-							"Name": "Целе",
-							"Resorts": []
-						},
-						{
-							"Name": "Крань",
-							"Resorts": []
-						},
-						{
-							"Name": "Веленє",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2406,26 +1705,7 @@
 					"Name": "Сполучені Штати Америки (США)",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/152px-Flag_of_the_United_States.svg.png",
 					"Cities": [
-						{
-							"Name": "Вашингтон",
-							"Resorts": []
-						},
-						{
-							"Name": "Нью-Йорк",
-							"Resorts": []
-						},
-						{
-							"Name": "Лос-Анджелес",
-							"Resorts": []
-						},
-						{
-							"Name": "Чикаго",
-							"Resorts": []
-						},
-						{
-							"Name": "Хьюстон",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2457,26 +1737,7 @@
 					"Name": "Таїланд",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/120px-Flag_of_Thailand.svg.png",
 					"Cities": [
-						{
-							"Name": "Бангкок",
-							"Resorts": []
-						},
-						{
-							"Name": "Нонг-Кай",
-							"Resorts": []
-						},
-						{
-							"Name": "Чіанг-Май",
-							"Resorts": []
-						},
-						{
-							"Name": "Паттайя",
-							"Resorts": []
-						},
-						{
-							"Name": "Пхукет",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2513,26 +1774,7 @@
 					"Name": "Туреччина",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/120px-Flag_of_Turkey.svg.png",
 					"Cities": [
-						{
-							"Name": "Стамбул",
-							"Resorts": []
-						},
-						{
-							"Name": "Анкара",
-							"Resorts": []
-						},
-						{
-							"Name": "Ізмір",
-							"Resorts": []
-						},
-						{
-							"Name": "Бурса",
-							"Resorts": []
-						},
-						{
-							"Name": "Адана",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2549,26 +1791,7 @@
 					"Name": "Угорщина",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/160px-Flag_of_Hungary.svg.png",
 					"Cities": [
-						{
-							"Name": "Будапешт",
-							"Resorts": []
-						},
-						{
-							"Name": "Дебрецен",
-							"Resorts": []
-						},
-						{
-							"Name": "Мішкольц",
-							"Resorts": []
-						},
-						{
-							"Name": "Сегед",
-							"Resorts": []
-						},
-						{
-							"Name": "Печ",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2580,26 +1803,7 @@
 					"Name": "Україна",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/120px-Flag_of_Ukraine.svg.png",
 					"Cities": [
-						{
-							"Name": "Київ",
-							"Resorts": []
-						},
-						{
-							"Name": "Харків",
-							"Resorts": []
-						},
-						{
-							"Name": "Одеса",
-							"Resorts": []
-						},
-						{
-							"Name": "Дніпро",
-							"Resorts": []
-						},
-						{
-							"Name": "Львів",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2621,78 +1825,21 @@
 					"Name": "Фінляндія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/131px-Flag_of_Finland.svg.png",
 					"Cities": [
-						{
-							"Name": "Гельсінкі",
-							"Resorts": []
-						},
-						{
-							"Name": "Еспоо",
-							"Resorts": []
-						},
-						{
-							"Name": "Тампере",
-							"Resorts": []
-						},
-						{
-							"Name": "Вантаа",
-							"Resorts": []
-						},
-						{
-							"Name": "Турку",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Франція",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/120px-Flag_of_France.svg.png",
 					"Cities": [
-						{
-							"Name": "Париж",
-							"Resorts": []
-						},
-						{
-							"Name": "Марсель",
-							"Resorts": []
-						},
-						{
-							"Name": "Ліон",
-							"Resorts": []
-						},
-						{
-							"Name": "Тулуза",
-							"Resorts": []
-						},
-						{
-							"Name": "Ніцца",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Хорватія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/160px-Flag_of_Croatia.svg.png",
 					"Cities": [
-						{
-							"Name": "Загреб",
-							"Resorts": []
-						},
-						{
-							"Name": "Спліт",
-							"Resorts": []
-						},
-						{
-							"Name": "Рієка",
-							"Resorts": []
-						},
-						{
-							"Name": "Осієк",
-							"Resorts": []
-						},
-						{
-							"Name": "Задар",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2709,26 +1856,7 @@
 					"Name": "Чехія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/120px-Flag_of_the_Czech_Republic.svg.png",
 					"Cities": [
-						{
-							"Name": "Прага",
-							"Resorts": []
-						},
-						{
-							"Name": "Брно",
-							"Resorts": []
-						},
-						{
-							"Name": "Острава",
-							"Resorts": []
-						},
-						{
-							"Name": "Пльзень",
-							"Resorts": []
-						},
-						{
-							"Name": "Ліберець",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
@@ -2740,78 +1868,21 @@
 					"Name": "Чорногорія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/160px-Flag_of_Montenegro.svg.png",
 					"Cities": [
-						{
-							"Name": "Подгориця",
-							"Resorts": []
-						},
-						{
-							"Name": "Нікшич",
-							"Resorts": []
-						},
-						{
-							"Name": "Герцег-Нові",
-							"Resorts": []
-						},
-						{
-							"Name": "Бар",
-							"Resorts": []
-						},
-						{
-							"Name": "Будва",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{
 					"Name": "Швеція",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/128px-Flag_of_Sweden.svg.png",
 					"Cities": [
-						{
-							"Name": "Стокгольм",
-							"Resorts": []
-						},
-						{
-							"Name": "Гетеборг",
-							"Resorts": []
-						},
-						{
-							"Name": "Мальме",
-							"Resorts": []
-						},
-						{
-							"Name": "Упсала",
-							"Resorts": []
-						},
-						{
-							"Name": "Вестерос",
-							"Resorts": []
-						}
+					
 					]
 				},
 				{
 					"Name": "Швейцарія",
 					"FlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/80px-Flag_of_Switzerland.svg.png",
 					"Cities": [
-						{
-							"Name": "Цюрих",
-							"Resorts": []
-						},
-						{
-							"Name": "Женева",
-							"Resorts": []
-						},
-						{
-							"Name": "Базель",
-							"Resorts": []
-						},
-						{
-							"Name": "Лозанна",
-							"Resorts": []
-						},
-						{
-							"Name": "Берн",
-							"Resorts": []
-						}
+						
 					]
 				},
 				{

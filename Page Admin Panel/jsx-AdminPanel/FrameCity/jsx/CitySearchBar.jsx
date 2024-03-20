@@ -15,7 +15,9 @@ function CitySearchBar(props) {
 
 	React.useEffect(() => {
 		props.setQuantity(quantity);
-	}, [quantity]);
+		props.setCities(cities);
+		props.setCountries(countries);
+	}, [quantity, cities, countries]);
 
 	const handleInput = (event) => {
 		event.preventDefault();
