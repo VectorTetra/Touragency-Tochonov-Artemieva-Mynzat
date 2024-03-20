@@ -6,6 +6,10 @@ function FrameCity(props){
 
 	return (
 		<div id="frameCountry">
+			{
+				console.log(countries),
+				console.log(cities)
+			}
 			<FrameCityHeader quantity={quantity} />
 			<CityEditForm countries={countries}/>
 			<CitySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} setCities={setCities} />
