@@ -7,6 +7,8 @@ function FrameCity(props){
 	return (
 		<div id="frameCountry">
 			{
+				console.log(props.tab),
+				console.log(quantity),
 				console.log(countries),
 				console.log(cities)
 			}
