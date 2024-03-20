@@ -1,0 +1,62 @@
+.cityListItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
+
+}
+
+.cityListItemStatContainer {
+	display: flex;
+	min-width: 50%;
+}
+
+.cityListItemStringStatContainer {
+	display: flex;
+	flex-direction: column;
+	min-width: 50%;
+}
+
+.form-editbutton-small
+{
+	background-image: url(../images/AdminPanel-Images/free-icon-edit-5934812.png);
+	background: #2196f3;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+}
+
+.form-clearbutton-small
+{
+	background-image: url(../images/AdminPanel-Images/free-icon-delete-7718788.png);
+	background: #ff5a54;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+}
