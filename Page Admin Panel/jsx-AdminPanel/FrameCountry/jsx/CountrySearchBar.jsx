@@ -1,23 +1,28 @@
 function CountrySearchBar(props) {
+	const [inputValue, setInputValue] = React.useState("");
+	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
+	const [countries, setCountries] = React.useState(props.tab.countries);
+
 	React.useEffect(() => {
-		props.setQuantity(props.tab.countries.length);
-		props.setCountries(props.tab.countries);
-	}, [props.tab]);
+		props.setQuantity(quantity);
+		props.setCountries(countries);
+	}, [quantity, countries]);
 
 	const handleInput = (event) => {
+		setInputValue(event.target.value);
 		if (event.target.value === "") {
-			props.setCountries(props.tab.countries);
-			props.setQuantity(props.tab.countries.length);
+			setCountries(props.tab.countries);
+			setQuantity(props.tab.countries.length);
 			return;
 		}
 		const filteredCountries = props.tab.countries.filter(country => country.Name.toLowerCase().includes(event.target.value.toLowerCase()));
-		props.setCountries(filteredCountries);
-		props.setQuantity(filteredCountries.length);
+		setCountries(filteredCountries);
+		setQuantity(filteredCountries.length);
 	};
 
 	return (
 		<div className="countryEditFormRow searchBarRow">
-			<input className="countryEditFormInput" name="searchBar" value="" placeholder="Введіть назву країни" onInput={handleInput} />
+			<input className="countryEditFormInput" name="searchBar" value={inputValue} placeholder="Введіть назву країни" onInput={handleInput} />
 		</div>
 	);
 };
