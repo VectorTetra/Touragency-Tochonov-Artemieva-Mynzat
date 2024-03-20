@@ -1,16 +1,13 @@
 function FrameCountry(props){
-	const searchRef = React.useRef();
-
-	// React.useEffect(() => {
-	// 	console.log("CountrySearchBar ref countries", searchRef.current ? searchRef.current.state.countries : undefined);
-	// }, [searchRef.current.state]);
+	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
+	const [countries, setCountries] = React.useState(props.tab.countries);
 
 	return (
 		<div id="frameCountry">
-			<FrameCountryHeader quantity={searchRef.getQuantity() ? searchRef.getQuantity() : 0} />
+			<FrameCountryHeader quantity={quantity} />
 			<CountryEditForm />
-			<CountrySearchBar tab={props.tab} searchRef={searchRef} />
-			<CountryList countries={searchRef.getCountries() ? searchRef.getCountries().countries : []} />
+			<CountrySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} />
+			<CountryList countries={countries} />
 		</div>
 	);
 };
