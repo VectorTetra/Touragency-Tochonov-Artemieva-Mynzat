@@ -1,6 +1,8 @@
 function CityEditForm(props) {
+	{
+		console.log("CityEditForm countries", props.countries)
+	}
 	return (
-
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<div className="countryEditFormRow">
 				<label htmlFor="countrySelect">Країна:</label>

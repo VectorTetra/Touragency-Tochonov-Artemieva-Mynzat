@@ -1,4 +1,7 @@
 function CityList(props){
+	{
+		console.log("CityList countries", props.countries)
+	}
 	return (
 		<div id="cityList">
 			{
