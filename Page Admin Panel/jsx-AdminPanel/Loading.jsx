@@ -1,4 +1,4 @@
-const Loading = () => {
+function Loading (props){
     return (
         <div className="loading">
             <div className="spinner"></div>

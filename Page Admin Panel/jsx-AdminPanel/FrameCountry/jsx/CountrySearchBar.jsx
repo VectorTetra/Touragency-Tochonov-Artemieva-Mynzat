@@ -1,4 +1,4 @@
-const CountrySearchBar = () => {
+function CountrySearchBar (props) {
 	return (
 		<input
 			type="text"
