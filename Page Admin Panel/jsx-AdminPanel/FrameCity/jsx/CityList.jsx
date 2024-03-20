@@ -1,12 +1,10 @@
 function CityList(props){
-	console.log("CityList countries", props.countries)
+	console.log("CityList cities", props.cities)
 	return (
 		<div id="cityList">
 			{
-				props.countries?.map((country, index) => {
-					return country.Cities.map((city, indext) => {
-						return <CityListItem key={crypto.randomUUID()} country={country} city={city}/>
-					})
+				props.cities?.map((city, index) => {
+					return <CityListItem key={crypto.randomUUID()} country={props.countries.find(country => country.Name === city.CountryName)} city={city}/>
 				})
 			}
 		</div>
