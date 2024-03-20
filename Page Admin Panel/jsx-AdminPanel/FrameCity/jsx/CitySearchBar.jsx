@@ -2,6 +2,8 @@ function CitySearchBar(props) {
 	const [inputCityValue, setInputCityValue] = React.useState("");
 	const [inputCountryValue, setInputCountryValue] = React.useState("");
 	const [quantity, setQuantity] = React.useState();
+	const [cities, setCities] = React.useState();
+	const [countries, setCountries] = React.useState();
 
 	// Список всіх міст
 	const allCities = props.tab.countries.flatMap(country => country.Cities);
@@ -30,7 +32,7 @@ function CitySearchBar(props) {
 		}
 		props.setCountries(filteredCountries);
 		props.setCities(filteredCities);
-		setQuantity(filteredCities.length);
+		props.setQuantity(filteredCities.length);
 	};
 
 	
