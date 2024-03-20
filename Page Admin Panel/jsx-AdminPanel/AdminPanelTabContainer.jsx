@@ -1,4 +1,3 @@
-import React, { Suspense } from 'react';
 class AdminPanelTabContainer extends React.Component {
 	constructor(props) {
 		super(props);
@@ -13,9 +12,7 @@ class AdminPanelTabContainer extends React.Component {
 				{
 					(this.state.name === "Країни") ? (
 						// Передайте його як проп в FrameCountry
-						<Suspense fallback={<Loading />}>
 							<FrameCountry tab={countryTab} />
-						</Suspense>
 					) : null
 				}
 			</div>

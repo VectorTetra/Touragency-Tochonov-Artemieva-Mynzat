@@ -17,6 +17,7 @@ class AdminPanel extends React.Component {
 			<div id="adminPanel">
 				<AdminPanelTabMenu sendDataToAdminPanelComponent={this.setDataFromTab} tabs={this.props.tabs}/>
 				<AdminPanelTabContainer ref={this.TabContainerRef} tabs={this.props.tabs}/>
+				<BackToTopButton/>
 			</div>
 		)
 	}
