@@ -85,7 +85,9 @@
 	flex-direction: row;
 	justify-content: space-around;
 }
-
+.searchBarRow{
+	margin: 2vh;
+}
 /*=====================================================================*/
 #frameCountryToolbar {
 	display: flex;
