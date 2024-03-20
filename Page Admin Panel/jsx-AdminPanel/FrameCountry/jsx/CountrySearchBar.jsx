@@ -10,7 +10,7 @@ function CountrySearchBar(props) {
 			setQuantity(props.tab.countries.length);
 			return;
 		}
-		const filteredCountries = props.tab.countries.filter(country => country.name.toLowerCase().includes(event.target.value.toLowerCase()));
+		const filteredCountries = props.tab.countries.filter(country => country.Name.toLowerCase().includes(event.target.value.toLowerCase()));
 		setCountries(filteredCountries);
 		setQuantity(filteredCountries.length);
 	};
