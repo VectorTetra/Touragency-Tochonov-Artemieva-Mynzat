@@ -1,9 +1,9 @@
 function FrameCountry(props){
 	const searchRef = React.useRef();
 
-	// React.useEffect(() => {
-	// 	// Do something with searchRef
-	// }, []);
+	React.useEffect(() => {
+		console.log("CountrySearchBar ref countries", searchRef.current.state.countries);
+	}, []);
 
 	return (
 		<div id="frameCountry">
