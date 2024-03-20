@@ -1,6 +1,6 @@
 function CountrySearchBar (props) {
-	const [quantity, setQuantity] = useState(props.tab.countries.length);
-	const [countries, setCountries] = useState(props.tab.countries);
+	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
+	const [countries, setCountries] = React.useState(props.tab.countries);
 
 	const handleInput = (event) => {
 		if	(event.target.value === "") {
