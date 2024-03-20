@@ -1,7 +1,8 @@
 function FrameCity(props){
-	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
+	const allCities = props.tab.countries.flatMap(country => country.Cities);
+	const [quantity, setQuantity] = React.useState(allCities.length);
 	const [countries, setCountries] = React.useState(props.tab.countries);
-	const [cities, setCities] = React.useState(props.tab.countries.flatMap(country => country.Cities)); // Add this line
+	const [cities, setCities] = React.useState(allCities);
 
 	return (
 		<div id="frameCountry">
