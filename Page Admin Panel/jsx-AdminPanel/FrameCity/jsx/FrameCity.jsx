@@ -5,7 +5,7 @@ function FrameCity(props){
 	return (
 		<div id="frameCountry">
 			<FrameCityHeader quantity={quantity} />
-			<CityEditForm />
+			<CityEditForm countries={countries}/>
 			<CitySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} />
 			<CityList countries={countries} />
 		</div>
