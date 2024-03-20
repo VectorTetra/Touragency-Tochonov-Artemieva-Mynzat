@@ -19,24 +19,43 @@ function CitySearchBar(props) {
 		props.setCountries(countries);
 	}, [quantity, cities, countries]);
 
+	// const handleInput = (event) => {
+	// 	event.preventDefault();
+	// 	let filteredCountries = props.tab.countries;
+	// 	let filteredCities = allCities;
+	
+	// 	if (inputCountryValue !== "") {
+	// 		filteredCountries = filteredCountries.filter(country => country.Name.toLowerCase().includes(inputCountryValue.toLowerCase()));
+	// 		filteredCities = filteredCountries.flatMap(country => country.Cities);
+	// 	}
+	
+	// 	if (inputCityValue !== "") {
+	// 		filteredCities = filteredCities.filter(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase()));
+	// 	}
+	// 	props.setCountries(filteredCountries);
+	// 	props.setCities(filteredCities);
+	// 	props.setQuantity(filteredCities.length);
+	// };
+
 	const handleInput = (event) => {
 		event.preventDefault();
-		let filteredCountries = props.tab.countries;
 		let filteredCities = allCities;
+		let filteredCountries = props.tab.countries;
+	
+		if (inputCityValue !== "") {
+			filteredCities = filteredCities.filter(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase()));
+			filteredCountries = filteredCountries.filter(country => country.Cities.some(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase())));
+		}
 	
 		if (inputCountryValue !== "") {
 			filteredCountries = filteredCountries.filter(country => country.Name.toLowerCase().includes(inputCountryValue.toLowerCase()));
 			filteredCities = filteredCountries.flatMap(country => country.Cities);
 		}
 	
-		if (inputCityValue !== "") {
-			filteredCities = filteredCities.filter(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase()));
-		}
 		props.setCountries(filteredCountries);
 		props.setCities(filteredCities);
 		props.setQuantity(filteredCities.length);
 	};
-
 	
 	const handleInputCountryValue = (event) => 
 	{
