@@ -4,7 +4,7 @@ function CityEditForm(props) {
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<div className="countryEditFormRow">
 				<label htmlFor="countrySelect">Країна:</label>
-				<select className="cityEditFormInput" name="countrySelect" required>
+				<select className="countryEditFormInput" name="countrySelect" required>
 					<option value="" disabled selected>Виберіть країну</option>
 					{props.countries.map((country, index) => {
 						return <option key={index} value={crypto.randomUUID()}>
@@ -18,11 +18,11 @@ function CityEditForm(props) {
 			</div>
 			<div className="countryEditFormRow">
 				<label htmlFor="cityNameInput">Назва міста:</label>
-				<input className="cityEditFormInput" name="cityNameInput" required />
+				<input className="countryEditFormInput" name="cityNameInput" required />
 			</div>
 			<div className="countryEditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
-				<a id="userFormSubmit" className="form-savebutton">Зберегти</a>
-				<a id="userFormReset" className="form-clearbutton">Очистити</a>
+				<input id="userFormSubmit" className="form-savebutton" type="submit" value="Зберегти"/>
+				<input id="userFormReset" className="form-clearbutton" type="reset" value="Очистити"/>
 			</div>
 		</form>
 

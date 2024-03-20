@@ -8,7 +8,7 @@ function CitySearchBar(props) {
 	React.useEffect(() => {
     	props.setCities(allCities);
 		const totalCities = allCities.length;
-		setQuantity(totalCities);
+		props.setQuantity(totalCities);
 	}, []);
 
 	React.useEffect(() => {
@@ -16,6 +16,7 @@ function CitySearchBar(props) {
 	}, [quantity]);
 
 	const handleInput = (event) => {
+		event.preventDefault();
 		let filteredCountries = props.tab.countries;
 		let filteredCities = allCities;
 	
@@ -42,10 +43,10 @@ function CitySearchBar(props) {
 		setInputCityValue(event.target.value);
 	}
 	return (
-		<div className="countryEditFormRow searchBarRow">
+		<form className="countryEditFormRow searchBarRow" method="post">
 			<input className="countryEditFormInput" name="country" value={inputCountryValue} onInput={handleInputCountryValue} placeholder="Введіть назву країни" />
 			<input className="countryEditFormInput" name="city" value={inputCityValue} onInput={handleInputCityValue} placeholder="Введіть назву міста" />
-			<button className="form-savebutton" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
-		</div>
+			<input type="submit" className="form-savebutton" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
+		</form>
 	);
 };

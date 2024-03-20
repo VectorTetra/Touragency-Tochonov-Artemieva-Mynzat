@@ -21,7 +21,7 @@
 
 .form-editbutton-small
 {
-	background-image: url(../images/AdminPanel-Images/free-icon-edit-5934812.png);
+	background-image: url(../../images/AdminPanel-Images/free-icon-edit-5934812.png);
 	background: #2196f3;
 	border-radius: 1vh;
 	color: #fff;
@@ -42,7 +42,7 @@
 
 .form-clearbutton-small
 {
-	background-image: url(../images/AdminPanel-Images/free-icon-delete-7718788.png);
+	background-image: url(../../images/AdminPanel-Images/free-icon-delete-7718788.png);
 	background: #ff5a54;
 	border-radius: 1vh;
 	color: #fff;
