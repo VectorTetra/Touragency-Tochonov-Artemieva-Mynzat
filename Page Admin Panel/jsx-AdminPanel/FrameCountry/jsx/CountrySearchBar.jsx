@@ -14,6 +14,6 @@ function CountrySearchBar (props) {
 	};
 
 	return (
-		<input className="countryEditFormInput" name="firstName" onInput={handleInput} />
+		<input className="countryEditFormInput" name="searchBar" value="" placeholder="Введіть назву країни"  onInput={handleInput} />
 	);
 };
