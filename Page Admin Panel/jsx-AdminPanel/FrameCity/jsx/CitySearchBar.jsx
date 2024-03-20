@@ -28,7 +28,7 @@ function CitySearchBar(props) {
 		if (inputCityValue !== "") {
 			filteredCities = filteredCities.filter(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase()));
 		}
-	
+		props.setCountries(filteredCountries);
 		props.setCities(filteredCities);
 		setQuantity(filteredCities.length);
 	};
