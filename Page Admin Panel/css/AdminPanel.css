@@ -26,7 +26,7 @@ a{
 #adminPanelTabContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     z-index: -1;
     top: 14vh;
@@ -160,7 +160,7 @@ a{
 	#adminPanelTabContainer {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		z-index: -1;
 		top: 9vh;
@@ -198,7 +198,7 @@ a{
 	#adminPanelTabContainer {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		z-index: -1;
 		top: 14vh;
