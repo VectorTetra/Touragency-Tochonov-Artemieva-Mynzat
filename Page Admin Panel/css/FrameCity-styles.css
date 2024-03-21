@@ -14,11 +14,12 @@
 }
 
 .cityListItemStringStatContainer {
-	display: flex;
-	flex-direction: column;
-	min-width: 50%;
-	justify-content: flex-start;
-	align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 25px;
 }
 
 .cityListItemNameDiv {
@@ -33,7 +34,8 @@
 .cityListItemFormButtonBar {
     display: flex;
     justify-content: flex-end;
-    margin: 0 2vmin;
+    /* margin: 0 2vmin; */
+	margin-left: auto;
 }
 
 .buttonSearchCity {
@@ -63,6 +65,7 @@
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
+	flex-shrink: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -86,6 +89,7 @@
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
+	flex-shrink: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
