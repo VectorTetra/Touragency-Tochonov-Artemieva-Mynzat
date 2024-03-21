@@ -50,7 +50,6 @@
 }
 
 .social-icons {
-   /*  width: 50%; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -66,8 +65,27 @@
 .map {
     display: flex;
     justify-content: center;
-    /* width: 100%; */
     margin-top: 30px;
     margin-bottom: 30px;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .container h1 {
+        font-size: 1.4rem;
+    }
+
+    .container2 {
+        font-size: 0.8rem;
+    }
+
+    .messenger-links h1 {
+        font-size: 1.4rem;
+    }
+
+    .social-icons img {
+        max-width: 100px;
+       
+    }
 
 }

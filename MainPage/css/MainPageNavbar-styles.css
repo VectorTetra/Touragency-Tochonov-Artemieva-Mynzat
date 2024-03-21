@@ -2,7 +2,6 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #f8f8f8;
-	display: flex;
 	font-family: 'Roboto', sans-serif;
 	overflow-x: hidden;
 	background-image: linear-gradient(to left, rgb(255, 250, 212),rgb(252, 208, 150));
@@ -39,12 +38,11 @@ nav {
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
-	/* margin: 10px; */
 	text-decoration: none;
 	text-align: left;
 	color: #fff;
 	background-color: #2936c4;
-	border: 5px solid rgba(242, 185, 80, 0.753);
+	border: 3px solid rgba(242, 185, 80, 0.753);
 	border-radius: 20px;
 	flex: 1 0 auto;
 }
@@ -59,7 +57,7 @@ nav {
 	padding: 5px;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
-	margin-top: 2px;
+	margin-top: 1px;
 	width: 15vw;
 	
 }
@@ -71,9 +69,7 @@ nav {
 
 .submenu li {
 	text-align: left;
-	/* line-height: 1.5; */
 	border-bottom: 1px solid #ccc;
-	/* white-space: nowrap; */
 }
 
 .submenu a {
@@ -92,4 +88,19 @@ nav {
 
 .submenu li:hover a {
 	color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+    .menu-item {
+        font-size: 10px; 
+		width: calc(100% / 6 - 5px);
+    }
+
+	nav{
+	margin: auto;
+	}
+
+	.submenu a{
+	font-size: 12px;
+	}
 }

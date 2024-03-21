@@ -1,17 +1,19 @@
 .header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    font-size: 30px;
+    padding: 30px;
+    font-size: 28px;
     color: #040f38;
+}
+
+.header h1{
+    margin: auto;
 }
 
 .row{
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 200px;
-    margin-right: 200px;
+   /*  flex-wrap: wrap; */
+    margin-left: 150px;
+    margin-right: 150px;
     font-size: 24px;
     background: #546cd7;
 }
@@ -24,14 +26,6 @@
     border-bottom: 1px solid #ccc;
 }
 
-.tab-content {
-    display: flex;
-    max-height: 0;
-    padding: 0 1em;
-    color: #2c3e50;
-    background: white;
-    transition: all 0.35s;
-}
    /* скрываем чекбоксы и блоки с содержанием */
 .hide,
 .hide + label ~ div {
@@ -99,4 +93,20 @@ to { opacity: 1 }
 
 .hide:checked + label:before {
     content: "\2212";
+}
+
+@media screen and (max-width: 900px) {
+    .header h1{
+        font-size: 20px;
+    }
+
+    .row{
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 14px;
+    }
+
+    .hide + label:before {
+        font-size: 12px;
+    }
 }

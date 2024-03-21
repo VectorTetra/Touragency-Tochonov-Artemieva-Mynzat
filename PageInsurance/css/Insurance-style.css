@@ -102,3 +102,30 @@ li strong {
 .Vuso a:hover {
     color: red;
 }
+
+@media screen and (max-width: 900px) {
+    .container h1{
+        font-size: 24px;
+    }
+    .browntext {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    .blutext {
+        font-size: 18px;
+    }
+
+    .headtable, .headtable1 {
+        font-size: 14px;
+    }
+
+    .oldturist{
+        font-size: 16px;
+    }
+
+    .Vuso a{
+        font-size: 18px;
+    }
+   
+}

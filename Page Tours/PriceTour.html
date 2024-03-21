@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Тур Італія</title>
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Photo-style.css">
+    <link rel="stylesheet" href="./css/Price-style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/js/i18n/uk.js"></script>
+    <script src="./script/scripts.js" type="text/javascript"></script>
+	<script src="./script/scriptPrice.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+	<div id="app"></div>
+	
+	<!-- ============================================================================================ -->
+	<!-- =========================== Тури =========================== -->
+
+	<!-- 0. Компонент, сторінки Тури -->
+	<script type="text/babel" src="./jsx-ToursItalian/PriceTourAll.jsx"></script>
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PriceTourBody.jsx"></script>
+	<!-- 2. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursChildren.jsx"></script>
+ 
+
+
+	<!-- ============================================================================================ -->
+	<!-- =========================== Інші спільні компоненти =========================== -->
+
+	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
+	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+    <!-- 1. Компонент, Кнопка перемотки сторінки до хедеру -->
+	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+	
+	
+
+	<!-- ============================================================================================ -->
+	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
+
+	<script type="text/babel">
+		let price;
+
+		Promise.all([
+			fetch('./json/PriceTour.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading header data from JSON file <================================
+					price = data.price;
+					console.log(price);
+				}))
+		]).then(
+			() => {
+				const rootNode = document.getElementById("app");
+				const root = ReactDOM.createRoot(rootNode);
+				root.render(
+					<React.StrictMode>
+						<div>
+							<PriceTourAll price={price}/>
+							<BackToTopButton />
+						</div>
+					</React.StrictMode>
+				);
+			}
+		)
+	</script>
+</body>
+
+</html>

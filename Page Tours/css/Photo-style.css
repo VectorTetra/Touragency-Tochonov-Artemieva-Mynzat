@@ -1,0 +1,100 @@
+/* Position the image container (needed to position the left and right arrows) */
+  .containerPhoto {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    /* display: none; */
+    text-align: center;
+    display: flex; /* Используем flexbox для выравнивания по центру */
+  }
+
+  .mySlides img{
+    width:70%; 
+    height:500px; 
+    margin: auto;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev1,
+  .next1 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -120px;
+    color: rgb(177, 39, 39);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next1 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+ 
+  /* On hover, add a black background color with a little bit see-through */
+  .prev1:hover,
+  .next1:hover {
+    background-color: rgba(222, 237, 122, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    margin-left: 15%;
+    font-weight: bold;
+    background-color: rgb(36, 21, 83);
+    color: yellow;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: #3f63d1;
+    padding: 3px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Количество фото в строке */
+  .column {
+    float: left;
+    width: calc((100% - (4 * 10px)) / 5); /* Вычисляем ширину с учетом отступов */
+    margin: 0 2px; /* Устанавливаем отступы между элементами */
+    border-radius: 2px;
+    border: solid 2px rgb(167, 129, 30);
+    /* box-sizing: border-box; */ /* Учитываем рамку в расчете ширины */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
