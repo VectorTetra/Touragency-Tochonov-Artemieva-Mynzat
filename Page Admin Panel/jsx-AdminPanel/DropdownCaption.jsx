@@ -1,26 +1,31 @@
-// Ми зможемо використовувати цей TabContext , щоб використовувати його змінні замість state
-// Для цього використаємо useContext
-import React, { useContext } from 'react';
-import AdminPanelTabContext  from "./AdminPanelTabContext.js";
-import DropdownList from "./DropdownList.jsx";
 function DropdownCaption(props){
+	const [isDropdownListVisible, setDropdownListVisible] = React.useState(false);
+	const [currentTab, setCurrentTab] = React.useState(props.tabs[0]);
 
-	const [DropdownCaptionTabContext, setDropdownCaptionTabContext] = useContext(AdminPanelTabContext);
+	function sendDataToAdminPanelTabMenu(TabInfo) {
+		setCurrentTab(TabInfo);
+		setDropdownListVisible(false);
+		props.sendDataToAdminPanelTabMenuComponent(TabInfo);
+		console.log("currentTab: ", TabInfo);
+	}
 	function handleClick() {
-		setDropdownCaptionTabContext({...DropdownCaptionTabContext, "isDropdownListVisible": !DropdownCaptionTabContext.isDropdownListVisible})
+		setDropdownListVisible(!isDropdownListVisible);
 	}
 	return (
 		<div>
 			<div className="dropdownCaption" onClick={handleClick}>
-				<img src={DropdownCaptionTabContext.activeTab.tabIconUrl}  className="dropdownCaptionIcon" />
-				<div className="dropdownCaptionName">{DropdownCaptionTabContext.activeTab.name}</div>
+				<img src={currentTab.tabIconUrl}  className="dropdownCaptionIcon" />
+				<div className="dropdownCaptionName">{currentTab.name}</div>
 			</div>
 			{
-				(DropdownCaptionTabContext.isDropdownListVisible === true) ?
-				<DropdownList />
+				(isDropdownListVisible === true) ?
+				<DropdownList tabs={props.tabs} 
+					sendDataToDropdownCaptionComponent={sendDataToAdminPanelTabMenu}
+					isVisible={isDropdownListVisible}
+					currentTab={currentTab}
+				/>
 				: null
 			}
 		</div>
 	);
 };
-export default DropdownCaption;

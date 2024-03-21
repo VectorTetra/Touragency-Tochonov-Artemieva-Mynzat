@@ -1,26 +1,24 @@
-// Використання контексту для передачі даних між компонентами без 
-// прямого виклику методів батьківського компонента в дочірній компоненті
-// Це дозволить уникнути props-drilling
-import  AdminPanelTabContext  from "./AdminPanelTabContext.js";
-import  AdminPanelTabMenu from "./AdminPanelTabMenu.jsx";
-import  AdminPanelTabContainer  from "./AdminPanelTabContainer.jsx";
-
-function AdminPanel(props) {
-	return (
-		<AdminPanelTabContext.Provider
-			value={{
-				"tabs": props.tabs,
-				"activeTab": props.tabs[0],
-				"isDropdownListVisible": false,
-			}}
-		>
+class AdminPanel extends React.Component {
+	constructor(props) {
+		super(props);
+		this.TabContainerRef = React.createRef();
+		this.setDataFromTab = this.setDataFromTab.bind(this);
+	}
+	setDataFromTab = (data) => 
+	{
+		this.TabContainerRef.current.setState({ 
+			name: data.name,
+			tabIconUrl:data.tabIconUrl
+		});
+	}
+	render() 
+	{
+		return (
 			<div id="adminPanel">
-				{/* {
-					console.log("AdminPanelTabContext: ", AdminPanelTabContext)
-				} */}
-				<AdminPanelTabMenu />
-				<AdminPanelTabContainer />
+				<AdminPanelTabMenu sendDataToAdminPanelComponent={this.setDataFromTab} tabs={this.props.tabs}/>
+				<AdminPanelTabContainer ref={this.TabContainerRef} tabs={this.props.tabs}/>
+				<BackToTopButton/>
 			</div>
-		</AdminPanelTabContext.Provider>
-	);
+		)
+	}
 }
