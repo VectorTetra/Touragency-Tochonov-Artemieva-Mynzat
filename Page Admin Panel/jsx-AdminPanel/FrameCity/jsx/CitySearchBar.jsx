@@ -56,7 +56,7 @@ function CitySearchBar(props) {
 		props.setCities(filteredCities);
 		props.setQuantity(filteredCities.length);
 	};
-	
+
 	const handleInputCountryValue = (event) => 
 	{
 		setInputCountryValue(event.target.value);
@@ -69,7 +69,7 @@ function CitySearchBar(props) {
 		<form className="countryEditFormRow searchBarRow" method="post">
 			<input className="countryEditFormInput" name="country" value={inputCountryValue} onInput={handleInputCountryValue} placeholder="Введіть назву країни" />
 			<input className="countryEditFormInput" name="city" value={inputCityValue} onInput={handleInputCityValue} placeholder="Введіть назву міста" />
-			<input type="submit" className="form-savebutton" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
+			<input type="submit" className="buttonSearchCity" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
 		</form>
 	);
 };

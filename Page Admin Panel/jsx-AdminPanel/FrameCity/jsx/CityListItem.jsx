@@ -8,7 +8,7 @@ function CityListItem(props) {
 					<div className="countryListItemNameDiv">Місто: {props.city.Name}</div>
 				</div>
 			</div>
-			<form action="post" className="countryListItemFormButtonBar">
+			<form action="post" className="cityListItemFormButtonBar">
 				<input type="hidden" name="countryId" value={props.key} />
 				<button type="submit" className="form-editbutton-small"></button>
 				<button type="submit" className="form-clearbutton-small"></button>

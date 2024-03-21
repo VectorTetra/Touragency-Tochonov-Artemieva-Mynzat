@@ -17,13 +17,35 @@
 	display: flex;
 	flex-direction: column;
 	min-width: 50%;
+	justify-content: center;
 }
 
-.form-editbutton-small
-{
+.cityListItemFormButtonBar {
+	display: flex;
+	justify-content: flex-end;
+	min-width: 50%;
+}
+
+.buttonSearchCity {
+	width: 70vw;
+	font-size: 4vmin;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	background: #4CAF50;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+}
+
+.form-editbutton-small {
 	background-image: url(../../images/AdminPanel-Images/free-icon-edit-5934812.png);
-	background: #2196f3;
-	border-radius: 1vh;
+	background-size: 100%;
+	background-color: #fff;
+	border-radius: 50%;
 	color: #fff;
 	font-weight: 700;
 	font-family: sans-serif;
@@ -38,13 +60,15 @@
 	user-select: none;
 	margin-right: 2vmin;
 	align-self: center;
+	height: clamp(4vmax, 6vmin, 75px);
+	width: clamp(4vmax, 6vmin, 75px);
 }
 
-.form-clearbutton-small
-{
+.form-clearbutton-small {
 	background-image: url(../../images/AdminPanel-Images/free-icon-delete-7718788.png);
-	background: #ff5a54;
-	border-radius: 1vh;
+	background-size: 100%;
+	background: #ffffff;
+	border-radius: 50%;
 	color: #fff;
 	font-weight: 700;
 	font-family: sans-serif;
@@ -59,4 +83,6 @@
 	user-select: none;
 	margin-right: 2vmin;
 	align-self: center;
+	height: clamp(4vmax, 6vmin, 75px);
+	width: clamp(4vmax, 6vmin, 75px);
 }
