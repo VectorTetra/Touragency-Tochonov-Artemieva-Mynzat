@@ -22,18 +22,18 @@
 }
 
 .cityListItemNameDiv {
-	font-size: clamp(1.5vmax, 3vmin, 4vmax);
-	display: flex;
-	font-weight: 1000;
-	text-wrap: pretty;
-	line-height: 4vmin;
-	padding-right: 3vmin;
-	word-break: break-word;
+    font-size: clamp(20px, 3vmin, 4vmax);
+    display: flex;
+    font-weight: 1000;
+    text-wrap: pretty;
+    line-height: 30px;
+    word-break: break-word;
 }
 
 .cityListItemFormButtonBar {
-	display: flex;
-	justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 2vmin;
 }
 
 .buttonSearchCity {
@@ -63,15 +63,15 @@
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	margin-right: 2vmin;
-	align-self: center;
-	height: clamp(4vmax, 6vmin, 75px);
-	width: clamp(4vmax, 6vmin, 75px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-right: 2vmin;
+    align-self: center;
+    height: clamp(35px, 8vmin, 75px) !important;
+    width: clamp(35px, 8vmin, 75px) !important;
 }
 
 .form-clearbutton-small {
@@ -86,12 +86,13 @@
 	padding: 1vmin 2.5vmin;
 	cursor: pointer;
 	display: flex;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	align-self: center;
-	height: clamp(4vmax, 6vmin, 75px);
-	width: clamp(4vmax, 6vmin, 75px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-right: 2vmin;
+    align-self: center;
+    height: clamp(35px, 8vmin, 75px) !important;
+    width: clamp(35px, 8vmin, 75px) !important;
 }
