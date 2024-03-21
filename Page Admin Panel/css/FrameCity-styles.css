@@ -17,13 +17,23 @@
 	display: flex;
 	flex-direction: column;
 	min-width: 50%;
-	justify-content: center;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.cityListItemNameDiv {
+	font-size: clamp(1.5vmax, 3vmin, 4vmax);
+	display: flex;
+	font-weight: 1000;
+	text-wrap: pretty;
+	line-height: 4vmin;
+	padding-right: 3vmin;
+	word-break: break-word;
 }
 
 .cityListItemFormButtonBar {
 	display: flex;
 	justify-content: flex-end;
-	min-width: 50%;
 }
 
 .buttonSearchCity {
@@ -67,7 +77,7 @@
 .form-clearbutton-small {
 	background-image: url(../../images/AdminPanel-Images/free-icon-delete-7718788.png);
 	background-size: 100%;
-	background: #ffffff;
+	background-color: #ffffff;
 	border-radius: 50%;
 	color: #fff;
 	font-weight: 700;
@@ -81,7 +91,6 @@
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	margin-right: 2vmin;
 	align-self: center;
 	height: clamp(4vmax, 6vmin, 75px);
 	width: clamp(4vmax, 6vmin, 75px);
