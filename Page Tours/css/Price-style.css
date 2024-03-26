@@ -1,0 +1,155 @@
+.menu {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    border: 2px solid rgb(228, 157, 43);
+    background-color: bisque;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, 
+td {
+    font-size: 16px;
+    padding: 8px;
+    border-right: 1px solid rgb(228, 157, 43);
+    text-align: center;
+}
+
+.children {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 2px solid rgb(167, 129, 30);
+}
+
+.children1 {
+    background-color: rgb(153, 230, 153);
+    padding: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.children2 {
+    padding: 10px;
+    /* margin: 10px; */
+    font-size: 18px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid grey;
+    width: 90%;
+    background-color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(242, 240, 222);
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 3px;
+    border: 2px solid rgb(167, 129, 30);
+}
+
+.dropdown-content2{
+    display: none;
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 100%; /* Помещаем подменю ниже кнопки */
+    left: 0; /* Выравниваем слева от родительского элемента */
+    z-index: 1; /* Поднимаем подменю над другими элементами */
+    background-color: #c3d7c2;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 a:hover {
+    background-color: #7ac5c0;
+}
+
+/* Отображение подменю при наведении на родительский элемент */
+.dropdown:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown-content p {
+    margin-right: 30px;
+}
+
+.dropdown-content span {
+    padding: 10px;
+}
+
+.dropdown-content div {
+    display: flex;
+    flex-direction: row;
+    /* Располагаем элементы в строку */
+    align-items: center;
+    /* Выравниваем элементы по центру по вертикали */
+    padding: 8px 10px;
+    /* padding: 5px; */
+    /* Добавляем небольшой внутренний отступ */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* .dropdown-content div button {
+    margin-right: 8px;
+    border: none;
+    background-color: transparent;
+} */
+
+.dropdown-content div button:hover {
+    background-color: #5bc0cb;
+    color: red;
+}
+
+.btn {
+    width: 100%;
+    background-color: rgb(153, 230, 153);
+    border: 2px solid rgb(200, 239, 59);
+   /*  color: rgb(30, 10, 89); */
+    padding: 14px 20px;
+   /*  margin: 8px 0; */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.child-info {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+#child-info-container {
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление колонок */
+}
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Тур Італія</title>
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Photo-style.css">
+    <link rel="stylesheet" href="./css/Price-style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/js/i18n/uk.js"></script>
+    <script src="./script/scripts.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div id="app"></div>
+	<!-- ============================================================================================ -->
+	<!-- =================================== Хедер ================================ -->
+
+	<!-- 0. Компонент, шапка головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeader.jsx"></script>
+	<!-- 1. Компонент, вертикальний flex-список для перерахув. номерів телефонів, графіку роботи, соцмереж і т.д.  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderContactList.jsx"></script>
+	<!-- 1. Компонент, логотип турагенства  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderLogo.jsx"></script>
+	<!-- 1. Компонент, назва і слоган турагенства  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderTouragencySign.jsx"></script>
+	<!-- 2. Компонент, рядок списку MainPageHeaderContactList, панель для іконок соцмереж з посиланнями-->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderNetworksBar.jsx"></script>
+	<!-- 3. Компонент, іконка соцмережі з посиланням-->
+	<script type="text/babel" src="../MainPage/jsx-Header/SocialNetworkIconRef.jsx"></script>
+	<!-- 1. Компонент, кнопка Увійти-->
+	<script type="text/babel" src="../MainPage/jsx-Header/LoginButton.jsx"></script>
+	<!-- 1. Компонент, відображає особ. інформ. користувача, коли він зайшов в систему-->
+	<script type="text/babel" src="../MainPage/jsx-Header/UserGreetings.jsx"></script>
+	<!-- 1. Компонент, кнопка Вийти-->
+	<script type="text/babel" src="../MainPage/jsx-Header/LogoutButton.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- =========================== Навігаційна панель =========================== -->
+
+	<!-- 0. Компонент, нав.панель головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbar.jsx"></script>
+	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbarItem.jsx"></script>
+
+	<!-- ============================================================================================ -->
+	<!-- =========================== Тури =========================== -->
+
+	<!-- 0. Компонент, сторінки Тури -->
+	<script type="text/babel" src="./jsx-ToursItalian/TourItalianAll.jsx"></script>
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursLogo.jsx"></script>
+    <!-- 2. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursCalendar.jsx"></script>
+	<!-- 3. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursNavPanel.jsx"></script>
+	<!-- 4. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/TourProgramm.jsx"></script>
+	<!-- 5. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursChildren.jsx"></script>
+	<!-- 6. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursFuter.jsx"></script>
+
+
+	<!-- ============================================================================================ -->
+	<!-- =========================== Інші спільні компоненти =========================== -->
+
+	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
+	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+
+	<!-- ============================================================================================ -->
+	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
+
+	<script type="text/babel">
+		let headerData;
+		let navbarItems;
+		let tours;
+
+		Promise.all([
+			fetch('../MainPage/json/mainPageHeaderInfo.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading header data from JSON file <================================
+					headerData = data.headerData;
+				})),
+			fetch('../MainPage/json/mainPageNavbarItems.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading navbarItems from JSON file <================================
+					navbarItems = data.navbarItems;
+				})),
+			fetch('./json/ToursItalian.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading header data from JSON file <================================
+					tours = data.tours;
+					console.log(tours);
+				}))
+		]).then(
+			() => {
+				const rootNode = document.getElementById("app");
+				const root = ReactDOM.createRoot(rootNode);
+				root.render(
+					<React.StrictMode>
+						<div>
+							<MainPageHeader headerData={headerData} />
+							<MainPageNavbar navbarItems={navbarItems} />
+							<TourItalianAll tours={tours}/>
+							<BackToTopButton />
+						</div>
+					</React.StrictMode>
+				);
+			}
+		)
+	</script>
+</body>
+
+</html>
