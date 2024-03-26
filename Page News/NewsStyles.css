@@ -1,0 +1,61 @@
+.news-wrapper 
+{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.content{
+    flex-direction: column;
+    width: 70%;
+}
+
+.news-caption
+{
+    margin-bottom: 5px;
+}
+
+.news-item{
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.news-block
+{
+    display: flex;
+    flex-direction: row;
+}
+.publication-img{
+    margin-right: 10px;
+    width: 300px;
+    height: auto;
+}
+
+.read-next
+{
+    margin-top: 5px;
+}
+.paragraph
+{
+    width: 50%;
+}
+.side-bar{
+    margin-left: 15px;
+}
+
+ul{
+    padding:20px;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+li
+{
+    margin:5px;
+}
+a {
+    color: dodgerblue;
+  }
+
