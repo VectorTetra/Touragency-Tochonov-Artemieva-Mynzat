@@ -57,9 +57,9 @@
 			"mainHref":null,
 			"submenu":
 			[
-				{"subItemCaption":"Всі відгуки", "href":"#"},
-				{"subItemCaption":"Відгуки по країнами", "href":"#"},
-				{"subItemCaption":"Відгуки по турам", "href":"#"}
+				{"subItemCaption":"Всі відгуки", "href":"../Page%20Feedback/Feedback.html"},
+				{"subItemCaption":"Відгуки по країнами", "href":"../Page%20Feedback/FeedbackCountry.html"},
+				{"subItemCaption":"Відгуки по турам", "href":"../Page%20Feedback/FeedbackTour.html"}
 			]
 		}
 	]
