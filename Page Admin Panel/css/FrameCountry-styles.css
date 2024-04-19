@@ -88,6 +88,9 @@
 .searchBarRow{
 	margin: 2vh;
 }
+.searchBarRow > input {
+    margin-bottom: 1vh;
+}
 /*=====================================================================*/
 #frameCountryToolbar {
 	display: flex;

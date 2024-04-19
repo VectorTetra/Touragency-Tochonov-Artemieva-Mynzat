@@ -1,0 +1,118 @@
+.cityListItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
+
+}
+
+.cityListItemStatContainer {
+	display: flex;
+	min-width: 50%;
+}
+
+.cityListItemStringStatContainer {
+	display: flex;
+	flex-direction: column;
+	min-width: 50%;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-right: 25px;
+}
+
+.cityListItemNameDiv {
+	font-size: clamp(20px, 3vmin, 4vmax);
+	display: flex;
+	font-weight: 1000;
+	text-wrap: pretty;
+	line-height: 30px;
+	word-break: break-word;
+}
+
+.cityListItemFormButtonBar {
+	display: flex;
+	justify-content: flex-end;
+	/* margin: 0 2vmin; */
+	margin-left: auto;
+}
+
+.buttonSearchCity {
+	width: 70vw;
+	font-size: 4vmin;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	background: #4CAF50;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+}
+
+.form-editbutton-small {
+	background-image: url(../../images/AdminPanel-Images/free-icon-edit-5934812.png);
+	background-size: 100%;
+	background-color: #fff;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	flex-shrink: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+	height: clamp(35px, 8vmin, 75px) !important;
+	width: clamp(35px, 8vmin, 75px) !important;
+}
+
+.form-clearbutton-small {
+	background-image: url(../../images/AdminPanel-Images/free-icon-delete-7718788.png);
+	background-size: 100%;
+	background-color: #ffffff;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	flex-shrink: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+	height: clamp(35px, 8vmin, 75px) !important;
+	width: clamp(35px, 8vmin, 75px) !important;
+}
+
+@media (pointer: coarse) and (orientation: landscape) {
+	.form-editbutton-small {
+		height: clamp(35px, 10vmin, 100px) !important;
+		width: clamp(35px, 10vmin, 100px) !important;
+	}
+
+	.form-clearbutton-small {
+		height: clamp(35px, 10vmin, 100px) !important;
+		width: clamp(35px, 10vmin, 100px) !important;
+	}
+	.buttonSearchCity {
+		font-size: 6vmin;
+		padding: 2vmin 5vmin;
+	}
+}

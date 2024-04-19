@@ -15,6 +15,11 @@ class AdminPanelTabContainer extends React.Component {
 							<FrameCountry tab={countryTab} />
 					) : null
 				}
+				{
+					(this.state.name === "Міста") ? (
+							<FrameCity tab={countryTab} />
+					) : null
+				}
 			</div>
 
 		);

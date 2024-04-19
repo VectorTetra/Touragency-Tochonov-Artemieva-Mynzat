@@ -3,11 +3,11 @@ function CountryEditForm(props) {
 
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<div className="countryEditFormRow">
-				<label htmlFor="firstName">Назва країни:</label>
+				<label htmlFor="countryNameInput">Назва країни:</label>
 				<input className="countryEditFormInput" name="countryNameInput" required />
 			</div>
 			<div className="countryEditFormRow">
-				<label htmlFor="login">URL до зображення прапора країни:</label>
+				<label htmlFor="urlFlagInput">URL до зображення прапора країни:</label>
 				<input className="countryEditFormInput" name="urlFlagInput" required />
 			</div>
 			<div className="countryEditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
