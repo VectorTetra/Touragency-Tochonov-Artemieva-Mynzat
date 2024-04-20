@@ -25,6 +25,5 @@ function CityEditForm(props) {
 				<input id="userFormReset" className="form-clearbutton" type="reset" value="Очистити"/>
 			</div>
 		</form>
-
 	);
 };

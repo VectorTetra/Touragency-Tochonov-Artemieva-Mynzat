@@ -1760,10 +1760,6 @@
 			]
 		},
 		{
-			"name": "Курорти",
-			"tabIconUrl": "../images/AdminPanel-Images/resorts.png"
-		},
-		{
 			"name": "Люди",
 			"tabIconUrl": "../images/AdminPanel-Images/people.png"
 		},

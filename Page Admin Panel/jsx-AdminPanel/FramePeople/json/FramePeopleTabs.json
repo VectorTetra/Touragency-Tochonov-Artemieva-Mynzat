@@ -1,0 +1,15 @@
+{
+	"framePeopleTabs":
+	[
+		{
+			"tabName": "Люди"
+		},
+		{
+			"tabName": "Телефони"
+		},
+		{
+			"tabName": "Emails"
+		}
+		
+	]
+}
