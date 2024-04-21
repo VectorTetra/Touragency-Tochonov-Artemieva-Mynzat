@@ -1,6 +1,6 @@
 function PeopleSubTabCaption(props){
 	const [isPeopleSubTabContentVisible, setPeopleSubTabContentVisible] = React.useState(false);
-	const tab = React.useContext(PeopleTabContext);
+	const tab = React.useContext(window.PeopleTabContext);
 	function handleClick() {
 		setPeopleSubTabContentVisible(!isPeopleSubTabContentVisible);
 	}
