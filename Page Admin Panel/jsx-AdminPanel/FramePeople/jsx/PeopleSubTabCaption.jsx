@@ -6,10 +6,10 @@ function PeopleSubTabCaption(props){
 	return (
 		<div className="framePeople-sub-tab">
 			<div className="framePeople-sub-tab-caption" onClick={handleClick}>
-				<div className="framePeople-sub-tab-caption-name">{props.tabName}</div>
+				<div className="framePeople-sub-tab-caption-name">{props.tab.tabName}</div>
 			</div>
 			{
-				isPeopleSubTabContentVisible === true && <PeopleSubTabContent/>
+				isPeopleSubTabContentVisible === true && <PeopleSubTabContent people={props.tab.people}/>
 			}
 		</div>
 	);	
