@@ -38,21 +38,21 @@ function PeopleSubTabEditForm(props)
 	  
 		return (
 		  <form className="peopleSubTabEditForm" onSubmit={handleSubmit} style={{ border: '1px solid black', borderRadius: '5px' }}>
-			<div className="personEditFormRow">
+			<div className="EditFormRow">
 			  <label htmlFor="idInput">ID:</label>
-			  <input type="text" className="personEditFormInput" name="idInput" value={id} readOnly />
+			  <input type="text" className="EditFormInput" name="idInput" value={id} readOnly />
 			</div>
-			<div className="personEditFormRow">
+			<div className="EditFormRow">
 			  <label htmlFor="firstNameInput">Ім'я:</label>
-			  <input type="text" className="personEditFormInput" name="firstName" value={firstName} onChange={handleInputChange} required />
+			  <input type="text" className="EditFormInput" name="firstName" value={firstName} onChange={handleInputChange} required />
 			</div>
-			<div className="personEditFormRow">
+			<div className="EditFormRow">
 			  <label htmlFor="lastNameInput">Прізвище:</label>
-			  <input type="text" className="personEditFormInput" name="lastName" value={lastName} onChange={handleInputChange} required />
+			  <input type="text" className="EditFormInput" name="lastName" value={lastName} onChange={handleInputChange} required />
 			</div>
-			<div className="personEditFormRow">
+			<div className="EditFormRow">
 			  <label htmlFor="middleNameInput">По-батькові:</label>
-			  <input type="text" className="personEditFormInput" name="middleName" value={middleName} onChange={handleInputChange} />
+			  <input type="text" className="EditFormInput" name="middleName" value={middleName} onChange={handleInputChange} />
 			</div>
 			<div className="personEditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 			  <button type="submit" className="form-savebutton">Зберегти</button>
