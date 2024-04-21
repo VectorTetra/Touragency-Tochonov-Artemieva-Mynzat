@@ -37,7 +37,7 @@ function PeopleSubTabEditForm(props)
 		}
 	  
 		return (
-		  <form onSubmit={handleSubmit} style={{ border: '1px solid black', borderRadius: '5px' }}>
+		  <form className="peopleSubTabEditForm" onSubmit={handleSubmit} style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<div className="personEditFormRow">
 			  <label htmlFor="idInput">ID:</label>
 			  <input type="text" className="personEditFormInput" name="idInput" value={id} readOnly />

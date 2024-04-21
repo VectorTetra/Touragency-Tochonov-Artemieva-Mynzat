@@ -1,6 +1,6 @@
 function PeopleSubTabList(props){
 	return (
-		<div>
+		<div className="peopleSubTabList">
 			<PeopleSubTabListItem/>
 		</div>
 	);	

@@ -4,7 +4,7 @@ function PeopleSubTabCaption(props){
 		setPeopleSubTabContentVisible(!isPeopleSubTabContentVisible);
 	}
 	return (
-		<div>
+		<div className="framePeople-sub-tab">
 			<div className="framePeople-sub-tab-caption" onClick={handleClick}>
 				<div className="dropdownCaptionName">{props.tabName}</div>
 			</div>
