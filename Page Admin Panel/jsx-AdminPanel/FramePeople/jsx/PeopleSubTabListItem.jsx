@@ -1,7 +1,7 @@
 function PeopleSubTabListItem({person}){
 	return (
 		<div className="peopleSubTabListItem">
-			<div className="peopleSubTabListItemStatContainer">
+			<div>
 				<p>ID: {person.id}</p>
 			</div>
 			<div className="peopleSubTabListItemStatContainer">
