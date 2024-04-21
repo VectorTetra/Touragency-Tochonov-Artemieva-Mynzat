@@ -1,7 +1,7 @@
 function FramePeople(props){
 	return (
 		<div id="framePeople">
-			<PeopleSubTabCaption />
+			<PeopleSubTabCaption tabName="Люди"/>
 		</div>
 	);	
 }
