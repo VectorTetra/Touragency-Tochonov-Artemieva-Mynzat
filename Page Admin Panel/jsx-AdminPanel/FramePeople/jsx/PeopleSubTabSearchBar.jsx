@@ -1,5 +1,5 @@
 function PeopleSubTabSearchBar(props){
-	const [inputIdValue, setInputIdValue] = React.useState(0);
+	const [inputIdValue, setInputIdValue] = React.useState(null);
 	const [inputFirstnameValue, setInputFirstnameValue] = React.useState("");
 	const [inputLastnameValue, setInputLastnameValue] = React.useState("");
 	const [inputMiddlenameValue, setInputMiddlenameValue] = React.useState("");
@@ -28,7 +28,7 @@ function PeopleSubTabSearchBar(props){
 	}
 	return (
 		<form className="EditFormRow searchBarRow" method="post">
-			<input type="number" min={0} className="EditFormInput" name="Id" value={inputIdValue} onInput={handleInputIdValue} placeholder="Введіть ID" />
+			<input type="number" min={1} className="EditFormInput" name="Id" value={inputIdValue} onInput={handleInputIdValue} placeholder="Введіть ID" />
 			<input className="EditFormInput" name="Firstname" value={inputFirstnameValue} onInput={handleInputFirstnameValue} placeholder="Введіть ім'я" />
 			<input className="EditFormInput" name="Lastname" value={inputLastnameValue} onInput={handleInputLastnameValue} placeholder="Введіть прізвище" />
 			<input className="EditFormInput" name="Middlename" value={inputMiddlenameValue} onInput={handleInputMiddlenameValue} placeholder="Введіть по-батькові (необов'язково)" />
