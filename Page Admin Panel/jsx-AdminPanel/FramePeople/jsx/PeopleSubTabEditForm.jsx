@@ -40,7 +40,7 @@ function PeopleSubTabEditForm(props)
 		  <form className="peopleSubTabEditForm" onSubmit={handleSubmit} style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<div className="EditFormRow">
 			  <label htmlFor="idInput">ID:</label>
-			  <input type="text" className="EditFormInput" name="idInput" value={id} readOnly />
+			  <input type="text" className="EditFormInput" name="idInput" value={id} readOnly disabled={true}/>
 			</div>
 			<div className="EditFormRow">
 			  <label htmlFor="firstNameInput">Ім'я:</label>
@@ -54,7 +54,7 @@ function PeopleSubTabEditForm(props)
 			  <label htmlFor="middleNameInput">По-батькові:</label>
 			  <input type="text" className="EditFormInput" name="middleName" value={middleName} onChange={handleInputChange} />
 			</div>
-			<div className="personEditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
+			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 			  <button type="submit" className="form-savebutton">Зберегти</button>
 			  <button type="button" onClick={handleReset} className="form-clearbutton">Очистити</button>
 			</div>

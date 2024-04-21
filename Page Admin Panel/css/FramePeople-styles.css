@@ -1,17 +1,31 @@
 #framePeople{
 	width: 95%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	background-color: #efe489;
-	padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #efe489;
+    padding: 20px;
 }
-.framePeople-sub-tab
-{
-
+.framePeople-sub-tab {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
 }
-.framePeople-sub-tab-caption{
-
+.framePeople-sub-tab-caption {
+    background-color: burlywood;
+    height: 2vh;
+    /* width: 95vmin; */
+}
+.framePeople-sub-tab-caption-name{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    font-size: 5vh;
+    font-family: sans-serif;
 }
