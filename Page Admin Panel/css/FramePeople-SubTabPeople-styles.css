@@ -1,0 +1,13 @@
+#framePeople{
+	width: 95%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #efe489;
+	padding: 20px;
+}
+.framePeople-sub-tab-caption{
+
+}
