@@ -1,9 +1,7 @@
-import { Suspense } from 'react';
-
 function PeopleSubTabContent(props){
 	return (
 		<div>
-			{/* <Suspense fallback={<div>Loading...</div>}></Suspense> */}
+			<React.Suspense fallback={<div>Loading...</div>}></React.Suspense> 
 			<PeopleSubTabEditForm/>
 			<PeopleSubTabList/>
 		</div>
