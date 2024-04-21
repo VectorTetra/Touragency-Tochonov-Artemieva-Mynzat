@@ -1,4 +1,4 @@
-const { Suspense } = require("react");
+import { Suspense } from 'react';
 
 function PeopleSubTabContent(props){
 	return (
