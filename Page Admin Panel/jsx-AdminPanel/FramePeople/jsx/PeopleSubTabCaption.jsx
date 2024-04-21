@@ -10,7 +10,7 @@ function PeopleSubTabCaption(props){
 				<div className="framePeople-sub-tab-caption-name">{tab.name}</div>
 			</div>
 			{
-				isPeopleSubTabContentVisible === true && <PeopleSubTabContent people={tab.people}/>
+				isPeopleSubTabContentVisible === true && <PeopleSubTabContent/>
 			}
 		</div>
 	);	
