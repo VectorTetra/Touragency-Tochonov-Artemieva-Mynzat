@@ -3,7 +3,8 @@ function CountryEditForm(props) {
 		event.preventDefault();
 		const countryName = event.target.elements.countryNameInput.value;
 		const urlFlag = event.target.elements.urlFlagInput.value;
-		const id = event.target.elements.countryIdInput.value;
+		let id = event.target.elements.countryIdInput.value;
+		id = Number(id); // перетворюємо id в число
 		let request = JSON.stringify({
 			id: id,
 			urlFlag: urlFlag,
