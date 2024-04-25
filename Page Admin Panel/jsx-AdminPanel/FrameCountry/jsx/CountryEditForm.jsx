@@ -8,7 +8,8 @@ function CountryEditForm(props) {
 		let request = JSON.stringify({
 			id: id,
 			urlFlag: urlFlag,
-			countryName: countryName
+			countryName: countryName,
+			SettlementIds: []
 		});
 		if(id === 0) 
 		{
