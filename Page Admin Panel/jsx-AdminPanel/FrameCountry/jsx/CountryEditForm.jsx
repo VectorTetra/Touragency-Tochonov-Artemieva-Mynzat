@@ -6,9 +6,9 @@ function CountryEditForm(props) {
 		let id = event.target.elements.countryIdInput.value;
 		id = Number(id); // перетворюємо id в число
 		let request = JSON.stringify({
-			id: id,
-			urlFlag: urlFlag,
-			countryName: countryName,
+			Id: id,
+			FlagUrl: urlFlag,
+			Name: countryName,
 			SettlementIds: []
 		});
 		if(id === 0) 
