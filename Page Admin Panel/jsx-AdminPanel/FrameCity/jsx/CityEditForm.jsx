@@ -6,7 +6,7 @@ function CityEditForm(props) {
 				<label htmlFor="countrySelect">Країна:</label>
 				<select className="EditFormInput" name="countrySelect" required>
 					<option value="" disabled selected>Виберіть країну</option>
-					{props.countries?.map((country, index) => {
+					{props.countries.map((country, index) => {
 						return <option key={index} value={crypto.randomUUID()}>
 							<div className="countryListItemStatContainer">
 								<img className="countryListItemFlagImg" src={country.FlagUrl} alt={country.Name} />
