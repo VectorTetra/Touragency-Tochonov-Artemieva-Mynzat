@@ -1,7 +1,7 @@
 function CountrySearchBar(props) {
 	const [inputValue, setInputValue] = React.useState("");
-	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
-	const [countries, setCountries] = React.useState(props.tab.countries);
+	const [quantity, setQuantity] = React.useState(props.countries.length);
+	const [countries, setCountries] = React.useState(props.countries);
 
 	React.useEffect(() => {
 		props.setQuantity(quantity);
@@ -11,11 +11,11 @@ function CountrySearchBar(props) {
 	const handleInput = (event) => {
 		setInputValue(event.target.value);
 		if (event.target.value === "") {
-			setCountries(props.tab.countries);
-			setQuantity(props.tab.countries.length);
+			setCountries(props.countries);
+			setQuantity(props.countries.length);
 			return;
 		}
-		const filteredCountries = props.tab.countries.filter(country => country.Name.toLowerCase().includes(event.target.value.toLowerCase()));
+		const filteredCountries = props.countries.filter(country => country.Name.toLowerCase().includes(event.target.value.toLowerCase()));
 		setCountries(filteredCountries);
 		setQuantity(filteredCountries.length);
 	};

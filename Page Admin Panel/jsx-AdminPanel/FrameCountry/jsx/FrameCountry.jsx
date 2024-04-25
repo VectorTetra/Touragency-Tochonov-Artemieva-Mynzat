@@ -35,8 +35,8 @@ function FrameCountry(props){
         <div id="frameCountry">
             <FrameCountryHeader quantity={quantity} />
             <CountryEditForm />
-            {/* <CountrySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} />
-            <CountryList countries={countries} /> */}
+            <CountrySearchBar countries={countries} setQuantity={setQuantity} setCountries={setCountries} />
+            <CountryList countries={countries} />
         </div>
     );
 };
