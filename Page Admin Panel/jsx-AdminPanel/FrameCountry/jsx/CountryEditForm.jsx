@@ -56,8 +56,8 @@ function CountryEditForm(props) {
 				<input className="EditFormInput" name="urlFlagInput" required />
 			</div>
 			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
-				<input type="submit" id="userFormSubmit" className="form-savebutton">Зберегти</input>
-				<input type="reset" id="userFormReset" className="form-clearbutton">Очистити</input>
+				<input type="submit" id="userFormSubmit" className="form-savebutton" value="Зберегти"></input>
+				<input type="reset" id="userFormReset" className="form-clearbutton" value="Очистити"></input>
 			</div>
 		</form>
 
