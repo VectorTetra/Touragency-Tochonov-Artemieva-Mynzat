@@ -17,16 +17,16 @@ function FrameCountry(props){
 
     React.useEffect(() => {
         $.ajax({
-            url: 'http://26.162.95.213:22546/api/Country', // Замініть на ваш URL API
-            data: { SearchParameter: 'GetAll' },
-            success: function(data) {
-                setCountries(data);
-                setQuantity(data.length);
-            },
-            error: function(error) {
-                console.error('Помилка при отриманні даних', error);
-            }
-        });
+			url: 'https://26.162.95.213:22546/api/Country', // Замініть на ваш URL API
+			data: { SearchParameter: 'GetAll' },
+			success: function(data) {
+				setCountries(data);
+				setQuantity(data.length);
+			},
+			error: function(error) {
+				console.error('Помилка при отриманні даних', error);
+			}
+		});
     }, []); // Пустий масив означає, що цей ефект буде виконуватися тільки при монтуванні компонента
 
     return (
