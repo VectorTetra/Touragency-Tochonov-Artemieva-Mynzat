@@ -18,7 +18,7 @@ function FrameCountry(props){
 
     React.useEffect(() => {
         $.ajax({
-			url: 'https://26.162.95.213:22546/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 			data: { SearchParameter: 'GetAll' },
 			success: function(data) {
 				setCountries(data);
