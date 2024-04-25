@@ -22,7 +22,8 @@ function FrameCountry(props){
 			data: { SearchParameter: 'GetAll' },
 			success: function(data) {
 				setCountries(data);
-				//setQuantity(data.length);
+				setQuantity(data.length);
+				console.log(data);
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
@@ -34,8 +35,8 @@ function FrameCountry(props){
         <div id="frameCountry">
             <FrameCountryHeader quantity={quantity} />
             <CountryEditForm />
-            <CountrySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} />
-            <CountryList countries={countries} />
+            {/* <CountrySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} />
+            <CountryList countries={countries} /> */}
         </div>
     );
 };
