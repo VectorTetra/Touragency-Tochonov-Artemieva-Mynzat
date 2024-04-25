@@ -4,15 +4,17 @@ function CountryEditForm(props) {
 		const countryName = event.target.elements.countryNameInput.value;
 		const urlFlag = event.target.elements.urlFlagInput.value;
 		const id = event.target.elements.countryIdInput.value;
+		let request = JSON.stringify({
+			id: id,
+			urlFlag: urlFlag,
+			countryName: countryName
+		});
 		if(id === 0) 
 		{
 			$.ajax({
 				url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 				type: 'POST',
-				data: {
-					name: countryName,
-					flagUrl: urlFlag
-				},
+				data: request,
 				success: function(data) {
 					setCountries(data);
 					setQuantity(data.length);
@@ -28,10 +30,7 @@ function CountryEditForm(props) {
 			$.ajax({
 				url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 				type: 'PUT',
-				data: {
-					name: countryName,
-					flagUrl: urlFlag
-				},
+				data: request,
 				success: function(data) {
 					setCountries(data);
 					setQuantity(data.length);
