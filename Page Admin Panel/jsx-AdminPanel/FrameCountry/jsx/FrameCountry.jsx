@@ -1,3 +1,4 @@
+
 // function FrameCountry(props){
 // 	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
 // 	const [countries, setCountries] = React.useState(props.tab.countries);
@@ -21,7 +22,7 @@ function FrameCountry(props){
 			data: { SearchParameter: 'GetAll' },
 			success: function(data) {
 				setCountries(data);
-				setQuantity(data.length);
+				//setQuantity(data.length);
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
