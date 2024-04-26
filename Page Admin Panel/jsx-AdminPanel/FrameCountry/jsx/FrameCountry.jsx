@@ -132,15 +132,34 @@ function FrameCountry(props){
 			}
 		});
 	}
-	window.FrameCountryContext = React.createContext({ GetAll, Get200Last, GetById, GetByName, PostCountry, PutCountry,
-		setDtoId, setDtoName, setDtoFlagUrl, setDtoSettlementIds, setCountries, inputName, setInputName,
-		dtoId, dtoName, dtoFlagUrl, dtoSettlementIds, countries });
+	window.FrameCountryContext = React.createContext({
+		GetAll: () => {},
+		Get200Last: () => {},
+		GetById: () => {},
+		GetByName: () => {},
+		PostCountry: () => {},
+		PutCountry: () => {},
+		setDtoId: () => {},
+		setDtoName: () => {},
+		setDtoFlagUrl: () => {},
+		setDtoSettlementIds: () => {},
+		setCountries: () => {},
+		inputName: '',
+		setInputName: () => {},
+		dtoId: 0,
+		dtoName: '',
+		dtoFlagUrl: '',
+		dtoSettlementIds: [],
+		countries: []
+	  });
     React.useEffect(() => {
         Get200Last();
     }, []); // Пустий масив означає, що цей ефект буде виконуватися тільки при монтуванні компонента
 
     return (
-		<window.FrameCountryContext.Provider value={props.tab}>
+		<window.FrameCountryContext.Provider value={{ 
+			GetAll, Get200Last, GetById, GetByName, PostCountry, PutCountry,
+			dtoId, dtoName, dtoFlagUrl, dtoSettlementIds, countries, inputName }}>
 			<div id="frameCountry">
 				<FrameCountryHeader/>
 				<CountryEditForm />
