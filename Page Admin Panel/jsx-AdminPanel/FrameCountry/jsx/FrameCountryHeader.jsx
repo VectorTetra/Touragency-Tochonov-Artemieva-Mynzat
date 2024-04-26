@@ -1,4 +1,5 @@
 function FrameCountryHeader(props){
+	const context = React.useContext(window.FrameCountryContext);
 	return (
 		<div id="frameCountryToolbar">
 			<div id="frameCountryToolbarTitleQuantity">
@@ -6,7 +7,7 @@ function FrameCountryHeader(props){
 					Країни
 				</div>
 				<div id="frameCountryToolbarQuantity">
-					{props.quantity} 
+					{context.countries.length} 
 				</div>
 			</div>
 		</div>

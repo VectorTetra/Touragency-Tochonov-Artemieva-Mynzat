@@ -1,55 +1,22 @@
 function CountryEditForm(props) {
+	const context = React.useContext(window.FrameCountryContext);
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const countryName = event.target.elements.countryNameInput.value;
-		const urlFlag = event.target.elements.urlFlagInput.value;
-		let id = event.target.elements.countryIdInput.value;
-		id = Number(id); // перетворюємо id в число
-		let request = JSON.stringify({
-			Id: id,
-			FlagUrl: urlFlag,
-			Name: countryName,
-			SettlementIds: []
-		});
+		context.setDtoName(event.target.elements.countryNameInput.value);
+		context.setDtoFlagUrl(event.target.elements.urlFlagInput.value);		
 		if(id === 0) 
 		{
-			$.ajax({
-				url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
-				method: 'POST',
-				contentType: "application/json",
-				data: request,
-				success: function(data) {
-					setCountries(data);
-					setQuantity(data.length);
-					console.log(data);
-				},
-				error: function(error) {
-					console.error('Помилка при отриманні даних', error);
-				}
-			});
+			context.PostCountry();
 		}
 		else
 		{
-			$.ajax({
-				url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
-				method: 'PUT',
-				contentType: "application/json",
-				data: request,
-				success: function(data) {
-					setCountries(data);
-					setQuantity(data.length);
-					console.log(data);
-				},
-				error: function(error) {
-					console.error('Помилка при отриманні даних', error);
-				}
-			});
+			context.PutCountry();
 		}
 		
 	};
 	return (
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }} onSubmit={handleSubmit}>
-			<input type="hidden" name="countryIdInput" value={0}/>
+			<input type="hidden" name="countryIdInput" value={context.dtoId}/>
 			<div className="EditFormRow">
 				<label htmlFor="countryNameInput">Назва країни:</label>
 				<input className="EditFormInput" name="countryNameInput" required />
