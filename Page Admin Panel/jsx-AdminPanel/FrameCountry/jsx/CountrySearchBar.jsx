@@ -8,11 +8,7 @@ function CountrySearchBar(props) {
 
 	React.useEffect(() => {
 		context.setInputName(localInput); // Оновлюємо глобальний стан, коли локальний стан змінюється
-		if (localInput === "") {
-			context.Get200Last();
-			return;
-		}
-		else {
+		if (localInput !== "") {
 			context.GetByName();
 		}
 	}, [localInput]); // Залежність від localInput, а не context.inputName
