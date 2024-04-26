@@ -6,17 +6,21 @@ function CountrySearchBar(props) {
 		setLocalInput(event.target.value); // Оновлюємо локальний стан при вводі
 	};
 
-	React.useEffect(() => {
+	const onClickHandler = () => {
 		context.setInputName(localInput); // Оновлюємо глобальний стан, коли локальний стан змінюється
 		if (localInput !== "") {
 			context.GetByName();
 		}
-	}, [localInput]); // Залежність від localInput, а не context.inputName
+		else 
+		{
+			context.Get200Last();
+		}
+	}; // Залежність від localInput, а не context.inputName
 
 	return (
 		<div className="EditFormRow searchBarRow">
-			<input className="EditFormInput" name="searchBar" value={localInput} placeholder="Введіть назву країни"/>
-			<input type="submit" className="buttonSearchCity" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
+			<input className="EditFormInput" name="searchBar" value={localInput} placeholder="Введіть назву країни" onChange={handleInput} />
+			<button className="buttonSearchCity" name="buttonSearchCity" value="Пошук" onClick={onClickHandler}/>
 		</div>
 	);
 };
