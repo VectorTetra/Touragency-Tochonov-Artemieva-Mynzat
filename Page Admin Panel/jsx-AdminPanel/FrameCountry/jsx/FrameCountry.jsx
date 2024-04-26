@@ -64,13 +64,13 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const GetByName = () => 
+	const GetByName = (Input) => 
 	{
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
-			data: { SearchParameter: 'GetByName', Name: inputName },
+			data: { SearchParameter: 'GetByName', Name: Input },
 			success: function(data) {
 				setCountries(data);
 			},

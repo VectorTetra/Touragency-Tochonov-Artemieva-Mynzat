@@ -7,9 +7,9 @@ function CountrySearchBar(props) {
 	};
 
 	const onClickHandler = () => {
-		context.setInputName(localInput); // Оновлюємо глобальний стан, коли локальний стан змінюється
+		//context.setInputName(localInput); // Оновлюємо глобальний стан, коли локальний стан змінюється
 		if (localInput !== "") {
-			context.GetByName();
+			context.GetByName(localInput);
 		}
 		else 
 		{
