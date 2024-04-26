@@ -1,9 +1,8 @@
 function CountrySearchBar(props) {
 	const context = React.useContext(window.FrameCountryContext);
-	const [inputValue, setInputValue] = React.useState("");
 
 	const handleInput = (event) => {
-		setInputValue(event.target.value);
+		context.setInputName(event.target.value);
 		if (event.target.value === "") {
 			context.Get200Last();
 			return;
@@ -16,7 +15,7 @@ function CountrySearchBar(props) {
 
 	return (
 		<div className="EditFormRow searchBarRow">
-			<input className="EditFormInput" name="searchBar" value={inputValue} placeholder="Введіть назву країни" onInput={handleInput} />
+			<input className="EditFormInput" name="searchBar" value={context.inputName} placeholder="Введіть назву країни" onInput={handleInput} />
 		</div>
 	);
 };
