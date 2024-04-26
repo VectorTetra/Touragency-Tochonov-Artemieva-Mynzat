@@ -133,24 +133,24 @@ function FrameCountry(props){
 		});
 	}
 	window.FrameCountryContext = React.createContext({
-		GetAll: () => {},
-		Get200Last: () => {},
-		GetById: () => {},
-		GetByName: () => {},
-		PostCountry: () => {},
-		PutCountry: () => {},
-		setDtoId: () => {},
-		setDtoName: () => {},
-		setDtoFlagUrl: () => {},
-		setDtoSettlementIds: () => {},
-		setCountries: () => {},
-		inputName: '',
-		setInputName: () => {},
-		dtoId: 0,
-		dtoName: '',
-		dtoFlagUrl: '',
-		dtoSettlementIds: [],
-		countries: []
+		GetAll: GetAll,
+		Get200Last: Get200Last,
+		GetById: GetById,
+		GetByName: GetByName,
+		PostCountry: PostCountry,
+		PutCountry: PutCountry,
+		setDtoId: setDtoId,
+		setDtoName: setDtoName,
+		setDtoFlagUrl: setDtoFlagUrl,
+		setDtoSettlementIds: setDtoSettlementIds,
+		setCountries: setCountries,
+		inputName: inputName,
+		setInputName: setInputName,
+		dtoId: dtoId,
+		dtoName: dtoName,
+		dtoFlagUrl: dtoFlagUrl,
+		dtoSettlementIds: dtoSettlementIds,
+		countries: countries
 	  });
     React.useEffect(() => {
         Get200Last();
@@ -158,8 +158,25 @@ function FrameCountry(props){
 
     return (
 		<window.FrameCountryContext.Provider value={{ 
-			GetAll, Get200Last, GetById, GetByName, PostCountry, PutCountry,
-			dtoId, dtoName, dtoFlagUrl, dtoSettlementIds, countries, inputName }}>
+			GetAll: GetAll,
+			Get200Last: Get200Last,
+			GetById: GetById,
+			GetByName: GetByName,
+			PostCountry: PostCountry,
+			PutCountry: PutCountry,
+			setDtoId: setDtoId,
+			setDtoName: setDtoName,
+			setDtoFlagUrl: setDtoFlagUrl,
+			setDtoSettlementIds: setDtoSettlementIds,
+			setCountries: setCountries,
+			inputName: inputName,
+			setInputName: setInputName,
+			dtoId: dtoId,
+			dtoName: dtoName,
+			dtoFlagUrl: dtoFlagUrl,
+			dtoSettlementIds: dtoSettlementIds,
+			countries: countries
+		}}>
 			<div id="frameCountry">
 				<FrameCountryHeader/>
 				<CountryEditForm />
