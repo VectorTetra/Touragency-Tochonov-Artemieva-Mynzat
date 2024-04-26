@@ -10,7 +10,7 @@ function CountrySearchBar(props) {
 		}
 		else {
 			context.setDtoName(event.target.value);
-			context.GetByName(event.target.value);
+			context.GetByName();
 		}
 	};
 
