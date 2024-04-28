@@ -31,6 +31,7 @@ function FrameCountry(props){
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
 			}
 		});
 	}
@@ -46,6 +47,7 @@ function FrameCountry(props){
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
 			}
 		});
 	}
@@ -61,6 +63,7 @@ function FrameCountry(props){
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
 			}
 		});
 	}
@@ -76,6 +79,7 @@ function FrameCountry(props){
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
 			}
 		});
 	}
@@ -96,6 +100,7 @@ function FrameCountry(props){
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
 			}
 		});
 	}
