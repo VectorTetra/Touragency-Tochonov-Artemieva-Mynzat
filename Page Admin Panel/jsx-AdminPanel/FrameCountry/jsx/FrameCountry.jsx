@@ -12,14 +12,20 @@ function FrameCountry(props){
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
-			success: function(data) {
-				setCountries(data);
+			statusCode: {
+				200: function(data) {
+					setCountries(data);
+				},
+				204: function() {
+					setCountries([]);
+				}
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
 				alert(error.responseText);
 			}
 		});
+		
 	}
 	const Get200Last = () => 
 	{
@@ -28,8 +34,13 @@ function FrameCountry(props){
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'Get200Last' },
-			success: function(data) {
-				setCountries(data);
+			statusCode: {
+				200: function(data) {
+					setCountries(data);
+				},
+				204: function() {
+					setCountries([]);
+				}
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
@@ -44,8 +55,13 @@ function FrameCountry(props){
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: id },
-			success: function(data) {
-				setCountries(data);
+			statusCode: {
+				200: function(data) {
+					setCountries(data);
+				},
+				204: function() {
+					setCountries([]);
+				}
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
@@ -60,8 +76,13 @@ function FrameCountry(props){
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByName', Name: inputName },
-			success: function(data) {
-				setCountries(data);
+			statusCode: {
+				200: function(data) {
+					setCountries(data);
+				},
+				204: function() {
+					setCountries([]);
+				}
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
