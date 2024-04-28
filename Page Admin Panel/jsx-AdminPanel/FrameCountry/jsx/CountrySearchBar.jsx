@@ -7,7 +7,6 @@ function CountrySearchBar(props) {
 	};
 
 	const onClickHandler = () => {
-		//context.setInputName(localInput); // Оновлюємо глобальний стан, коли локальний стан змінюється
 		if (localInput !== "") {
 			context.GetByName(localInput);
 		}
@@ -15,7 +14,7 @@ function CountrySearchBar(props) {
 		{
 			context.Get200Last();
 		}
-	}; // Залежність від localInput, а не context.inputName
+	};
 
 	return (
 		<div className="EditFormRow searchBarRow">

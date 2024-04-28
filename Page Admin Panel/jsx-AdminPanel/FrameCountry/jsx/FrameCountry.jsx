@@ -49,13 +49,13 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const GetById = () => 
+	const GetById = (id) => 
 	{
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
-			data: { SearchParameter: 'GetById', Id: dtoId },
+			data: { SearchParameter: 'GetById', Id: id },
 			success: function(data) {
 				setCountries(data);
 			},
@@ -64,13 +64,13 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const GetByName = (Input) => 
+	const GetByName = (inputName) => 
 	{
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
-			data: { SearchParameter: 'GetByName', Name: Input },
+			data: { SearchParameter: 'GetByName', Name: inputName },
 			success: function(data) {
 				setCountries(data);
 			},
