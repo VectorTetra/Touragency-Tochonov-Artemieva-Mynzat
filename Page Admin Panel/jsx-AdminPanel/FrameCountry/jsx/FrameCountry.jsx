@@ -85,10 +85,10 @@ function FrameCountry(props){
 	}
 	const PostCountry = () =>{
 		let request = JSON.stringify({
-			Id: dtoId,
-			FlagUrl: dtoFlagUrl,
-			Name: dtoName,
-			SettlementIds: dtoSettlementIds
+			Id: $('#EditFormInputCountryId').val(),
+			FlagUrl: $('#EditFormInputCountryUrlFlag').val(),
+			Name: $('#EditFormInputCountryName').val(),
+			SettlementIds: []
 		});
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
@@ -106,22 +106,10 @@ function FrameCountry(props){
 	}
 	const PutCountry = () =>
 	{
-		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
-			method: 'GET',
-			contentType: "application/json",
-			data: { SearchParameter: 'GetById', Id: dtoId },
-			success: function(data) {
-				setDtoSettlementIds(data.SettlementIds);
-			},
-			error: function(error) {
-				console.error('Помилка при отриманні даних', error);
-			}
-		});
 		let request = JSON.stringify({
-			Id: dtoId,
-			FlagUrl: dtoFlagUrl,
-			Name: dtoName,
+			Id: $('#EditFormInputCountryId').val(),
+			FlagUrl: $('#EditFormInputCountryUrlFlag').val(),
+			Name: $('#EditFormInputCountryName').val(),
 			SettlementIds: dtoSettlementIds
 		});
 		$.ajax({
@@ -134,6 +122,7 @@ function FrameCountry(props){
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
 			}
 		});
 	}

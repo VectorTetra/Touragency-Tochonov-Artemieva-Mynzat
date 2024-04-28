@@ -28,14 +28,14 @@ function CountryEditForm(props) {
 
 	return (
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }} onSubmit={handleSubmit}>
-			<input type="hidden" name="countryIdInput" value={context.dtoId}/>
+			<input id="EditFormInputCountryId" type="hidden" name="countryIdInput" value={context.dtoId}/>
 			<div className="EditFormRow">
 				<div>Назва країни:</div>
-				<input className="EditFormInput" name="countryNameInput" value={context.dtoName}  required onChange={handleCountryNameChange} />
+				<input id="EditFormInputCountryName" className="EditFormInput" name="countryNameInput" required onChange={handleCountryNameChange} />
 			</div>
 			<div className="EditFormRow">
 				<div>URL до зображення прапора країни:</div>
-				<input className="EditFormInput" name="urlFlagInput" value={context.dtoFlagUrl} required onChange={handleFlagUrlChange} />
+				<input id="EditFormInputCountryUrlFlag" className="EditFormInput" name="urlFlagInput" required onChange={handleFlagUrlChange} />
 			</div>
 			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 				<input type="submit" id="userFormSubmit" className="form-savebutton" value="Зберегти"></input>
