@@ -10,13 +10,12 @@ function CountryListItem(props) {
 			data: { SearchParameter: 'GetById', Id: props.country.id },
 			success: function(data) {
 				console.log("PrepareToEdit success data: ",data);
-				// $('#EditFormInputCountryId').val(data[0].id);
-				// $('#EditFormInputCountryName').val(data[0].name);
-				// $('#EditFormInputCountryUrlFlag').val(data[0].flagUrl);
-				context.setDtoId(data[0].id);
-				context.setDtoName(data[0].name);
-				context.setDtoFlagUrl(data[0].flagUrl);
-				context.setDtoSettlementIds(data[0].settlementIds);
+				setTimeout(() => {
+					context.setDtoId(data[0].id);
+					context.setDtoName(data[0].name);
+					context.setDtoFlagUrl(data[0].flagUrl);
+					context.setDtoSettlementIds(data[0].settlementIds);
+				}, 0);
 			},
 			error: function(error) {
 				console.error('Помилка при отриманні даних', error);
@@ -24,6 +23,7 @@ function CountryListItem(props) {
 			}
 		});
 	}
+
 	const DeleteCountry = (e) => 
 	{
 		e.preventDefault();
