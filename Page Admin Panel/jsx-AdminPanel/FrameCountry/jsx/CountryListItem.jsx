@@ -2,6 +2,7 @@ function CountryListItem(props) {
 	const context = React.useContext(window.FrameCountryContext);
 	const PrepareToEdit = (e) => 
 	{
+		e.preventDefault();
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
 			method: 'GET',
@@ -21,6 +22,7 @@ function CountryListItem(props) {
 	}
 	const DeleteCountry = (e) => 
 	{
+		e.preventDefault();
 		if(!confirm('Ви впевнені, що хочете видалити країну ' + props.country.name + ' ?')) return;
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country/' + props.country.id, // Замініть на ваш URL API
