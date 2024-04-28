@@ -28,9 +28,15 @@ function CountryEditForm(props) {
 		{
 			context.PutCountry(countryName,flagUrl);
 		}
+		handleReset();
 		
 	};
-
+	const handleReset = (event) => {
+		context.setDtoId(0);
+		context.setDtoName('');
+		context.setDtoFlagUrl('');
+		context.setDtoSettlementIds([]);
+	};
 	return (
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }} onSubmit={handleSubmit}>
 			<input id="EditFormInputCountryId" type="hidden" name="countryIdInput" value={context.dtoId}/>
@@ -44,7 +50,7 @@ function CountryEditForm(props) {
 			</div>
 			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 				<input type="submit" id="userFormSubmit" className="form-savebutton" value="Зберегти"></input>
-				<input type="reset" id="userFormReset" className="form-clearbutton" value="Очистити"></input>
+				<button id="userFormReset" className="form-clearbutton" onClick={handleReset}>Очистити</button>
 			</div>
 		</form>
 
