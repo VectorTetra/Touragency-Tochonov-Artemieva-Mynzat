@@ -1,17 +1,3 @@
-
-// function FrameCountry(props){
-// 	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
-// 	const [countries, setCountries] = React.useState(props.tab.countries);
-
-// 	return (
-// 		<div id="frameCountry">
-// 			<FrameCountryHeader quantity={quantity} />
-// 			<CountryEditForm />
-// 			<CountrySearchBar tab={props.tab} setQuantity={setQuantity} setCountries={setCountries} />
-// 			<CountryList countries={countries} />
-// 		</div>
-// 	);
-// };
 function FrameCountry(props){
     const [countries, setCountries] = React.useState([]);
     const [dtoId, setDtoId] = React.useState(0);
@@ -83,11 +69,11 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const PostCountry = () =>{
+	const PostCountry = (inputName,inputFlagUrl) =>{
 		let request = JSON.stringify({
 			Id: dtoId,
-			FlagUrl: dtoFlagUrl,
-			Name: dtoName,
+			FlagUrl: inputFlagUrl,
+			Name: inputName,
 			SettlementIds: []
 		});
 		$.ajax({
@@ -104,12 +90,11 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const PutCountry = () =>
-	{
+	const PutCountry = (inputName,inputFlagUrl) =>{
 		let request = JSON.stringify({
 			Id: dtoId,
-			FlagUrl: dtoFlagUrl,
-			Name: dtoName,
+			FlagUrl: inputFlagUrl,
+			Name: inputName,
 			SettlementIds: dtoSettlementIds
 		});
 		$.ajax({

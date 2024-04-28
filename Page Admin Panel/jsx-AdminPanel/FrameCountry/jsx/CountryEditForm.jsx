@@ -1,33 +1,32 @@
 function CountryEditForm(props) {
 	const context = React.useContext(window.FrameCountryContext);
-	const countryNameRef = React.useRef();
-	const flagUrlRef = React.useRef();
-
+	const [countryName, setCountryName] = React.useState(''); 
+	const [flagUrl, setFlagUrl] = React.useState(''); 
 	React.useEffect(() => {
-		countryNameRef.current.focus();
+		setCountryName(context.dtoName);
 	}, [context.dtoName]);
 
 	React.useEffect(() => {
-		flagUrlRef.current.focus();
+		setFlagUrl(context.dtoFlagUrl);
 	}, [context.dtoFlagUrl]);
 
 	const handleCountryNameChange = (event) => {
-		context.setDtoName(event.target.value);
+		setCountryName(event.target.value);
 	};
 
 	const handleFlagUrlChange = (event) => {
-		context.setDtoFlagUrl(event.target.value);
+		setFlagUrl(event.target.value);
 	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();	
 		if(context.dtoId === 0) 
 		{
-			context.PostCountry();
+			context.PostCountry(countryName, flagUrl);
 		}
 		else
 		{
-			context.PutCountry();
+			context.PutCountry(countryName,flagUrl);
 		}
 		
 	};
