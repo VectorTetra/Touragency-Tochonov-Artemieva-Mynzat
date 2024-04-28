@@ -1,9 +1,17 @@
 function CountryEditForm(props) {
 	const context = React.useContext(window.FrameCountryContext);
 
+	const handleCountryNameChange = (event) => {
+		context.setDtoName(event.target.value);
+	};
+
+	const handleFlagUrlChange = (event) => {
+		context.setDtoFlagUrl(event.target.value);
+	};
+
 	const handleSubmit = (event) => {
 		event.preventDefault();	
-		if($("#EditFormInputCountryId").val() === 0) 
+		if(context.dtoId === 0) 
 		{
 			context.PostCountry();
 		}
@@ -16,14 +24,14 @@ function CountryEditForm(props) {
 
 	return (
 		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }} onSubmit={handleSubmit}>
-			<input id="EditFormInputCountryId" type="hidden" name="countryIdInput" value={0}/>
+			<input id="EditFormInputCountryId" type="hidden" name="countryIdInput" value={context.dtoId}/>
 			<div className="EditFormRow">
 				<div>Назва країни:</div>
-				<input id="EditFormInputCountryName" className="EditFormInput" name="countryNameInput" required/>
+				<input id="EditFormInputCountryName" className="EditFormInput" name="countryNameInput" value={context.dtoName} required onChange={handleCountryNameChange} />
 			</div>
 			<div className="EditFormRow">
 				<div>URL до зображення прапора країни:</div>
-				<input id="EditFormInputCountryUrlFlag" className="EditFormInput" name="urlFlagInput" required/>
+				<input id="EditFormInputCountryUrlFlag" className="EditFormInput" name="urlFlagInput" value={context.dtoFlagUrl} required onChange={handleFlagUrlChange} />
 			</div>
 			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 				<input type="submit" id="userFormSubmit" className="form-savebutton" value="Зберегти"></input>

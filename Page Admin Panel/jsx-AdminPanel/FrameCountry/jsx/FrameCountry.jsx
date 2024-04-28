@@ -85,9 +85,9 @@ function FrameCountry(props){
 	}
 	const PostCountry = () =>{
 		let request = JSON.stringify({
-			Id: $('#EditFormInputCountryId').val(),
-			FlagUrl: $('#EditFormInputCountryUrlFlag').val(),
-			Name: $('#EditFormInputCountryName').val(),
+			Id: dtoId,
+			FlagUrl: dtoFlagUrl,
+			Name: dtoName,
 			SettlementIds: []
 		});
 		$.ajax({
@@ -107,9 +107,9 @@ function FrameCountry(props){
 	const PutCountry = () =>
 	{
 		let request = JSON.stringify({
-			Id: $('#EditFormInputCountryId').val(),
-			FlagUrl: $('#EditFormInputCountryUrlFlag').val(),
-			Name: $('#EditFormInputCountryName').val(),
+			Id: dtoId,
+			FlagUrl: dtoFlagUrl,
+			Name: dtoName,
 			SettlementIds: dtoSettlementIds
 		});
 		$.ajax({
