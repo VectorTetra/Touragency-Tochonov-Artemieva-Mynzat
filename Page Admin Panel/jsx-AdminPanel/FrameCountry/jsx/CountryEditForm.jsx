@@ -4,7 +4,7 @@ function CountryEditForm(props) {
 		event.preventDefault();
 		context.setDtoName(event.target.elements.countryNameInput.value);
 		context.setDtoFlagUrl(event.target.elements.urlFlagInput.value);		
-		if(id === 0) 
+		if(context.dtoId === 0) 
 		{
 			context.PostCountry();
 		}
