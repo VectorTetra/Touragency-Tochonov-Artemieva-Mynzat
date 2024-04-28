@@ -3,18 +3,20 @@ function CountryEditForm(props) {
 	const countryNameRef = React.useRef();
 	const flagUrlRef = React.useRef();
 
+	React.useEffect(() => {
+		countryNameRef.current.focus();
+	}, [context.dtoName]);
+
+	React.useEffect(() => {
+		flagUrlRef.current.focus();
+	}, [context.dtoFlagUrl]);
+
 	const handleCountryNameChange = (event) => {
 		context.setDtoName(event.target.value);
-		setTimeout(() => {
-			countryNameRef.current.focus(); // Встановити фокус назад на поле вводу після оновлення стану
-		}, 0);
 	};
 
 	const handleFlagUrlChange = (event) => {
 		context.setDtoFlagUrl(event.target.value);
-		setTimeout(() => {
-			flagUrlRef.current.focus(); // Встановити фокус назад на поле вводу після оновлення стану
-		}, 0);
 	};
 
 	const handleSubmit = (event) => {
