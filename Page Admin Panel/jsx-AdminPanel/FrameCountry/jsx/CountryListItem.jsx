@@ -9,6 +9,7 @@ function CountryListItem(props) {
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: props.country.id },
 			success: function(data) {
+				console.log("PrepareToEdit success data: ",data);
 				$('#EditFormInputCountryId').val(data[0].Id);
 				$('#EditFormInputCountryName').val(data[0].Name);
 				$('#EditFormInputCountryUrlFlag').val(data[0].FlagUrl);
