@@ -12,9 +12,9 @@ function CountryListItem(props) {
 				console.log("PrepareToEdit success data: ",data);
 				setTimeout(() => {
 					context.setDtoId(data[0].id);
+					context.setDtoName(data[0].name);
+					context.setDtoFlagUrl(data[0].flagUrl);
 					context.setDtoSettlementIds(data[0].settlementIds);
-					$('#EditFormInputCountryName').val(data[0].name);
-					$('#EditFormInputCountryUrlFlag').val(data[0].flagUrl);
 				}, 0);
 			},
 			error: function(error) {
