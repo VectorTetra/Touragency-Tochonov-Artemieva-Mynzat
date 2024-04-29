@@ -2,7 +2,6 @@ function FrameCountry(props){
     const [countries, setCountries] = React.useState([]);
     const [dtoId, setDtoId] = React.useState(0);
     const [dtoName, setDtoName] = React.useState('');
-    const [inputName, setInputName] = React.useState('');
     const [dtoFlagUrl, setDtoFlagUrl] = React.useState('');
     const [dtoSettlementIds, setDtoSettlementIds] = React.useState([]);
 	const GetAll = () => 
@@ -144,8 +143,6 @@ function FrameCountry(props){
 		setDtoFlagUrl: setDtoFlagUrl,
 		setDtoSettlementIds: setDtoSettlementIds,
 		setCountries: setCountries,
-		inputName: inputName,
-		setInputName: setInputName,
 		dtoId: dtoId,
 		dtoName: dtoName,
 		dtoFlagUrl: dtoFlagUrl,
@@ -169,8 +166,6 @@ function FrameCountry(props){
 			setDtoFlagUrl: setDtoFlagUrl,
 			setDtoSettlementIds: setDtoSettlementIds,
 			setCountries: setCountries,
-			inputName: inputName,
-			setInputName: setInputName,
 			dtoId: dtoId,
 			dtoName: dtoName,
 			dtoFlagUrl: dtoFlagUrl,
