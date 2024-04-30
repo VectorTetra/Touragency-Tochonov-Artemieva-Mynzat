@@ -44,7 +44,10 @@ function CountryListItem(props) {
 		<div className="countryListItem">
 			<div className="countryListItemStatContainer">
 				<img className="countryListItemFlagImg" src={props.country.flagUrl} alt={props.country.name} />
-				<div className="countryListItemNameDiv">{props.country.name}</div>
+				<div className="cityListItemStringStatContainer">
+					<div className="cityListItemNameDiv">Країна: {props.country.name}</div>
+					<div className="cityListItemNameDiv">Континент: {props.country.continentName}</div>
+				</div>
 			</div>
 			<form action="post" className="countryListItemFormButtonBar">
 				<input type="hidden" name="countryId" value={props.country.id} />

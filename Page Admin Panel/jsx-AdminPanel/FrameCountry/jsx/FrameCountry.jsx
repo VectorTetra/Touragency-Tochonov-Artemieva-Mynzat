@@ -1,7 +1,9 @@
 function FrameCountry(props){
     const [countries, setCountries] = React.useState([]);
     const [dtoId, setDtoId] = React.useState(0);
+    const [dtoContinentId, setDtoContinentId] = React.useState(0);
     const [dtoName, setDtoName] = React.useState('');
+    const [dtoContinentName, setDtoContinentName] = React.useState('');
     const [dtoFlagUrl, setDtoFlagUrl] = React.useState('');
     const [dtoSettlementIds, setDtoSettlementIds] = React.useState([]);
 	const GetAll = () => 
@@ -89,12 +91,35 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const PostCountry = (inputName,inputFlagUrl) =>{
+	const GetByCompositeSearch = (inputName,inputContinentName) => 
+	{
+		$.ajax({
+			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			method: 'GET',
+			contentType: "application/json",
+			data: { SearchParameter: 'GetByCompositeSearch', Name: inputName, ContinentName: inputContinentName, ContinentId: null},
+			statusCode: {
+				200: function(data) {
+					setCountries(data);
+				},
+				204: function() {
+					setCountries([]);
+				}
+			},
+			error: function(error) {
+				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
+			}
+		});
+	}
+	const PostCountry = (inputName,inputFlagUrl, continentId) =>{
 		let request = JSON.stringify({
 			Id: dtoId,
 			FlagUrl: inputFlagUrl,
 			Name: inputName,
-			SettlementIds: []
+			SettlementIds: [],
+			ContinentId: continentId,
+			ContinentName: ''
 		});
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
@@ -110,12 +135,14 @@ function FrameCountry(props){
 			}
 		});
 	}
-	const PutCountry = (inputName,inputFlagUrl) =>{
+	const PutCountry = (inputName,inputFlagUrl, continentId) =>{
 		let request = JSON.stringify({
 			Id: dtoId,
 			FlagUrl: inputFlagUrl,
 			Name: inputName,
-			SettlementIds: dtoSettlementIds
+			SettlementIds: dtoSettlementIds,
+			ContinentId: continentId,
+			ContinentName: ''
 		});
 		$.ajax({
 			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
@@ -136,14 +163,19 @@ function FrameCountry(props){
 		Get200Last: Get200Last,
 		GetById: GetById,
 		GetByName: GetByName,
+		GetByCompositeSearch: GetByCompositeSearch,
 		PostCountry: PostCountry,
 		PutCountry: PutCountry,
 		setDtoId: setDtoId,
 		setDtoName: setDtoName,
+		setDtoContinentId: setDtoContinentId,
+		setDtoContinentName: setDtoContinentName,
 		setDtoFlagUrl: setDtoFlagUrl,
 		setDtoSettlementIds: setDtoSettlementIds,
 		setCountries: setCountries,
 		dtoId: dtoId,
+		dtoContinentId: dtoContinentId,
+		dtoContinentName: dtoContinentName,
 		dtoName: dtoName,
 		dtoFlagUrl: dtoFlagUrl,
 		dtoSettlementIds: dtoSettlementIds,
@@ -159,17 +191,22 @@ function FrameCountry(props){
 			Get200Last: Get200Last,
 			GetById: GetById,
 			GetByName: GetByName,
+			GetByCompositeSearch: GetByCompositeSearch,
 			PostCountry: PostCountry,
 			PutCountry: PutCountry,
 			setDtoId: setDtoId,
 			setDtoName: setDtoName,
 			setDtoFlagUrl: setDtoFlagUrl,
 			setDtoSettlementIds: setDtoSettlementIds,
+			setDtoContinentId: setDtoContinentId,
+			setDtoContinentName: setDtoContinentName,
 			setCountries: setCountries,
 			dtoId: dtoId,
 			dtoName: dtoName,
 			dtoFlagUrl: dtoFlagUrl,
 			dtoSettlementIds: dtoSettlementIds,
+			dtoContinentId: dtoContinentId,
+			dtoContinentName: dtoContinentName,
 			countries: countries
 		}}>
 			<div id="frameCountry">
