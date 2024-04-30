@@ -3,7 +3,6 @@ function FrameCountry(props){
     const [dtoId, setDtoId] = React.useState(0);
     const [dtoContinentId, setDtoContinentId] = React.useState(0);
     const [dtoName, setDtoName] = React.useState('');
-    const [dtoContinentName, setDtoContinentName] = React.useState('');
     const [dtoFlagUrl, setDtoFlagUrl] = React.useState('');
     const [dtoSettlementIds, setDtoSettlementIds] = React.useState([]);
 	const GetAll = () => 
@@ -169,13 +168,11 @@ function FrameCountry(props){
 		setDtoId: setDtoId,
 		setDtoName: setDtoName,
 		setDtoContinentId: setDtoContinentId,
-		setDtoContinentName: setDtoContinentName,
 		setDtoFlagUrl: setDtoFlagUrl,
 		setDtoSettlementIds: setDtoSettlementIds,
 		setCountries: setCountries,
 		dtoId: dtoId,
 		dtoContinentId: dtoContinentId,
-		dtoContinentName: dtoContinentName,
 		dtoName: dtoName,
 		dtoFlagUrl: dtoFlagUrl,
 		dtoSettlementIds: dtoSettlementIds,
@@ -199,14 +196,12 @@ function FrameCountry(props){
 			setDtoFlagUrl: setDtoFlagUrl,
 			setDtoSettlementIds: setDtoSettlementIds,
 			setDtoContinentId: setDtoContinentId,
-			setDtoContinentName: setDtoContinentName,
 			setCountries: setCountries,
 			dtoId: dtoId,
 			dtoName: dtoName,
 			dtoFlagUrl: dtoFlagUrl,
 			dtoSettlementIds: dtoSettlementIds,
 			dtoContinentId: dtoContinentId,
-			dtoContinentName: dtoContinentName,
 			countries: countries
 		}}>
 			<div id="frameCountry">
