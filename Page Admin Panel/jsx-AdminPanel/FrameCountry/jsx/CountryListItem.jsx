@@ -15,6 +15,7 @@ function CountryListItem(props) {
 					context.setDtoName(data[0].name);
 					context.setDtoFlagUrl(data[0].flagUrl);
 					context.setDtoSettlementIds(data[0].settlementIds);
+					context.setDtoContinentId(data[0].continentId);
 				}, 0);
 			},
 			error: function(error) {
