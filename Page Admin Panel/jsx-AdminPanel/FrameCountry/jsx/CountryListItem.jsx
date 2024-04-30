@@ -1,28 +1,25 @@
 function CountryListItem(props) {
 	const context = React.useContext(window.FrameCountryContext);
-	const PrepareToEdit = (e) => 
+	const PrepareToEdit = async (e) => 
 	{
 		e.preventDefault();
-		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
-			method: 'GET',
-			contentType: "application/json",
-			data: { SearchParameter: 'GetById', Id: props.country.id },
-			success: function(data) {
-				console.log("PrepareToEdit success data: ",data);
-				setTimeout(() => {
-					context.setDtoId(data[0].id);
-					context.setDtoName(data[0].name);
-					context.setDtoFlagUrl(data[0].flagUrl);
-					context.setDtoSettlementIds(data[0].settlementIds);
-					context.setDtoContinentId(data[0].continentId);
-				}, 0);
-			},
-			error: function(error) {
-				console.error('Помилка при отриманні даних', error);
-				alert(error.responseText);
-			}
-		});
+		try {
+			const response = await $.ajax({
+				url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: { SearchParameter: 'GetById', Id: props.country.id },
+			});
+			console.log("PrepareToEdit success data: ", response);
+			context.setDtoId(response[0].id);
+			context.setDtoName(response[0].name);
+			context.setDtoFlagUrl(response[0].flagUrl);
+			context.setDtoSettlementIds(response[0].settlementIds);
+			context.setDtoContinentId(response[0].continentId);
+		} catch (error) {
+			console.error('Помилка при отриманні даних', error);
+			alert(error.responseText);
+		}
 	}
 
 	const DeleteCountry = (e) => 
