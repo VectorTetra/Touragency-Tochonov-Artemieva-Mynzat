@@ -20,17 +20,17 @@ function FrameFeedback(props) {
 	return (
 		<div id="frameFeedback">
 			{currentUserAccount === "Admin" ? (
-				<>
+				<div>
 					<FrameFeedbackHeader quantity={quantity} />
 					<FeedbackSearch feedback={props.tab.feedback} setFeedBack={setFeedBack} setQuantity={setQuantity} />
 					<FeedbackListAdmin feedback={feedback} />
-				</>
+				</div>
 			) : (
-				<>
+				<div>
 					<FrameFeedbackHeader quantity={quantity} />
 					<FeedbackForm tab={props.tab} />
 					<FeedbackList feedback={feedback} />
-				</>
+					</div>
 			)}
 		</div>
 	);
