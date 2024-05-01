@@ -55,37 +55,31 @@ function FeedbackSearch(props) {
 
             <div className="text"><h3>Пошук</h3></div>
 
-            <div className="search">
-
-                <div>
+            <div className="EditFormRow searchBarRow">
                     <input
-                        name="searchBar"
+                        name="login"
                         value={inputUserName}
                         placeholder="Введіть Логін"
+                        className="EditFormInput"
                     onChange={(event) => setInputUserName(event.target.value)}
                     onKeyDown={handleKeyDown}
                     />
-                </div>
-
-                <div>
                     <input
-                        name="searchBar"
+                        name="tourName"
                         value={inputTourName}
                         placeholder="Введіть назву туру"
+                        className="EditFormInput"
                     onChange={(event) => setInputTourName(event.target.value)}
                     onKeyDown={handleKeyDown}
                     />
-                </div>
-                <div>
                     <input
-                        name="searchBar"
+                        name="countryName"
                         value={inputCountryName}
                         placeholder="Введіть назву країни"
+                        className="EditFormInput"
                     onChange={(event) => setInputCountryNameFeefback(event.target.value)}
                     onKeyDown={handleKeyDown}
                     />
-                </div>
-
             </div >
             <div className="searchbutton">
 			<button type="submit"  onClick={handleSearch}>
