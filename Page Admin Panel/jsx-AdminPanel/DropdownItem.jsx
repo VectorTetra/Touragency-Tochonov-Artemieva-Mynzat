@@ -14,6 +14,12 @@
 // }
 
 function DropdownItem(props) {
+	function sendDataToDropdownList(){
+		props.sendDataToDropdownListComponent({
+			"name":props.name,
+			"tabIconUrl":props.iconSrc
+		});
+	}
     return (
         <div className="dropdownItem">
             {props.name === "МАГІЯ МАНДРІВ" ? (
