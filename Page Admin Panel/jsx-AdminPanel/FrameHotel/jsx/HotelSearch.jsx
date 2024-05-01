@@ -39,37 +39,32 @@ function HotelSearch(props) {
 
 			<div className="text"><h3>Пошук</h3></div>
 
-			<div className="search">
-				<div>
+			<div className="EditFormRow searchBarRow">
 					<input
 						name="searchBar"
 						value={inputHotelName}
 						placeholder="Введіть назву готелю"
+						className="EditFormInput"
 						onChange={(event) => setInputHotelName(event.target.value)}
 						onKeyDown={handleKeyDown}
 					/>
-			</div>
-			<div>
 					<input
 						name="searchBar"
 						value={inputCountryName}
 						placeholder="Введіть назву країни"
+						className="EditFormInput"
 						onChange={(event) => setInputCountryName(event.target.value)}
 						onKeyDown={handleKeyDown}
 					/>
-				
-			</div>
-			<div>
-				
 					<input
 						name="searchBar"
 						value={inputCityName}
 						placeholder="Введіть назву міста"
+						className="EditFormInput"
 						onChange={(event) => setInputCityName(event.target.value)}
 						onKeyDown={handleKeyDown}
 					/>
 			</div>
-			</div >
 			<div className="searchbutton">
 			<button type="submit"  onClick={handleSearch}>
 				Шукати
