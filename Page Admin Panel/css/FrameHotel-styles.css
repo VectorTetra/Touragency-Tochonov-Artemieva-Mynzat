@@ -1,0 +1,202 @@
+#frameHotelToolbarTitle {
+    font-size: 6vmin;
+    font-style: italic;
+    width: 100%;
+}
+
+#frameHotel {
+    width: 90%;
+}
+
+.hotelEditFormRow {
+    padding: 10px 20px;
+    display: flex;
+    font-size: 4vmin;
+}
+
+.hotelEditFormRow input {
+    font-size: 22px;
+    width: 80%;
+    margin-left: 10px;
+    background-color: rgb(196, 227, 240);
+    border: 2px solid rgb(80, 49, 205);
+}
+
+.hotelEditFormRow textarea {
+    background-color: rgb(196, 227, 240);
+    font-size: 22px;
+    border: 2px solid rgb(80, 49, 205);
+}
+
+.inputWrapper {
+    display: flex;
+}
+
+.countryEditFormInput {
+    width: 80%;
+    height: auto;
+    margin-left: 20px;
+}
+
+.container1 {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.block {
+    flex: 1;
+    height: auto;
+    background-color: #5cc6d4;
+    margin-right: 50px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.container {
+    display: none;
+}
+
+.toggle-checkbox:checked+.container {
+    display: block;
+}
+
+.service {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.toggle-label {
+    font-size: 4vmin;
+    position: relative;
+    color: blue;
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    border-bottom: 1px dashed black;
+}
+
+.toggle-label:hover {
+    color: red;
+}
+
+.other {
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.otherService {
+    margin-left: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.HotelView {
+    display: flex;
+    margin-top: 15px;
+}
+
+.containerHotel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blockHotel {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 3px solid rgb(80, 49, 205);
+}
+
+.blockHotel img {
+    width: 100%;
+    height: auto;
+}
+
+.coteinerPhoto {
+    flex: 1;
+}
+
+.coteinerText {
+    flex: 3;
+    margin-left: 10px;
+}
+
+.coteinerText h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.blockSearch {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.text {
+    margin: auto;
+}
+
+.text h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 4vmin;
+}
+
+.search {
+    display: flex;
+    margin: auto;
+}
+
+.search input {
+    background-color: rgb(158, 252, 221);
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    width: 380px;
+    border: 3px solid rgb(80, 49, 205);
+}
+
+.searchbutton {
+    font-family: sans-serif;
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.searchbutton button{
+    width: 60%;
+    margin-left: 40px;
+    padding: 1vmin 5vmin;
+    align-self: center;
+    background: #574de5;
+    border-radius: 1vh;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 2vmin;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(190, 190, 190);
+    font-weight: bold;
+}

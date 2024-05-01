@@ -4,12 +4,20 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Турагенство Т.А.М.</title>
-	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+	<script src="../libs/react.production.min.js"></script>
+	<script src="../libs/react-dom.production.min.js"></script>
+	<script src="../libs/babel.min.js"></script>
+	<script src="../libs/jquery-3.6.0.min.js"></script>
 	<link rel="stylesheet" href="./css/AdminPanel.css" type="text/css">
 	<link rel="stylesheet" href="./css/FrameCountry-styles.css" type="text/css">
 	<link rel="stylesheet" href="./css/FrameCity-styles.css" type="text/css">
+	<link rel="stylesheet" href="./css/FramePeople-styles.css" type="text/css">
+	<link rel="stylesheet" href="./css/FrameHotel-styles.css" type="text/css">
+	<link rel="stylesheet" href="./css/FrameFeedback-style.css" type="text/css">
 	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
 </head>
 
@@ -42,6 +50,31 @@
 	<script type="text/babel" src="./jsx-AdminPanel/FrameCity/jsx/CityList.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FrameCity/jsx/CityListItem.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FrameCity/jsx/CitySearchBar.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- ================================= Компоненти адмін-панелі (фрейм "Люди") ================================ -->
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/FramePeople.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabCaption.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabContent.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabEditForm.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabList.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabListItem.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabSearchBar.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- ================================= Компоненти адмін-панелі (фрейм "Відгуки") ================================ -->
+	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FeedbackForm.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FeedbackList.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FeedbackListAdmin.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FeedbackSearch.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FrameFeedback.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FrameFeedbackHeader.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- ================================= Компоненти адмін-панелі (фрейм "Готелі") ================================ -->
+	<script type="text/babel" src="./jsx-AdminPanel/FrameHotel/jsx/FrameHotel.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameHotel/jsx/FrameHotelHeader.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameHotel/jsx/HotelAppart.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameHotel/jsx/HotelEditForm.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameHotel/jsx/HotelSearch.jsx"></script>
+
 	
 	<!-- ============================================================================================ -->
 	<!-- =========================== Інші спільні компоненти =========================== -->

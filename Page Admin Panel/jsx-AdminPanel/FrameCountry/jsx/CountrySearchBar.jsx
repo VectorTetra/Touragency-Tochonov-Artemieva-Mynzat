@@ -1,28 +1,30 @@
 function CountrySearchBar(props) {
-	const [inputValue, setInputValue] = React.useState("");
-	const [quantity, setQuantity] = React.useState(props.tab.countries.length);
-	const [countries, setCountries] = React.useState(props.tab.countries);
-
-	React.useEffect(() => {
-		props.setQuantity(quantity);
-		props.setCountries(countries);
-	}, [quantity, countries]);
-
+	const context = React.useContext(window.FrameCountryContext);
+	const [CountryNameInput, setCountryNameInput] = React.useState(''); // Локальний стан для поля вводу
+	const [ContinentNameInput, setContinentNameInput] = React.useState(''); // Локальний стан для поля вводу
+	
 	const handleInput = (event) => {
-		setInputValue(event.target.value);
-		if (event.target.value === "") {
-			setCountries(props.tab.countries);
-			setQuantity(props.tab.countries.length);
-			return;
+		setCountryNameInput(event.target.value); // Оновлюємо локальний стан при вводі
+	};
+	const handleContinentInput = (event) => {
+		setContinentNameInput(event.target.value); // Оновлюємо локальний стан при вводі
+	};
+
+	const onClickHandler = () => {
+		if (CountryNameInput === "" && ContinentNameInput === "") {
+			context.Get200Last();
 		}
-		const filteredCountries = props.tab.countries.filter(country => country.Name.toLowerCase().includes(event.target.value.toLowerCase()));
-		setCountries(filteredCountries);
-		setQuantity(filteredCountries.length);
+		else 
+		{
+			context.GetByCompositeSearch(CountryNameInput, ContinentNameInput);
+		}
 	};
 
 	return (
-		<div className="countryEditFormRow searchBarRow">
-			<input className="countryEditFormInput" name="searchBar" value={inputValue} placeholder="Введіть назву країни" onInput={handleInput} />
+		<div className="EditFormRow searchBarRow">
+			<input className="EditFormInput" name="searchBar" value={CountryNameInput} placeholder="Введіть назву країни" onChange={handleInput} />
+			<input className="EditFormInput" name="searchBar" value={ContinentNameInput} placeholder="Введіть назву континенту" onChange={handleContinentInput} />
+			<button className="buttonSearchCity" name="buttonSearchCity" onClick={onClickHandler}>Пошук</button>
 		</div>
 	);
 };

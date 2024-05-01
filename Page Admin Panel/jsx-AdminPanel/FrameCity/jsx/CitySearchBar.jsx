@@ -66,9 +66,9 @@ function CitySearchBar(props) {
 		setInputCityValue(event.target.value);
 	}
 	return (
-		<form className="countryEditFormRow searchBarRow" method="post">
-			<input className="countryEditFormInput" name="country" value={inputCountryValue} onInput={handleInputCountryValue} placeholder="Введіть назву країни" />
-			<input className="countryEditFormInput" name="city" value={inputCityValue} onInput={handleInputCityValue} placeholder="Введіть назву міста" />
+		<form className="EditFormRow searchBarRow" method="post">
+			<input className="EditFormInput" name="country" value={inputCountryValue} onInput={handleInputCountryValue} placeholder="Введіть назву країни" />
+			<input className="EditFormInput" name="city" value={inputCityValue} onInput={handleInputCityValue} placeholder="Введіть назву міста" />
 			<input type="submit" className="buttonSearchCity" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
 		</form>
 	);
