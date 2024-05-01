@@ -13,13 +13,13 @@ class AdminPanelTabContainer extends React.Component {
 		return (
 			<div id="adminPanelTabContainer">
 				{
-					(this.state.name === "Країни") && <FrameCountry tab={countryTab} />
+					(this.state.name === "Країни") && <FrameCountry tab={myTab} />
 				}
 				{
-					(this.state.name === "Міста") && <FrameCity tab={countryTab} />
+					(this.state.name === "Міста") && <FrameCity tab={myTab} />
 				}
 				{
-					(this.state.name === "Люди") && <FramePeople tab={peopleTab}/>
+					(this.state.name === "Люди") && <FramePeople tab={myTab}/>
 				}
 				{	
 					(this.state.name === "Готелі") && <FrameHotel tab={myTab} />
