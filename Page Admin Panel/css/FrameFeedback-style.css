@@ -1,0 +1,210 @@
+#frameFeedbackToolbar {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 80px;
+  margin-right: 80px; */
+}
+
+#frameFeedbackToolbarTitleQuantity {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: baseline;
+  flex: 1 0;
+  justify-content: space-evenly;
+  /* margin-left: 80px;
+  margin-right: 80px; */
+}
+
+#frameFeedbackToolbarTitle {
+  font-size: 7vmin;
+  font-style: italic;
+  /* font-weight: 900; */
+}
+
+#frameFeedbackToolbarQuantity {
+  font-size: 7vmin;
+  /* font-weight: 600; */
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 2px solid #2936c4;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.children1 {
+  background-color: #63add2;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.children1 strong {
+  text-align: right;
+}
+
+.children2 {
+  padding: 10px;
+}
+
+.children3 {
+  background-color: #97999a;
+  padding: 10px;
+}
+
+.children2 a {
+  color: rgb(255, 145, 0);
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.left,
+.right {
+  float: left;
+  margin-left: 50px;
+}
+
+.right3 {
+  float: right;
+  margin-right: 50px;
+}
+
+.left2 {
+  width: 100%;
+
+}
+
+.boxphoto {
+  display: flex;
+  flex-wrap: nowrap;
+
+  width: 80%;
+  justify-content: center;
+}
+
+.boxphoto img {
+  max-Width: 100px;
+  max-Height: 100px;
+  margin: 15px;
+  transition: transform 0.2s ease;
+}
+
+.boxphoto img:hover {
+  transform: scale(2.1);
+  z-index: 2;
+}
+
+.children1 .right a {
+  text-decoration: none;
+  color: rgb(45, 27, 112);
+}
+
+.children3 .right a {
+  text-decoration: none;
+  color: rgb(45, 27, 112);
+}
+
+.children1 .right a:hover {
+  color: rgb(200, 88, 33);
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  max-width: 150px;
+padding: 15px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.formfeedback {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-left: 70px;
+}
+
+.toggle-labelfeedback {
+  font-size: 5vmin;
+  position: relative;
+  color: rgb(51, 51, 224);
+  font-weight: bold;
+}
+
+.toggle-labelfeedback::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  border-bottom: 1px dashed black;
+}
+
+.toggle-labelfeedback:hover {
+  color: red;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.container {
+  display: none;
+}
+
+select{
+margin-left: 10px;
+padding: 10px 20px;
+font-size: 18px;
+width: 80%;
+background-color: rgb(196, 227, 240);
+border: 2px solid rgb(80, 49, 205);
+}
+
+.feedbackEditFormInput {
+  width: 85%;
+  height: auto;
+  margin-left: 30px;
+  background-color: rgb(196, 227, 240)
+}
+
+.buttonFeedback{
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #2936c4;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  border: 3px solid rgb(77, 216, 237);
+  border-radius: 10px;
+}
+
+.feedbackButton{
+  width: 30%;
+  height: auto;
+}
+
+.limit{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 22px;
+}

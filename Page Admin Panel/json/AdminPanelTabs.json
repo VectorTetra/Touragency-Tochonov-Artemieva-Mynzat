@@ -6,16 +6,205 @@
 		},
 		{
 			"name": "Відгуки",
-			"tabIconUrl": "../images/AdminPanel-Images/reviews.png"
+			"tabIconUrl": "../images/AdminPanel-Images/reviews.png",
+			"account": "Admin",
+			"NameTourSearch": ["Чао, Італія! 2 дня в Римі та Флоренція і Венеція! (05.03.2024)", "Вітаю, милий Амстердам (05.04.2024)", "Кастан'єти іспанського сердця 3 дні в Барселоні (23.03.2024)", "Вихідні в Італії. Флоренція, Рим, Венеція (15.04.2024)"],
+			"feedback": [
+				{
+					  "dataTour": "05.03.2024",
+					  "nameTour": "Чао, Італія! 2 дня в Римі та Флоренція і Венеція!",
+					  "linkTour": "../Page%20Tours/ToursItalian.html",
+					  "bodyFeedback": "Тур «Чао Италия»! Очень боялась ехать автобусом (долго, неудобно и т. д. Скажу коротко - лучшего путешествия у меня не было!!! Организовано все до мелочей. Возможно у меня такие впечатления от лучшего руководителя группы Натальи Никифоренко и замечательных водителях Юрия и Александра. Незабываемые впечатления, прекрасное настроение и дружеское общение. Спасибо за профессионализм.",
+					  "login": "Чао",
+					  "dataFeedback": "21.03.2024",
+					  "nameCountry":["Угорщина","Італія"],
+					"photoFeedback": [
+						{
+							"url": "../Page%20Tours/img/Italian/Bled1.jpg",
+							"alt":"Bled",   
+							"index": 1 
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Bled2.jpg",
+							"alt":"Bled",   
+							"index": 2     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Florence.jpg",
+							"alt":"Florence",   
+							"index": 3     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Florence1.jpg",
+							"alt":"Florence",   
+							"index": 4     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Lublyana1.jpg",
+							"alt":"Lublyana",   
+							"index": 5     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Lublyana2.jpg",
+							"alt":"Lublyana",   
+							"index": 6     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Pisa1.jpg",
+							"alt":"Pisa",   
+							"index": 7     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Pisa2.jpg",
+							"alt":"Pisa",   
+							"index": 8     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Rome11.jpg",
+							"alt":"Rome",   
+							"index": 9     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Rome12.jpg",
+							"alt":"Rome",   
+							"index": 10        
+						}
+					]
+		
+				  },
+				  {
+					  "dataTour": "05.04.2024",
+					  "nameTour": "Вітаю, милий Амстердам",
+					  "linkTour": "#",
+					  "bodyFeedback": "Все було супер. Жодних нюансів чи проблем в подорожі не було, гід Софія дуже компетентна в своїй роботі та максимально старалась, організація на вищому рівні, молодчинка. Водії просто скарб, дякую за цю подорож. Краса країн вражає, спогади на все життя!!!",
+					  "login": "Юлія",
+					  "dataFeedback": "13.04.2024",
+					  "nameCountry":["Польша","Німеччина","Нідерланди","Бельгія"],
+					"photoFeedback": [
+						{
+							"url": "../Page%20Tours/img/Italian/Bled1.jpg",
+							"alt":"Bled",   
+							"index": 1 
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Bled2.jpg",
+							"alt":"Bled",   
+							"index": 2     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Florence.jpg",
+							"alt":"Florence",   
+							"index": 3     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Florence1.jpg",
+							"alt":"Florence",   
+							"index": 4     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Lublyana1.jpg",
+							"alt":"Lublyana",   
+							"index": 5     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Lublyana2.jpg",
+							"alt":"Lublyana",   
+							"index": 6     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Pisa1.jpg",
+							"alt":"Pisa",   
+							"index": 7     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Pisa2.jpg",
+							"alt":"Pisa",   
+							"index": 8     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Rome11.jpg",
+							"alt":"Rome",   
+							"index": 9     
+						},
+						{
+							"url": "../Page%20Tours/img/Italian/Rome12.jpg",
+							"alt":"Rome",   
+							"index": 10        
+						}
+					]
+		
+				},
+				  {
+					  "dataTour": "05.04.2024",
+					  "nameTour": "Вітаю, милий Амстердам",
+					  "linkTour": "#",
+					  "bodyFeedback": "Їздила з подругами в тур \"Вітаю, милий Амстердам\". Це була неймовірна подорож наповнена яскравими емоціями, все дуже сподобалося. Окреме дякую керівнику групи-Діані та нашим водіям, організація туру супер, все пройшло чудово️. Вже хочеться чим швидше в нову подорож!",
+					  "login": "Світлана",
+					  "dataFeedback": "12.04.2024",
+					  "nameCountry":["Польша","Німеччина","Нідерланди","Бельгія"]
+				  },
+				  {
+					  "dataTour": "23.03.2024",
+					  "nameTour": "Кастан'єти іспанського сердця 3 дні в Барселоні",
+					  "linkTour": "#",
+					  "bodyFeedback": "Мандрую з Акордом вже багато років і завжди знаю, що буде неперевершено і запам'ятається надовго приємне враження. Дуже багато очікувала від цієї подорожі та всі очікування дійсно того варті! Кожне місто вражало і в кінці мандрівки на передостанньому дні здавалось нічого вже мене здивує, але нічний Будапешт на кораблі це просто фантастично. Я б однозначно радила поїхати до Інтерлакена. Просто захоплює дух від панорами й дивовижно чисто повітря. У прекрасній Барселоні пройтись по готичному кварталу і побачити нічне місто з вершини.",
+					  "login": "Чао",
+					  "dataFeedback": "14.04.2024",
+					  "nameCountry":["Польша","Угорщина","Німеччина","Італія","Швейцарія","Іспанія","Словенія","Франція"]
+				  },
+				  {
+					  "dataTour": "23.06.2020",
+					  "nameTour": "Вихідні в Італії. Флоренція, Рим, Венеція",
+					  "linkTour": "#",
+					  "bodyFeedback": "Щиро дякую компанії за неймовірну подорож та супроводжуючому керівнику Надії Цвяк яка вправно виконувала свою роботу, має хороші організаторські здібності, все було чітко, злагоджено.",
+					  "login": "Оксана",
+					  "dataFeedback": "17.07.2020",
+					  "nameCountry":["Угорщина","Італія"]
+				  },
+				  {
+					  "dataTour": "23.06.2020",
+					  "nameTour": "Вихідні в Італії. Флоренція, Рим, Венеція",
+					  "linkTour": "#",
+					  "bodyFeedback": "Щиро дякую компанії за неймовірну подорож та супроводжуючому керівнику Надії Цвяк яка вправно виконувала свою роботу, має хороші організаторські здібності, все було чітко, злагоджено.",
+					  "login": "Lord",
+					  "dataFeedback": "17.07.2020",
+					  "nameCountry":["Угорщина","Італія"]
+				  }
+	
+			]
 		},
 		{
 			"name": "Готелі",
-			"tabIconUrl": "../images/AdminPanel-Images/hotels.png"
+			"tabIconUrl": "../images/AdminPanel-Images/hotels.png",
+			"Food": ["OB","BB","HB","FB","AI","UAI"],
+			"Services": ["СПА",	"Аквапарк",	"Анімація", "Безкоштовний Wi-Fi", "Дайвінг", "Басейн", "Парковка", "Електрочайник"],
+			"Beds": ["Single Bed", "Double Bed", "King Size", "Twin", "Bunk Bed", "Rollaway Bed", "Extra Bed"],
+			"hotels": [
+				{
+					"HotelName": "1. Five Season's Apartment",
+					"Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+					"CountryName": "Угорщина",
+					"CityName": "Буда",
+					"imgUrl": "../Page%20Hotels/img/Itali/Budapesht.jpg",
+					"food": "OB",
+					"Services": ["СПА", "Безкоштовний Wi-Fi", "Басейн", "Парковка"],
+					"Beds": ["Single Bed", "Extra Bed"]
+				},
+				{
+					"HotelName": "2. Five Season's Apartment",
+					"Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+					"CountryName": "Венгрия",
+					"CityName": "Пешт",
+					"imgUrl": "../Page%20Hotels/img/Itali/Budapesht.jpg",
+					"food": "OB",
+					"Services": ["СПА", "Безкоштовний Wi-Fi", "Басейн", "Парковка"],
+					"Beds": ["Single Bed", "Extra Bed"]
+				}
+			]
 		},
 		{
 			"name": "Країни",
 			"tabIconUrl": "../images/AdminPanel-Images/countries.png"
-			
 		},
 		{
 			"name": "Люди",
@@ -187,6 +376,10 @@
 		{
 			"name": "Тури",
 			"tabIconUrl": "../images/AdminPanel-Images/tours.png"
+		},
+		{
+			"name": "МАГІЯ МАНДРІВ",
+			"tabIconUrl": "../images/HeaderTouragencyLogo.png"
 		}
 	]
 }

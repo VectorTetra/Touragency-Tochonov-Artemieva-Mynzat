@@ -5,10 +5,11 @@ class AdminPanelTabContainer extends React.Component {
 	}
 	render() {
 		// Знайти вкладку "Країни"
-		let countryTab = this.props.tabs.find(el => el.name === "Країни");
+		//let countryTab = this.props.tabs.find(el => el.name === "Країни");
 		// Знайти вкладку "Люди"
-		let peopleTab = this.props.tabs.find(el => el.name === "Люди");
+		//let peopleTab = this.props.tabs.find(el => el.name === "Люди");
 
+		let myTab = this.props.tabs.find(el => el.name === this.state.name);
 		return (
 			<div id="adminPanelTabContainer">
 				{
@@ -19,6 +20,12 @@ class AdminPanelTabContainer extends React.Component {
 				}
 				{
 					(this.state.name === "Люди") && <FramePeople tab={peopleTab}/>
+				}
+				{	
+					(this.state.name === "Готелі") && <FrameHotel tab={myTab} />
+				}
+				{
+					(this.state.name === "Відгуки") && <FrameFeedback tab={myTab} />
 				}
 			</div>
 
