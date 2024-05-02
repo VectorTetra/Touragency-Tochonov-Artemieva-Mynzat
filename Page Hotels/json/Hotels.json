@@ -1,0 +1,101 @@
+{
+    "hotels": {
+        "logo": {
+            "title": "Готелі"
+        },
+        "tours": [
+            {
+                "tourUrl": "../Page%20Tours/ToursItalian.html",
+                "tourName": "Чао, Італія! 2 дня у Римі + Флоренція та Венеція!",
+                "hotels": [
+                    {
+                        "HotelName": "Five Season's Apartment",
+                        "Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+                        "HotelGPS": "Будапешт, Угорщина",
+                        "imgUrl": "./img/Itali/Budapesht.jpg",
+                        "food": "cніданки",
+                        "bed": "2 односпальні ліжка"
+                    },
+                    {
+                        "HotelName": "Tomato Backpackers",
+                        "Descriptions": "Абсолютно новий готель Tomato Backpackers розташований в районі Сан-Сальваріо міста Турін, за 15 хвилин ходьби від залізничного вокзалу Порта-Нуова.",
+                        "HotelGPS": "Турин, Італія",
+                        "imgUrl": "./img/Itali/Turin.jpg",
+                        "food": "cніданки",
+                        "bed": "велике двоспальне ліжко"
+                    },
+                    {
+                        "HotelName": "San Firenze Suites & Spa",
+                        "Descriptions": "Спа-готель San Firenze Suites з видом на історичну площу Сан-Фіренце розташований всього за 100 метрів від площі Синьорії та Галерея Уффіці.",
+                        "HotelGPS": "Флоренція, Італія",
+                        "imgUrl": "./img/Itali/Florence.jpg",
+                        "food": "Cніданки",
+                        "bed": "велике двоспальне ліжко"
+                    },
+                    {
+                        "HotelName": "Casa San Giuseppe",
+                        "Descriptions": "Casa San Giuseppe - готель в місті Рим, розташований за 1,2 км і 1,9 км від таких місць як Станція метро Ponte Lungo та Ворота Порта-Маджоре. До послуг гостей безкоштовний Wi-Fi на всій території.",
+                        "HotelGPS": "Рим, Італія",
+                        "imgUrl": "./img/Itali/Roma.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    },
+                    {
+                        "HotelName": "Piazza Bovio 22",
+                        "Descriptions": "Гостьовий будинок Piazza Bovio 22 розташований у місті Неаполь, всього за кілька метрів від станції метро Università і за 10 хвилин ходьби від порту Моло-Беверелло.",
+                        "HotelGPS": "Неаполь, Італія",
+                        "imgUrl": "./img/Itali/Napoli.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    },
+                    {
+                        "HotelName": "A Tribute To Music Residenza",
+                        "Descriptions": "A Tribute To Music Residenza займає відреставровану будівлю 19-го століття з видом на площу Сан-Марко та історичну Венецію. Номери оснащені кондиціонером, телевізором і міні-баром.",
+                        "HotelGPS": "Венеція, Італія",
+                        "imgUrl": "./img/Itali/Venec.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    }
+                ]
+            },
+            {
+                "tourUrl": "../Page%20Tours/ToursItalian.html",
+                "tourName": "Будапешт",
+                "hotels": [
+                    {
+                        "HotelName": "Five Season's Apartment",
+                        "Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+                        "HotelGPS": "21. Уйбуда, Будапешт, Угорщина",
+                        "imgUrl": "./img/Itali/Budapesht.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    },
+                    {
+                        "HotelName": "Five Season's Apartment",
+                        "Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+                        "HotelGPS": "22. Уйбуда, Будапешт, Угорщина",
+                        "imgUrl": "./img/Itali/Budapesht.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    },
+                    {
+                        "HotelName": "Five Season's Apartment",
+                        "Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+                        "HotelGPS": "23. Уйбуда, Будапешт, Угорщина",
+                        "imgUrl": "./img/Itali/Budapesht.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    },
+                    {
+                        "HotelName": "Five Season's Apartment",
+                        "Descriptions": "Сучасні апартаменти Five Season's розташовані в будівлі початку 20 століття у Буді, за 150 метрів від термальних ванн Gellért. У вашому розпорядженні кондиціонер та безкоштовний Wi-Fi.",
+                        "HotelGPS": "24. Уйбуда, Будапешт, Угорщина",
+                        "imgUrl": "./img/Itali/Budapesht.jpg",
+                        "food": "Cніданки",
+                        "bed": "2 односпальні ліжка"
+                    }
+                ]
+            }
+        ]
+    }
+}
