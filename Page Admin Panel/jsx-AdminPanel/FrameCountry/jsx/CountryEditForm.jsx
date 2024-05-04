@@ -60,7 +60,6 @@ function CountryEditForm(props) {
 			context.PutCountry(countryName, flagUrl, continentId); // Додано новий параметр
 		}
 		handleReset();
-		
 	};
 	const handleReset = (event) => {
 		context.setDtoId(0);

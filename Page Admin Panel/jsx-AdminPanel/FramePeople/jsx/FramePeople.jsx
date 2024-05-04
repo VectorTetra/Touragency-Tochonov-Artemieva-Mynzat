@@ -1,10 +1,10 @@
-function FramePeople(props){
-	window.PeopleTabContext = React.createContext(props.tab);
+function FramePeople(props) {
+	
+	
 	return (
-		<window.PeopleTabContext.Provider value={props.tab}>
-			<div id="framePeople">
-				<PeopleSubTabCaption/>
-			</div>
-		</window.PeopleTabContext.Provider>
-	);	
+		<div id="framePeople">
+			<PeopleSubTabCaption />
+			<TouragentsSubTabCaption/> 
+		</div>
+	);
 }

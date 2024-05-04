@@ -1,0 +1,525 @@
+{
+    "countryAll": [
+        {
+            "objType": "logo",
+            "title": "Країни"
+        },       
+        {
+            "objType": "country",
+            "countryPersonURL": "./CountryPerson.html",
+            "table": [
+                {
+                    "nameCountry": "Австрія",
+                    "imageurl": "../Page%20Feedback/img/at.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Найкрасивіша країна Центральної Європи. Це маленька європейська перлина: гірськолижні та спа-курорти, відпочинок на озерах в оточенні заповідних лісів, шедевральна архітектура міст, казкові села на тірольських схилах та середньовічні замки... Це все приваблює в країну мільйони туристів з усього світу, при цьому Австрії вдається зберегти свою унікальність і почасти провінційність.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Austria/Austria1.jpg",
+                            "alt": "Austria"
+                        },
+                        {
+                            "url": "./img/Austria/Austria2.jpg",
+                            "alt": "Austria"
+                        },
+                        {
+                            "url": "./img/Austria/Austria3.jpg",
+                            "alt": "Austria"
+                        },
+                        {
+                            "url": "./img/Austria/Austria4.jpg",
+                            "alt": "Austria"
+                        },
+                        {
+                            "url": "./img/Austria/Austria5.jpg",
+                            "alt": "Austria"
+                        },
+                        {
+                            "url": "./img/Austria/Austria6.jpg",
+                            "alt": "Austria"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Албанія",
+                    "imageurl": "../Page%20Feedback/img/al.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Унікальна Албанія – справжня загадка для мандрівників! Албанія радує туристів прекрасною незайманою природою, неймовірними краєвидами, чистим і прозорим морем, відсутністю шуму та великої кількості людей на курортах і цікавою культурою. Наразі Албанія активно розвивається і відкрита для туристів. Наша порада: беріть напрокат машину і вирушайте насолоджуватися красою балканської країни. Приємний бонус – безвізовий в’їзд в мальовничу Албанію і 300 сонячних днів на рік! Прозорість води Адріатичного і Іонічного морів змушують мандрівників затамувати подих. Тут є прекрасні місця для заняття дайвінгом, оскільки підводні пейзажі нітрохи не поступаються надводним. Туристів в Албанії чекають розкішні пляжі, кришталево чиста вода і дивовижної краси гори.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Albania/Albania1.jpg",
+                            "alt": "Albania"
+                        },
+                        {
+                            "url": "./img/Albania/Albania2.jpg",
+                            "alt": "Albania"
+                        },
+                        {
+                            "url": "./img/Albania/Albania3.jpg",
+                            "alt": "Albania"
+                        },
+                        {
+                            "url": "./img/Albania/Albania4.jpg",
+                            "alt": "Albania"
+                        },
+                        {
+                            "url": "./img/Albania/Albania5.jpg",
+                            "alt": "Albania"
+                        },
+                        {
+                            "url": "./img/Albania/Albania6.jpg",
+                            "alt": "Albania"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Бельгія",
+                    "imageurl": "../Page%20Feedback/img/be.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Країна є втіленням справжньої казки, яка ожила у нашій реальності. Середньовічна архітектура міст і розкішні ландшафти, романтичні замки і розкішні маєтки, чудові пляжі і вишукані бальнеологічні курорти, популярна бельгійська кухня і смачний шоколад - все тут підштовхує до того, щоб провести унікальний, по-реальному комфортний відпочинок.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Belgium/belgium1.jpg",
+                            "alt": "Belgium"
+                        },
+                        {
+                            "url": "./img/Belgium/belgium2.jpg",
+                            "alt": "Belgium"
+                        },
+                        {
+                            "url": "./img/Belgium/belgium3.jpg",
+                            "alt": "Belgium"
+                        },
+                        {
+                            "url": "./img/Belgium/belgium4.jpg",
+                            "alt": "Belgium"
+                        },
+                        {
+                            "url": "./img/Belgium/belgium5.jpg",
+                            "alt": "Belgium"
+                        },
+                        {
+                            "url": "./img/Belgium/belgium6.jpg",
+                            "alt": "Belgium"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Болгарія",
+                    "imageurl": "../Page%20Feedback/img/bg.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Цілий рік гостинна і сприяє повноцінному відпочинку. По-перше, ми знаємо Болгарію як чудовий і недорогий літній курорт з тепленьким морем, прекрасними пляжами, лагідним сонцем і унікальним мікрокліматом. Однак, це ще й чудові гірськолижні траси взимку, винні дегустації восени та цікаві екскурсійні програми навесні. Тури до Болгарії – це супер можливість втекти від депресії та міської метушні, заспокоїти нерви за келихом вина та помилуватися гарними заходами.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Bolgaria/Bulgaria1.jpg",
+                            "alt": "Bolgaria"
+                        },
+                        {
+                            "url": "./img/Bolgaria/Bulgaria2.jpg",
+                            "alt": "Bolgaria"
+                        },
+                        {
+                            "url": "./img/Bolgaria/Bulgaria3.jpg",
+                            "alt": "Bolgaria"
+                        },
+                        {
+                            "url": "./img/Bolgaria/Bulgaria4.jpg",
+                            "alt": "Bolgaria"
+                        },
+                        {
+                            "url": "./img/Bolgaria/Bulgaria5.jpg",
+                            "alt": "Bolgaria"
+                        },
+                        {
+                            "url": "./img/Bolgaria/Bulgaria6.jpg",
+                            "alt": "Bolgaria"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Боснія та Герцеговина",
+                    "imageurl": "../Page%20Feedback/img/be.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Чарівна балканська країна залишалася \"білою плямою\" на карті Європи. Країна з дивовижною назвою зберігає не менш дивовижні речі: змішання найдавніших релігій і культур — мусульманства і християнства. Одне з найпопулярніших місць відпочинку у туристів є місто Сараєво. Ще одне місто Боснії та Герцеговини - Мостар, відомий своїм Старим мостом через річку Неретва. Міст поєднує дві частини міста. До речі, міст вважається своєрідним символом країни. Для любителів моря та пляжу завжди є можливість відпочити на узбережжі Адріатичного моря. Ціни цілком демократичні.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Bosnia/Bosnia1.jpg",
+                            "alt": "Bosnia"
+                        },
+                        {
+                            "url": "./img/Bosnia/Bosnia2.jpg",
+                            "alt": "Bosnia"
+                        },
+                        {
+                            "url": "./img/Bosnia/Bosnia3.jpg",
+                            "alt": "Bosnia"
+                        },
+                        {
+                            "url": "./img/Bosnia/Bosnia4.jpg",
+                            "alt": "Bosnia"
+                        },
+                        {
+                            "url": "./img/Bosnia/Bosnia5.jpg",
+                            "alt": "Bosnia"
+                        },
+                        {
+                            "url": "./img/Bosnia/Bosnia6.jpg",
+                            "alt": "Bosnia"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Великобританія",
+                    "imageurl": "../Page%20Feedback/img/gb.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Греція",
+                    "imageurl": "../Page%20Feedback/img/gr.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Данія",
+                    "imageurl": "../Page%20Feedback/img/dk.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Ізраіль",
+                    "imageurl": "../Page%20Feedback/img/il.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Ірландія",
+                    "imageurl": "../Page%20Feedback/img/ie.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Іспанія",
+                    "imageurl": "../Page%20Feedback/img/es.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Італія",
+                    "imageurl": "../Page%20Feedback/img/it.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Напевно немає у світі країни, більш пристосованої для відпочинку, яскравих вражень, релаксу та нестримних веселощів, ніж Італія. Кількість шедеврів архітектури, музеїв, неймовірних видів, гастрономічних вишукувань та дивовижних видовищ ви не знайдете більше ніде. Опис найвідоміших пам'яток Італії може зайняти сотні сторінок. Погодьтеся, як приємно холодним зимовим вечором переглянути фотографії з Риму, Венеції, Мілана або Неаполя, згадати смак приголомшливої ​​піци або витонченого різотто... Ось наша порада: якщо не були в Італії – не роздумуйте довго, – країна здатна здивувати та задовольнити усі ваші очікування.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Italy/Italy1.jpg",
+                            "alt": "Italy"
+                        },
+                        {
+                            "url": "./img/Italy/Italy2.jpg",
+                            "alt": "Italy"
+                        },
+                        {
+                            "url": "./img/Italy/Italy3.jpg",
+                            "alt": "Italy"
+                        },
+                        {
+                            "url": "./img/Italy/Italy4.jpg",
+                            "alt": "Italy"
+                        },
+                        {
+                            "url": "./img/Italy/Italy5.jpg",
+                            "alt": "Italy"
+                        },
+                        {
+                            "url": "./img/Italy/Italy6.jpg",
+                            "alt": "Italy"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Латвія",
+                    "imageurl": "../Page%20Feedback/img/lv.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Литва",
+                    "imageurl": "../Page%20Feedback/img/lt.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Нідерланди",
+                    "imageurl": "../Page%20Feedback/img/nl.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Німеччина",
+                    "imageurl": "../Page%20Feedback/img/de.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Країна наступального футболу, кращих автомобілів, відмінного пива, простої та смачної кухні, відомої на весь світ педантичності та німецької якості, драйвової рок-музики, чудових музеїв, ідеальних доріг та галасливих фестивалів. Німеччина - багатогранна і багато в чому непізнана нами. Це країна, відкинувши стереотипи про яку, ви побачите зовсім інший світ. Схожих на нас людей, зовні стриманих і нордичних, але які відрізняються гостинністю та привітністю.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Germany/Germany1.jpg",
+                            "alt": "Germany"
+                        },
+                        {
+                            "url": "./img/Germany/Germany2.jpg",
+                            "alt": "Germany"
+                        },
+                        {
+                            "url": "./img/Germany/Germany3.jpg",
+                            "alt": "Germany"
+                        },
+                        {
+                            "url": "./img/Germany/Germany4.jpg",
+                            "alt": "Germany"
+                        },
+                        {
+                            "url": "./img/Germany/Germany5.jpg",
+                            "alt": "Germany"
+                        },
+                        {
+                            "url": "./img/Germany/Germany6.jpg",
+                            "alt": "Germany"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Норвегія",
+                    "imageurl": "../Page%20Feedback/img/no.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Польша",
+                    "imageurl": "../Page%20Feedback/img/pl.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Наша західна сусідка Польща є яскравою ілюстрацією того, як країна може змінитися на краще всього за кілька десятиліть. Старовину Кракова та Варшави доповнюють краси Сопота та Закопане, а середньовічні замки лицарів змагаються у популярності з численними костелами. Польщу важко уявити без апетитного журека та ситного бігосу, різних ковбас та пирогів, а польське зубрівка ріднить братів-слов'ян набагато більше за промови всіх політиків разом узятих.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Poland/Poland1.jpg",
+                            "alt": "Poland"
+                        },
+                        {
+                            "url": "./img/Poland/Poland2.jpg",
+                            "alt": "Poland"
+                        },
+                        {
+                            "url": "./img/Poland/Poland3.jpg",
+                            "alt": "Poland"
+                        },
+                        {
+                            "url": "./img/Poland/Poland4.jpg",
+                            "alt": "Poland"
+                        },
+                        {
+                            "url": "./img/Poland/Poland5.jpg",
+                            "alt": "Poland"
+                        },
+                        {
+                            "url": "./img/Poland/Poland6.jpg",
+                            "alt": "Poland"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Потругалія",
+                    "imageurl": "../Page%20Feedback/img/pt.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Румунія",
+                    "imageurl": "../Page%20Feedback/img/ro.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Ця 'Карпатська загадка' порадує найдосвідченішого мандрівника. До ваших послуг замки Трансільванії та пляжі чорноморського узбережжя, гірськолижні курорти та еко-тури по Дунаю, архітектурні чудеса Бухареста та пам'ятки історії римського та візантійського періоду. Ще Румунія – це легенда про Дракулу, свіжа мамалига та міцне вино, сливовиця і скрипка, що рве душу. Але бережіться, прикипіти до румунської гостинності можна дуже швидко.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Romania/Romania1.jpg",
+                            "alt": "Romania"
+                        },
+                        {
+                            "url": "./img/Romania/Romania2.jpg",
+                            "alt": "Romania"
+                        },
+                        {
+                            "url": "./img/Romania/Romania3.jpg",
+                            "alt": "Romania"
+                        },
+                        {
+                            "url": "./img/Romania/Romania4.jpg",
+                            "alt": "Romania"
+                        },
+                        {
+                            "url": "./img/Romania/Romania5.jpg",
+                            "alt": "Romania"
+                        },
+                        {
+                            "url": "./img/Romania/Romania6.jpg",
+                            "alt": "Romania"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Словакія",
+                    "imageurl": "../Page%20Feedback/img/sk.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Словенія",
+                    "imageurl": "../Page%20Feedback/img/si.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Угорщина",
+                    "imageurl": "../Page%20Feedback/img/hu.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Країна, в якій переплелося сьогодення та минуле, давні традиції та нові віяння. Тут замки, фортеці та палаци гармонійно поєднуються із сучасною архітектурою, а розвинена інфраструктура міст не заступає собою чудові природні ландшафти. Це край термальних джерел і прекрасного токайського вина, гострого гуляшу та найсмачніших ковбасок, Кубика-рубика та чардаша. Відвідавши пишне Будапешт або тихе провінційне містечко, відпочивши в купальнях, ресторані або на озері Балатон, ви обов'язково полюбите цю країну назавжди.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Hungary/Hungary1.jpg",
+                            "alt": "Hungary"
+                        },
+                        {
+                            "url": "./img/Hungary/Hungary2.jpg",
+                            "alt": "Hungary"
+                        },
+                        {
+                            "url": "./img/Hungary/Hungary3.jpg",
+                            "alt": "Hungary"
+                        },
+                        {
+                            "url": "./img/Hungary/Hungary4.jpg",
+                            "alt": "Hungary"
+                        },
+                        {
+                            "url": "./img/Hungary/Hungary5.jpg",
+                            "alt": "Hungary"
+                        },
+                        {
+                            "url": "./img/Hungary/Hungary6.jpg",
+                            "alt": "Hungary"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Україна",
+                    "imageurl": "../Page%20Feedback/img/ua.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "На перший погляд, Україна здається повністю звіданою, обкатаною вздовж і поперек. Але це лише на перший погляд. Поїхавши до будь-якого з наших українських турів, ви будете приємно здивовані та вражені тому, скільки ще приємних сюрпризів ховає наша Батьківщина. Це і середньовічні замки, загублені у сільській глушині, і маленькі львівські дворики, які не побачиш із вулиці, це масивні монастирі, за стіни яких не так просто потрапити, та затишні закарпатські виноробні, в яких привітний господар приділить свою увагу кожному гостю. Ще загублені церкви, старовинні особняки, таємничі підземелля, печери, що леденять душу, оповиті безліччю легенд і переказів. Україна – як книга, яку тільки-но почав читати, і все найцікавіше ще попереду.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Ukraine/Ukraine1.jpg",
+                            "alt": "Ukraine"
+                        },
+                        {
+                            "url": "./img/Ukraine/Ukraine2.jpg",
+                            "alt": "Ukraine"
+                        },
+                        {
+                            "url": "./img/Ukraine/Ukraine3.jpg",
+                            "alt": "Ukraine"
+                        },
+                        {
+                            "url": "./img/Ukraine/Ukraine4.jpg",
+                            "alt": "Ukraine"
+                        },
+                        {
+                            "url": "./img/Ukraine/Ukraine5.jpg",
+                            "alt": "Ukraine"
+                        },
+                        {
+                            "url": "./img/Ukraine/Ukraine6.jpg",
+                            "alt": "Ukraine"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Фінляндія",
+                    "imageurl": "../Page%20Feedback/img/fi.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Франція",
+                    "imageurl": "../Page%20Feedback/img/fr.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Край, який асоціюється з вишуканими парфумами, високою модою, витонченою кухнею та шармом парижанок. Країна, символами якої є Ейфелева вежа, ранкова кава з круасаном, затишні столики Латинського кварталу, галасливий рибний ринок на набережній Марселя. Країна, що подарувала світу шампанське та коньяк, курорти Лазурного берега та Лувр, сир камамбер та французький багет, Версаль та Шартрський собор, картини Едуарда Мане та романи Віктора Гюго, пісні Едіт Піаф та Шарля Азнавура. Тут шедеври архітектури мирно уживаються зі старими багатолюдними дворами, а в одному кафе можна зустріти сивого професора і студента-провінціала, який слухає його. Францію неможливо описати, Францію треба бачити, пробувати та нюхати.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/France/France1.jpg",
+                            "alt": "France"
+                        },
+                        {
+                            "url": "./img/France/France2.jpg",
+                            "alt": "France"
+                        },
+                        {
+                            "url": "./img/France/France3.jpg",
+                            "alt": "France"
+                        },
+                        {
+                            "url": "./img/France/France4.jpg",
+                            "alt": "France"
+                        },
+                        {
+                            "url": "./img/France/France5.jpg",
+                            "alt": "France"
+                        },
+                        {
+                            "url": "./img/France/France6.jpg",
+                            "alt": "France"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Хорватія",
+                    "imageurl": "../Page%20Feedback/img/hr.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Чорногорія",
+                    "imageurl": "../Page%20Feedback/img/cs.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Чехія",
+                    "imageurl": "../Page%20Feedback/img/cz.jpg",
+                    "url": "./CountryPerson.html",
+                    "description": "Цю країну складно уявити без золотоголової Праги, готичного замку Карлштейн, соборів Кутної-Гори, чудового Крумлівського замку, палацу в Льодниці та мінеральних джерел Карлових Вар, смачного пива та незрівнянного бехерування, запеченої свинячої рульки та маринованих сосисів. Чехія — країна яскравої архітектури та оздоровчого відпочинку, прекрасної гастрономії, чудового шопінгу, самобутньої культури та давніх традицій. Чехія завжди бажана та стала для українських туристів практично другою дачею.",
+                    "photoUrl": [
+                        {
+                            "url": "./img/Chehia/Chehia1.jpg",
+                            "alt": "Chehia"
+                        },
+                        {
+                            "url": "./img/Chehia/Chehia2.jpg",
+                            "alt": "Chehia"
+                        },
+                        {
+                            "url": "./img/Chehia/Chehia3.jpg",
+                            "alt": "Chehia"
+                        },
+                        {
+                            "url": "./img/Chehia/Chehia4.jpg",
+                            "alt": "Chehia"
+                        },
+                        {
+                            "url": "./img/Chehia/Chehia5.jpg",
+                            "alt": "Chehia"
+                        },
+                        {
+                            "url": "./img/Chehia/Chehia6.jpg",
+                            "alt": "Chehia"
+                        }
+                    ]
+                },
+                {
+                    "nameCountry": "Швейцарія",
+                    "imageurl": "../Page%20Feedback/img/ch.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Швеція",
+                    "imageurl": "../Page%20Feedback/img/se.jpg",
+                    "url": "./CountryPerson.html"
+                },
+                {
+                    "nameCountry": "Естонія",
+                    "imageurl": "../Page%20Feedback/img/ee.jpg",
+                    "url": "./CountryPerson.html"
+                }
+            ] 
+        }
+    ]
+}

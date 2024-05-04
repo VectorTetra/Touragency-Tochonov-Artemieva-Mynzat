@@ -1,0 +1,164 @@
+{
+    "feedbackC": [
+        {
+            "objType": "logo",
+            "title": "Відгуки по країнам",
+            "description": "У цьому розділі зібрані відгуки по країнах, де побували наші туристи. Кожна країна – це окремий світ зі своїми традиціями, звичаями та кухнею. У кожній країні ви знайдете щось особливе, унікальне та цікаве. Поділіться своїми враженнями, розкажіть про особливість кожної країни, внесіть свої фарби в палітру світу."
+        },
+        {
+            "objType": "NavBar",
+            "link": [
+                {
+                    "href": "./Feedback.html",
+                    "text": "Всі відгуки"
+                },
+                {
+                    "href": "./FeedbackCountry.html",
+                    "text": "Відгуки по країнам"
+                },
+                {
+                    "href": "./FeedbackTour.html",
+                    "text": "Відгуки по турам"
+                }
+            ]
+        },
+        {
+            "objType": "country",
+            "url": "./Feedback.html",
+            "table": [
+                {
+                    "nameCountry": "Австрія",
+                    "imageurl": "./img/at.jpg"   
+                },
+                {
+                    "nameCountry": "Албанія",
+                    "imageurl": "./img/al.jpg"
+                },
+                {
+                    "nameCountry": "Андора",
+                    "imageurl": "./img/ad.jpg"
+                },
+                {
+                    "nameCountry": "Бельгія",
+                    "imageurl": "./img/be.jpg"
+                },
+                {
+                    "nameCountry": "Болгарія",
+                    "imageurl": "./img/bg.jpg"
+                },
+                {
+                    "nameCountry": "Боснія та Герцеговина",
+                    "imageurl": "./img/be.jpg"
+                },
+                {
+                    "nameCountry": "Великобританія",
+                    "imageurl": "./img/gb.jpg"
+                },
+                {
+                    "nameCountry": "Греція",
+                    "imageurl": "./img/gr.jpg"
+                },
+                {
+                    "nameCountry": "Данія",
+                    "imageurl": "./img/dk.jpg"
+                },
+                {
+                    "nameCountry": "Ізраіль",
+                    "imageurl": "./img/il.jpg"
+                },
+                {
+                    "nameCountry": "Ірландія",
+                    "imageurl": "./img/ie.jpg"
+                },
+                {
+                    "nameCountry": "Іспанія",
+                    "imageurl": "./img/es.jpg"
+                },
+                {
+                    "nameCountry": "Італія",
+                    "imageurl": "./img/it.jpg"
+                },
+                {
+                    "nameCountry": "Латвія",
+                    "imageurl": "./img/lv.jpg"
+                },
+                {
+                    "nameCountry": "Литва",
+                    "imageurl": "./img/lt.jpg"
+                },
+                {
+                    "nameCountry": "Нідерланди",
+                    "imageurl": "./img/nl.jpg"
+                },
+                {
+                    "nameCountry": "Німеччина",
+                    "imageurl": "./img/de.jpg"
+                },
+                {
+                    "nameCountry": "Норвегія",
+                    "imageurl": "./img/no.jpg"
+                },
+                {
+                    "nameCountry": "Польша",
+                    "imageurl": "./img/pl.jpg"
+                },
+                {
+                    "nameCountry": "Потругалія",
+                    "imageurl": "./img/pt.jpg"
+                },
+                {
+                    "nameCountry": "Румінія",
+                    "imageurl": "./img/ro.jpg"
+                },
+                {
+                    "nameCountry": "Словакія",
+                    "imageurl": "./img/sk.jpg"
+                },
+                {
+                    "nameCountry": "Словенія",
+                    "imageurl": "./img/si.jpg"
+                },
+                {
+                    "nameCountry": "Угорщина",
+                    "imageurl": "./img/hu.jpg"
+                },
+                {
+                    "nameCountry": "Україна",
+                    "imageurl": "./img/ua.jpg"
+                },
+                {
+                    "nameCountry": "Фінляндія",
+                    "imageurl": "./img/fi.jpg"
+                },
+                {
+                    "nameCountry": "Франція",
+                    "imageurl": "./img/fr.jpg"
+                },
+                {
+                    "nameCountry": "Хорватія",
+                    "imageurl": "./img/hr.jpg"
+                },
+                {
+                    "nameCountry": "Чорногорія",
+                    "imageurl": "./img/cs.jpg"
+                },
+                {
+                    "nameCountry": "Чехія",
+                    "imageurl": "./img/cz.jpg"
+                },
+                {
+                    "nameCountry": "Швейцарія",
+                    "imageurl": "./img/ch.jpg"
+                },
+                {
+                    "nameCountry": "Швеція",
+                    "imageurl": "./img/se.jpg"
+                },
+                {
+                    "nameCountry": "Естонія",
+                    "imageurl": "./img/ee.jpg"
+                }
+            ] 
+        }
+    ]
+}

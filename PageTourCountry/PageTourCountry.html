@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Турагенство Т.А.М.</title>
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageContentBlock-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageFooter3-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/search-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/footer-styles.css" type="text/css">
+</head>
+
+<body>
+
+	<div id="app"></div>
+	<!-- ============================================================================================ -->
+	<!-- =================================== Хедер головної сторінки ================================ -->
+
+	<!-- 0. Компонент, шапка головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeader.jsx"></script>
+	<!-- 1. Компонент, вертикальний flex-список для перерахув. номерів телефонів, графіку роботи, соцмереж і т.д.  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderContactList.jsx"></script>
+	<!-- 1. Компонент, логотип турагенства  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderLogo.jsx"></script>
+	<!-- 1. Компонент, назва і слоган турагенства  -->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderTouragencySign.jsx"></script>
+	<!-- 2. Компонент, рядок списку MainPageHeaderContactList, панель для іконок соцмереж з посиланнями-->
+	<script type="text/babel" src="../MainPage/jsx-Header/MainPageHeaderNetworksBar.jsx"></script>
+	<!-- 3. Компонент, іконка соцмережі з посиланням-->
+	<script type="text/babel" src="../MainPage/jsx-Header/SocialNetworkIconRef.jsx"></script>
+	<!-- 1. Компонент, кнопка Увійти-->
+	<script type="text/babel" src="../MainPage/jsx-Header/LoginButton.jsx"></script>
+	<!-- 1. Компонент, відображає особ. інформ. користувача, коли він зайшов в систему-->
+	<script type="text/babel" src="../MainPage/jsx-Header/UserGreetings.jsx"></script>
+	<!-- 1. Компонент, кнопка Вийти-->
+	<script type="text/babel" src="../MainPage/jsx-Header/LogoutButton.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- =========================== Навігаційна панель головної сторінки =========================== -->
+
+	<!-- 0. Компонент, нав.панель головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbar.jsx"></script>
+	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
+	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbarItem.jsx"></script>
+
+	<!-- ============================================================================================ -->
+	<!-- ========================== Блок Пошуку ===================================================== -->
+
+	<script type="text/babel" src="../MainPage/jsx-Search/MainPageSearch.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBar.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBarWhere.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBarFrom.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBarDate.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBarDuration.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBarTourists.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/SearchBarSubmitButton.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtendedSearch.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcColumn1.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcColumn2.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcColumn3.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcCategory.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcButton.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcFood.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcRewies.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcServices.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcTransport.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSearchCheckBoxes.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Search/ExtSrcPrice.jsx"></script>
+
+	<!-- ============================================================================================ -->
+	<!-- ========================== Основний контент-блок головної сторінки ========================= -->
+
+	<!-- 0. Компонент, сторінки Країни -->
+	<script type="text/babel" src="../Page Country/jsx-Country/CountryPersonAll.jsx"></script>
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="../Page Country/jsx-Country/CountryPerson.jsx"></script>
+	<!-- 2. Компонент, питання -->
+	<!-- <script type="text/babel" src="../Page Country/jsx-Country/CountryPicture.jsx"></script> -->
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="../Page Country/jsx-Country/CountryHotTours.jsx"></script>
+	<!-- 2. Компонент, рядок у таблиці турів на головній сторінці сайту -->
+	<script type="text/babel" src="../MainPage/jsx-ContentBlock/ToursTableBlock.jsx"></script>
+	<!-- 2. Компонент, рядок у таблиці турів на головній сторінці сайту -->
+	<script type="text/babel" src="../MainPage/jsx-ContentBlock/ToursTableBlockCaption.jsx"></script>
+	<!-- 2. Компонент, рядок у таблиці турів на головній сторінці сайту -->
+	<script type="text/babel" src="../MainPage/jsx-ContentBlock/ToursTableBlockList.jsx"></script>
+	<!-- 2. Компонент, рядок у таблиці турів на головній сторінці сайту -->
+	<script type="text/babel" src="../MainPage/jsx-ContentBlock/ToursTableBlockTableRow.jsx"></script>
+
+
+	<script type="text/babel" src="../PageTourCountry/jsx-pageTourCountry/TourList.jsx"></script>
+
+	
+	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
+
+	<script type="text/babel">
+		let headerData;
+		let navbarItems;
+		let toursArray;
+		let SearchBarData;
+		let countryAll;
+		let tours;
+
+		Promise.all([
+			fetch('../MainPage/json/mainPageHeaderInfo.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading header data from JSON file <================================
+					headerData = data.headerData;
+				})),
+			fetch('../MainPage/json/mainPageNavbarItems.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading navbarItems from JSON file <================================
+					navbarItems = data.navbarItems;
+				})),
+			fetch('../MainPage/json/tours.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading tours from JSON file <================================
+					toursArray = data;
+					console.log('toursArray : ', toursArray);
+				})),
+			fetch('../Page Country/json/country.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading header data from JSON file <================================
+					countryAll = data.countryAll;
+				})),
+			fetch('../MainPage/json/SearchBarInfo.json').
+				then(resp => resp.json()).
+				then((data => {
+					SearchBarData = data.SearchBarData;
+				})),
+		]).then(
+			() => {
+				const rootNode = document.getElementById("app");
+				const root = ReactDOM.createRoot(rootNode);
+				// ДЕСЬ НА ЦІЙ СТОРІНЦІ ПОВИНЕН ВІДБУТИСЯ ЗАПИТ ДО SessionTourListController,
+				// В ЯКОМУ МАЮТЬ БУТИ ДАНІ ПРО ОСНОВНІ ПАРАТЕМТРИ ПОШУКУ З НАВ.ПАНЕЛІ 
+				let urlParams = new URLSearchParams(window.location.search);
+				let countryId = urlParams.get('countryId');
+				let continentId = urlParams.get('continentId');
+
+				root.render(
+					<React.StrictMode>
+						<TourList/>
+					</React.StrictMode>
+				);
+			}
+		)
+	</script>
+</body>
+
+</html>
