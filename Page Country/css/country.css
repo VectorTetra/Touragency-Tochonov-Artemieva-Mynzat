@@ -1,0 +1,548 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.LogoCountry {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.LogoCountry h2 {
+  text-align: center;
+  color: rgb(8, 8, 57);
+}
+
+.LogoCountry hr {
+  width: 95%;
+  border: none;
+  height: 2px;
+  background-color: blue;
+
+}
+
+.picture {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+.picture div {
+  width: 15%;
+  /* каждая картинка занимает 20% ширины родительского контейнера */
+  padding: 10px;
+  /* отступ между картинками */
+}
+
+.boxphotoimg {
+  max-width: 100%;
+  height: auto;
+  margin: 15px;
+  transition: transform 0.2s ease;
+}
+
+.boxphotoimg:hover {
+  transform: scale(2.1);
+  z-index: 2;
+}
+
+.pictureimg {
+  max-width: 100%;
+  height: auto;
+}
+
+.pictureimg:hover {
+  opacity: 0.5;
+}
+
+.picture a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 10px;
+  overflow-wrap: break-word;
+  color: #2936c4;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.picture a:hover {
+  color: red;
+}
+
+.picture img+span {
+  display: block;
+  text-align: left;
+}
+
+.tourInfo{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  color: blue;
+  font-size: 1.2em;
+}
+
+#toursTable-block-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+}
+
+#toursTableBlockList {
+  border-spacing: 0;
+  border: 2px solid rgb(74, 77, 255);
+  /* border-radius: 20px; */
+}
+
+#toursTableBlockList tr:nth-child(even) {
+  background-color: lightgoldenrodyellow;
+}
+
+
+.TableRowDatesCell {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* font-size: 1rem; */
+  padding: 0 0.5rem;
+  text-wrap: nowrap;
+  font-weight: 600;
+}
+
+.TableRowRouteCell {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0.7rem;
+  transition: 1s;
+}
+
+.TableRowRouteCellAnchor {
+  text-align: center;
+  font-weight: 800;
+}
+
+.TableRowRouteCell a:hover {
+  color: hotpink;
+  transition: 1s;
+}
+
+.TableRowRouteString {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-wrap: pretty;
+  max-width: 90%;
+  padding: 0.25rem 0;
+}
+
+#toursTable-block-caption {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin: 10px 0 10px 0;
+margin-bottom: 30px;
+}
+
+@media (945px < width < 1100px) and (not (pointer: coarse)) {
+
+  #reviews-block-caption,
+  #news-block-caption,
+  #toursTable-block-caption {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+  }
+
+  #content-block-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    max-height: min-content;
+    justify-content: space-evenly;
+  }
+
+  #toursTable-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 600px;
+  }
+
+  #news-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    min-width: 100%;
+    order: 1;
+  }
+
+  .news {
+    padding: 0 15px;
+  }
+
+  #touristsReviews-block-container {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 50%;
+    padding: 0;
+    margin: 15px 0 0 0;
+    flex-wrap: wrap;
+    min-width: 100%;
+    align-items: center;
+    order: 2;
+  }
+
+  .touristReview {
+    display: flex;
+    flex-direction: column;
+    max-width: 46vw;
+    margin: auto;
+  }
+
+  .boldUserNameReviewCaption {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .touristReviewStarsDateRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .touristReviewCaptionRow {
+    font-size: 1.1rem;
+  }
+
+  .touristReviewTextRow {
+    font-size: 0.9rem;
+  }
+
+  #touristsReviews-block-container .touristReview:nth-child(even) {
+    padding: 0 1vw 0 0;
+  }
+
+  #touristsReviews-block-container .touristReview:nth-child(odd) {
+    padding: 0 0 0 1vw;
+  }
+}
+
+@media (width <=945px) and (not (pointer: coarse)) {
+
+  #reviews-block-caption,
+  #news-block-caption,
+  #toursTable-block-caption {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+  }
+
+  #content-block-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    max-height: min-content;
+    justify-content: space-evenly;
+  }
+
+  #toursTable-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 600px;
+  }
+
+  #news-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    min-width: 100%;
+    order: 1;
+  }
+
+  .news {
+    padding: 0 15px;
+  }
+
+  #touristsReviews-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    padding: 0;
+    margin: 15px 15px 0 15px;
+    flex-wrap: wrap;
+    min-width: 100%;
+    align-items: center;
+    order: 2;
+  }
+
+  .boldUserNameReviewCaption {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .touristReviewStarsDateRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .touristReviewCaptionRow {
+    font-size: 1.1rem;
+  }
+
+  .touristReviewTextRow {
+    font-size: 0.9rem;
+  }
+}
+
+@media (pointer: coarse) and (orientation: portrait) {
+  #content-block-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 2vw 1vh 2vw;
+    flex-wrap: wrap;
+    max-height: min-content;
+    justify-content: space-evenly;
+  }
+
+  #toursTable-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 600px;
+  }
+
+  #touristsReviews-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    padding: 0;
+    /* margin: 15px 15px 0 15px; */
+    flex-wrap: wrap;
+    min-width: 100%;
+    align-items: center;
+    order: 2;
+  }
+
+  #news-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    min-width: 100%;
+    order: 1;
+  }
+
+  #reviews-block-caption,
+  #news-block-caption,
+  #toursTable-block-caption {
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 800;
+    margin: 2vh 1vh 2vh 1vh;
+    text-wrap: wrap;
+  }
+
+  .news {
+    font-size: 1.5vh;
+  }
+
+  .news a {
+    font-size: 2vh;
+  }
+
+  .ToursTableBlockTableRow {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .TableRowDatesCell {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 1rem; */
+    padding: 0 0.5rem;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: 1.8vh;
+  }
+
+  .TableRowRouteCellAnchor {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2vh;
+  }
+
+  .TableRowRouteString {
+    font-size: 1.3vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-wrap: pretty;
+    max-width: 90%;
+    padding: 0.25rem 0;
+  }
+
+  .touristReviewCaptionRow {
+    font-size: 1.8vh;
+  }
+
+  .touristReviewTextRow {
+    font-size: 1.5vh;
+    margin-top: 1.5vh;
+  }
+
+  .boldUserNameReviewCaption {
+    font-weight: bold;
+    font-size: 2vh;
+  }
+
+  .touristReviewStarsDateRow {
+    font-size: 1.8vh;
+  }
+
+  .reviewStar {
+    width: 1.8vh;
+    height: 1.8vh;
+  }
+}
+
+@media (pointer: coarse) and (orientation: landscape) {
+  #content-block-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 2vh 1vw 2vh;
+    flex-wrap: wrap;
+    max-height: min-content;
+    justify-content: space-evenly;
+  }
+
+  #toursTable-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 600px;
+  }
+
+  #touristsReviews-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    padding: 0;
+    margin: 15px 15px 0 15px;
+    flex-wrap: wrap;
+    min-width: 100%;
+    align-items: center;
+    order: 2;
+  }
+
+  #news-block-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    min-width: 100%;
+    order: 1;
+  }
+
+  #reviews-block-caption,
+  #news-block-caption,
+  #toursTable-block-caption {
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 800;
+    margin: 2vw 0 2vw 0;
+    text-wrap: nowrap;
+  }
+
+  .news {
+    font-size: 1.85vw;
+  }
+
+  .news a {
+    font-size: 2.15vw;
+  }
+
+  .ToursTableBlockTableRow {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .TableRowDatesCell {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 1rem; */
+    padding: 0 0.5rem;
+    text-wrap: nowrap;
+    font-weight: 600;
+    font-size: 2.5vw;
+  }
+
+  .TableRowRouteCellAnchor {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3vw;
+  }
+
+  .TableRowRouteString {
+    font-size: 1.9vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-wrap: pretty;
+    max-width: 90%;
+    padding: 0.25rem 0;
+  }
+
+  .touristReviewCaptionRow {
+    font-size: 2.5vw;
+  }
+
+  .touristReviewTextRow {
+    font-size: 2vw;
+    margin-top: 1.5vw;
+  }
+
+  .boldUserNameReviewCaption {
+    font-weight: bold;
+    font-size: 3vw;
+  }
+
+  .touristReviewStarsDateRow {
+    font-size: 2.5vw;
+  }
+
+  .reviewStar {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}

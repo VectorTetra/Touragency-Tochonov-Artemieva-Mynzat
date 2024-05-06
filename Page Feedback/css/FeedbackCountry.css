@@ -1,0 +1,97 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .LogoCountry{
+    display: flex;
+    /* flex-direction: row; */
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .LogoCountry h2{
+    text-align: center;
+    color: rgb(8, 8, 57);
+  }
+
+  /*Стили для менюшки*/
+.navconteiners
+{
+  display: flex;
+  justify-content: center;
+
+}
+
+#navbar li {
+  display: inline;
+  white-space: nowrap;
+}
+
+#navbar {
+  list-style-type: none;
+  border: 3px solid rgb(220, 160, 20);
+  border-radius: 20px 5px;
+  width: 40%;
+  text-align: center;
+  background-color: #2936c4;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+#navbar a {
+  color: rgb(225, 231, 41);
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#navbar a:hover {
+  border-radius: 20px 5px;
+  background-color: rgb(225, 231, 41);
+  color: #2936c4;
+}
+
+.picture {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+.picture div {
+  width: 15%; /* каждая картинка занимает 20% ширины родительского контейнера */
+  padding: 10px; /* отступ между картинками */
+  /* box-sizing: border-box;  */
+}
+
+.picture img {
+  max-width: 100%;
+  height: auto; /* чтобы изображения не деформировались */
+}
+
+.picture a{
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 10px;
+  overflow-wrap: break-word;
+  color: #2936c4;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.picture a:hover{
+  color: red;
+}
+
+.picture img + span {
+  display: block;
+  text-align: left; /* центрирование текста под изображением */
+}
