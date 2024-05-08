@@ -5,8 +5,8 @@
             {
                 "name":"login",
                 "type":"text",
-                "Text":"Введіть email, телефон або нікнейм туріста",
-                "PlaceHolder":"email, номер телефона або нікнейм"
+                "Text":"Введіть логін",
+                "PlaceHolder":"John24151"
             },
             {
                 "name":"password",

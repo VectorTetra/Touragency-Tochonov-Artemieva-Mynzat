@@ -29,7 +29,7 @@
                 "type":"text",
                 "Text":"Псевдонім",
                 "PlaceHolder":"Ваш псевдонім",
-                "pattern":"[A-Za-zА-Яа-я]"
+                "pattern":"[A-Za-z"
             },
             {
                 "name":"email",
