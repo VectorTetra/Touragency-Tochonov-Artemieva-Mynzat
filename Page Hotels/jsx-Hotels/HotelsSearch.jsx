@@ -1,29 +1,93 @@
 function HotelsSearch(props) {
     const [inputValue, setInputValue] = React.useState("");
     const [tours, setTours] = React.useState(props.tours);
-	const [quantity, setQuantity] = React.useState(props.tours.length);
 
 	React.useEffect(() => {
-		props.setQuantity(quantity);
 		props.setTours(tours);
-	}, [quantity, tours]);
+	}, [tours]);
 
-	const handleInput = (event) => {
-		setInputValue(event.target.value);
-		if (event.target.value === "") {
-			setTours(props.tours);
-			setQuantity(props.tours.length);
+	const handleInput = () => {
+		if (inputValue === "" || inputValue === undefined || inputValue === null) {
+			GetAllTourNames();
 			return;
 		}
-		const filteredTours = props.tours.filter(tour => tour.tourName.toLowerCase().includes(event.target.value.toLowerCase()));
-		setTours(filteredTours);
-		setQuantity(filteredTours.length);
+		else{
+			GetTourNames(inputValue);
+		}
+		
 	};
+	const GetAllTourNames = async () => {
+        try {
+            const response = await $.ajax({
+                url: 'https://26.162.95.213:7098/api/TourName', // Замініть на ваш URL API
+                method: 'GET',
+                contentType: "application/json",
+                data: { SearchParameter: 'GetAll' }
+                ,
+                statusCode: {
+                    200: function (data) {
+                        const last11Tours = data.slice(-10); // Отримуємо останні 10 елементів
+                        setTours(last11Tours);
+                    },
+                    204: function () {
+                        setTours([]);
+                    }
+                },
+                error: function (error) {
+                    console.error('Помилка при отриманні даних', error);
+                    alert(error.responseText);
+                }
+            });
+            console.log("GetTourNames success data: ", response);
 
+        } catch (error) {
+            console.error('Помилка при отриманні даних', error);
+            alert(error.responseText);
+        }
+                
+    };
+	const GetTourNames = async (tourName) => {
+        try {
+            const response = await $.ajax({
+                url: 'https://26.162.95.213:7098/api/TourName', // Замініть на ваш URL API
+                method: 'GET',
+                contentType: "application/json",
+                data: { SearchParameter: 'GetByCompositeSearch', Name: tourName },
+                statusCode: {
+                    200: function (data) {
+                        setTours(data);
+                    },
+                    204: function () {
+                        setTours([]);
+                    }
+                },
+                error: function (error) {
+                    console.error('Помилка при отриманні даних', error);
+                    alert(error.responseText);
+                }
+            });
+            console.log("GetTourNames success data: ", response);
+
+        } catch (error) {
+            console.error('Помилка при отриманні даних', error);
+            alert(error.responseText);
+        }
+                
+    };
+	const handleInputChange = (event) => {
+		switch (event.target.name) {
+			case 'searchBar':
+				setInputValue(event.target.value);
+				break;
+			default:
+				break;
+		}
+	}
 	return (
-		<div className="search">
+		<div className="search EditFormRow">
 			<input className="countryEditFormInput" name="searchBar" 
-			value={inputValue} placeholder="Введіть назву туру" onInput={handleInput} />
+			value={inputValue} onChange={handleInputChange} placeholder="Введіть назву туру"/>
+			<button className="buttonSearchCity" style={{width: "auto", marginTop:"20px"}} onClick={handleInput}>Пошук</button>
 		</div>
 	);
     

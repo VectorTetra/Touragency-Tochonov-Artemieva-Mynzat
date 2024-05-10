@@ -24,23 +24,35 @@ function HotelsApart(props) {
     return (
         <div>
             <div className="hotelConteinerLogo">
-                <h2><a href={props.tour.tourUrl} target="_blank">{props.tour.tourName}</a></h2>
+                <h2><a href={props.tour.tourUrl} target="_blank">{props.tour.name}</a></h2>
             </div>
             <div className="containerHotel">
                 {hotelsToShow.map(hotel => (
                     <div className="blockHotel">
                         <div>
-                            <img src={hotel.imgUrl} alt={hotel.HotelName} />
+                            <img src={hotel.imgUrl} alt={hotel.name} />
                         </div>
                         <div>
-                            <h3>{hotel.HotelName}</h3>
-                            <p style={{ "color": "grey" }}>{hotel.HotelGPS}</p>
-                            <p>{hotel.Descriptions}</p>
+                            <h3>{hotel.name}</h3>
+                            <p style={{ "color": "grey" }}>{hotel.settlementName} , {hotel.countryName}</p>
+                            <p>{hotel.description}</p>
                         </div>
                         <div className="services">
                             <hr />
-                            <div>{hotel.food}</div>
-                            <div>{hotel.bed}</div>
+                            <ul>
+                                <h4>Харчування:</h4>
+                                {hotel.foodServices.map((service, index) => {
+                                    return <li style={{textAlign:"left"}} key={index}>{service}</li>
+                                })}
+                            </ul>
+                            <hr />
+                            <ul>
+                                <h4>Розваги:</h4>
+                                {hotel.otherServices.map((service, index) => {
+                                    return <li style={{textAlign:"left"}} key={index}>{service}</li>
+                                })}
+                            </ul>
+                            <hr />
                         </div>
                     </div>
                 ))}

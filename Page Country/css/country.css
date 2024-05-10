@@ -104,13 +104,22 @@ body {
 #toursTableBlockList {
   border-spacing: 0;
   border: 2px solid rgb(74, 77, 255);
-  /* border-radius: 20px; */
+  border-radius: 20px;
 }
 
 #toursTableBlockList tr:nth-child(even) {
   background-color: lightgoldenrodyellow;
 }
+.ToursTableBlockTableRow:last-child{
+	border-radius: 0 0 20px 20px;
+}
 
+.ToursTableBlockTableRow:last-child td:nth-last-child(1){
+	border-radius: 0 0 20px 0;
+}
+.ToursTableBlockTableRow:last-child td:nth-last-child(2){
+	border-radius: 0 0 0 20px;
+}
 
 .TableRowDatesCell {
   display: flex;

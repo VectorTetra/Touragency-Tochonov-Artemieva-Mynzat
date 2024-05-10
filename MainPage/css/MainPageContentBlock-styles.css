@@ -86,8 +86,15 @@ a{
 .ToursTableBlockTableRow > td{
 	/* border: 1px solid rgb(74, 77, 255); */
 }
-.ToursTableBlockTableRow{
+.ToursTableBlockTableRow:last-child{
+	border-radius: 0 0 20px 20px;
+}
 
+.ToursTableBlockTableRow:last-child td:nth-last-child(1){
+	border-radius: 0 0 20px 0;
+}
+.ToursTableBlockTableRow:last-child td:nth-last-child(2){
+	border-radius: 0 0 0 20px;
 }
 .TableRowDatesCell {
     display: flex;
@@ -210,6 +217,9 @@ a{
 	#touristsReviews-block-container .touristReview:nth-child(odd) {
 		padding: 0 0 0 1vw;
 	}
+	.ToursTableBlockTableRow:last-child{
+		border-radius: 0 0 20px 20px;
+	}
 }
 @media (width <= 945px)  and (not (pointer: coarse)) {
 	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {
@@ -275,6 +285,9 @@ a{
 	}
 	.touristReviewTextRow {
 		font-size: 0.9rem;
+	}
+	.ToursTableBlockTableRow:last-child{
+		border-radius: 0 0 20px 20px;
 	}
 }
 @media (pointer: coarse) and (orientation: portrait){
@@ -372,6 +385,9 @@ a{
 		width: 1.8vh;
 		height: 1.8vh;
 	}
+	.ToursTableBlockTableRow:last-child{
+		border-radius: 0 0 20px 20px;
+	}
 }
 @media (pointer: coarse) and (orientation: landscape){
 	#content-block-container {
@@ -467,6 +483,9 @@ a{
 	.reviewStar{
 		width: 2.5vw;
 		height: 2.5vw;
+	}
+	.ToursTableBlockTableRow:last-child{
+		border-radius: 0 0 20px 20px;
 	}
 }
 /* 

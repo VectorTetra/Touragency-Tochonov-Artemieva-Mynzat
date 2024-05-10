@@ -61,6 +61,12 @@
 			"width":"20",
 			"height":"20"
 		},
+		"goToAdminPanelIcon":
+		{
+			"url":"../images/AdminPanel-Images/user.png",
+			"width":"20",
+			"height":"20"
+		},
 		"userData":{
 			"name":"Віктор Точонов",
 			"email":"viktochonov@gmail.com"
