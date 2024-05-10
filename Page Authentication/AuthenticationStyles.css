@@ -68,6 +68,40 @@
         align-items: center;
         padding-top: 70px;
     }
+    .clients-agents-switch {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-evenly;
+      padding-left: 25vh;
+      padding-right: 25vh;
+    }
+    .clients-agents-switch li{
+      color: rgba(74, 77, 255, 1);
+      font-weight: bolder;
+      font-size: 150%;
+    }
+    .active
+    {
+      text-decoration: underline;
+    }
+
+    .tabs
+    {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-evenly;
+      padding: 0px;
+      margin: -10px 0 5px 0;
+    }
+
+    .tabs li{
+      background-color: rgb(34, 189, 73);
+      color: white;
+      padding: 10px 20px 10px 20px;
+      min-width: 100px;
+      text-align: center;
+      border-radius: 10px;
+    }
 }
 
 @media (pointer: coarse) and (orientation: portrait)
