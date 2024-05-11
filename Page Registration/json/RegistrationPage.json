@@ -3,21 +3,21 @@
     {
         "RegistrationInfo":[
             {
-                "name":"surname",
+                "name":"Lastname",
                 "type":"text",
                 "Text":"Прізвище",
                 "PlaceHolder":"Ваше прізвище",
                 "pattern":"[A-Za-zА-Яа-я]"
             },
             {
-                "name":"name",
+                "name":"Firstname",
                 "type":"text",
                 "Text":"Ім'я",
-                "PlaceHolder":"Ваше повне ім'я",
+                "PlaceHolder":"Ваше ім'я",
                 "pattern":"[A-Za-zА-Яа-я]"
             },
             {
-                "name":"middlename",
+                "name":"Middlename",
                 "type":"text",
                 "Text":"По-батькові",
                 "PlaceHolder":"По-батькові",
@@ -25,14 +25,14 @@
 
             },
             {
-                "name":"nickname",
+                "name":"TouristNickname",
                 "type":"text",
                 "Text":"Псевдонім",
                 "PlaceHolder":"Ваш псевдонім",
-                "pattern":"[A-Za-zА-Яа-я]"
+                "pattern":"[A-Za-z]"
             },
             {
-                "name":"email",
+                "name":"Email",
                 "type":"email",
                 "Text":"Email",
                 "PlaceHolder":"Ваш Email",
@@ -40,21 +40,21 @@
 
             },
             {
-                "name":"phone",
+                "name":"Phone",
                 "type":"text",
                 "Text":"Номер Телефону",
-                "PlaceHolder":"+38 (xxx) xxx xx xx",
-                "pattern":"^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$"
+                "PlaceHolder":"+38xxxxxxxxxx",
+                "pattern":"^\\+380[0-9]{9}$"
             },
             {
-                "name":"psw",
+                "name":"Password",
                 "type":"password",
                 "Text":"Пароль",
                 "PlaceHolder":"Введіть пароль",
                 "pattern":"[A-Za-z0-9]"
             },
             {
-                "name":"psw-repeat",
+                "name":"PasswordConfirm",
                 "type":"password",
                 "Text":"Повторіть пароль",
                 "PlaceHolder":"Повторний пароль",

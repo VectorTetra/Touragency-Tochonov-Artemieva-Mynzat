@@ -161,7 +161,7 @@ function PeopleSubTabEditForm(props) {
 			</div>
 			<div className="EditFormRow">
 				<label htmlFor="clientPhoneInput">Номер телефону:</label>
-				<input type="tel" className="EditFormInput" name="clientPhone" value={clientPhone} onChange={handleInputChange} placeholder="+380991234567" required />
+				<input type="tel" className="EditFormInput" name="clientPhone" value={clientPhone} onChange={handleInputChange} pattern="^\\+380[0-9]{9}$" placeholder="+380991234567" required />
 			</div>
 			<div className="EditFormRow">
 				<label htmlFor="clientEmailInput">Email:</label>
