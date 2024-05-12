@@ -11,7 +11,7 @@ function NewsItem(props)
                 <div class="paragraph"><p style={{marginTop: "0px"}}>{props.paragraph}</p></div>
             </div>
             <div class="read-next">
-                <span><a href={props.link}>Читати далі {'>'}</a></span>
+                <span><a href={props.link}>Розкрити {'>'}</a></span>
             </div>
         </div>
     )

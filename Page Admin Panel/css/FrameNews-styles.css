@@ -79,6 +79,10 @@
 	font-size: 5vmin;
 }
 
+.articleImageInput {
+	font-size: 5vmin;
+}
+
 .articleEditFormRowButtons {
 	margin: 15px 0px 15px 15px;
 	display: flex;

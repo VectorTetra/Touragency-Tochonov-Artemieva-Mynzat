@@ -10,6 +10,10 @@ function NewsEditForm()
                 <label>Текст:</label>
                 <textarea className="articleTextArea" name="ArticleTextArea" style={{height: "150px"}}></textarea>
             </div>
+            <div className="articleEditFormRow" style={{justifyContent: "left"}}>
+                <label>Додати зображення:</label>
+                <input type="image" className="form-editbutton" name="ArticleImageInput" required></input>
+            </div>
             <div className="articleEditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 				<a id="userFormSubmit" className="form-savebutton">Зберегти</a>
 				<a id="userFormReset" className="form-clearbutton">Очистити</a>

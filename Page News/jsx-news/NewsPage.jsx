@@ -9,7 +9,7 @@ function NewsPage(props)
             }   
         </div>
         <div class="side-bar">
-            <h2>Важливі новини</h2>
+            <h2>Важливі cтаті</h2>
             <ul>
                 {
                     props.newsData.NewsInfo.map(item => 
