@@ -12,7 +12,7 @@ function NewsEditForm()
             </div>
             <div className="articleEditFormRow" style={{justifyContent: "left"}}>
                 <label>Додати зображення:</label>
-                <input type="image" className="form-editbutton" name="ArticleImageInput" required></input>
+                <input type="file" className="form-editbutton" name="ArticleImageInput" required></input>
             </div>
             <div className="articleEditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
 				<a id="userFormSubmit" className="form-savebutton">Зберегти</a>
