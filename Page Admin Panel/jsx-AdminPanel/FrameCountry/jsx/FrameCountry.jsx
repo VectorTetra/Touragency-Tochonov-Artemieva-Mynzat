@@ -8,7 +8,7 @@ function FrameCountry(props){
 	const GetAll = () => 
 	{
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
@@ -30,7 +30,7 @@ function FrameCountry(props){
 	const Get200Last = () => 
 	{
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'Get200Last' },
@@ -51,7 +51,7 @@ function FrameCountry(props){
 	const GetById = (id) => 
 	{
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: id },
@@ -72,7 +72,7 @@ function FrameCountry(props){
 	const GetByName = (inputName) => 
 	{
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByName', Name: inputName },
@@ -93,7 +93,7 @@ function FrameCountry(props){
 	const GetByCompositeSearch = (inputName,inputContinentName) => 
 	{
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByCompositeSearch', Name: inputName, ContinentName: inputContinentName, ContinentId: null},
@@ -121,7 +121,7 @@ function FrameCountry(props){
 			ContinentName: ''
 		});
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'POST',
 			contentType: "application/json",
 			data: request,
@@ -144,7 +144,7 @@ function FrameCountry(props){
 			ContinentName: ''
 		});
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 			method: 'PUT',
 			contentType: "application/json",
 			data: request,

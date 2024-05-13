@@ -35,15 +35,15 @@ function PeopleSubTabSearchBar(props) {
 	return (
 		<form className="EditFormRow searchBarRow" method="post">
 			<input type="number" min={1} className="EditFormInput" name="Id" value={inputIdValue} onInput={handleInputIdValue} placeholder="Введіть ID" />
-			<div className="EditFormColumn" style={{padding:"5px 0px", justifyContent:"space-between"}}>
+			<div className="EditFormColumn" >
 				<input className="EditFormInput" name="Firstname" value={inputFirstnameValue} onInput={handleInputFirstnameValue} placeholder="Введіть ім'я" />
 				<input className="EditFormInput" name="Lastname" value={inputLastnameValue} onInput={handleInputLastnameValue} placeholder="Введіть прізвище" />
 			</div>
-			<div className="EditFormColumn" style={{padding:"5px 0px", justifyContent:"space-between"}}>
+			<div className="EditFormColumn" >
 				<input className="EditFormInput" name="Middlename" value={inputMiddlenameValue} onInput={handleInputMiddlenameValue} placeholder="Введіть по-батькові" />
 				<input className="EditFormInput" name="TouristNickname" value={inputTouristNickname} onInput={handleInputTouristNickname} placeholder="Введіть нік туриста" />
 			</div>
-			<div className="EditFormColumn" style={{padding:"5px 0px", justifyContent:"space-between"}}>
+			<div className="EditFormColumn">
 				<input className="EditFormInput" name="ClientPhone" value={inputClientPhone} onInput={handleInputClientPhone} placeholder="Введіть номер телефону" />
 				<input className="EditFormInput" name="ClientEmail" value={inputClientEmail} onInput={handleInputClientEmail} placeholder="Введіть email" />
 			</div>

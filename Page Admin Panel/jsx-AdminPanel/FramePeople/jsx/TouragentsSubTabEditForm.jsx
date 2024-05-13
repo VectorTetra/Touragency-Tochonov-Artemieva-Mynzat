@@ -1,17 +1,18 @@
 function TouragentsSubTabEditForm(props) {
-	let context = React.useContext(window.TouragentsTabContext);
+	const context = React.useContext(window.TouragentsTabContext);
 	const [id, setId] = React.useState(0); // This will be updated programmatically
 	const [TouragentPersonId, setTouragentPersonId] = React.useState(0);
 	const [firstName, setFirstName] = React.useState('');
 	const [lastName, setLastName] = React.useState('');
 	const [middleName, setMiddleName] = React.useState('');
+	const [touragentLogin, setTouragentLogin] = React.useState('');
 	const [phone, setPhone] = React.useState('');
 	const [email, setEmail] = React.useState('');
 	const [positionId, setPositionId] = React.useState(0);
 	const [positions, setPositions] = React.useState([]);
 	React.useEffect(() => {
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Position', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Position', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
@@ -63,8 +64,8 @@ function TouragentsSubTabEditForm(props) {
 	},[context.dtoTouragentPositionId]);
 
 	React.useEffect(() => {
-		setTouristNickname(context.dtoClientTouristNickname);
-	},[context.dtoClientTouristNickname]);
+		setTouragentLogin(context.dtoTouragentLogin);
+	},[context.dtoTouragentLogin]);
 	
 	const handleInputChange = (event) => {
 		switch (event.target.name) {
@@ -92,6 +93,9 @@ function TouragentsSubTabEditForm(props) {
 			case 'positionId':
 				setPositionId(event.target.value);
 				break;
+			case 'touragentLogin':
+				setTouragentLogin(event.target.value);
+				break;
 			default:
 				break;
 		}
@@ -103,14 +107,17 @@ function TouragentsSubTabEditForm(props) {
 	}
 
 	const handleReset = () => {
+		console.log('Resetting form');
+		console.log('Context', context);
 		context.setDtoTouragentId(0);
 		context.setDtoTouragentPersonId(0);
-		context.setDtoTouragentFirstname("");
-		context.setDtoTouragentLastname("");
-		context.setDtoTouragentMiddlename("");
-		context.setDtoTouragentEmail("");
-		context.setDtoTouragentPhone("");
+		context.setDtoTouragentFirstname('');
+		context.setDtoTouragentLastname('');
+		context.setDtoTouragentMiddlename('');
+		context.setDtoTouragentEmail('');
+		context.setDtoTouragentPhone('');
 		context.setDtoTouragentPositionId(0);
+		context.setDtoTouragentLogin('');
 	}
 
 	return (
@@ -130,6 +137,10 @@ function TouragentsSubTabEditForm(props) {
 				<input type="text" className="EditFormInput" name="middleName" value={middleName} onChange={handleInputChange} />
 			</div>
 			<div className="EditFormRow">
+				<div>Логін турагента:</div>
+				<input type="text" className="EditFormInput" name="touragentLogin" value={touragentLogin} onChange={handleInputChange} />
+			</div>
+			<div className="EditFormRow">
 				<div>Email:</div>
 				<input type="text" className="EditFormInput" name="email" value={email} onChange={handleInputChange} />
 			</div>
@@ -138,7 +149,7 @@ function TouragentsSubTabEditForm(props) {
 				<input type="text" className="EditFormInput" name="phone" value={phone} onChange={handleInputChange} />
 			</div>
 			<div className="EditFormRow">
-				<div>Континент:</div>
+				<div>Посада:</div>
 				<select id="EditFormInputPositionId" className="EditFormInput" name="positionId" value={positionId} required onChange={handleInputChange} >
 					<option value="0" disabled hidden>Виберіть посаду</option>
 					{positions.map((position) => <option key={position.id} value={position.id}>{position.name}</option>)}

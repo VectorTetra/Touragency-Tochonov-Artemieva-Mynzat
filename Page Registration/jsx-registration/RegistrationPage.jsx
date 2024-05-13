@@ -25,7 +25,7 @@ function RegistrationPage(props){
             PasswordConfirm: e.target.PasswordConfirm.value
         });
         $.ajax({
-            url: 'https://26.162.95.213:7098/api/ClientRegister', // Замініть на ваш URL API
+            url: 'https://26.162.95.213:7099/api/ClientRegister', // Замініть на ваш URL API
             method: 'POST',
             contentType: "application/json",
             data: request,

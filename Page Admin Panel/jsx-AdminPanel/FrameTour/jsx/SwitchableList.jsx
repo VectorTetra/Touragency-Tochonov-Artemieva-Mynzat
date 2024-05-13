@@ -1,11 +1,11 @@
-function SwitchableList(props)
-{
+function SwitchableList(props) {
     const [possibleItems, setPossibleItems] = React.useState([1, 2, 3]);
     const [wishListItems, setWishListItems] = React.useState([]);
     const [selectedPossibleItem, setSelectedPossibleItem] = React.useState(null);
     const [selectedWishListItem, setSelectedWishListItem] = React.useState(null);
 
-    const handleMoveToWishList = () => {
+    const handleMoveToWishList = (e) => {
+        e.preventDefault();
         if (selectedPossibleItem) {
             setWishListItems([...wishListItems, selectedPossibleItem]);
             setPossibleItems(possibleItems.filter(item => item !== selectedPossibleItem));
@@ -13,7 +13,8 @@ function SwitchableList(props)
         }
     };
 
-    const handleRemoveFromWishList = () => {
+    const handleRemoveFromWishList = (e) => {
+        e.preventDefault();
         if (selectedWishListItem) {
             setPossibleItems([...possibleItems, selectedWishListItem]);
             setWishListItems(wishListItems.filter(item => item !== selectedWishListItem));
@@ -21,21 +22,28 @@ function SwitchableList(props)
         }
     };
 
-    return(
+    return (
         <div>
-            <select value={selectedPossibleItem} onChange={e => setSelectedPossibleItem(e.target.value)}>
+            <div className="switchableListCaptionContainer">
+                <div>{props.PossibleItemsListCaption}</div>
+                <div>{props.WishItemsListCaption}</div>
+            </div>
+            <div className="switchableListContainer">
+                <select size={5} className="switchableListSelect" value={selectedPossibleItem} onChange={e => setSelectedPossibleItem(Number(e.target.value))} >
                     {possibleItems.map((item, index) => (
-                    <option key={index} value={item}>{item}</option>
-                ))}
-                </select>
-                <button onClick={handleMoveToWishList}>Move to Wishlist</button>
-
-                <select value={selectedWishListItem} onChange={e => setSelectedWishListItem(e.target.value)}>
-                    {wishListItems.map((item, index) => (
-                    <option key={index} value={item}>{item}</option>
+                        <option key={index} value={item}>{item}</option>
                     ))}
                 </select>
-                <button onClick={handleRemoveFromWishList}>Remove from Wishlist</button>
+                <div className="switchableListButtonContainer">
+                    <button className="switchableListButtonMoveToWishList" onClick={handleMoveToWishList}></button>
+                    <button className="switchableListButtonRemoveFromWishList" onClick={handleRemoveFromWishList}></button>
+                </div>
+                <select size={5} className="switchableListSelect" value={selectedWishListItem} onChange={e => setSelectedWishListItem(Number(e.target.value))}>
+                    {wishListItems.map((item, index) => (
+                        <option key={index} value={item}>{item}</option>
+                    ))}
+                </select>
+            </div>
         </div>
     )
 }

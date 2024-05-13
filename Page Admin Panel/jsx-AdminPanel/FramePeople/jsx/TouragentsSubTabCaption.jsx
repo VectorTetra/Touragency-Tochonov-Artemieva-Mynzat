@@ -5,7 +5,7 @@ function TouragentsSubTabCaption(props) {
 	}
 	const Get200LastTouragents = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/TouragencyEmployee', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/TouragencyEmployee', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'Get200Last' },
@@ -32,6 +32,7 @@ function TouragentsSubTabCaption(props) {
 	const [dtoTouragentEmail, setDtoTouragentEmail] = React.useState('');
 	const [dtoTouragentPhone, setDtoTouragentPhone] = React.useState('');
 	const [dtoTouragentPositionId, setDtoTouragentPositionId] = React.useState(0);
+	const [dtoTouragentLogin, setDtoTouragentLogin] = React.useState('');
 	window.TouragentsTabContext = React.createContext(
 		{
 			touragents: touragents,
@@ -43,6 +44,7 @@ function TouragentsSubTabCaption(props) {
 			dtoTouragentEmail: dtoTouragentEmail,
 			dtoTouragentPhone: dtoTouragentPhone,
 			dtoTouragentPositionId: dtoTouragentPositionId,
+			dtoTouragentLogin: dtoTouragentLogin,
 			setTouragents: setTouragents,
 			setDtoTouragentId: setDtoTouragentId,
 			setDtoTouragentPersonId: setDtoTouragentPersonId,
@@ -52,7 +54,8 @@ function TouragentsSubTabCaption(props) {
 			setDtoTouragentEmail: setDtoTouragentEmail,
 			setDtoTouragentPhone: setDtoTouragentPhone,
 			setDtoTouragentPositionId: setDtoTouragentPositionId,
-			Get200LastTouragents: Get200LastTouragents
+			setDtoTouragentLogin: setDtoTouragentLogin,
+			Get200LastTouragents: Get200LastTouragents,
 		}
 	);
 	return (
@@ -66,6 +69,7 @@ function TouragentsSubTabCaption(props) {
 			dtoTouragentEmail: dtoTouragentEmail,
 			dtoTouragentPhone: dtoTouragentPhone,
 			dtoTouragentPositionId: dtoTouragentPositionId,
+			dtoTouragentLogin: dtoTouragentLogin,
 			setTouragents: setTouragents,
 			setDtoTouragentId: setDtoTouragentId,
 			setDtoTouragentPersonId: setDtoTouragentPersonId,
@@ -75,6 +79,7 @@ function TouragentsSubTabCaption(props) {
 			setDtoTouragentEmail: setDtoTouragentEmail,
 			setDtoTouragentPhone: setDtoTouragentPhone,
 			setDtoTouragentPositionId: setDtoTouragentPositionId,
+			setDtoTouragentLogin: setDtoTouragentLogin,
 			Get200LastTouragents: Get200LastTouragents
 		}}>
 			<div className="framePeople-sub-tab">

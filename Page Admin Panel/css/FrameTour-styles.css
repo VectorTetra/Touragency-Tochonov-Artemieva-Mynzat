@@ -1,0 +1,76 @@
+.tourFormLabel {
+	font-size: clamp(3vmin, 3vmax, 4vmin);
+}
+
+.switchableListContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 20px 20px 0 20px;
+	align-items: center;
+}
+
+.switchableListSelect {
+	/* min-width: 30vw; */
+	flex: 0.65;
+	display: flex;
+	min-height: 15vh;
+	font-size: 3vh;
+
+}
+.switchableListCaptionContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	font-size: 4vh;
+	margin-top: 20px;
+}
+.switchableListButtonContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 20px;
+}
+
+.switchableListButtonMoveToWishList {
+	background-image: url(../../images/AdminPanel-images/right-arrow.png);
+	background-size: cover;
+	display: flex;
+	flex:1;
+	min-width: 2vw;
+    aspect-ratio: 1 / 1;
+	margin: 5px 0;
+}
+
+.switchableListButtonRemoveFromWishList {
+	background-image: url(../../images/AdminPanel-images/left-arrow.png);
+	background-size: cover;
+	display: flex;
+	flex:1;
+	min-width: 2vw;
+    aspect-ratio: 1 / 1;
+	margin: 5px 0;
+}
+.image-container { 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+.constructorTextarea{
+	margin :0 5px 0 15px;
+	resize:vertical;
+	width:85vw;
+	min-height:15vh;
+	font-size: 3.5vh; 
+}
+.constructorInput{
+	margin :0 5px 0 15px;
+	width:85vw;
+	font-size: 3.5vh; 
+	height: 7vh;
+}

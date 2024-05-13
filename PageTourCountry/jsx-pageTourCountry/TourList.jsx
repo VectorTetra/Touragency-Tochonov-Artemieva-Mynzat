@@ -14,7 +14,7 @@ function TourList(props) {
     const GetSessionVars = async () => {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7098/api/SessionTourList', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7099/api/SessionTourList', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetAll' },
@@ -45,7 +45,7 @@ function TourList(props) {
     const DeleteSessionVars = async () => {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7098/api/SessionTourList', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7099/api/SessionTourList', // Замініть на ваш URL API
                 method: 'DELETE',
                 statusCode: {
                     200: function (data) {
@@ -74,7 +74,7 @@ function TourList(props) {
     const GetToursByCompositeSearch = async (countryId,continentId,transportTypeId,arrivalDate,departureDate,stars,hotelServices) => {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7098/api/Tour', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7099/api/Tour', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetByCompositeSearch',
@@ -109,7 +109,7 @@ function TourList(props) {
     const Get11LastActiveTours = async () => {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7098/api/Tour', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7099/api/Tour', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetByCompositeSearch',
@@ -140,7 +140,7 @@ function TourList(props) {
     {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7098/api/Tour', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7099/api/Tour', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetByCompositeSearch',

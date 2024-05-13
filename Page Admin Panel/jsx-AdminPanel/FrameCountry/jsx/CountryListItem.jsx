@@ -5,7 +5,7 @@ function CountryListItem(props) {
 		e.preventDefault();
 		try {
 			const response = await $.ajax({
-				url: 'https://26.162.95.213:7098/api/Country', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'GetById', Id: props.country.id },
@@ -27,7 +27,7 @@ function CountryListItem(props) {
 		e.preventDefault();
 		if(!confirm('Ви впевнені, що хочете видалити країну ' + props.country.name + ' ?')) return;
 		$.ajax({
-			url: 'https://26.162.95.213:7098/api/Country/' + props.country.id, // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7099/api/Country/' + props.country.id, // Замініть на ваш URL API
 			method: 'DELETE',
 			success: function(data) {
 				context.Get200Last();

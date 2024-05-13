@@ -3,7 +3,7 @@ function MainPageContentBlock(props) {
 	const Get11LastActiveTours = async () => {
 		try {
 			const response = await $.ajax({
-				url: 'https://26.162.95.213:7098/api/Tour', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7099/api/Tour', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: {

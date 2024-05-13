@@ -6,7 +6,7 @@ function CitySearchBar(props) {
 	const [countries, setCountries] = React.useState();
 
 	// Список всіх міст
-	const allCities = props.tab.countries.flatMap(country => country.Cities);
+	const allCities = props.tab.countries.map(country => country.Cities);
 	React.useEffect(() => {
     	props.setCities(allCities);
 		const totalCities = allCities.length;
@@ -49,7 +49,7 @@ function CitySearchBar(props) {
 	
 		if (inputCountryValue !== "") {
 			filteredCountries = filteredCountries.filter(country => country.Name.toLowerCase().includes(inputCountryValue.toLowerCase()));
-			filteredCities = filteredCountries.flatMap(country => country.Cities);
+			filteredCities = filteredCountries.map(country => country.Cities);
 		}
 	
 		props.setCountries(filteredCountries);

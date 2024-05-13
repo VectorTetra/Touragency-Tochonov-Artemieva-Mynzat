@@ -6,9 +6,9 @@ function TourTabCaption()
         setTourTabContentVisible(!isTourTabContentVisible)
     }
     return(
-        <div className="frameTour-sub-tab">
-            <div className="frameTour-sub-tab-caption" onClick={handleClick}>
-                <div className="frameTour-sub-tab-caption">{tab.name}</div>
+        <div className="framePeople-sub-tab">
+            <div className="framePeople-sub-tab-caption" onClick={handleClick}>
+                <div className="framePeople-sub-tab-caption-name">{tab.name}</div>
             </div>
             {
                 isTourTabContentVisible === true && <TourTabContent/>

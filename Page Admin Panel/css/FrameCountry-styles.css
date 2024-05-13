@@ -75,9 +75,19 @@
 	font-size: 5vmin;
 }
 
+.EditFormColumn {
+    padding: 5px 0px;
+    display: flex;
+	align-items: center;
+}
+
 .EditFormInput {
 	font-size: 5vmin;
+	display: flex;
+	flex: auto;
+	margin: 0 5px;
 }
+
 
 .EditFormRowButtons {
 	margin: 15px 0px 15px 15px;
@@ -85,12 +95,15 @@
 	flex-direction: row;
 	justify-content: space-around;
 }
-.searchBarRow{
+
+.searchBarRow {
 	margin: 2vh;
 }
-.searchBarRow > input {
-    margin-bottom: 1vh;
+
+.searchBarRow>input {
+	margin-bottom: 1vh;
 }
+
 /*=====================================================================*/
 #frameCountryToolbar {
 	display: flex;
@@ -127,13 +140,13 @@
 }
 
 .countryListItemFlagImg {
-    object-fit: cover;
-    margin-right: 3vw;
-    border: 1px solid;
-    width: 100px;
+	object-fit: cover;
+	margin-right: 3vw;
+	border: 1px solid;
+	width: 100px;
 	min-width: 100px;
-    height: auto;
-    align-self: center;
+	height: auto;
+	align-self: center;
 }
 
 .countryListItemStatContainer {
@@ -152,29 +165,32 @@
 }
 
 .countryListItemFormButtonBar {
-    display: flex;
+	display: flex;
 	justify-content: flex-end;
-    min-width: 50%;
+	min-width: 50%;
 }
 
 #countryList {
 	display: flex;
 	flex-direction: column;
 }
+
 /*
 @media (pointer: coarse) and (orientation: portrait)
 {
 
 }
 */
-@media (pointer: coarse) and (orientation: landscape)
-{
+@media (pointer: coarse) and (orientation: landscape) {
 	.countryListItemNameDiv {
 		font-size: clamp(3vmax, 6vmin, 8vmax);
 		line-height: 8vmin;
 		padding-right: 3vmin;
 	}
-	.form-savebutton, .form-clearbutton, .form-editbutton {
+
+	.form-savebutton,
+	.form-clearbutton,
+	.form-editbutton {
 		font-size: 6vmin;
 		padding: 2vmin 5vmin;
 	}
