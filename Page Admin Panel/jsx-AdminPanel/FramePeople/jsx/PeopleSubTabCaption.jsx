@@ -12,6 +12,7 @@ function PeopleSubTabCaption(props){
 			statusCode: {
 				200: function (data) {
 					setClients(data);
+					console.log(data);
 				},
 				204: function () {
 					setClients([]);
@@ -63,6 +64,10 @@ function PeopleSubTabCaption(props){
 			}
 		});
 	}
+
+	React.useEffect(() => {
+		Get200LastClients();
+	},[]);
 	const [clients, setClients] = React.useState([]);
 	const [dtoClientId, setDtoClientId] = React.useState(0);
 	const [dtoClientPersonId, setDtoClientPersonId] = React.useState(0);

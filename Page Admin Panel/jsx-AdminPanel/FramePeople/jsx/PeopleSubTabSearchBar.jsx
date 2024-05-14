@@ -1,5 +1,6 @@
 function PeopleSubTabSearchBar(props) {
-	const [inputIdValue, setInputIdValue] = React.useState(null);
+	let context = React.useContext(window.PeopleTabContext);
+	// const [inputIdValue, setInputIdValue] = React.useState(null);
 	const [inputFirstnameValue, setInputFirstnameValue] = React.useState("");
 	const [inputLastnameValue, setInputLastnameValue] = React.useState("");
 	const [inputMiddlenameValue, setInputMiddlenameValue] = React.useState("");
@@ -7,9 +8,9 @@ function PeopleSubTabSearchBar(props) {
 	const [inputClientPhone, setInputClientPhone] = React.useState("");
 	const [inputClientEmail, setInputClientEmail] = React.useState("");
 
-	const handleInputIdValue = (event) => {
-		setInputIdValue(event.target.value);
-	}
+	// const handleInputIdValue = (event) => {
+	// 	setInputIdValue(event.target.value);
+	// }
 	const handleInputFirstnameValue = (event) => {
 		setInputFirstnameValue(event.target.value);
 	}
@@ -28,13 +29,62 @@ function PeopleSubTabSearchBar(props) {
 	const handleInputClientEmail = (event) => {
 		setInputClientEmail(event.target.value);
 	}
-	const handleInputSearchById = (event) => {
-	}
+	// const handleInputSearchById = (event) => {
+	// }
 	const handleInputSearchByOther = (event) => {
+		event.preventDefault();
+		if(inputFirstnameValue === "" && inputLastnameValue === "" && inputMiddlenameValue === "" && inputTouristNickname === "" && inputClientPhone === "" && inputClientEmail === "") {
+			$.ajax({
+				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: { SearchParameter: 'Get200Last' },
+				statusCode: {
+					200: function (data) {
+						context.setClients(data);
+						console.log(data);
+					},
+					204: function () {
+						context.setClients([]);
+					}
+				},
+				error: function (error) {
+					console.error('Помилка при отриманні даних', error);
+					alert(error.responseText);
+				}
+			});
+		}
+		else{
+			$.ajax({
+				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: { SearchParameter: 'GetByCompositeSearch',
+					Firstname: inputFirstnameValue,
+					Lastname: inputLastnameValue,
+					Middlename: inputMiddlenameValue,
+					TouristNickname: inputTouristNickname,
+					Email: inputClientEmail,
+					Phone: inputClientPhone
+				},
+				statusCode: {
+					200: function (data) {
+						context.setClients(data);
+					},
+					204: function () {
+						context.setClients([]);
+					}
+				},
+				error: function (error) {
+					console.error('Помилка при отриманні даних', error);
+					alert(error.responseText);
+				}
+			});
+		}
 	}
 	return (
 		<form className="EditFormRow searchBarRow" method="post">
-			<input type="number" min={1} className="EditFormInput" name="Id" value={inputIdValue} onInput={handleInputIdValue} placeholder="Введіть ID" />
+			{/* <input type="number" min={1} className="EditFormInput" name="Id" value={inputIdValue} onInput={handleInputIdValue} placeholder="Введіть ID" /> */}
 			<div className="EditFormColumn" >
 				<input className="EditFormInput" name="Firstname" value={inputFirstnameValue} onInput={handleInputFirstnameValue} placeholder="Введіть ім'я" />
 				<input className="EditFormInput" name="Lastname" value={inputLastnameValue} onInput={handleInputLastnameValue} placeholder="Введіть прізвище" />
@@ -48,8 +98,8 @@ function PeopleSubTabSearchBar(props) {
 				<input className="EditFormInput" name="ClientEmail" value={inputClientEmail} onInput={handleInputClientEmail} placeholder="Введіть email" />
 			</div>
 
-			<input type="submit" className="buttonSearchCity" name="buttonSearchById" value="Пошук по ID" onClick={handleInputSearchById} />
-			<input type="submit" className="buttonSearchCity" name="buttonSearchByOther" value="Розширений пошук" onClick={handleInputSearchByOther} />
+			{/* <input type="submit" className="buttonSearchCity" name="buttonSearchById" value="Пошук по ID" onClick={handleInputSearchById} /> */}
+			<button className="buttonSearchCity" name="buttonSearchByOther" value="Розширений пошук" onClick={handleInputSearchByOther} >Розширений пошук</button>
 		</form>
 	);
 }

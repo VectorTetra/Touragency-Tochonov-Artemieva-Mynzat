@@ -1,5 +1,5 @@
 function TouragentsSubTabEditForm(props) {
-	const context = React.useContext(window.TouragentsTabContext);
+	let context = React.useContext(window.TouragentsTabContext);
 	const [id, setId] = React.useState(0); // This will be updated programmatically
 	const [TouragentPersonId, setTouragentPersonId] = React.useState(0);
 	const [firstName, setFirstName] = React.useState('');
@@ -106,18 +106,29 @@ function TouragentsSubTabEditForm(props) {
 		// Handle the form submission here
 	}
 
-	const handleReset = () => {
+	const handleReset = (e) => {
+		e.preventDefault();
 		console.log('Resetting form');
 		console.log('Context', context);
-		context.setDtoTouragentId(0);
-		context.setDtoTouragentPersonId(0);
-		context.setDtoTouragentFirstname('');
-		context.setDtoTouragentLastname('');
-		context.setDtoTouragentMiddlename('');
-		context.setDtoTouragentEmail('');
-		context.setDtoTouragentPhone('');
-		context.setDtoTouragentPositionId(0);
-		context.setDtoTouragentLogin('');
+		// context.setDtoTouragentId(0);
+		// context.setDtoTouragentPersonId(0);
+		// context.setDtoTouragentFirstname('');
+		// context.setDtoTouragentLastname('');
+		// context.setDtoTouragentMiddlename('');
+		// context.setDtoTouragentEmail('');
+		// context.setDtoTouragentPhone('');
+		// context.setDtoTouragentPositionId(0);
+		// context.setDtoTouragentLogin('');
+		//context.resetDto();
+		setId(0);
+		setTouragentPersonId(0);
+		setFirstName('');
+		setLastName('');
+		setMiddleName('');
+		setEmail('');
+		setPhone('');
+		setPositionId(0);
+		setTouragentLogin(''); 
 	}
 
 	return (

@@ -30,6 +30,8 @@
 
 .inputWrapper {
     display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
 }
 
 .countryEditFormInput {
@@ -180,7 +182,7 @@
     margin-bottom: 20px;
 }
 
-.searchbutton button{
+.searchbutton button {
     width: 60%;
     margin-left: 40px;
     padding: 1vmin 5vmin;
@@ -199,4 +201,13 @@ hr {
     height: 2px;
     background-color: rgb(190, 190, 190);
     font-weight: bold;
+}
+
+.hotelEditFormTextArea {
+    margin: 0 15px 0 15px;
+    resize: vertical;
+    /* width:85vw; */
+    min-height: 15vh;
+    font-size: 3.5vh;
+    display: flex;
 }

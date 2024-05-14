@@ -23,6 +23,17 @@ function TouragentsSubTabCaption(props) {
 			}
 		});
 	}
+	const resetDto = () => {
+		setDtoTouragentId(0);
+		setDtoTouragentPersonId(0);
+		setDtoTouragentFirstname('');
+		setDtoTouragentLastname('');
+		setDtoTouragentMiddlename('');
+		setDtoTouragentEmail('');
+		setDtoTouragentPhone('');
+		setDtoTouragentPositionId(0);
+		setDtoTouragentLogin('');
+	};
 	const [touragents, setTouragents] = React.useState([]);
 	const [dtoTouragentId, setDtoTouragentId] = React.useState(0);
 	const [dtoTouragentPersonId, setDtoTouragentPersonId] = React.useState(0);
@@ -45,6 +56,7 @@ function TouragentsSubTabCaption(props) {
 			dtoTouragentPhone: dtoTouragentPhone,
 			dtoTouragentPositionId: dtoTouragentPositionId,
 			dtoTouragentLogin: dtoTouragentLogin,
+			resetDto: resetDto,
 			setTouragents: setTouragents,
 			setDtoTouragentId: setDtoTouragentId,
 			setDtoTouragentPersonId: setDtoTouragentPersonId,
@@ -70,6 +82,7 @@ function TouragentsSubTabCaption(props) {
 			dtoTouragentPhone: dtoTouragentPhone,
 			dtoTouragentPositionId: dtoTouragentPositionId,
 			dtoTouragentLogin: dtoTouragentLogin,
+			resetDto: resetDto,
 			setTouragents: setTouragents,
 			setDtoTouragentId: setDtoTouragentId,
 			setDtoTouragentPersonId: setDtoTouragentPersonId,

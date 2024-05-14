@@ -3,27 +3,37 @@ function HotelEditForm(props) {
 	return (
 
 		<form name="HotelEditForm" id="HotelEditForm" style={{ border: '2px solid navy', borderRadius: '5px', }}>
-			<div className="hotelEditFormRow">
+			<div className="EditFormRow">
 				<label htmlFor="HotelName">Назва готелю:</label>
-				<input name="HotelNameInput" required />
+				<input className="EditFormInput" name="HotelNameInput" required />
 			</div>
-			<div className="hotelEditFormRow">
+			<div className="EditFormRow">
 				<div className="inputWrapper">
-					<label htmlFor="CountryName" style={{ marginRight: '30px' }}>Країна:</label>
-					<input style={{ width: '420px', marginLeft: '70px'}} required />
+					<label htmlFor="CountryName">Країна:</label>
+					{/* <input style={{ width: '420px', marginLeft: '70px'}} required /> */}
+					<select className="EditFormInput" style={{maxWidth:"65vw"}} name="countryId" id="">
+						<option value="1">Україна</option>
+						<option value="2">Польща</option>
+						<option value="3">Чехія</option>
+					</select>
+
 				</div>
 				<div className="inputWrapper">
-					<label htmlFor="CityName" style={{ marginRight: '30px', marginLeft: '60px' }}>Місто:</label>
-					<input style={{ width: '420px' }} required />
+					<label htmlFor="CityName">Місто:</label>
+					{/* <input style={{ width: '420px' }} required /> */}
+					<select className="EditFormInput" style={{maxWidth:"65vw"}} name="cityId" id="">
+						<option value="1">Львів</option>
+						<option value="2">Київ</option>
+						<option value="3">Одеса</option>
+					</select>
 				</div>
 			</div>
-			<div className="hotelEditFormRow">
+			<div className="EditFormRow">
 				<label htmlFor="Descriptions">Опис готелю:</label>
-				<textarea className="countryEditFormInput" name="hotelDescriptionInput" id="hotelDescription" required />
+				<textarea className="hotelEditFormTextArea" name="hotelDescriptionInput" id="hotelDescription" required />
 			</div>
-			<div className="hotelEditFormRow">
-				<label htmlFor="ImageUrl">Фото готелю:</label>
-				<input style={{ width: '1017px', marginLeft:'25px'}} name="urlImageInput" required />
+			<div className="EditFormRow">
+				<HotelImageInput/>
 			</div>
 
 			<div className="service">
