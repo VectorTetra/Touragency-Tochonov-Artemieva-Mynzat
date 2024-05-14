@@ -1,10 +1,6 @@
 {
 	"tabs": [
 		{
-			"name": "Акаунти",
-			"tabIconUrl": "../images/AdminPanel-Images/accounts.png"
-		},
-		{
 			"name": "Відгуки",
 			"tabIconUrl": "../images/AdminPanel-Images/reviews.png",
 			"account": "Lord",
@@ -207,163 +203,8 @@
 			"tabIconUrl": "../images/AdminPanel-Images/countries.png"
 		},
 		{
-			"name": "Люди",
-			"tabIconUrl": "../images/AdminPanel-Images/people.png",
-			"people": [
-				{
-					"id": 1,
-					"firstName": "Андрій",
-					"lastName": "Ковальчук",
-					"middleName": "Вікторович"
-				},
-				{
-					"id": 2,
-					"firstName": "John",
-					"lastName": "Doe",
-					"middleName": "Smith"
-				},
-				{
-					"id": 3,
-					"firstName": "Jane",
-					"lastName": "Doe",
-					"middleName": "Johnson"
-				},
-				{
-					"id": 4,
-					"firstName": "Michael",
-					"lastName": "Brown",
-					"middleName": "Thomas"
-				},
-				{
-					"id": 5,
-					"firstName": "Emily",
-					"lastName": "Johnson",
-					"middleName": "Davis"
-				},
-				{
-					"id": 6,
-					"firstName": "David",
-					"lastName": "Miller",
-					"middleName": "Wilson"
-				},
-				{
-					"id": 7,
-					"firstName": "Sarah",
-					"lastName": "Anderson",
-					"middleName": "Taylor"
-				},
-				{
-					"id": 8,
-					"firstName": "Daniel",
-					"lastName": "Martinez",
-					"middleName": "Harris"
-				},
-				{
-					"id": 9,
-					"firstName": "Olivia",
-					"lastName": "Clark",
-					"middleName": "Lewis"
-				},
-				{
-					"id": 10,
-					"firstName": "James",
-					"lastName": "Walker",
-					"middleName": "Moore"
-				},
-				{
-					"id": 11,
-					"firstName": "Sophia",
-					"lastName": "Garcia",
-					"middleName": "Jackson"
-				}
-			],
-			"phones":[
-				{
-					"id": 1,
-					"phone": "+380 50 123 45 67",
-					"personIds": [1,2]
-				},
-				{
-					"id": 2,
-					"phone": "+380 50 123 45 68",
-					"personIds": [3,4]
-				},
-				{
-					"id": 3,
-					"phone": "+380 50 123 45 69",
-					"personIds": [5,6]
-				},
-				{
-					"id": 4,
-					"phone": "+380 50 123 45 70",
-					"personIds": [7,8]
-				},
-				{
-					"id": 5,
-					"phone": "+380 50 123 45 71",
-					"personIds": [9,10]
-				},
-				{
-					"id": 6,
-					"phone": "+380 50 123 45 72",
-					"personIds": [11]
-				}
-			],
-			"emails":[
-				[
-					{
-						"id": 1,
-						"email": "john.doe@example.com",
-						"personIds": [1, 2]
-					},
-					{
-						"id": 2,
-						"email": "jane.doe@example.com",
-						"personIds": [3, 4]
-					},
-					{
-						"id": 3,
-						"email": "michael.brown@example.com",
-						"personIds": [5, 6]
-					},
-					{
-						"id": 4,
-						"email": "emily.johnson@example.com",
-						"personIds": [7, 8]
-					},
-					{
-						"id": 5,
-						"email": "david.miller@example.com",
-						"personIds": [9, 10]
-					},
-					{
-						"id": 6,
-						"email": "sarah.anderson@example.com",
-						"personIds": [11,1]
-					},
-					{
-						"id": 7,
-						"email": "daniel.martinez@example.com",
-						"personIds": [2,3]
-					},
-					{
-						"id": 8,
-						"email": "olivia.clark@example.com",
-						"personIds": [4,5]
-					},
-					{
-						"id": 9,
-						"email": "james.walker@example.com",
-						"personIds": [6,7]
-					},
-					{
-						"id": 10,
-						"email": "sophia.garcia@example.com",
-						"personIds": [8,9]
-					}
-				]
-			]
-
+			"name": "Клієнти",
+			"tabIconUrl": "../images/AdminPanel-Images/people.png"
 		},
 		{
 			"name": "Міста",
@@ -372,6 +213,10 @@
 		{
 			"name": "Новини",
 			"tabIconUrl": "../images/AdminPanel-Images/news.png"
+		},
+		{
+			"name": "Турагенти",
+			"tabIconUrl": "../images/AdminPanel-Images/accounts.png"
 		},
 		{
 			"name": "Тури",

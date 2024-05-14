@@ -52,7 +52,7 @@
 	<script type="text/babel" src="./jsx-AdminPanel/FrameCity/jsx/CityListItem.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FrameCity/jsx/CitySearchBar.jsx"></script>
 	<!-- ============================================================================================ -->
-	<!-- ================================= Компоненти адмін-панелі (фрейм "Люди") ================================ -->
+	<!-- ================================= Компоненти адмін-панелі (фрейм "Клієнти") ================================ -->
 	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/FramePeople.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleAvatarInput.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabCaption.jsx"></script>
@@ -61,12 +61,16 @@
 	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabList.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabListItem.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/PeopleSubTabSearchBar.jsx"></script>
-	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/TouragentsSubTabCaption.jsx"></script>
-	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/TouragentsSubTabContent.jsx"></script>
-	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/TouragentsSubTabEditForm.jsx"></script>
-	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/TouragentsSubTabList.jsx"></script>
-	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/TouragentsSubTabListItem.jsx"></script>
-	<script type="text/babel" src="./jsx-AdminPanel/FramePeople/jsx/TouragentsSubTabSearchBar.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- ================================= Компоненти адмін-панелі (фрейм "Турагенти") ================================ -->
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/FrameTouragents.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/TouragentsSubTabCaption.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/TouragentsSubTabContent.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/TouragentsSubTabEditForm.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/TouragentsSubTabList.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/TouragentsSubTabListItem.jsx"></script>
+	<script type="text/babel" src="./jsx-AdminPanel/FrameTouragents/jsx/TouragentsSubTabSearchBar.jsx"></script>
+
 	<!-- ============================================================================================ -->
 	<!-- ================================= Компоненти адмін-панелі (фрейм "Відгуки") ================================ -->
 	<script type="text/babel" src="./jsx-AdminPanel/FrameFeedback/jsx/FeedbackForm.jsx"></script>
@@ -94,7 +98,7 @@
 	<script type="text/babel" src="./jsx-AdminPanel/FrameTour/jsx/SwitchableList.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FrameTour/jsx/TourTabNameCaption.jsx"></script>
 	<script type="text/babel" src="./jsx-AdminPanel/FrameTour/jsx/TourTabNameContent.jsx"></script>
-	
+
 	<!-- ============================================================================================ -->
 	<!-- =========================== Інші спільні компоненти =========================== -->
 
@@ -106,6 +110,7 @@
 
 	<script type="text/babel">
 		let adminPanelTabsData;
+		let adminPanelTabsDataForClients;
 
 		Promise.all([
 			fetch('./json/AdminPanelTabs.json').
@@ -115,13 +120,22 @@
 					adminPanelTabsData = data.tabs;
 					console.log(adminPanelTabsData);
 				}))
+			,
+			fetch('./json/AdminPanelTabsForClients.json').
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading tabs data from JSON file <================================
+					adminPanelTabsDataForClients = data.tabs;
+					console.log(adminPanelTabsDataForClients);
+				}))
 		]).then(
 			() => {
+
 				const rootNode = document.getElementById("app");
 				const root = ReactDOM.createRoot(rootNode);
 				root.render(
 					<React.StrictMode>
-						<AdminPanel tabs={adminPanelTabsData} />
+						<AdminPanel tabs={adminPanelTabsData} tabsForClients={adminPanelTabsDataForClients} />
 					</React.StrictMode>
 				);
 			}

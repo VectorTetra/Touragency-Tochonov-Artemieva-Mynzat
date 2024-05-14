@@ -19,7 +19,7 @@ class AdminPanelTabContainer extends React.Component {
 					(this.state.name === "Міста") && <FrameCity tab={myTab} />
 				}
 				{
-					(this.state.name === "Люди") && <FramePeople tab={myTab}/>
+					(this.state.name === "Клієнти") && <FramePeople tab={myTab}/>
 				}
 				{	
 					(this.state.name === "Готелі") && <FrameHotel tab={myTab} />
@@ -29,6 +29,9 @@ class AdminPanelTabContainer extends React.Component {
 				}
 				{
 					(this.state.name === "Тури") && <FrameTour tab={myTab}/>
+				}
+				{
+					(this.state.name === "Турагенти") && <FrameTouragents tab={myTab}/>
 				}
 			</div>
 

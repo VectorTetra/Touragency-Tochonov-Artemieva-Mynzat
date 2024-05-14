@@ -5,35 +5,35 @@
             {
                 "img":"../images/feerie---homepage (17)_0.png",
                 "header":"20 років в туризмі",
-                "parag":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus magna vitae leo mollis, a accumsan est tristique. Quisque at nisi nec ex accumsan dictum. Nulla id ex magna. Integer id est nec dui rutrum lacinia nec a justo. Sed vulputate massa vel ultricies commodo. Morbi ullamcorper turpis vitae feugiat lobortis. Proin euismod quam sed ante aliquam, sed consectetur sem efficitur. "
+                "parag":"Колосальний досвід, довіра туристів і співпраця з найкращими партнерами. Ми динамічні, постійно розвиваємося і покращуємо тури, відкриваємо нове і пропонуємо особливе."
             },
             {
                 "img":"../images/feerie---homepage_18_.png",
                 "header":"Якість в усьому",
-                "parag":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus magna vitae leo mollis, a accumsan est tristique. Quisque at nisi nec ex accumsan dictum. Nulla id ex magna. Integer id est nec dui rutrum lacinia nec a justo. Sed vulputate massa vel ultricies commodo. Morbi ullamcorper turpis vitae feugiat lobortis. Proin euismod quam sed ante aliquam, sed consectetur sem efficitur. "
+                "parag":"Спілкування, індивідуальний підхід, увага до дрібниць та нюансів, правильна логістика, якість готелів, оперативність, інформаційний супровід та чесна ціна."
             },
             {
                 "img":"../images/feerie---homepage_19_.png",
                 "header":"Найкращі гіди",
-                "parag":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus magna vitae leo mollis, a accumsan est tristique. Quisque at nisi nec ex accumsan dictum. Nulla id ex magna. Integer id est nec dui rutrum lacinia nec a justo. Sed vulputate massa vel ultricies commodo. Morbi ullamcorper turpis vitae feugiat lobortis. Proin euismod quam sed ante aliquam, sed consectetur sem efficitur. "
+                "parag":"Досвідчені, заглиблені у матеріал, закохані у свою роботу та уважні до людей гіди супроводжують усі наші тури."
             }
         ],
         "SpecialOffers":
         [
             {
-                "img":"../images/2-3_0.png",
+                "img":"../images/2-3_1.png",
                 "header":"Тури у розстрочку"
             },
             {
-                "img":"../images/feerie---homepage_20_.png",
+                "img":"../images/koshik2.png",
                 "header":"Знижки для постійних клієнтів"
             },
             {
-                "img":"../images/rann.jpg",
+                "img":"../images/rann.png",
                 "header":"Раннє бронювання"
             },
             {
-                "img":"../images/samolet_0.jpg",
+                "img":"../images/samolet.png",
                 "header":"Подарункові сертифікати"
             }
         ],

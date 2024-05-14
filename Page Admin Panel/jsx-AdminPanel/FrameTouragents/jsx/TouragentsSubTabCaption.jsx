@@ -1,5 +1,16 @@
 function TouragentsSubTabCaption(props) {
 	const [isTouragentsSubTabContentVisible, setTouragentsSubTabContentVisible] = React.useState(false);
+	const [touragents, setTouragents] = React.useState([]);
+	const [dtoTouragentId, setDtoTouragentId] = React.useState(0);
+	const [dtoTouragentPersonId, setDtoTouragentPersonId] = React.useState(0);
+	const [dtoTouragentFirstname, setDtoTouragentFirstname] = React.useState('');
+	const [dtoTouragentLastname, setDtoTouragentLastname] = React.useState('');
+	const [dtoTouragentMiddlename, setDtoTouragentMiddlename] = React.useState('');
+	const [dtoTouragentEmail, setDtoTouragentEmail] = React.useState('');
+	const [dtoTouragentPhone, setDtoTouragentPhone] = React.useState('');
+	const [dtoTouragentPositionId, setDtoTouragentPositionId] = React.useState(0);
+	const [dtoTouragentAccountId, setDtoTouragentAccountId] = React.useState(0);
+	const [dtoTouragentLogin, setDtoTouragentLogin] = React.useState('');
 	function handleClick() {
 		setTouragentsSubTabContentVisible(!isTouragentsSubTabContentVisible);
 	}
@@ -8,13 +19,14 @@ function TouragentsSubTabCaption(props) {
 			url: 'https://26.162.95.213:7099/api/TouragencyEmployee', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
-			data: { SearchParameter: 'Get200Last' },
+			data: { SearchParameter: 'GetAll' },
 			statusCode: {
 				200: function (data) {
-					setClients(data);
+					setTouragents(data);
+					console.log('Дані успішно отримані', data);
 				},
 				204: function () {
-					setClients([]);
+					setTouragents([]);
 				}
 			},
 			error: function (error) {
@@ -23,6 +35,10 @@ function TouragentsSubTabCaption(props) {
 			}
 		});
 	}
+	React.useEffect(() => {
+		Get200LastTouragents();
+		console.log('Дані успішно отримані', touragents);
+	}, []);
 	const resetDto = () => {
 		setDtoTouragentId(0);
 		setDtoTouragentPersonId(0);
@@ -33,17 +49,9 @@ function TouragentsSubTabCaption(props) {
 		setDtoTouragentPhone('');
 		setDtoTouragentPositionId(0);
 		setDtoTouragentLogin('');
+		setDtoTouragentAccountId(0);
 	};
-	const [touragents, setTouragents] = React.useState([]);
-	const [dtoTouragentId, setDtoTouragentId] = React.useState(0);
-	const [dtoTouragentPersonId, setDtoTouragentPersonId] = React.useState(0);
-	const [dtoTouragentFirstname, setDtoTouragentFirstname] = React.useState('');
-	const [dtoTouragentLastname, setDtoTouragentLastname] = React.useState('');
-	const [dtoTouragentMiddlename, setDtoTouragentMiddlename] = React.useState('');
-	const [dtoTouragentEmail, setDtoTouragentEmail] = React.useState('');
-	const [dtoTouragentPhone, setDtoTouragentPhone] = React.useState('');
-	const [dtoTouragentPositionId, setDtoTouragentPositionId] = React.useState(0);
-	const [dtoTouragentLogin, setDtoTouragentLogin] = React.useState('');
+	
 	window.TouragentsTabContext = React.createContext(
 		{
 			touragents: touragents,
@@ -56,6 +64,7 @@ function TouragentsSubTabCaption(props) {
 			dtoTouragentPhone: dtoTouragentPhone,
 			dtoTouragentPositionId: dtoTouragentPositionId,
 			dtoTouragentLogin: dtoTouragentLogin,
+			dtoTouragentAccountId: dtoTouragentAccountId,
 			resetDto: resetDto,
 			setTouragents: setTouragents,
 			setDtoTouragentId: setDtoTouragentId,
@@ -67,6 +76,7 @@ function TouragentsSubTabCaption(props) {
 			setDtoTouragentPhone: setDtoTouragentPhone,
 			setDtoTouragentPositionId: setDtoTouragentPositionId,
 			setDtoTouragentLogin: setDtoTouragentLogin,
+			setDtoTouragentAccountId: setDtoTouragentAccountId,
 			Get200LastTouragents: Get200LastTouragents,
 		}
 	);
@@ -82,6 +92,7 @@ function TouragentsSubTabCaption(props) {
 			dtoTouragentPhone: dtoTouragentPhone,
 			dtoTouragentPositionId: dtoTouragentPositionId,
 			dtoTouragentLogin: dtoTouragentLogin,
+			dtoTouragentAccountId: dtoTouragentAccountId,
 			resetDto: resetDto,
 			setTouragents: setTouragents,
 			setDtoTouragentId: setDtoTouragentId,
@@ -93,6 +104,7 @@ function TouragentsSubTabCaption(props) {
 			setDtoTouragentPhone: setDtoTouragentPhone,
 			setDtoTouragentPositionId: setDtoTouragentPositionId,
 			setDtoTouragentLogin: setDtoTouragentLogin,
+			setDtoTouragentAccountId: setDtoTouragentAccountId,
 			Get200LastTouragents: Get200LastTouragents
 		}}>
 			<div className="framePeople-sub-tab">

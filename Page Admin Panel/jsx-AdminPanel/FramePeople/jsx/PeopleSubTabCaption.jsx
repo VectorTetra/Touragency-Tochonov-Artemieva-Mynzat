@@ -1,28 +1,54 @@
-function PeopleSubTabCaption(props){
+function PeopleSubTabCaption(props) {
 	const [isPeopleSubTabContentVisible, setPeopleSubTabContentVisible] = React.useState(false);
 	function handleClick() {
 		setPeopleSubTabContentVisible(!isPeopleSubTabContentVisible);
 	}
 	const Get200LastClients = () => {
-		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
-			method: 'GET',
-			contentType: "application/json",
-			data: { SearchParameter: 'Get200Last' },
-			statusCode: {
-				200: function (data) {
-					setClients(data);
-					console.log(data);
+		if (JSON.parse(localStorage.getItem('userData')).isClient === true) {
+			$.ajax({
+				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: { SearchParameter: 'GetById', Id: JSON.parse(localStorage.getItem('userData')).clientId },
+				statusCode: {
+					200: function (data) {
+						setClients(data);
+						console.log(data);
+						console.log(clients);
+						console.log(clients);
+					},
+					204: function () {
+						setClients([]);
+					}
 				},
-				204: function () {
-					setClients([]);
+				error: function (error) {
+					console.error('Помилка при отриманні даних', error);
+					alert(error.responseText);
 				}
-			},
-			error: function (error) {
-				console.error('Помилка при отриманні даних', error);
-				alert(error.responseText);
-			}
-		});
+			});
+		}
+		else {
+			$.ajax({
+				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: { SearchParameter: 'Get200Last' },
+				statusCode: {
+					200: function (data) {
+						setClients(data);
+						console.log(data);
+					},
+					204: function () {
+						setClients([]);
+					}
+				},
+				error: function (error) {
+					console.error('Помилка при отриманні даних', error);
+					alert(error.responseText);
+				}
+			});
+		}
+
 	}
 	const GetClientById = (id) => {
 		$.ajax({
@@ -67,7 +93,7 @@ function PeopleSubTabCaption(props){
 
 	React.useEffect(() => {
 		Get200LastClients();
-	},[]);
+	}, []);
 	const [clients, setClients] = React.useState([]);
 	const [dtoClientId, setDtoClientId] = React.useState(0);
 	const [dtoClientPersonId, setDtoClientPersonId] = React.useState(0);
@@ -129,14 +155,14 @@ function PeopleSubTabCaption(props){
 			clients: clients,
 			setClients: setClients
 		}}>
-		<div className="framePeople-sub-tab">
-			<div className="framePeople-sub-tab-caption" onClick={handleClick}>
-				<div className="framePeople-sub-tab-caption-name">Клієнти</div>
+			<div className="framePeople-sub-tab">
+				<div className="framePeople-sub-tab-caption" onClick={handleClick}>
+					<div className="framePeople-sub-tab-caption-name">Клієнти</div>
+				</div>
+				{
+					isPeopleSubTabContentVisible === true && <PeopleSubTabContent />
+				}
 			</div>
-			{
-				isPeopleSubTabContentVisible === true && <PeopleSubTabContent/>
-			}
-		</div>
 		</window.PeopleTabContext.Provider>
-	);	
+	);
 }

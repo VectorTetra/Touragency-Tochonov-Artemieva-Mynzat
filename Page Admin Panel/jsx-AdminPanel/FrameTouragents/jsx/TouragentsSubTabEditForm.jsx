@@ -9,6 +9,7 @@ function TouragentsSubTabEditForm(props) {
 	const [phone, setPhone] = React.useState('');
 	const [email, setEmail] = React.useState('');
 	const [positionId, setPositionId] = React.useState(0);
+	const [accountId, setAccountId] = React.useState(0);
 	const [positions, setPositions] = React.useState([]);
 	React.useEffect(() => {
 		$.ajax({
@@ -31,42 +32,7 @@ function TouragentsSubTabEditForm(props) {
 		});
 	}, []);
 
-	React.useEffect(() => {
-		setId(context.dtoTouragentId);
-	},[context.dtoTouragentId]);
 
-	React.useEffect(() => {
-		setTouragentPersonId(context.dtoTouragentPersonId);
-	},[context.dtoTouragentPersonId]);
-
-	React.useEffect(() => {
-		setFirstName(context.dtoTouragentFirstname);
-	},[context.dtoTouragentFirstname]);
-
-	React.useEffect(() => {
-		setLastName(context.dtoTouragentLastname);
-	},[context.dtoTouragentLastname]);
-
-	React.useEffect(() => {
-		setMiddleName(context.dtoTouragentMiddlename);
-	},[context.dtoTouragentMiddlename]);
-
-	React.useEffect(() => {
-		setPhone(context.dtoTouragentPhone);
-	},[context.dtoTouragentPhone]);
-
-	React.useEffect(() => {
-		setEmail(context.dtoTouragentEmail);
-	},[context.dtoTouragentEmail]);
-
-	React.useEffect(() => {
-		setPositionId(context.dtoTouragentPositionId);
-	},[context.dtoTouragentPositionId]);
-
-	React.useEffect(() => {
-		setTouragentLogin(context.dtoTouragentLogin);
-	},[context.dtoTouragentLogin]);
-	
 	const handleInputChange = (event) => {
 		switch (event.target.name) {
 			case 'id':
@@ -96,14 +62,48 @@ function TouragentsSubTabEditForm(props) {
 			case 'touragentLogin':
 				setTouragentLogin(event.target.value);
 				break;
+			case 'accountId':
+				setAccountId(event.target.value);
+				break;
 			default:
 				break;
 		}
 	}
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
-		// Handle the form submission here
+		if(id === 0) {
+			alert('Не вибрано турагента для редагування!');
+			handleReset(event);
+			return;
+		}
+		let request = {
+			Id: id,
+			PersonId: TouragentPersonId,
+			Firstname: firstName,
+			Lastname: lastName,
+			Middlename: middleName,
+			Email: email,
+			Phone: phone,
+			PositionId: positionId,
+			AccountLogin: touragentLogin,
+			AccountId: accountId
+		};
+		await $.ajax({
+			url: 'https://26.162.95.213:7099/api/TouragencyEmployee', // Замініть на ваш URL API
+			method: 'PUT',
+			contentType: "application/json",
+			data: JSON.stringify(request),
+			success: function (data) {
+				context.Get200LastTouragents();
+				console.log(data);
+			},
+			error: function (error) {
+				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
+			}
+		});
+		handleReset(event);
 	}
 
 	const handleReset = (e) => {
@@ -119,22 +119,61 @@ function TouragentsSubTabEditForm(props) {
 		// context.setDtoTouragentPhone('');
 		// context.setDtoTouragentPositionId(0);
 		// context.setDtoTouragentLogin('');
-		//context.resetDto();
-		setId(0);
-		setTouragentPersonId(0);
-		setFirstName('');
-		setLastName('');
-		setMiddleName('');
-		setEmail('');
-		setPhone('');
-		setPositionId(0);
-		setTouragentLogin(''); 
+		context.resetDto();
+		// setId(0);
+		// setTouragentPersonId(0);
+		// setFirstName('');
+		// setLastName('');
+		// setMiddleName('');
+		// setEmail('');
+		// setPhone('');
+		// setPositionId(0);
+		// setTouragentLogin(''); 
 	}
+	React.useEffect(() => {
+		setId(context.dtoTouragentId);
+	}, [context.dtoTouragentId]);
 
+	React.useEffect(() => {
+		setTouragentPersonId(context.dtoTouragentPersonId);
+	}, [context.dtoTouragentPersonId]);
+
+	React.useEffect(() => {
+		setFirstName(context.dtoTouragentFirstname);
+	}, [context.dtoTouragentFirstname]);
+
+	React.useEffect(() => {
+		setLastName(context.dtoTouragentLastname);
+	}, [context.dtoTouragentLastname]);
+
+	React.useEffect(() => {
+		setMiddleName(context.dtoTouragentMiddlename);
+	}, [context.dtoTouragentMiddlename]);
+
+	React.useEffect(() => {
+		setPhone(context.dtoTouragentPhone);
+	}, [context.dtoTouragentPhone]);
+
+	React.useEffect(() => {
+		setEmail(context.dtoTouragentEmail);
+	}, [context.dtoTouragentEmail]);
+
+	React.useEffect(() => {
+		setPositionId(context.dtoTouragentPositionId);
+	}, [context.dtoTouragentPositionId]);
+
+	React.useEffect(() => {
+		setTouragentLogin(context.dtoTouragentLogin);
+	}, [context.dtoTouragentLogin]);
+
+	React.useEffect(() => {
+		setAccountId(context.dtoTouragentAccountId);
+	}, [context.dtoTouragentAccountId]);
 	return (
 		<form className="touragentsSubTabEditForm" onSubmit={handleSubmit} style={{ border: '1px solid black', borderRadius: '5px' }}>
 			<input type="hidden" className="EditFormInput" name="id" value={id} />
 			<input type="hidden" className="EditFormInput" name="TouragentPersonId" value={TouragentPersonId} />
+			<input type="hidden" className="EditFormInput" name="TouragentAccountId" value={accountId} />
 			<div className="EditFormRow">
 				<div>Ім'я:</div>
 				<input type="text" className="EditFormInput" name="firstName" value={firstName} onChange={handleInputChange} required />
@@ -167,8 +206,8 @@ function TouragentsSubTabEditForm(props) {
 				</select>
 			</div>
 			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
-				<button type="submit" className="form-savebutton">Зберегти</button>
-				<button type="button" onClick={handleReset} className="form-clearbutton">Очистити</button>
+				<input type="submit" className="form-savebutton" value="Зберегти"></input>
+				<button onClick={handleReset} className="form-clearbutton">Очистити</button>
 			</div>
 		</form>
 	);

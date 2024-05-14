@@ -6,7 +6,7 @@
                 "name":"login",
                 "type":"text",
                 "Text":"Введіть логін",
-                "PlaceHolder":"John24151"
+                "PlaceHolder":"Введіть логін турагента"
             },
             {
                 "name":"password",
