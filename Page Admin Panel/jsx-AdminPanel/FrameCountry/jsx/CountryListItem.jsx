@@ -16,6 +16,7 @@ function CountryListItem(props) {
 			context.setDtoFlagUrl(response[0].flagUrl);
 			context.setDtoSettlementIds(response[0].settlementIds);
 			context.setDtoContinentId(response[0].continentId);
+			context.setDtoTourNameIds(response[0].tourNameIds);
 		} catch (error) {
 			console.error('Помилка при отриманні даних', error);
 			alert(error.responseText);

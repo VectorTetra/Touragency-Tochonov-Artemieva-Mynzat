@@ -4,7 +4,7 @@ function CityList(props){
 		<div id="cityList">
 			{
 				props.cities.map((city, index) => {
-					return <CityListItem key={crypto.randomUUID()} country={props.countries.find(country => country.Name === city.CountryName)} city={city}/>
+					return <CityListItem key={index} city={city}/>
 				})
 			}
 		</div>

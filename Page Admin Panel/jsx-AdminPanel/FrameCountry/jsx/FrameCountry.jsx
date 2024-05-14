@@ -5,6 +5,7 @@ function FrameCountry(props){
     const [dtoName, setDtoName] = React.useState('');
     const [dtoFlagUrl, setDtoFlagUrl] = React.useState('');
     const [dtoSettlementIds, setDtoSettlementIds] = React.useState([]);
+    const [dtoTourNameIds, setDtoTourNameIds] = React.useState([]);
 	const GetAll = () => 
 	{
 		$.ajax({
@@ -118,7 +119,8 @@ function FrameCountry(props){
 			Name: inputName,
 			SettlementIds: [],
 			ContinentId: continentId,
-			ContinentName: ''
+			ContinentName: '',
+			TourNameIds: []
 		});
 		$.ajax({
 			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
@@ -141,7 +143,8 @@ function FrameCountry(props){
 			Name: inputName,
 			SettlementIds: dtoSettlementIds,
 			ContinentId: continentId,
-			ContinentName: ''
+			ContinentName: '',
+			TourNameIds: dtoTourNameIds
 		});
 		$.ajax({
 			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
@@ -170,12 +173,14 @@ function FrameCountry(props){
 		setDtoContinentId: setDtoContinentId,
 		setDtoFlagUrl: setDtoFlagUrl,
 		setDtoSettlementIds: setDtoSettlementIds,
+		setDtoTourNameIds: setDtoTourNameIds,
 		setCountries: setCountries,
 		dtoId: dtoId,
 		dtoContinentId: dtoContinentId,
 		dtoName: dtoName,
 		dtoFlagUrl: dtoFlagUrl,
 		dtoSettlementIds: dtoSettlementIds,
+		dtoTourNameIds: dtoTourNameIds,
 		countries: countries
 	  });
     React.useEffect(() => {
@@ -197,11 +202,13 @@ function FrameCountry(props){
 			setDtoSettlementIds: setDtoSettlementIds,
 			setDtoContinentId: setDtoContinentId,
 			setCountries: setCountries,
+			setDtoTourNameIds: setDtoTourNameIds,
 			dtoId: dtoId,
 			dtoName: dtoName,
 			dtoFlagUrl: dtoFlagUrl,
 			dtoSettlementIds: dtoSettlementIds,
 			dtoContinentId: dtoContinentId,
+			dtoTourNameIds: dtoTourNameIds,
 			countries: countries
 		}}>
 			<div id="frameCountry">

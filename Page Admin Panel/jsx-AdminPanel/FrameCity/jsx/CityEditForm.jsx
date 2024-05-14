@@ -1,28 +1,86 @@
 function CityEditForm(props) {
-	console.log("CityEditForm countries", props.countries)
+	const context = React.useContext(window.FrameCityContext);
+	const [settlementName, setSettlementName] = React.useState('');
+	const [countryId, setCountryId] = React.useState('');
+	const [countries, setCountries] = React.useState([]);
+
+	React.useEffect(() => {
+		$.ajax({
+			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
+			method: 'GET',
+			contentType: "application/json",
+			data: { SearchParameter: 'GetAll' },
+			statusCode: {
+				200: function (data) {
+					setCountries(data);
+				},
+				204: function () {
+					setCountries([]);
+				}
+			},
+			error: function (error) {
+				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
+			}
+		});
+	}, []);
+
+	React.useEffect(() => {
+		setSettlementName(context.dtoName);
+	}, [context.dtoName]);
+
+	React.useEffect(() => {
+		setCountryId(context.dtoCountryId);
+	}, [context.dtoCountryId]);
+
+	const handleSettlementNameChange = (event) => {
+		setSettlementName(event.target.value);
+	};
+
+	const handleCountryChange = (event) => {
+		setCountryId(event.target.value); // Обробник зміни для нового стану
+	};
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		if (context.dtoId === 0) {
+			context.PostSettlement(settlementName, countryId); // Додано новий параметр
+		}
+		else {
+			context.PutSettlement(settlementName, countryId); // Додано новий параметр
+		}
+		handleReset(event);
+	};
+	const handleReset = (event) => {
+		event.preventDefault();
+		context.setDtoId(0);
+		context.setDtoName('');
+		context.setDtoHotelIds([]);
+		context.setDtoTourNameIds([]);
+		context.setDtoCountryId(0);
+	};
 	return (
-		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }}>
+		<form name="countryEditForm" id="countryEditForm" style={{ border: '1px solid black', borderRadius: '5px' }} onSubmit={handleSubmit}>
 			<div className="EditFormRow">
-				<label htmlFor="countrySelect">Країна:</label>
-				<select className="EditFormInput" name="countrySelect" required>
-					<option value="" disabled selected>Виберіть країну</option>
-					{props.countries.map((country, index) => {
-						return <option key={index} value={crypto.randomUUID()}>
+				<div>Країна:</div>
+				<select className="EditFormInput" name="countrySelect" value={countryId} onChange={handleCountryChange} required>
+					<option value="0" disabled selected>Виберіть країну</option>
+					{countries.map((country, index) => {
+						return <option key={country} value={country.id}>
 							<div className="countryListItemStatContainer">
-								<img className="countryListItemFlagImg" src={country.FlagUrl} alt={country.Name} />
-								<div className="countryListItemNameDiv">{country.Name}</div>
+								<img className="countryListItemFlagImg" src={country.flagUrl} alt={country.name} />
+								<div className="countryListItemNameDiv">{country.name}</div>
 							</div>
 						</option>
 					})}
 				</select>
 			</div>
 			<div className="EditFormRow">
-				<label htmlFor="cityNameInput">Назва міста:</label>
-				<input className="EditFormInput" name="cityNameInput" required />
+				<div>Назва міста:</div>
+				<input className="EditFormInput" name="cityNameInput" value={settlementName} onChange={handleSettlementNameChange} required />
 			</div>
 			<div className="EditFormRowButtons" style={{ margin: '15px 0 15px 15px' }}>
-				<input id="userFormSubmit" className="form-savebutton" type="submit" value="Зберегти"/>
-				<input id="userFormReset" className="form-clearbutton" type="reset" value="Очистити"/>
+				<input type="submit" id="userFormSubmit" className="form-savebutton" value="Зберегти" />
+				<button id="userFormReset" className="form-clearbutton" onClick={handleReset}>Очистити</button>
 			</div>
 		</form>
 	);

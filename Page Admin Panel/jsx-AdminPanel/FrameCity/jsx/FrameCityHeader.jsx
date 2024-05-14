@@ -1,4 +1,5 @@
 function FrameCityHeader(props){
+	const context = React.useContext(window.FrameCityContext);
 	return (
 		<div id="frameCountryToolbar">
 			<div id="frameCountryToolbarTitleQuantity">
@@ -6,7 +7,7 @@ function FrameCityHeader(props){
 					Міста
 				</div>
 				<div id="frameCountryToolbarQuantity">
-					{props.quantity} 
+					{context.settlements.length} 
 				</div>
 			</div>
 		</div>

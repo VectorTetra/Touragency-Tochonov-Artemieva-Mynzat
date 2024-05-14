@@ -67,6 +67,7 @@ function CountryEditForm(props) {
 		context.setDtoName('');
 		context.setDtoFlagUrl('');
 		context.setDtoSettlementIds([]);
+		context.setDtoTourNameIds([]);
 		context.setDtoContinentId(0);
 	};
 	return (

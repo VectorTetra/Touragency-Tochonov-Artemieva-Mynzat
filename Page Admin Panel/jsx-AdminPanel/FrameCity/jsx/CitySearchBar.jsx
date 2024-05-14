@@ -1,75 +1,30 @@
 function CitySearchBar(props) {
-	const [inputCityValue, setInputCityValue] = React.useState("");
-	const [inputCountryValue, setInputCountryValue] = React.useState("");
-	const [quantity, setQuantity] = React.useState();
-	const [cities, setCities] = React.useState();
-	const [countries, setCountries] = React.useState();
-
-	// Список всіх міст
-	const allCities = props.tab.countries.map(country => country.Cities);
-	React.useEffect(() => {
-    	props.setCities(allCities);
-		const totalCities = allCities.length;
-		props.setQuantity(totalCities);
-	}, []);
-
-	React.useEffect(() => {
-		props.setQuantity(quantity);
-		props.setCities(cities);
-		props.setCountries(countries);
-	}, [quantity, cities, countries]);
-
-	// const handleInput = (event) => {
-	// 	event.preventDefault();
-	// 	let filteredCountries = props.tab.countries;
-	// 	let filteredCities = allCities;
+	const context = React.useContext(window.FrameCityContext);
+	const [CountryNameInput, setCountryNameInput] = React.useState(''); // Локальний стан для поля вводу
+	const [SettlementNameInput, setSettlementNameInput] = React.useState(''); // Локальний стан для поля вводу
 	
-	// 	if (inputCountryValue !== "") {
-	// 		filteredCountries = filteredCountries.filter(country => country.Name.toLowerCase().includes(inputCountryValue.toLowerCase()));
-	// 		filteredCities = filteredCountries.flatMap(country => country.Cities);
-	// 	}
-	
-	// 	if (inputCityValue !== "") {
-	// 		filteredCities = filteredCities.filter(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase()));
-	// 	}
-	// 	props.setCountries(filteredCountries);
-	// 	props.setCities(filteredCities);
-	// 	props.setQuantity(filteredCities.length);
-	// };
-
 	const handleInput = (event) => {
-		event.preventDefault();
-		let filteredCities = allCities;
-		let filteredCountries = props.tab.countries;
-	
-		if (inputCityValue !== "") {
-			filteredCities = filteredCities.filter(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase()));
-			filteredCountries = filteredCountries.filter(country => country.Cities.some(city => city.Name.toLowerCase().includes(inputCityValue.toLowerCase())));
-		}
-	
-		if (inputCountryValue !== "") {
-			filteredCountries = filteredCountries.filter(country => country.Name.toLowerCase().includes(inputCountryValue.toLowerCase()));
-			filteredCities = filteredCountries.map(country => country.Cities);
-		}
-	
-		props.setCountries(filteredCountries);
-		props.setCities(filteredCities);
-		props.setQuantity(filteredCities.length);
+		setCountryNameInput(event.target.value); // Оновлюємо локальний стан при вводі
+	};
+	const handleSettlementInput = (event) => {
+		setSettlementNameInput(event.target.value); // Оновлюємо локальний стан при вводі
 	};
 
-	const handleInputCountryValue = (event) => 
-	{
-		setInputCountryValue(event.target.value);
-	}
+	const onClickHandler = () => {
+		if (CountryNameInput === "" && SettlementNameInput === "") {
+			context.Get200Last();
+		}
+		else 
+		{
+			context.GetByCompositeSearch(SettlementNameInput,CountryNameInput);
+		}
+	};
 
-	const handleInputCityValue = (event) =>{
-		setInputCityValue(event.target.value);
-	}
 	return (
-		<form className="EditFormRow searchBarRow" method="post">
-			<input className="EditFormInput" name="country" value={inputCountryValue} onInput={handleInputCountryValue} placeholder="Введіть назву країни" />
-			<input className="EditFormInput" name="city" value={inputCityValue} onInput={handleInputCityValue} placeholder="Введіть назву міста" />
-			<input type="submit" className="buttonSearchCity" name="buttonSearchCity" value="Пошук" onClick={handleInput} />
-		</form>
+		<div className="EditFormRow searchBarRow">
+			<input className="EditFormInput" name="searchBar" value={SettlementNameInput} placeholder="Введіть назву міста" onChange={handleSettlementInput} />
+			<input className="EditFormInput" name="searchBar" value={CountryNameInput} placeholder="Введіть назву країни" onChange={handleInput} />
+			<button className="buttonSearchCity" name="buttonSearchCity" onClick={onClickHandler}>Пошук</button>
+		</div>
 	);
 };
