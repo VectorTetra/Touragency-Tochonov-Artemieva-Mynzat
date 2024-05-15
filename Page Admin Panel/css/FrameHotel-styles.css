@@ -51,6 +51,12 @@
     height: auto;
     background-color: #5cc6d4;
     margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+select option:checked, select option:active, select option:hover {
+    background: #8208d3; 
+    color: #FFFFFF; 
 }
 
 .toggle-checkbox {
@@ -105,13 +111,13 @@
 }
 
 .HotelView {
-    display: flex;
+    /* display: flex; */
     margin-top: 15px;
 }
 
 .containerHotel {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 .blockHotel {
@@ -127,11 +133,13 @@
 }
 
 .coteinerPhoto {
-    flex: 1;
+    flex: 0.75;
+    display: flex;
+    object-fit: cover;
 }
 
 .coteinerText {
-    flex: 3;
+    flex: 1.5;
     margin-left: 10px;
 }
 

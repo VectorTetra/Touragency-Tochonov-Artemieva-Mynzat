@@ -30,7 +30,7 @@ function HotelsApart(props) {
                 {hotelsToShow.map(hotel => (
                     <div className="blockHotel">
                         <div>
-                            <img src={hotel.imgUrl} alt={hotel.name} />
+                            <img src={hotel.hotelImages.length>0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
                         </div>
                         <div>
                             <h3>{hotel.name}</h3>

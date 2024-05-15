@@ -1,25 +1,56 @@
 function HotelAppart(props) {
-    // const [currentIndex, setCurrentIndex] = React.useState(0);
-    // const [hotelsToShow, setHotelsToShow] = React.useState([]);
-    // const numberHotelsToShow = 4;
+    const context = React.useContext(window.FrameHotelContext);
 
-    // console.log(props.tour.hotels);
-
-    // React.useEffect(() => {
-    //     setHotelsToShow(props.tour.hotels.slice(currentIndex, currentIndex + numberHotelsToShow));
-    // }, [currentIndex]);
-
-    // const handleNext = () => {
-    //     if (currentIndex + numberHotelsToShow < props.tour.hotels.length) {
-    //         setCurrentIndex(currentIndex + 1);
-    //     }
-    // };
-
-    // const handlePrev = () => {
-    //     if (currentIndex > 0) {
-    //         setCurrentIndex(currentIndex - 1);
-    //     }
-    // };
+    const prepareToEdit = async (e) => {
+        e.preventDefault();
+        const id = $(e.target).data('id'); // Отримуємо значення data-id
+        try {
+            const response = await $.ajax({
+                url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+                method: 'GET',
+                contentType: "application/json",
+                data: { SearchParameter: 'GetById', Id: id },
+            });
+            console.log("PrepareToEdit success data: ", response);
+            context.setDtoId(response[0].id);
+            context.setDtoName(response[0].name);
+            context.setDtoCountryId(response[0].countryId);
+            context.setDtoSettlementId(response[0].settlementId);
+            context.setDtoTourNameIds(response[0].tourNameIds);
+            context.setDtoDescription(response[0].description);
+            context.setDtoHotelFoodServicesIds(response[0].foodServicesIds);
+            context.setDtoHotelOtherServicesIds(response[0].otherServicesIds);
+            context.setDtoHotelImages(response[0].hotelImages);
+            context.setDtoBookingIds(response[0].bookingIds);
+            context.setDtoHotelConfigurationIds(response[0].hotelConfigurationIds);
+            context.setDtoBedConfigurationIds(response[0].bedConfigurationIds);
+            context.setDtoStars(response[0].stars);
+        } catch (error) {
+            console.error('Помилка при отриманні даних', error);
+            alert(error.responseText);
+        }
+    }
+    const DeleteHotel = async(e) =>{
+        e.preventDefault();
+        if(!confirm('Ви впевнені, що хочете видалити цей готель?')) return;
+        const id = $(e.target).data('id');
+        try {
+            await $.ajax({
+                url: 'https://26.162.95.213:7099/api/Hotel/' + id, // Замініть на ваш URL API
+			method: 'DELETE',
+			success: function(data) {
+				context.Get200Last();
+			},
+			error: function(error) {
+				console.error('Помилка при видаленні', error);
+				alert(error.responseText);
+			}
+            });
+        } catch (error) {
+            console.error('Помилка при отриманні даних', error);
+            alert(error.responseText);
+        }
+    }
 
     return (
         <div className="HotelView">
@@ -27,25 +58,22 @@ function HotelAppart(props) {
                 {props.hotel.map(hotel => (
                     <div className="blockHotel">
                         <div className="coteinerPhoto">
-                            <img src={hotel.imgUrl} />
+                            <img src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
                         </div>
                         <div className="coteinerText">
-                            <h3>{hotel.HotelName}</h3>
-                            <p style={{ color: 'grey', padding: '10px' }}>{hotel.CountryName} / {hotel.CityName}</p>
-                            <p>{hotel.Descriptions}</p>
-                            <hr style={{marginTop:'15px', marginBottom:'15px'}}></hr>
-                            <div style={{ padding: '5px' }}>{hotel.food}</div>
-                            <div style={{ padding: '5px' }}>{hotel.Services.join(', ')}</div>
-                            <div style={{ padding: '5px' }}>{hotel.Beds.join(', ')}</div>
+                            <h3>{hotel.name}</h3>
+                            <p style={{ color: 'darkblue', padding: '10px', fontWeight: "600" }}>{hotel.countryName} / {hotel.settlementName}</p>
+                            <p>{hotel.description}</p>
+                            <hr style={{ marginTop: '15px', marginBottom: '15px' }}></hr>
+                            <div style={{ padding: '5px' }}>
+                                {hotel.foodServices.join(', ')}
+                            </div>
+                            <div style={{ padding: '5px' }}>{hotel.otherServices.join(', ')}</div>
                         </div>
-                        <div>
-                            <form style={{ marginTop: '10px' }} action="post" className="countryListItemFormButtonBar">
-                                <button type="submit" style={{ marginRight: '10px' }}>
-                                    <img style={{ width: '40px', height: 'auto' }} src="..//Page%20Admin%20Panel/img/edit.png" alt="Редактировать" />
-                                </button>
-                                <button type="submit" style={{ marginRight: '10px' }}>
-                                    <img style={{ width: '40px', height: 'auto' }} src="..//Page%20Admin%20Panel/img/del.png" alt="Удалить" />
-                                </button>
+                        <div style={{ display: "flex" }}>
+                            <form action="post" className="countryListItemFormButtonBar">
+                                <button className="form-editbutton-small" onClick={prepareToEdit} data-id={hotel.id}></button>
+                                <button className="form-clearbutton-small" onClick={DeleteHotel} data-id={hotel.id}></button>
                             </form>
                         </div>
                     </div>

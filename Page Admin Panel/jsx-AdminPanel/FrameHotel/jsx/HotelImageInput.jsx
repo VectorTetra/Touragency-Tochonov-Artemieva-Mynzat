@@ -1,4 +1,5 @@
 function HotelImageInput(props) {
+	let context = React.useContext(window.FrameHotelContext);
 	const fileInputRef = React.useRef(null);
 	const [hotelImageFile, setHotelImageFile] = React.useState([]);
 	const handleButtonClick = () => {
@@ -10,7 +11,15 @@ function HotelImageInput(props) {
 		$("#hotelImageInput").val(null);
 		console.log(document.getElementById("hotelImageInput").files.length);
 	};
-	
+	React.useEffect(() =>
+	{
+		if (context.dtoHotelImages.length > 0) {
+			setHotelImageFile([context.dtoHotelImages[0].imageUrl]);
+		}
+		else{
+			setHotelImageFile([]);
+		}
+	}, [context.dtoHotelImages]);
 	const handleInputChange = (event) => {
 		const files = event.target.files;
 		// if (files.length === 1) {
@@ -50,6 +59,7 @@ function HotelImageInput(props) {
 			reader.readAsDataURL(file);
 		}
 		//event.target.value = null;
+		console.log(document.getElementById("hotelImageInput").files.length);
 	}
 
 	return (

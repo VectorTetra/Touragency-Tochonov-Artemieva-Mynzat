@@ -151,6 +151,7 @@ function PeopleSubTabEditForm(props) {
 			contentType: "application/json",
 			data: JSON.stringify(request),
 			success: function(data) {
+				console.log("Request to save client",request)
 				context.Get200LastClients();
 				console.log(data);
 			},
