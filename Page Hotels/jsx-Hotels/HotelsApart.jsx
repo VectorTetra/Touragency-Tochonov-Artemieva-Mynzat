@@ -29,7 +29,7 @@ function HotelsApart(props) {
             <div className="containerHotel">
                 {hotelsToShow.map(hotel => (
                     <div className="blockHotel">
-                        <div>
+                        <div style={{height: "200px",display: "flex",justifyContent: "flex-end"}}>
                             <img src={hotel.hotelImages.length>0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
                         </div>
                         <div>
