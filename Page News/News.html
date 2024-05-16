@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="NewsStyles.css" type="text/css">
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="NewsStyles.css" type="text/css">
+	<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+	<script src="../libs/react.production.min.js"></script>
+	<script src="../libs/react-dom.production.min.js"></script>
+	<script src="../libs/babel.min.js"></script>
+	<script src="../libs/jquery-3.6.0.min.js"></script>
 	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
 	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
 	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
-    <link rel="stylesheet" href="../MainPage/css/MainPageFooter3-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageFooter3-styles.css" type="text/css">
 </head>
+
 <body>
-    <div id="app"></div>
+	<div id="app"></div>
 	<!-- ============================================================================================ -->
 	<!-- =================================== Хедер ================================================== -->
 
@@ -44,26 +50,46 @@
 	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbar.jsx"></script>
 	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
 	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbarItem.jsx"></script>
-    <!-- ============================================================================================ -->
+	<!-- ============================================================================================ -->
 	<!-- =========================== Про нас ======================================================== -->
 
-    <script type="text/babel" src="./jsx-news/NewsPage.jsx"></script>
+	<script type="text/babel" src="./jsx-news/NewsPage.jsx"></script>
 	<script type="text/babel" src="./jsx-news/NewsItem.jsx"></script>
 
-    <!-- ============================================================================================ -->
-    <!-- ================================= Футер-3 головної сторінки ================================ -->
+	<!-- ============================================================================================ -->
+	<!-- ================================= Футер-3 головної сторінки ================================ -->
 	<!-- 0. Компонент, футер-3 головної сторінки -->
-    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3.jsx"></script>
 	<!-- 1. Компонент, flex-box зі слоганом -->
-    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3Slogan.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3Slogan.jsx"></script>
 	<!-- 1. Компонент, flex-box із формою підписки на розсилку  -->
-    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3SubscriptionForm.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3SubscriptionForm.jsx"></script>
 
-    <script type="text/babel">
+	<script type="text/babel">
 		let headerData;
 		let navbarItems;
-        let FooterData;
+		let FooterData;
 		let newsData;
+	
+		const GetLastActiveToQuantinyPrioritizeIncludeImportant7Items = async () => {
+			try {
+				const response = await $.ajax({
+					url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+					method: 'GET',
+					contentType: "application/json",
+					data: {
+						SearchParameter: 'GetLastActiveToQuantinyPrioritizeIncludeImportant',
+						DesiredQuantity: 7
+					}
+				});
+				console.log("PrepareToEdit success data: ", response);
+				return response;
+			} catch (error) {
+				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
+			}
+		};
+	
 		Promise.all([
 			fetch('../MainPage/json/mainPageHeaderInfo.json').
 				then(resp => resp.json()).
@@ -77,15 +103,12 @@
 					//=======================> Reading navbarItems from JSON file <================================
 					navbarItems = data.navbarItems;
 				})),
-			fetch('./json/NewsData.json').
-			then(resp => resp.json()).
-			then((data => {
-				//=======================> Reading news from JSON file <================================
-				newsData = data.NewsData; 
-				
-			}))
+			GetLastActiveToQuantinyPrioritizeIncludeImportant7Items()
 		]).then(
-			() => {
+			(results) => {
+				// Assign the result of the AJAX request to newsData
+				newsData = results[2];
+	
 				const rootNode = document.getElementById("app");
 				const root = ReactDOM.createRoot(rootNode);
 				root.render(
@@ -93,13 +116,15 @@
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-                            <NewsPage newsData={newsData}/>
-                            <MainPageFooter3/>
+							<NewsPage newsData={newsData}/>
+							<MainPageFooter3/>
 						</div>
 					</React.StrictMode>
 				);
 			}
 		)
 	</script>
+	
 </body>
+
 </html>

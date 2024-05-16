@@ -47,43 +47,6 @@ function PeopleSubTabEditForm(props) {
 			case 'clientEmail':
 				setClientEmail(event.target.value);
 				break;
-			// case 'touristAvatarFile':
-			// 	{
-			// 		const files = event.target.files;
-			// 		const urls = [...touristAvatarFile];
-			// 		// Переменная для отслеживания того, были ли не добавлены изображения из-за лимита
-			// 		let imagesNotAdded = false;
-
-			// 		for (let i = 0; i < files.length; i++) {
-			// 			const file = files[i];
-			// 			const reader = new FileReader();
-
-			// 			reader.onload = () => {
-			// 				const dataUrl = reader.result;
-
-			// 				// Проверяем, есть ли данные изображения в массиве urls
-			// 				if (!urls.includes(dataUrl)) {
-			// 					if (urls.length < 1) {
-			// 						urls.push(dataUrl);
-			// 						setTouristAvatarFile([...urls]);
-			// 					} else {
-			// 						alert("Досягнут ліміт завантаження зображень (1). Деякі файли не були додані.");
-			// 						imagesNotAdded = true; // Устанавливаем флаг, что были не добавлены изображения из-за лимита
-			// 					}
-			// 				} else {
-			// 					alert("Фото " + file.name + " вже додано");
-			// 				}
-			// 			};
-
-			// 			if (imagesNotAdded) {
-			// 				break; // Если уже были не добавлены изображения из-за лимита, выходим из цикла
-			// 			}
-
-			// 			reader.readAsDataURL(file);
-			// 		}
-			// 		event.target.value = null;
-			// 	}
-			// 	break;
 			default:
 				break;
 		}

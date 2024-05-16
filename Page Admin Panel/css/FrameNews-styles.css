@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+	min-width: 0;
+	min-height: 0;
+	font-family: sans-serif;
+}
+
+#frameNews {
+	width: 95%;
+	/* padding: 0 3vmin; */
+}
+
+.form-savebutton {
+	background: #4CAF50;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+}
+
+.form-clearbutton {
+	background: #f44336;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+}
+
+.form-editbutton {
+	background: #001aff;
+	border-radius: 1vh;
+	color: #fff;
+	font-weight: 700;
+	font-family: sans-serif;
+	font-size: 3vmin;
+	padding: 1vmin 2.5vmin;
+	cursor: pointer;
+	display: flex;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	margin-right: 2vmin;
+	align-self: center;
+}
+
+.articleEditFormRow {
+	padding: 5px 15px;
+	display: flex;
+	flex-direction: column;
+	font-size: 5vmin;
+}
+
+.articleTitleInput {
+	font-size: 5vmin;
+}
+
+.articleImageInput {
+	font-size: 5vmin;
+}
+
+.articleEditFormRowButtons {
+	margin: 15px 0px 15px 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+/*=====================================================================*/
+.newsListItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.newsListItemStatContainer {
+	display: flex;
+	min-width: 50%;
+}
+
+.newsListItemNameDiv {
+	font-size: clamp(1.5vmax, 3vmin, 4vmax);
+	font-weight: 1000;
+	text-wrap: pretty;
+	line-height: 4vmin;
+	align-self: center;
+	padding-right: 3vmin;
+	word-break: break-word;
+}
+
+.newsListItemFormButtonBar {
+    display: flex;
+	justify-content: flex-end;
+    min-width: 50%;
+}
+
+#newsList {
+	display: flex;
+	flex-direction: column;
+}
+/*
+@media (pointer: coarse) and (orientation: portrait)
+{
+
+}
+*/
+@media (pointer: coarse) and (orientation: landscape)
+{
+	.newsListItemNameDiv {
+		font-size: clamp(3vmax, 6vmin, 8vmax);
+		line-height: 8vmin;
+		padding-right: 3vmin;
+	}
+	.form-savebutton, .form-clearbutton, .form-editbutton {
+		font-size: 6vmin;
+		padding: 2vmin 5vmin;
+	}
+}
