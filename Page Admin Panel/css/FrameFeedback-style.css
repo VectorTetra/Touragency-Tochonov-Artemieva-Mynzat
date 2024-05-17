@@ -25,6 +25,9 @@
   font-size: 7vmin;
   /* font-weight: 600; */
 }
+#frameFeedback{
+  width: 92%;
+}
 
 .children {
   display: flex;
@@ -112,33 +115,51 @@
   color: rgb(200, 88, 33);
 }
 
-.image-container {
-  position: relative;
-  display: inline-block;
+.feedbackframe-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 15px;
 }
 
 .image {
-  max-width: 150px;
-  padding: 15px;
+  height: 120px;
+  padding: 15px 0 15px;
+  width: 180px;
+  object-fit: cover;
 }
 
 .delete-button {
-  position: absolute;
+  /* position: relative; */
   top: 5px;
+  bottom: 20px;
   right: 5px;
   background-color: transparent;
   border: none;
   color: red;
-  font-size: 20px;
+  /* font-size: 20px; */
   cursor: pointer;
   padding: 0;
+  display: flex;
+  font-size: 10vh;
 }
 
 .formfeedback {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 90%;
-  margin-left: 70px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-left: 70px; */
 }
 
 .toggle-labelfeedback {
@@ -146,6 +167,7 @@
   position: relative;
   color: rgb(51, 51, 224);
   font-weight: bold;
+  text-align: center;
 }
 
 .toggle-labelfeedback::after {

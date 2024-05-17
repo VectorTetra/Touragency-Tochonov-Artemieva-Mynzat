@@ -29,27 +29,32 @@ function HotelsApart(props) {
             <div className="containerHotel">
                 {hotelsToShow.map(hotel => (
                     <div className="blockHotel">
-                        <div style={{height: "200px",display: "flex",justifyContent: "flex-end"}}>
-                            <img src={hotel.hotelImages.length>0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
+                        <div style={{ height: "200px", display: "flex", justifyContent: "flex-end" }}>
+                            <img src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
                         </div>
                         <div>
                             <h3>{hotel.name}</h3>
                             <p style={{ "color": "grey" }}>{hotel.settlementName} , {hotel.countryName}</p>
-                            <p>{hotel.description}</p>
+                            <div style={{ height: "200px", overflowY: "auto" }}>
+                                {hotel.description.split('\n').map((paragraph, index) => (
+                                    <p style={{textAlign:"left",margin:"0",paddingRight:"10px"}} key={index}>{paragraph}<br></br></p>
+
+                                ))}
+                            </div>
                         </div>
                         <div className="services">
                             <hr />
                             <ul>
                                 <h4>Харчування:</h4>
                                 {hotel.foodServices.map((service, index) => {
-                                    return <li style={{textAlign:"left"}} key={index}>{service}</li>
+                                    return <li style={{ textAlign: "left" }} key={index}>{service}</li>
                                 })}
                             </ul>
                             <hr />
                             <ul>
                                 <h4>Розваги:</h4>
                                 {hotel.otherServices.map((service, index) => {
-                                    return <li style={{textAlign:"left"}} key={index}>{service}</li>
+                                    return <li style={{ textAlign: "left" }} key={index}>{service}</li>
                                 })}
                             </ul>
                             <hr />

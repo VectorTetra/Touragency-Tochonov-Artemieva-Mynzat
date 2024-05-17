@@ -128,19 +128,28 @@ select option:checked, select option:active, select option:hover {
 }
 
 .blockHotel img {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
+    width: 24vw;
+    height: 16vw;
+    object-fit: cover;
 }
 
 .coteinerPhoto {
-    flex: 0.75;
+    /* flex: 0.75;
     display: flex;
-    object-fit: cover;
+    object-fit: cover; */
+   
+        flex: 0.6;
+        display: flex;
+        object-fit: cover;
+        flex-direction: column;
+   
 }
 
 .coteinerText {
     flex: 1.5;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 .coteinerText h3 {

@@ -35,13 +35,24 @@ function NewsListItem(props) {
     return (
         <div className="blockHotel">
             <div className="coteinerPhoto">
-                <img style={{maxHeight:"300px"}} src={props.newsItem.photoUrl !== null ? props.newsItem.photoUrl : ""} alt={props.newsItem.caption} />
+                <img style={{ maxHeight: "300px" }} src={props.newsItem.photoUrl !== null ? props.newsItem.photoUrl : ""} alt={props.newsItem.caption} />
+                <div style={{ display: "flex", justifyContent: "center", margin: "20px" }}>
+                    <form action="post" className="countryListItemFormButtonBar">
+                        <button onClick={prepareEditForm} className="form-editbutton-small" ></button>
+                        <button onClick={DeleteNews} className="form-clearbutton-small"></button>
+                    </form>
+                </div>
             </div>
             <div className="coteinerText">
                 <h3>{props.newsItem.isVisible ? "Видима" : "Невидима"}, {props.newsItem.isImportant ? "Важлива" : "Звичайна"}</h3>
                 <hr style={{ marginTop: '15px', marginBottom: '15px' }}></hr>
                 <h3>{props.newsItem.caption}</h3>
-                <p>{props.newsItem.text}</p>
+                <div style={{ maxHeight: "225px", overflowY: "auto" }}>
+                    {props.newsItem.text.split('\n').map((paragraph, index) => (
+                        <p key={index}>{paragraph}<br></br></p>
+                    ))}
+
+                </div>
                 <hr style={{ marginTop: '15px', marginBottom: '15px' }}></hr>
                 <div style={{ padding: '5px' }}>
                     {/* {new Date(new Date(props.newsItem.publishDateTime).getTime() - (new Date(props.newsItem.publishDateTime).getTimezoneOffset() * 60000)).toLocaleDateString('uk-UA')} {new Date(new Date(props.newsItem.publishDateTime).getTime() - (new Date(props.newsItem.publishDateTime).getTimezoneOffset() * 60000)).toLocaleTimeString('uk-UA')}  */}
@@ -50,12 +61,7 @@ function NewsListItem(props) {
 
                 </div>
             </div>
-            <div style={{ display: "flex" }}>
-                <form action="post" className="countryListItemFormButtonBar">
-                    <button onClick={prepareEditForm} className="form-editbutton-small" ></button>
-                    <button onClick={DeleteNews} className="form-clearbutton-small"></button>
-                </form>
-            </div>
+
         </div>
     )
 }

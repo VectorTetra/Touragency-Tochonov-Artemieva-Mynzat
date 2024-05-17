@@ -1,9 +1,7 @@
 function FeedbackList(props) {
-    let table = props.feedback
-    
     return (
         <div style={{ marginTop: "20px" }}>
-            {table.map(item => {
+            {/* {table.map(item => {
                 return (
                     <div className="children">
                         <div className="children1">
@@ -56,7 +54,7 @@ function FeedbackList(props) {
 
                     </div>
                 );
-            })}
+            })} */}
         </div>
     );
 }

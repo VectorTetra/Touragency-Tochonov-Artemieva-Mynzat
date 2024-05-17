@@ -9,7 +9,7 @@
 
 .content {
     flex-direction: column;
-    width: 100%;
+    width: 75%;
 }
 
 .news-caption {
@@ -44,7 +44,11 @@
 }
 
 .side-bar {
+    position: fixed;
     margin-left: 15px;
+    height: 100vh;
+    left: 77%;
+    transition: top 0.3s;
 }
 
 ul {

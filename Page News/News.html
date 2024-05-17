@@ -70,7 +70,7 @@
 		let navbarItems;
 		let FooterData;
 		let newsData;
-	
+
 		const GetLastActiveToQuantinyPrioritizeIncludeImportant7Items = async () => {
 			try {
 				const response = await $.ajax({
@@ -89,7 +89,7 @@
 				alert(error.responseText);
 			}
 		};
-	
+
 		Promise.all([
 			fetch('../MainPage/json/mainPageHeaderInfo.json').
 				then(resp => resp.json()).
@@ -108,7 +108,7 @@
 			(results) => {
 				// Assign the result of the AJAX request to newsData
 				newsData = results[2];
-	
+
 				const rootNode = document.getElementById("app");
 				const root = ReactDOM.createRoot(rootNode);
 				root.render(
@@ -116,15 +116,27 @@
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-							<NewsPage newsData={newsData}/>
-							<MainPageFooter3/>
+							<NewsPage newsData={newsData} />
+							<MainPageFooter3 />
 						</div>
 					</React.StrictMode>
 				);
 			}
 		)
 	</script>
-	
+	<script>
+		window.onscroll = function () {
+			var headerHeight = document.querySelector('#mainPageHeader').offsetHeight;
+			var navHeight = document.querySelector('nav').offsetHeight;
+			var sidebar = document.querySelector('.side-bar');
+			if (window.pageYOffset > headerHeight + navHeight) {
+				sidebar.style.top = '0';
+			} else {
+				sidebar.style.top = headerHeight + navHeight + 'px'; // or whatever offset you want when the header is visible
+			}
+		};
+
+	</script>
 </body>
 
 </html>

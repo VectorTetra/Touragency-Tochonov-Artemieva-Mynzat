@@ -3,7 +3,7 @@ function HotelSearch(props) {
 	const [inputHotelName, setInputHotelName] = React.useState("");
 	const [inputCountryName, setInputCountryName] = React.useState("");
 	const [inputCityName, setInputCityName] = React.useState("");
-
+	
 
 	const handleSearch = (event) => {
 		event.preventDefault();
@@ -13,7 +13,7 @@ function HotelSearch(props) {
 		else{
 			context.GetByCompositeSearch(inputHotelName, inputCityName, inputCountryName);
 		}
-		handleClear();
+		//handleClear();
 	};
 
 	const handleClear = () => {
@@ -51,10 +51,10 @@ function HotelSearch(props) {
 				/>
 			</div>
 			<div className="searchbutton">
-				<button type="submit" onClick={handleSearch}>
+				<button onClick={handleSearch}>
 					Шукати
 				</button>
-				<button type="submit" onClick={handleClear}>
+				<button onClick={handleClear}>
 					Очистити
 				</button>
 				<hr />

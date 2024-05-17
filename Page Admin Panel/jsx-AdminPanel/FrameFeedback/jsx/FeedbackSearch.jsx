@@ -1,41 +1,12 @@
 function FeedbackSearch(props) {
 
-    console.log("Received props:", props.feedback);
-
     const [inputTourName, setInputTourName] = React.useState("");
     const [inputCountryName, setInputCountryNameFeefback] = React.useState("");
     const [inputUserName, setInputUserName] = React.useState("");
-    const [feedback, setFeedBack] = React.useState(props.feedback);
-    const [quantity, setQuantity] = React.useState(props.feedback.length);
-
-    console.log("Вывод0", props.feedback);
- 
-    React.useEffect(() => {
-        props.setQuantity(quantity);
-        props.setFeedBack(feedback);
-    }, [quantity, feedback]);
-
-    console.log("Вывод2", feedback);
     
     const handleSearch = () => {
-        const filteredFeedback = props.feedback.filter(feedback =>
-            feedback.nameTour.toLowerCase().includes(inputTourName.toLowerCase()) &&
-            (feedback.nameCountry.some(country => country.toLowerCase().includes(inputCountryName.toLowerCase()))) &&
-            // feedback.nameCountry.toLowerCase().includes(inputCountryName.toLowerCase()) &&
-            feedback.login.toLowerCase().includes(inputUserName.toLowerCase())
-        );
-        
-        setFeedBack(filteredFeedback);
-        setQuantity(filteredFeedback.length);
-        
     };
-
-    console.log("Begin1",   feedback.nameTour);
-    console.log("Begin2",   feedback.nameCountry);
-    console.log("Begin3",    feedback.login);
-
-    
-
+ 
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
             handleSearch();
@@ -46,8 +17,6 @@ function FeedbackSearch(props) {
         setInputTourName("");
         setInputCountryNameFeefback("");
         setInputUserName("");
-        setFeedBack(props.feedback);
-        setQuantity(props.feedback.length);
     };
 
     return (
