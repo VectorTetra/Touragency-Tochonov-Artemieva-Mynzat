@@ -1,104 +1,127 @@
 function FeedbackForm(props) {
-    console.log(props.tab.NameTourSearch);
-
-    const [imageUrls, setImageUrls] = React.useState([]);
-    const fileInputRef = React.useRef(null);
-
-    const handleButtonClick = () => {
-        fileInputRef.current.click();
+    let context = React.useContext(window.FrameFeedbackContext);
+    const [SelectedTourId, setSelectedTourId] = React.useState(0);
+    const [SelectedReviewId, setSelectedReviewId] = React.useState(0);
+    const [SelectedClientId, setSelectedClientId] = React.useState(0);
+    const [SelectedRating, setSelectedRating] = React.useState(5);
+    const [SelectedLikes, setSelectedLikes] = React.useState(0);
+    const [SelectedReviewCaption, setSelectedReviewCaption] = React.useState('');
+    const [SelectedReviewText, setSelectedReviewText] = React.useState('');
+    const [SelectedReviewDate, setSelectedReviewDate] = React.useState(new Date());
+    const handleReset = (e) => {
+        e.preventDefault();
+        context.setDtoId(0);
+        context.setDtoTourId(0);
+        context.setDtoClientId(props.jsonUserData.isClient ? props.jsonUserData.clientId : 0);
+        context.setDtoRating(5);
+        context.setDtoLikes(0);
+        context.setDtoReviewCaption("");
+        context.setDtoReviewText("");
+        context.setDtoReviewDate(new Date());
+        context.setDtoReviewImages([]);
+        context.setDtoReviewImageIds([]);
     };
+    React.useEffect(() => {
+        setSelectedClientId(context.DtoClientId);
+    }, [context.DtoClientId]);
+    React.useEffect(() => {
+        setSelectedTourId(context.DtoTourId);
+    }, [context.DtoTourId]);
+    React.useEffect(() => {
+        setSelectedRating(context.DtoRating);
+    }, [context.DtoRating]);
+    React.useEffect(() => {
+        setSelectedLikes(context.DtoLikes);
+    }, [context.DtoLikes]);
+    React.useEffect(() => {
+        setSelectedReviewCaption(context.DtoReviewCaption);
+    }, [context.DtoReviewCaption]);
+    React.useEffect(() => {
+        setSelectedReviewText(context.DtoReviewText);
+    }, [context.DtoReviewText]);
+    React.useEffect(() => {
+        setSelectedReviewDate(context.DtoReviewDate);
+    }, [context.DtoReviewDate]);
+    React.useEffect(() => {
+        setSelectedReviewId(context.DtoId);
+    }, [context.DtoId]);
 
-    const handleFileChange = (event) => {
-        const files = event.target.files;
-        const urls = [...imageUrls];
-        // Переменная для отслеживания того, были ли не добавлены изображения из-за лимита
-        let imagesNotAdded = false;
-
-        for (let i = 0; i < files.length; i++) {
-            const file = files[i];
-            const reader = new FileReader();
-
-            reader.onload = () => {
-                const dataUrl = reader.result;
-
-                // Проверяем, есть ли данные изображения в массиве urls
-                if (!urls.includes(dataUrl)) {
-                    if (urls.length < 10) {
-                        urls.push(dataUrl);
-                        setImageUrls([...urls]);
-                    } else {
-                        alert("Досягнут ліміт завантаження зображень (10). Деякі файли не були додані.");
-                        imagesNotAdded = true; // Устанавливаем флаг, что были не добавлены изображения из-за лимита
-                    }
-                } else {
-                    alert("Фото " + file.name + " вже додано");
-                }
-            };
-
-            if (imagesNotAdded) {
-                break; // Если уже были не добавлены изображения из-за лимита, выходим из цикла
-            }
-
-            reader.readAsDataURL(file);
+    const handleInput = (e) => {
+        switch (e.target.name) {
+            case "TourId":
+                setSelectedTourId(e.target.value);
+                break;
+            case "ClientId":
+                setSelectedClientId(e.target.value);
+                break;
+            case "Rating":
+                setSelectedRating(e.target.value);
+                break;
+            case "Likes":
+                setSelectedLikes(e.target.value);
+                break;
+            case "ReviewCaption":
+                setSelectedReviewCaption(e.target.value);
+                break;
+            case "ReviewText":
+                setSelectedReviewText(e.target.value);
+                break;
+            case "ReviewDate":
+                setSelectedReviewDate(e.target.value);
+                break;
+            case "ReviewId":
+                setSelectedReviewId(e.target.value);
+                break;
+            default:
+                break;
         }
-        event.target.value = null;
     };
-
-    const handleRemoveImage = (index) => {
-        const newUrls = [...imageUrls];
-        newUrls.splice(index, 1);
-        setImageUrls(newUrls);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if(context.DtoId === 0){
+            await context.PostReview(SelectedTourId,SelectedRating, SelectedReviewCaption, SelectedReviewText);
+        }
+        else{
+            await context.PutReview(SelectedTourId,SelectedRating, SelectedReviewCaption, SelectedReviewText);
+        }
+        context.Get200Last();
+        handleReset(e);
     };
-
-    const clearForm = () => {
-        setImageUrls([]);
-        document.getElementById('states').selectedIndex = 0;
-        document.getElementById('hotelDescription').value = '';
-    };
-
     return (
         <div className="formfeedback">
             <label for="toggle" class="toggle-labelfeedback">Залишити відгук</label>
             <input type="checkbox" id="toggle" class="toggle-checkbox" />
             <div className="container">
                 <form name="FeedbackEditForm" id="FeedbackEditForm" style={{ border: '2px solid navy', borderRadius: '5px', marginTop: '15px' }}>
+                    <input type="hidden" name="" value={SelectedReviewId} />
+                    <input type="hidden" name="" value={SelectedClientId} />
+                    <input type="hidden" name="" value={SelectedReviewDate} />
+                    <input type="hidden" name="" value={SelectedLikes} />
                     <div className="EditFormRow">
                         <span class="caption">Виберіть тур</span>
-                        <select className="EditFormInput" name="states" id="states">
-                            <option value="">Вибрати тур</option>
-                            {props.tab.NameTourSearch.map(item => <option value={item}>{item}</option>)}
+                        <select className="EditFormInput" style={{ fontSize: "3.5vmin" }} name="TourId" value={SelectedTourId} onChange={handleInput}>
+                            <option value="0" disabled hidden selected>Вибрати тур</option>
+                            {props.tours.map(item => <option value={item.id}>{item.tourName} ({new Date(item.arrivalDate).toLocaleDateString('uk-UA')} - {new Date(item.departureDate).toLocaleDateString('uk-UA')})</option>)}
                         </select>
                     </div>
+                    <div className="EditFormColumn">
+                        <div className="EditFormRow" style={{ flex: "1" }}>
+                            <div>Заголовок відгуку</div>
+                            <input className="EditFormInput" name="ReviewCaption" value={SelectedReviewCaption} onChange={handleInput} id="" required />
+                        </div>
+                        <div className="EditFormRow">
+                            <div>Оцінка (1 - 5)</div>
+                            <input className="EditFormInput" type="number" min={1} max={5} name="Rating" id="" value={SelectedRating} onChange={handleInput}/>
+                        </div>
+                    </div>
                     <div className="EditFormRow">
-                        <label htmlFor="Descriptions">Відгук</label>
-                        <textarea className="EditFormInput" style={{ resize: "vertical", display: "flex" }} name="hotelDescriptionInput" id="hotelDescription" required />
+                        <div>Відгук</div>
+                        <textarea className="EditFormInput" style={{ resize: "vertical", display: "flex" }} value={SelectedReviewText} name="ReviewText" id="" required onChange={handleInput}/>
                     </div>
-                    <div className="EditFormColumn" style={{paddingLeft:"15px"}}>
-                        <span class="EditFormInput" style={{flex:"none"}}>Фото з туру (не більше 10)</span>
-                        <input
-                            type="file"
-                            accept="image/*"
-                            multiple
-                            style={{ display: 'none' }}
-                            ref={fileInputRef}
-                            onChange={handleFileChange}
-                        />
-                        <button className="buttonFeedback" type="button" onClick={handleButtonClick}>Завантажити фото</button>
-                    </div>
-                    <div className="feedbackframe-image-container">
-                        {imageUrls.map((url, index) => (
-                            <div key={index} className="image-container-item">
-                                <img src={url} alt={`Зображення ${index + 1}`} className="image" />
-                                <button onClick={() => handleRemoveImage(index)} className="delete-button">×</button>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="limit">
-                        {imageUrls.length === 10 && <p style={{ color: 'red' }}>Досягнуто максимальну кількість зображень!!!</p>}
-                    </div>
+                    <FeedbackFormPhotoInput />
                     <div className="EditFormRowButtons" style={{ margin: '' }}>
-                        <a id="userFormSubmit" className="form-savebutton">Зберегти</a>
-                        <a id="userFormReset" className="form-clearbutton" onClick={clearForm}>Очистити</a>
+                        <button id="userFormSubmit" className="form-savebutton" onClick={handleSubmit}>Зберегти</button>
+                        <button id="userFormReset" className="form-clearbutton" onClick={handleReset}>Очистити</button>
                     </div>
                 </form>
             </div></div>

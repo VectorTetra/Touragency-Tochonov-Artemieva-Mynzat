@@ -14,11 +14,11 @@ function NewsItem(props) {
                 <img style={{ maxHeight: "300px" }} src={props.item.photoUrl ? props.item.photoUrl : ""} alt={new Date(props.item.publishDateTime).toLocaleDateString('uk-UA')} class="publication-img" />
                 <div>
                     {props.item.text.split('\n').map((paragraph, index) => (
-                                    <p style={{textAlign:"left",margin:"0",paddingRight:"10px"}} key={index}>{paragraph}<br></br></p>
+                        <p style={{ textAlign: "left", margin: "0", paddingRight: "10px" }} key={index}>{paragraph}<br></br></p>
 
-                                ))}
+                    ))}
                 </div>
-                
+
                 {/* <span class="paragraph">
                     {
                         sentences.map((sentence, index) => {
