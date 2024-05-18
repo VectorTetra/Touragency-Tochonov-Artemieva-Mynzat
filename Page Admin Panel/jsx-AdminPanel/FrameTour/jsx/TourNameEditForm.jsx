@@ -1,4 +1,6 @@
 function TourNameEditForm() {
+    const context = React.useContext(window.FrameTourContext);
+    const [AvailableCountries,setAvailableCountries] = React.useState(context.AvailableCountries) ;
     const [pageStructureItems, setPageStructureItems] = React.useState([]);
 
     function generateID() {
@@ -151,14 +153,14 @@ function TourNameEditForm() {
                 </div>
             </div> */}
             <div>
-                <SwitchableList PossibleItemsListCaption="Доступні країни" WishItemsListCaption="Вибрані країни"></SwitchableList>
+                <SwitchableGeography availableCountries={AvailableCountries} ></SwitchableGeography>
+            </div>
+            {/* <div>
+                <SwitchableList availableItems={[]} availableItemsListCaption="Доступні міста" wishItemsListCaption="Вибрані міста"></SwitchableList>
             </div>
             <div>
-                <SwitchableList PossibleItemsListCaption="Доступні міста" WishItemsListCaption="Вибрані міста"></SwitchableList>
-            </div>
-            <div>
-                <SwitchableList PossibleItemsListCaption="Доступні готелі" WishItemsListCaption="Вибрані готелі"></SwitchableList>
-            </div>
+                <SwitchableList availableItems={[]} availableItemsListCaption="Доступні готелі" wishItemsListCaption="Вибрані готелі"></SwitchableList>
+            </div> */}
 
         </form>
     )

@@ -31,6 +31,9 @@ class AdminPanelTabContainer extends React.Component {
 					(this.state.name === "Тури") && <FrameTour tab={myTab}/>
 				}
 				{
+					(this.state.name === "Планування турів") && <FrameTourPlanning tab={myTab}/>
+				}
+				{
 					(this.state.name === "Турагенти") && <FrameTouragents tab={myTab}/>
 				}
 				{

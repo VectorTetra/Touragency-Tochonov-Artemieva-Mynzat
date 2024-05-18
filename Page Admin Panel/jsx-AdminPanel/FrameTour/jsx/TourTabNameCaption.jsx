@@ -1,7 +1,6 @@
 function TourTabNameCaption()
 {
     const [isTourTabNameContentVisible, setTourTabNameContentVisible] = React.useState(false);
-    const tab = React.useContext(window.TourTabNameContext);
     function handleClick() {
         setTourTabNameContentVisible(!isTourTabNameContentVisible)
     }
