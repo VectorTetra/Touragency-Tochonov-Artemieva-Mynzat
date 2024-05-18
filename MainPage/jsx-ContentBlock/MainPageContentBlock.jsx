@@ -1,6 +1,7 @@
 function MainPageContentBlock(props) {
 	const [tours, setTours] = React.useState([]);
 	const [news, setNews] = React.useState([]);
+	const [reviews, setReviews] = React.useState([]);
 	const Get11LastActiveTours = async () => {
 		try {
 			const response = await $.ajax({
@@ -61,17 +62,48 @@ function MainPageContentBlock(props) {
 			console.error('Помилка при отриманні даних', error);
 			alert(error.responseText);
 		}
-	}; 
+	};
+	const GetLast4Reviews = async () => {
+		try {
+			const response = await $.ajax({
+				url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: {
+					SearchParameter: 'Get200Last'
+				},
+				statusCode: {
+					200: function (data) {
+						const last4Reviews = data.slice(0, 4);
+						setReviews(last4Reviews);
+					},
+					204: function () {
+						setReviews([]);
+					}
+				},
+				error: function (error) {
+					console.error('Помилка при отриманні даних', error);
+					alert(error.responseText);
+				}
+			});
+			console.log("PrepareToEdit success data: ", response);
+
+		} catch (error) {
+			console.error('Помилка при отриманні даних', error);
+			alert(error.responseText);
+		}
+	};
 	React.useEffect(async () => {
 		await Get11LastActiveTours();
 		await GetLastActiveToQuantinyPrioritizeIncludeImportant7Items();
+		await GetLast4Reviews();
 	}, []);
 	return (
 		<div id="content-block-container">
 			<React.Suspense fallback={<div>Loading...</div>}>
 				<NewsBlock newsList={news} />
 				<ToursTableBlock tourList={tours} />
-				<TouristsReviewsBlock reviewList={props.reviewList} />
+				<TouristsReviewsBlock reviewList={reviews} />
 			</React.Suspense>
 		</div>
 	);

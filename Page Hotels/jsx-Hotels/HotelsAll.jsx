@@ -1,6 +1,6 @@
 function HotelsAll(props) {
     const [tourNames, setTourNames] = React.useState([]);
-    const GetTourNames = async () => {
+    const Get10TourNames = async () => {
         try {
             const response = await $.ajax({
                 url: 'https://26.162.95.213:7099/api/TourName', // Замініть на ваш URL API
@@ -22,23 +22,61 @@ function HotelsAll(props) {
                     alert(error.responseText);
                 }
             });
-            console.log("GetTourNames success data: ", response);
+            console.log("Get10TourNames success data: ", response);
 
         } catch (error) {
             console.error('Помилка при отриманні даних', error);
             alert(error.responseText);
         }
-                
-    };
 
+    };
+    const GetByTourName = async (tourName) => {
+        try {
+            const response = await $.ajax({
+                url: 'https://26.162.95.213:7099/api/TourName', // Замініть на ваш URL API
+                method: 'GET',
+                contentType: "application/json",
+                data: { SearchParameter: 'GetByName', Name: tourName },
+                statusCode: {
+                    200: function (data) {
+                        setTourNames(data);
+                    },
+                    204: function () {
+                        setTourNames([]);
+                    }
+                },
+                error: function (error) {
+                    console.error('Помилка при отриманні даних', error);
+                    alert(error.responseText);
+                }
+            });
+            console.log("Get10TourNames success data: ", response);
+        } catch (error) {
+            console.error('Помилка при отриманні даних', error);
+            alert(error.responseText);
+        }
+    };
+    window.HotelPageContext = React.createContext({
+        tourNames: tourNames,
+        setTourNames: setTourNames,
+        Get10TourNames: Get10TourNames,
+        GetByTourName: GetByTourName
+    });
     React.useEffect(() => {
-        GetTourNames();
+        Get10TourNames();
     }, []);
     return (
-        <div id="hotels">
-            <HotelsLogo logo={props.hotels.logo} />
-            <HotelsSearch tours={tourNames} setTours={setTourNames} />
-            <HotelsTours tours={tourNames}/>
-        </div>
+        <window.HotelPageContext.Provider value={{
+            tourNames: tourNames,
+            setTourNames: setTourNames,
+            Get10TourNames: Get10TourNames,
+            GetByTourName: GetByTourName
+        }}>
+            <div id="hotels">
+                <HotelsLogo logo={props.hotels.logo} />
+                <HotelsSearch tours={tourNames} setTours={setTourNames} />
+                <HotelsTours tours={tourNames} />
+            </div>
+        </window.HotelPageContext.Provider>
     );
 }   

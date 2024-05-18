@@ -53,6 +53,7 @@
 	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbar.jsx"></script>
 	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
 	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbarItem.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-ContentBlock/Star.jsx"></script>
 
 	<!-- ============================================================================================ -->
 	<!-- =========================== Тури =========================== -->
@@ -108,12 +109,14 @@
 				const rootNode = document.getElementById("app");
 				const root = ReactDOM.createRoot(rootNode);
 
+				let urlParams = new URLSearchParams(window.location.search);
+				let nameCountry = urlParams.get('nameCountry');
 				root.render(
 					<React.StrictMode>
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-							<FeedbackAll feedbacks={feedbacks} />
+							<FeedbackAll feedbacks={feedbacks} urlParamNameCountry={nameCountry}/>
 							<BackToTopButton />
 						</div>
 					</React.StrictMode>

@@ -1,15 +1,37 @@
 function FeedbackSearch(props) {
-
+    let context = React.useContext(window.FrameFeedbackContext);
     const [inputTourName, setInputTourName] = React.useState("");
     const [inputCountryName, setInputCountryNameFeefback] = React.useState("");
     const [inputUserName, setInputUserName] = React.useState("");
     
     const handleSearch = () => {
-    };
- 
-    const handleKeyDown = (event) => {
-        if (event.key === "Enter") {
-            handleSearch();
+        if(inputTourName === "" && inputCountryName === "" && inputUserName === ""){
+            context.Get200Last();
+        }
+        else{
+            $.ajax({
+				url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+				method: 'GET',
+				contentType: "application/json",
+				data: {
+					SearchParameter: 'GetByCompositeSearch',
+					TouristNickname: inputUserName.length === 0 ? null : inputUserName,
+                    TourName: inputTourName.length === 0 ? null : inputTourName,
+                    CountryName: inputCountryName.length === 0 ? null : inputCountryName
+				},
+				statusCode: {
+					200: function (data) {
+						context.setReviews(data);
+					},
+					204: function () {
+						context.setReviews([]);
+					}
+				},
+				error: function (error) {
+					console.error('Помилка при отриманні даних', error);
+					alert(error.responseText);
+				}
+			});   
         }
     };
 
@@ -31,7 +53,6 @@ function FeedbackSearch(props) {
                         placeholder="Введіть Логін"
                         className="EditFormInput"
                     onChange={(event) => setInputUserName(event.target.value)}
-                    onKeyDown={handleKeyDown}
                     />
                     <input
                         name="tourName"
@@ -39,7 +60,6 @@ function FeedbackSearch(props) {
                         placeholder="Введіть назву туру"
                         className="EditFormInput"
                     onChange={(event) => setInputTourName(event.target.value)}
-                    onKeyDown={handleKeyDown}
                     />
                     <input
                         name="countryName"
@@ -47,14 +67,13 @@ function FeedbackSearch(props) {
                         placeholder="Введіть назву країни"
                         className="EditFormInput"
                     onChange={(event) => setInputCountryNameFeefback(event.target.value)}
-                    onKeyDown={handleKeyDown}
                     />
             </div >
             <div className="searchbutton">
-			<button type="submit"  onClick={handleSearch}>
+			<button onClick={handleSearch}>
 				Шукати
 			</button>
-			<button type="submit"  onClick={handleClear}>
+			<button onClick={handleClear}>
 				Очистити
 			</button> 
                 <hr />

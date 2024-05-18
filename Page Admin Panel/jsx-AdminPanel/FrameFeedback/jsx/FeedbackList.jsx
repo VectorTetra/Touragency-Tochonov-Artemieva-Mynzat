@@ -1,6 +1,6 @@
 function FeedbackList(props) {
     return(
-        <div className="list-news">
+        <div className="list-news" style={{padding:"0 0 20px 0"}}>
             {
                 props.reviews.map(item => <FeedbackListItem item={item} isClient={props.isClient}></FeedbackListItem>)
             }

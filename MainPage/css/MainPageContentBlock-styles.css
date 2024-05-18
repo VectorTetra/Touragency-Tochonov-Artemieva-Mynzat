@@ -140,6 +140,11 @@ a{
 	font-size: 0.6rem;
 	font-style: italic;
 	margin-top: 10px;
+	overflow: hidden;
+    text-overflow: ellipsis; /* Додайте трьохкрапки в кінці тексту */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Встановіть кількість рядків для відображення */
+    -webkit-box-orient: vertical;
 }
 .reviewStar{
 	width: 20px;

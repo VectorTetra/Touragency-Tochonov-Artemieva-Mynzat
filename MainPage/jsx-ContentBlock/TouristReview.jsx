@@ -20,7 +20,7 @@ class TouristReview extends React.Component{
 				<div className="boldUserNameReviewCaption">{this.props.userName}</div>
 				<div className="touristReviewStarsDateRow">
 					<div>{this.drawStars()}</div>	
-					<div>{this.props.date}</div>						
+					<div>{new Date(this.props.date).toLocaleDateString('uk-UA')}</div>						
 				</div>
 				<div className="flex-box-column">
 					<div className="touristReviewCaptionRow">{this.props.caption}</div>	

@@ -203,7 +203,7 @@ function FrameFeedback(props) {
 		}
 		else {
 			//document.getElementById('ReviewImageIdsLengthLocal').value === "0"
-			if ( $("#ReviewImageIdsLengthLocal").val() === "0"){
+			if ($("#ReviewImageIdsLengthLocal").val() === "0") {
 				await $.ajax({
 					url: 'https://26.162.95.213:7099/api/ReviewImage/DeleteReviewImage/' + responsedId, // Замініть на ваш URL API
 					method: 'DELETE',
@@ -263,6 +263,8 @@ function FrameFeedback(props) {
 		setDtoReviewDate: setDtoReviewDate,
 		setDtoReviewImages: setDtoReviewImages,
 		setDtoReviewImageIds: setDtoReviewImageIds,
+		setReviews: setReviews,
+		Reviews: Reviews,
 		DtoReviewImageIds: DtoReviewImageIds,
 		DtoId: DtoId,
 		DtoTourId: DtoTourId,
@@ -289,6 +291,8 @@ function FrameFeedback(props) {
 			setDtoReviewDate: setDtoReviewDate,
 			setDtoReviewImages: setDtoReviewImages,
 			setDtoReviewImageIds: setDtoReviewImageIds,
+			setReviews: setReviews,
+			Reviews: Reviews,
 			DtoReviewImageIds: DtoReviewImageIds,
 			DtoId: DtoId,
 			DtoTourId: DtoTourId,

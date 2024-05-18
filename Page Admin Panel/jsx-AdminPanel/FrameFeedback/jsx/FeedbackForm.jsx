@@ -89,9 +89,9 @@ function FeedbackForm(props) {
     };
     return (
         <div className="formfeedback">
-            <label for="toggle" class="toggle-labelfeedback">Залишити відгук</label>
-            <input type="checkbox" id="toggle" class="toggle-checkbox" />
-            <div className="container">
+            <div class="toggle-labelfeedback">Залишити відгук</div>
+            {/* <input type="checkbox" id="toggle" class="toggle-checkbox" /> */}
+            <div className="">
                 <form name="FeedbackEditForm" id="FeedbackEditForm" style={{ border: '2px solid navy', borderRadius: '5px', marginTop: '15px' }}>
                     <input type="hidden" name="" value={SelectedReviewId} />
                     <input type="hidden" name="" value={SelectedClientId} />
