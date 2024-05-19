@@ -49,6 +49,10 @@
     height: 100vh;
     left: 77%;
     transition: top 0.3s;
+    /* z-index: -1; */
+}
+.side-bar:hover {
+    /* z-index: 0; */
 }
 
 ul {
