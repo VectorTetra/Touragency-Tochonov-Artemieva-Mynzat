@@ -79,17 +79,21 @@ function FileInputItem(props) {
 
 	return (
 		<div id={"constructor" + props.id} data-id={"div" + props.id} style={{ display: "flex", margin: "0 0 10px 0", flexWrap: "wrap", justifyContent: "center" }}>
-			<input type="file" id={"file"+props.id} className="constructorInput" accept="image/*" multiple style={{ display: 'none' }} ref={fileInputRef} onChange={handleFileChange} />
+			<input type="file" id={"file"+props.id} name={"gallery" + props.id} className="constructorInput" accept="image/*" multiple style={{ display: 'none' }} ref={fileInputRef} onChange={handleFileChange} />
 			<button className="buttonFeedback" type="button" onClick={handleButtonClick} style={{ width: "80vw" }}>Завантажити фото (не більше 5)</button>
 			<button data-id={props.id} onClick={props.deleteItem} className="delete-button" style={{ position: "relative", top: "0px", right: "0px" }}>
 				<span style={{ fontSize: "10vh", fontWeight: "bolder", position: "relative" }}>×</span>
 			</button>
-			<div style={{ marginTop: '20px' }} className="image-container">
+			<div style={{ marginTop: '20px' }} className="feedbackframe-image-container">
 				{imageUrls.map((url, index) => {
 					//const id = generateID();
 					return (
-						<div id={"imageContainer" + url.id} key={url.id}  data-id={url.id}>
-							<img src={url.dataUrl} alt={`Зображення ${props.id + "_" + index}`} style={{ height: "17vh", width: "auto" }} className="image" />
+						
+						<div id={"imageContainer" + url.id} key={url.id}  data-id={url.id} className="image-container-item">
+							{/* <img src={url.dataUrl} alt={`Зображення ${props.id + "_" + index}`} style={{ height: "17vh", width: "auto" }} className="image" /> */}
+							<React.Suspense fallback={<Loading />}>
+								<SuspenseImage src={url.dataUrl} alt={`Зображення ${props.id + "_" + index}`} style={{ height: "17vh", width: "auto" }} className="image" />
+							</React.Suspense>
 							{/* <button data-id={url.id} onClick={(e) => { e.preventDefault(); handleRemoveImage(e) }} className="delete-button">×</button> */}
 						</div>
 					)

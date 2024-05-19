@@ -1,7 +1,6 @@
 function CountryListItem(props) {
 	const context = React.useContext(window.FrameCountryContext);
-	const PrepareToEdit = async (e) => 
-	{
+	const PrepareToEdit = async (e) => {
 		e.preventDefault();
 		try {
 			const response = await $.ajax({
@@ -23,17 +22,16 @@ function CountryListItem(props) {
 		}
 	}
 
-	const DeleteCountry = (e) => 
-	{
+	const DeleteCountry = (e) => {
 		e.preventDefault();
-		if(!confirm('Ви впевнені, що хочете видалити країну ' + props.country.name + ' ?')) return;
+		if (!confirm('Ви впевнені, що хочете видалити країну ' + props.country.name + ' ?')) return;
 		$.ajax({
 			url: 'https://26.162.95.213:7099/api/Country/' + props.country.id, // Замініть на ваш URL API
 			method: 'DELETE',
-			success: function(data) {
+			success: function (data) {
 				context.Get200Last();
 			},
-			error: function(error) {
+			error: function (error) {
 				console.error('Помилка при видаленні', error);
 				alert(error.responseText);
 			}
@@ -42,7 +40,10 @@ function CountryListItem(props) {
 	return (
 		<div className="countryListItem">
 			<div className="countryListItemStatContainer">
-				<img className="countryListItemFlagImg" src={props.country.flagUrl} alt={props.country.name} />
+				{/* <img className="countryListItemFlagImg" src={props.country.flagUrl} alt={props.country.name} /> */}
+				<React.Suspense fallback={<Loading width="40px" height="40px" />}>
+					<SuspenseImage className="countryListItemFlagImg" src={props.country.flagUrl} alt={props.country.name} />
+				</React.Suspense>
 				<div className="cityListItemStringStatContainer">
 					<div className="cityListItemNameDiv">Країна: {props.country.name}</div>
 					<div className="cityListItemNameDiv">Континент: {props.country.continentName}</div>

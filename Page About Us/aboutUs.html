@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Про нас</title>
-    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Про нас</title>
+	<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 	<script src="../libs/react.production.min.js"></script>
@@ -14,11 +15,14 @@
 	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
 	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
 	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
-    <link rel="stylesheet" href="AboutUs-styles.css" type="text/css">
-    <link rel="stylesheet" href="../MainPage/css/MainPageFooter3-styles.css" type="text/css">
+	<link rel="stylesheet" href="AboutUs-styles.css" type="text/css">
+	<link rel="stylesheet" href="../MainPage/css/MainPageFooter3-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/Loading-styles.css" type="text/css">
 </head>
+
 <body>
-    <div id="app"></div>
+	<div id="app"></div>
 	<!-- ============================================================================================ -->
 	<!-- =================================== Хедер ================================================== -->
 
@@ -40,8 +44,8 @@
 	<script type="text/babel" src="../MainPage/jsx-Header/UserGreetings.jsx"></script>
 	<!-- 1. Компонент, кнопка Вийти-->
 	<script type="text/babel" src="../MainPage/jsx-Header/LogoutButton.jsx"></script>
-	
-    <script type="text/babel" src="../MainPage/jsx-Header/GoToAdminPanelButton.jsx"></script>
+
+	<script type="text/babel" src="../MainPage/jsx-Header/GoToAdminPanelButton.jsx"></script>
 	<!-- ============================================================================================ -->
 	<!-- =========================== Навігаційна панель ============================================= -->
 
@@ -49,25 +53,32 @@
 	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbar.jsx"></script>
 	<!-- 1. Компонент, пункт нав.панелі головної сторінки сайту -->
 	<script type="text/babel" src="../MainPage/jsx-Navbar/MainPageNavbarItem.jsx"></script>
-    <!-- ============================================================================================ -->
+	<!-- ============================================================================================ -->
 	<!-- =========================== Про нас ======================================================== -->
 
-    <script type="text/babel" src="AboutUsArticle.jsx"></script>
+	<script type="text/babel" src="AboutUsArticle.jsx"></script>
 
-    <!-- ============================================================================================ -->
-    <!-- ================================= Футер-3 головної сторінки ================================ -->
+	<!-- ============================================================================================ -->
+	<!-- ================================= Футер-3 головної сторінки ================================ -->
 	<!-- 0. Компонент, футер-3 головної сторінки -->
-    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3.jsx"></script>
 	<!-- 1. Компонент, flex-box зі слоганом -->
-    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3Slogan.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3Slogan.jsx"></script>
 	<!-- 1. Компонент, flex-box із формою підписки на розсилку  -->
-    <script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3SubscriptionForm.jsx"></script>
+	<script type="text/babel" src="../MainPage/jsx-Footer-3/MainPageFooter3SubscriptionForm.jsx"></script>
+	<!-- ============================================================================================ -->
+	<!-- ================================= Спільні компоненти ================================ -->
+	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
+	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+	<!-- 0. Компонент, img з лінивим завантаженням -->
+	<script type="text/babel" src="../SharedItems/jsx/SuspenseImage.jsx"></script>
+	<!-- 0. Компонент, індикатор завантаження -->
+	<script type="text/babel" src="../SharedItems/jsx/Loading.jsx"></script>
 
-
-    <script type="text/babel">
+	<script type="text/babel">
 		let headerData;
 		let navbarItems;
-        let FooterData;
+		let FooterData;
 		Promise.all([
 			fetch('../MainPage/json/mainPageHeaderInfo.json').
 				then(resp => resp.json()).
@@ -82,12 +93,12 @@
 					navbarItems = data.navbarItems;
 				})),
 			fetch('../MainPage/json/MainPageFooterInfo.json').
-			then(resp => resp.json()).
-			then((data => {
-				//=======================> Reading news from JSON file <================================
-				FooterData = data.FooterData; 
-				
-			}))
+				then(resp => resp.json()).
+				then((data => {
+					//=======================> Reading news from JSON file <================================
+					FooterData = data.FooterData;
+
+				}))
 		]).then(
 			() => {
 				const rootNode = document.getElementById("app");
@@ -97,8 +108,8 @@
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-                            <AboutUsArticle/>
-                            <MainPageFooter3/>
+							<AboutUsArticle />
+							<MainPageFooter3 />
 						</div>
 					</React.StrictMode>
 				);
@@ -106,4 +117,5 @@
 		)
 	</script>
 </body>
+
 </html>

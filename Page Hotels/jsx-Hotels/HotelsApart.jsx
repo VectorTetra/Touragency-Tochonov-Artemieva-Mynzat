@@ -30,14 +30,17 @@ function HotelsApart(props) {
                 {hotelsToShow.map(hotel => (
                     <div className="blockHotel">
                         <div style={{ height: "200px", display: "flex", justifyContent: "flex-end" }}>
-                            <img src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
+                            {/* <img src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} /> */}
+                            <React.Suspense fallback={<Loading width="60px" height="60px" />}>
+                                <SuspenseImage src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
+                            </React.Suspense>
                         </div>
                         <div>
                             <h3>{hotel.name}</h3>
                             <p style={{ "color": "grey" }}>{hotel.settlementName} , {hotel.countryName}</p>
                             <div style={{ height: "200px", overflowY: "auto" }}>
                                 {hotel.description.split('\n').map((paragraph, index) => (
-                                    <p style={{textAlign:"left",margin:"0",paddingRight:"10px"}} key={index}>{paragraph}<br></br></p>
+                                    <p style={{ textAlign: "left", margin: "0", paddingRight: "10px" }} key={index}>{paragraph}<br></br></p>
 
                                 ))}
                             </div>

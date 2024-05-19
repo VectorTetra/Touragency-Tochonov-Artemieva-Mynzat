@@ -14,14 +14,15 @@
 	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
 	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
 	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/Photo-style.css">
-    <link rel="stylesheet" href="./css/Price-style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pikaday/js/i18n/uk.js"></script>
-    <script src="./script/scripts.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="../SharedItems/css/Loading-styles.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/Photo-style.css">
+	<link rel="stylesheet" href="./css/Price-style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/js/i18n/uk.js"></script>
+	<script src="./script/scripts.js" type="text/javascript"></script>
 
 </head>
 
@@ -65,7 +66,7 @@
 	<script type="text/babel" src="./jsx-ToursItalian/TourItalianAll.jsx"></script>
 	<!-- 1. Компонент, питання -->
 	<script type="text/babel" src="./jsx-ToursItalian/ToursLogo.jsx"></script>
-    <!-- 2. Компонент, питання -->
+	<!-- 2. Компонент, питання -->
 	<script type="text/babel" src="./jsx-ToursItalian/ToursCalendar.jsx"></script>
 	<!-- 3. Компонент, питання -->
 	<script type="text/babel" src="./jsx-ToursItalian/ToursNavPanel.jsx"></script>
@@ -78,10 +79,13 @@
 
 
 	<!-- ============================================================================================ -->
-	<!-- =========================== Інші спільні компоненти =========================== -->
-
+<!-- ================================= Спільні компоненти ================================ -->
 	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
 	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+	<!-- 0. Компонент, img з лінивим завантаженням -->
+	<script type="text/babel" src="../SharedItems/jsx/SuspenseImage.jsx"></script>
+	<!-- 0. Компонент, індикатор завантаження -->
+	<script type="text/babel" src="../SharedItems/jsx/Loading.jsx"></script>
 
 	<!-- ============================================================================================ -->
 	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
@@ -120,7 +124,7 @@
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-							<TourItalianAll tours={tours}/>
+							<TourItalianAll tours={tours} />
 							<BackToTopButton />
 						</div>
 					</React.StrictMode>

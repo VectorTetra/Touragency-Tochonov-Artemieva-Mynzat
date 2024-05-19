@@ -13,17 +13,17 @@ function FeedbackTable(props) {
 
         console.log("FeedbackTable table: ", table);
     }
-    const drawStars = (starsQuantity) =>{
+    const drawStars = (starsQuantity) => {
 
-		const rows = [];
-		for (let i = 0; i < starsQuantity; i++) {
-			// note: we are adding a key prop here to allow react to uniquely identify each
-			// element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-			// Star v1.0 url - https://png.pngtree.com/png-vector/20220926/ourmid/pngtree-shiny-gold-star-clipart-illustration-design-png-image_6216956.png
-			rows.push(<Star url="https://clipart.info/images/ccovers/1559839448blue-star-png-3.png" width="20" height="20"/>);
-		}
-		return <div>{rows}</div>;
-	}
+        const rows = [];
+        for (let i = 0; i < starsQuantity; i++) {
+            // note: we are adding a key prop here to allow react to uniquely identify each
+            // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+            // Star v1.0 url - https://png.pngtree.com/png-vector/20220926/ourmid/pngtree-shiny-gold-star-clipart-illustration-design-png-image_6216956.png
+            rows.push(<Star url="https://clipart.info/images/ccovers/1559839448blue-star-png-3.png" width="20" height="20" />);
+        }
+        return <div>{rows}</div>;
+    }
     return (
         <div>
             {props.reviews.map(item => {
@@ -58,7 +58,10 @@ function FeedbackTable(props) {
                             {item.reviewImages && item.reviewImages.length > 0 ? (
                                 item.reviewImages.map((image, index) => (
                                     <div key={image.id}>
-                                        <img src={image.imagePath} alt={image.id} />
+                                        {/* <img src={image.imagePath} alt={image.id} /> */}
+                                        <React.Suspense fallback={<Loading width="60px" height="60px" />}>
+                                            <SuspenseImage src={image.imagePath} alt={image.id} />
+                                        </React.Suspense>
                                     </div>
                                 ))
                             ) : (

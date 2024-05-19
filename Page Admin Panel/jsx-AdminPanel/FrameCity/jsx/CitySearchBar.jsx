@@ -16,7 +16,7 @@ function CitySearchBar(props) {
 		}
 		else 
 		{
-			context.GetByCompositeSearch(SettlementNameInput,CountryNameInput);
+			context.GetByCompositeSearch(SettlementNameInput.length > 0 ? SettlementNameInput: null,CountryNameInput.length > 0 ? CountryNameInput:null);
 		}
 	};
 

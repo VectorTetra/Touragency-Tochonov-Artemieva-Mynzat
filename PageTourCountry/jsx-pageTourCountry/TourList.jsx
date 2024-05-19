@@ -11,66 +11,6 @@ function TourList(props) {
     const [dtoSearchFormStars, setDtoSearchFormStars] = React.useState([]);
     const [dtoSearchFormHotelServices, setDtoSearchFormHotelServices] = React.useState([]);
     const [dtoSearchFormTransportTypeId, setDtoSearchFormTransportTypeId] = React.useState(0);
-    const GetSessionVars = async () => {
-        try {
-            const response = await $.ajax({
-                url: 'https://26.162.95.213:7099/api/SessionTourList', // Замініть на ваш URL API
-                method: 'GET',
-                contentType: "application/json",
-                data: { SearchParameter: 'GetAll' },
-                statusCode: {
-                    200: function (data) {
-                        setDtoCountryName(data.countryName);
-                        setDtoContinentName(data.continentName);
-                        setDtoTransportTypeId(data.transportTypeId);
-                    },
-                    204: function () {
-                        setDtoCountryName(null);
-                        setDtoContinentName(null);
-                        setDtoTransportTypeId(null);
-                    }
-                },
-                error: function (error) {
-                    console.error('Помилка при отриманні даних', error);
-                    alert(error.responseText);
-                }
-            });
-            console.log("PrepareToEdit success data: ", response);
-
-        } catch (error) {
-            console.error('Помилка при отриманні даних', error);
-            alert(error.responseText);
-        }
-    };
-    const DeleteSessionVars = async () => {
-        try {
-            const response = await $.ajax({
-                url: 'https://26.162.95.213:7099/api/SessionTourList', // Замініть на ваш URL API
-                method: 'DELETE',
-                statusCode: {
-                    200: function (data) {
-                        setDtoCountryName(null);
-                        setDtoContinentName(null);
-                        setDtoTransportTypeId(null);
-                    },
-                    204: function () {
-                        setDtoCountryName(null);
-                        setDtoContinentName(null);
-                        setDtoTransportTypeId(null);
-                    }
-                },
-                error: function (error) {
-                    console.error('Помилка при отриманні даних', error);
-                    alert(error.responseText);
-                }
-            });
-            console.log("PrepareToEdit success data: ", response);
-
-        } catch (error) {
-            console.error('Помилка при отриманні даних', error);
-            alert(error.responseText);
-        }
-    };
     const GetToursByCompositeSearch = async (countryId,continentId,transportTypeId,arrivalDate,departureDate,stars,hotelServices) => {
         try {
             const response = await $.ajax({
@@ -191,14 +131,12 @@ function TourList(props) {
             setDtoSearchFormDepartureDate: setDtoSearchFormDepartureDate,
             setDtoSearchFormStars: setDtoSearchFormStars,
             setDtoSearchFormHotelServices: setDtoSearchFormHotelServices,
-            setDtoSearchFormTransportTypeId: setDtoSearchFormTransportTypeId,
-            GetSessionVars: GetSessionVars,
-            DeleteSessionVars: DeleteSessionVars
+            setDtoSearchFormTransportTypeId: setDtoSearchFormTransportTypeId
         }
     );
 
     React.useEffect(() => {
-        GetSessionVars();
+        //GetSessionVars();
         if(dtoCountryName === null && dtoContinentName === null && dtoTransportTypeId === null){
             Get11LastActiveTours();
         }
@@ -231,9 +169,7 @@ function TourList(props) {
                 setDtoSearchFormDepartureDate: setDtoSearchFormDepartureDate,
                 setDtoSearchFormStars: setDtoSearchFormStars,
                 setDtoSearchFormHotelServices: setDtoSearchFormHotelServices,
-                setDtoSearchFormTransportTypeId: setDtoSearchFormTransportTypeId,
-                GetSessionVars: GetSessionVars,
-                DeleteSessionVars: DeleteSessionVars
+                setDtoSearchFormTransportTypeId: setDtoSearchFormTransportTypeId
             }}>
                 <MainPageSearch SearchBarData={SearchBarData} />
                 <div style={{paddingLeft:"25vh", paddingRight:"25vh", marginBottom:"20px"}}>

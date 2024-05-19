@@ -11,7 +11,10 @@ function NewsItem(props) {
                 <span class="news-publication-time" style={{ color: "gray" }}><time>{new Date(props.item.publishDateTime).toLocaleDateString('uk-UA')}</time></span>
             </div>
             <div class="news-block">
-                <img style={{ maxHeight: "300px" }} src={props.item.photoUrl ? props.item.photoUrl : ""} alt={new Date(props.item.publishDateTime).toLocaleDateString('uk-UA')} class="publication-img" />
+                {/* <img style={{ maxHeight: "300px" }} src={props.item.photoUrl ? props.item.photoUrl : ""} alt={new Date(props.item.publishDateTime).toLocaleDateString('uk-UA')} class="publication-img" /> */}
+                <React.Suspense fallback={<Loading width="60px" height="60px" />}>
+                    <SuspenseImage style={{ maxHeight: "300px" }} src={props.item.photoUrl ? props.item.photoUrl : ""} alt={new Date(props.item.publishDateTime).toLocaleDateString('uk-UA')} class="publication-img" />
+                </React.Suspense>
                 <div>
                     {props.item.text.split('\n').map((paragraph, index) => (
                         <p style={{ textAlign: "left", margin: "0", paddingRight: "10px" }} key={index}>{paragraph}<br></br></p>

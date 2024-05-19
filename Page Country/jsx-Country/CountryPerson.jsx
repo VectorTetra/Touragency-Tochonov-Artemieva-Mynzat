@@ -10,7 +10,10 @@ function CountryPerson(props) {
                 <div className="picture">
                     {props.data.photoUrl.map((image) => (
                         <div key={image.index}>
-                            <img className="boxphotoimg"  src={image.url} alt={image.alt} />
+                            <React.Suspense fallback={<Loading width="60px" height="60px" />}>
+                                <SuspenseImage className="boxphotoimg" src={image.url} alt={image.alt}/>
+                            </React.Suspense>
+                            {/* <img className="boxphotoimg" src={image.url} alt={image.alt} /> */}
                         </div>
                     ))}
                 </div>

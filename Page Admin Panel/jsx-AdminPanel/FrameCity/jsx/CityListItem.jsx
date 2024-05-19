@@ -41,7 +41,10 @@ function CityListItem(props) {
 	return (
 		<div className="cityListItem">
 			<div className="cityListItemStatContainer">
-				<img className="countryListItemFlagImg" src={props.city.countryFlagUrl} alt={props.city.countryName} />
+				{/* <img className="countryListItemFlagImg" src={props.city.countryFlagUrl} alt={props.city.countryName} /> */}
+				<React.Suspense fallback={<Loading width="40px" height="40px" />}>
+					<SuspenseImage className="countryListItemFlagImg" src={props.city.countryFlagUrl} alt={props.city.countryName} />
+				</React.Suspense>
 				<div className="cityListItemStringStatContainer">
 					<div className="cityListItemNameDiv">Країна: {props.city.countryName}</div>
 					<div className="cityListItemNameDiv">Місто: {props.city.name}</div>

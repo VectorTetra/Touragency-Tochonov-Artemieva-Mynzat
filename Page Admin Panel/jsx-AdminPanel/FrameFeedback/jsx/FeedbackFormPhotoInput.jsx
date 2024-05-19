@@ -32,7 +32,7 @@ function FeedbackFormPhotoInput(props) {
 	React.useEffect(() => {
 		console.log("ReviewImageIdsLength", ReviewImageIdsLength);
 	}, [ReviewImageIdsLength]);
-	
+
 	const handleFileChange = (event) => {
 		const files = event.target.files;
 		const urls = [];
@@ -105,8 +105,10 @@ function FeedbackFormPhotoInput(props) {
 			<div className="feedbackframe-image-container">
 				{FeedbackImageFiles.map((url, index) => (
 					<div key={index} className="image-container-item">
-						<img src={url} alt={`Зображення ${index + 1}`} className="image" />
-
+						{/* <img src={url} alt={`Зображення ${index + 1}`} className="image" /> */}
+						<React.Suspense fallback={<Loading width="40px" height="40px" />}>
+							<SuspenseImage className="image" src={url} alt={`Зображення ${index + 1}`} />
+						</React.Suspense>
 					</div>
 				))}
 			</div>

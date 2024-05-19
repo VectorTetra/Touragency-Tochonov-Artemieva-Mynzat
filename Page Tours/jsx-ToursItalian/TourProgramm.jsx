@@ -16,7 +16,10 @@ function TourProgramm(props) {
                         <div className="picture">
                             {event.pictures.map((picture, pictureIndex) => (
                                 <div key={pictureIndex}>
-                                    <img src={picture.src} alt={picture.alt} />
+                                    {/* <img src={picture.src} alt={picture.alt} /> */}
+                                    <React.Suspense fallback={<Loading width="60px" height="60px" />}>
+                                        <SuspenseImage src={picture.src} alt={picture.alt} />
+                                    </React.Suspense>
                                 </div>
                             ))}
                         </div>

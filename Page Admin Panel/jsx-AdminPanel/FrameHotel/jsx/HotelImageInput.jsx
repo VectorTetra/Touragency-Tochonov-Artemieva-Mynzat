@@ -71,7 +71,10 @@ function HotelImageInput(props) {
 				<div style={{ marginTop: '20px' }}>
 					{hotelImageFile.map((url, index) => (
 						<div key={index} className="image-container" style={{ justifyContent:"center" }}>
-							<img src={url} alt={`Зображення ${index + 1}`} className="image" style={{ height: "auto", width: "25vw", minWidth: "25vw", objectFit: "cover" }} />
+							{/* <img src={url} alt={`Зображення ${index + 1}`} className="image" style={{ height: "auto", width: "25vw", minWidth: "25vw", objectFit: "cover" }} /> */}
+							<React.Suspense fallback={<Loading width="60px" height="60px"/>}>
+                                <SuspenseImage src={url} alt={`Зображення ${index + 1}`} className="image" style={{ height: "auto", width: "25vw", minWidth: "25vw", objectFit: "cover" }} />
+                            </React.Suspense>
 							<button onClick={() => handleRemoveImage(index)} className="delete-button" style={{position:"static"}}>
 								<span style={{ fontSize: "10vh", fontWeight: "bolder", position: "relative", left: "3vh", top: "-4vh" }}>×</span>
 							</button>

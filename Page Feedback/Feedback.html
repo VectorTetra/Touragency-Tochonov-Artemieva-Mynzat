@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="../MainPage/css/MainPageHeader-styles.css" type="text/css">
 	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
 	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/Loading-styles.css" type="text/css">
 	<link rel="stylesheet" href="./css/Feedback.css">
 	<!-- <link rel="stylesheet" href="./css/Photo-style.css">
     <link rel="stylesheet" href="./css/Price-style.css"> -->
@@ -71,10 +72,13 @@
 
 
 	<!-- ============================================================================================ -->
-	<!-- =========================== Інші спільні компоненти =========================== -->
-
+<!-- ================================= Спільні компоненти ================================ -->
 	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
 	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+	<!-- 0. Компонент, img з лінивим завантаженням -->
+	<script type="text/babel" src="../SharedItems/jsx/SuspenseImage.jsx"></script>
+	<!-- 0. Компонент, індикатор завантаження -->
+	<script type="text/babel" src="../SharedItems/jsx/Loading.jsx"></script>
 
 	<!-- ============================================================================================ -->
 	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
@@ -116,7 +120,7 @@
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-							<FeedbackAll feedbacks={feedbacks} urlParamNameCountry={nameCountry}/>
+							<FeedbackAll feedbacks={feedbacks} urlParamNameCountry={nameCountry} />
 							<BackToTopButton />
 						</div>
 					</React.StrictMode>

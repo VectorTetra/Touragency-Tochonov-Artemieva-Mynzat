@@ -13,20 +13,20 @@ function FeedbackListItem(props) {
 		context.setDtoReviewImages(props.item.reviewImageUrls);
 		context.setDtoReviewImageIds(props.item.reviewImageIds);
 	}
-	const drawStars = (starsQuantity) =>{
+	const drawStars = (starsQuantity) => {
 
 		const rows = [];
 		for (let i = 0; i < starsQuantity; i++) {
 			// note: we are adding a key prop here to allow react to uniquely identify each
 			// element in this array. see: https://reactjs.org/docs/lists-and-keys.html
 			// Star v1.0 url - https://png.pngtree.com/png-vector/20220926/ourmid/pngtree-shiny-gold-star-clipart-illustration-design-png-image_6216956.png
-			rows.push(<Star url="https://clipart.info/images/ccovers/1559839448blue-star-png-3.png" width="20" height="20"/>);
+			rows.push(<Star url="https://clipart.info/images/ccovers/1559839448blue-star-png-3.png" width="20" height="20" />);
 		}
 		return <div>{rows}</div>;
 	}
 	const DeleteReview = async (e) => {
 		e.preventDefault();
-		console.log('DeleteReview props',props);
+		console.log('DeleteReview props', props);
 		if (!confirm('Ви впевнені, що хочете видалити цей відгук?')) return;
 		await $.ajax({
 			url: 'https://26.162.95.213:7099/api/ReviewImage/DeleteReviewImage/' + props.item.id, // Замініть на ваш URL API
@@ -80,7 +80,11 @@ function FeedbackListItem(props) {
 				{props.item.reviewImages && props.item.reviewImages.length > 0 ? (
 					props.item.reviewImages.map((image, index) => (
 						<div key={image.id}>
-							<img src={image.imagePath} alt={image.id} />
+							{/* <img src={image.imagePath} alt={image.id} /> */}
+							<React.Suspense fallback={<Loading width="40px" height="40px"/>}>
+								<SuspenseImage src={image.imagePath} alt={image.id} />
+							</React.Suspense>
+
 						</div>
 					))
 				) : (

@@ -14,7 +14,7 @@ function NewsPhotoInput(props) {
 	};
 	React.useEffect(() => {
 		setNewsPhoto(context.dtoImage);
-	},[context.dtoImage]);
+	}, [context.dtoImage]);
 
 	const handleInputChange = (event) => {
 		const files = event.target.files;
@@ -51,7 +51,7 @@ function NewsPhotoInput(props) {
 			reader.readAsDataURL(file);
 		}
 		//event.target.value = null;
-		
+
 	}
 
 	return (
@@ -62,9 +62,12 @@ function NewsPhotoInput(props) {
 			<div className="EditFormRow">
 				<div style={{ marginTop: '20px' }}>
 					{newsPhoto.map((url, index) => (
-						<div key={index} className="image-container" style={{ justifyContent:"center" }}>
-							<img src={url} alt={`Зображення ${index + 1}`} className="image" style={{ height: "auto", width: "25vw", minWidth: "25vw", objectFit: "cover" }} />
-							<button onClick={() => handleRemoveImage(index)} className="delete-button" style={{position:"static"}}>
+						<div key={index} className="image-container" style={{ justifyContent: "center" }}>
+							{/* <img src={url} alt={`Зображення ${index + 1}`} className="image" style={{ height: "auto", width: "25vw", minWidth: "25vw", objectFit: "cover" }} /> */}
+							<React.Suspense fallback={<Loading />}>
+								<SuspenseImage src={url} alt={`Зображення ${index + 1}`} className="image" style={{ height: "auto", width: "25vw", minWidth: "25vw", objectFit: "cover" }}  />
+							</React.Suspense>
+							<button onClick={() => handleRemoveImage(index)} className="delete-button" style={{ position: "static" }}>
 								<span style={{ fontSize: "10vh", fontWeight: "bolder", position: "relative", left: "3vh", top: "-4vh" }}>×</span>
 							</button>
 						</div>

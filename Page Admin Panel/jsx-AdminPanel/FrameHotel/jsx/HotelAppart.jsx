@@ -58,7 +58,10 @@ function HotelAppart(props) {
                 {props.hotel.map(hotel => (
                     <div className="blockHotel">
                         <div className="coteinerPhoto">
-                            <img src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
+                            {/* <img src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} /> */}
+                            <React.Suspense fallback={<Loading />}>
+                                <SuspenseImage src={hotel.hotelImages.length > 0 ? hotel.hotelImages[0].imageUrl : ""} alt={hotel.name} />
+                            </React.Suspense>
                             <div style={{ display: "flex", justifyContent: "center", margin: "20px" }}>
                                 <form action="post" className="countryListItemFormButtonBar">
                                     <button className="form-editbutton-small" onClick={prepareToEdit} data-id={hotel.id}></button>

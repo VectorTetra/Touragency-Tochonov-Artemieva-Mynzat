@@ -35,7 +35,10 @@ function NewsListItem(props) {
     return (
         <div className="blockHotel">
             <div className="coteinerPhoto">
-                <img style={{ maxHeight: "300px" }} src={props.newsItem.photoUrl !== null ? props.newsItem.photoUrl : ""} alt={props.newsItem.caption} />
+                {/* <img style={{ maxHeight: "300px" }} src={props.newsItem.photoUrl !== null ? props.newsItem.photoUrl : ""} alt={props.newsItem.caption} /> */}
+                <React.Suspense fallback={<Loading />}>
+                    <SuspenseImage src={props.newsItem.photoUrl !== null ? props.newsItem.photoUrl : ""} alt={props.newsItem.caption} style={{ maxHeight: "300px" }}/>
+                </React.Suspense>
                 <div style={{ display: "flex", justifyContent: "center", margin: "20px" }}>
                     <form action="post" className="countryListItemFormButtonBar">
                         <button onClick={prepareEditForm} className="form-editbutton-small" ></button>

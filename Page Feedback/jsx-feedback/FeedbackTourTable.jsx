@@ -2,7 +2,7 @@ function FeedbackTourTable(props) {
 
     return (
         <div className="tableconteiner">
-            
+
             <table>
                 <thead>
                     <tr>
@@ -16,7 +16,10 @@ function FeedbackTourTable(props) {
                         <tr key={item.title}>
                             <td className="column1">
                                 {item.imgUrl.map((url, idx) => (
-                                    <img key={idx} src={url} />
+                                    // <img key={idx} src={url} />
+                                    <React.Suspense fallback={<Loading width="60px" height="60px" />}>
+                                        <SuspenseImage src={url} alt={idx} />
+                                    </React.Suspense>
                                 ))}
                             </td>
                             <td className="column2">

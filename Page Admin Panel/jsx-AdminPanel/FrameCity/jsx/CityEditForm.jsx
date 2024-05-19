@@ -67,7 +67,6 @@ function CityEditForm(props) {
 					{countries.map((country, index) => {
 						return <option key={country} value={country.id}>
 							<div className="countryListItemStatContainer">
-								<img className="countryListItemFlagImg" src={country.flagUrl} alt={country.name} />
 								<div className="countryListItemNameDiv">{country.name}</div>
 							</div>
 						</option>

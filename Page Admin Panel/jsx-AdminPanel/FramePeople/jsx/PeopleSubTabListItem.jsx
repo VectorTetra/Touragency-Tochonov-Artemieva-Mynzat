@@ -1,4 +1,4 @@
-function PeopleSubTabListItem({person}){
+function PeopleSubTabListItem({ person }) {
 	let context = React.useContext(window.PeopleTabContext);
 	const prepareEditForm = () => {
 		context.setDtoClientId(person.id);
@@ -9,19 +9,20 @@ function PeopleSubTabListItem({person}){
 		context.setDtoClientEmail(person.person.emails[0]);
 		context.setDtoClientPhone(person.person.phones[0]);
 		context.setDtoClientTouristNickname(person.touristNickname);
-		if(person.avatarImagePath !== null && person.avatarImagePath !== undefined && person.avatarImagePath !== '')
-		{
+		if (person.avatarImagePath !== null && person.avatarImagePath !== undefined && person.avatarImagePath !== '') {
 			context.setDtoClientAvatar([person.avatarImagePath]);
 		}
-		else
-		{
+		else {
 			context.setDtoClientAvatar([]);
 		}
 	};
 	return (
 		<div className="peopleSubTabListItem">
 			<div>
-				<img className="countryListItemFlagImg" src={person.avatarImagePath !== null ? person.avatarImagePath : "../images/AdminPanel-Images/people.png"} alt={person.id} />
+				{/* <img className="countryListItemFlagImg" src={person.avatarImagePath !== null ? person.avatarImagePath : "../images/AdminPanel-Images/people.png"} alt={person.id} /> */}
+				<React.Suspense fallback={<Loading />}>
+					<SuspenseImage className="countryListItemFlagImg" src={person.avatarImagePath !== null ? person.avatarImagePath : "../images/AdminPanel-Images/people.png"} alt={person.id} />
+				</React.Suspense>
 			</div>
 			<div className="peopleSubTabListItemStatContainer">
 				<p>Ім'я: {person.person.firstname}</p>
@@ -37,5 +38,5 @@ function PeopleSubTabListItem({person}){
 				{/* <button className="form-clearbutton-small"></button> */}
 			</form>
 		</div>
-	);	
+	);
 }

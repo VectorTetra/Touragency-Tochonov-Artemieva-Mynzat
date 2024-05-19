@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="../MainPage/css/MainPageNavbar-styles.css" type="text/css">
 	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
 	<link rel="stylesheet" href="./css/DocumentList-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/BackToTopButton-styles.css" type="text/css">
+	<link rel="stylesheet" href="../SharedItems/css/Loading-styles.css" type="text/css">
 </head>
 
 <body>
@@ -41,8 +43,8 @@
 	<script type="text/babel" src="../MainPage/jsx-Header/UserGreetings.jsx"></script>
 	<!-- 1. Компонент, кнопка Вийти-->
 	<script type="text/babel" src="../MainPage/jsx-Header/LogoutButton.jsx"></script>
-	
-    <script type="text/babel" src="../MainPage/jsx-Header/GoToAdminPanelButton.jsx"></script>
+
+	<script type="text/babel" src="../MainPage/jsx-Header/GoToAdminPanelButton.jsx"></script>
 	<!-- ============================================================================================ -->
 	<!-- =========================== Навігаційна панель =========================== -->
 
@@ -71,13 +73,16 @@
 	<script type="text/babel" src="./jsx-DocumentList/DocumentListListItemWithSubitems.jsx"></script>
 	<!-- 1. Компонент, блок для відображення параграфу з текстом у статті -->
 	<script type="text/babel" src="./jsx-DocumentList/DocumentListParagraph.jsx"></script>
-	
+
 
 	<!-- ============================================================================================ -->
-	<!-- =========================== Інші спільні компоненти =========================== -->
-
+	<!-- ================================= Спільні компоненти ================================ -->
 	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
 	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
+	<!-- 0. Компонент, img з лінивим завантаженням -->
+	<script type="text/babel" src="../SharedItems/jsx/SuspenseImage.jsx"></script>
+	<!-- 0. Компонент, індикатор завантаження -->
+	<script type="text/babel" src="../SharedItems/jsx/Loading.jsx"></script>
 
 	<!-- ============================================================================================ -->
 	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
@@ -116,7 +121,7 @@
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-							<DocumentList articleItems={DocumentListData}/>
+							<DocumentList articleItems={DocumentListData} />
 							<BackToTopButton />
 						</div>
 					</React.StrictMode>
