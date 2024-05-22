@@ -15,9 +15,6 @@ function TourListItem({ tour }) {
         context.setDtoDuration(tour.duration);
         context.setDtoCountryIds(tour.countryIds);
         context.setDtoId(tour.id);
-        context.setDtoSettlementIds(tour.settlementIds);
-        context.setDtoHotelIds(tour.hotelIds);
-        context.setDtoCountries(tour.countries);
         context.setDtoSettlements(tour.settlements);
         context.setDtoHotels(tour.hotels);
         context.setDtoTourName(tour.name);
@@ -26,8 +23,13 @@ function TourListItem({ tour }) {
         context.setDtoNightRidesCount(tour.nightRidesCount);
         context.setDtoTourIds(tour.tourIds);
         context.setTransportTypeIds(tour.transportTypeIds);
+        // context.setDtoSettlementIds(tour.settlementIds);
+        // context.setDtoHotelIds(tour.hotelIds);
+        // context.setDtoCountries(tour.countries);
         context.setDtoPageStructureUrl(tour.pageJSONStructureUrl);
-    
+        context.setDtoSettlementIds(tour.settlementIds);
+        context.setDtoHotelIds(tour.hotelIds);
+        context.setDtoCountries(tour.countries);
         fetch(tour.pageJSONStructureUrl)
             .then(response => {
                 if (!response.ok) {

@@ -158,7 +158,7 @@ function TourNameEditForm() {
                 selectedCountriesIds.push(Number(selCountries.options[i].value));
             }
         }
-       
+        console.log("1. selectedCountriesIds: ", selectedCountriesIds )
         let selSettlements = document.getElementById('selectedSettlementsSelect');
         let selectedSettlementsIds = [];
         if(selCountries.options.length === 0){
@@ -169,7 +169,7 @@ function TourNameEditForm() {
                 selectedSettlementsIds.push(Number(selSettlements.options[i].value));
             }
         }
-    
+        console.log("1. selectedSettlementsIds: ", selectedSettlementsIds )
         let selHotels = document.getElementById('selectedHotelsSelect');
         let selectedHotelsIds = [];
         if(selCountries.options.length === 0){
@@ -180,7 +180,7 @@ function TourNameEditForm() {
                 selectedHotelsIds.push(Number(selHotels.options[i].value));
             }
         }
-        
+        console.log("1. selectedHotelsIds: ", selectedHotelsIds )
 
         let clearCollection = [];
         for(let item of pageStructureItems){
@@ -273,6 +273,42 @@ function TourNameEditForm() {
     
         // 2 Етап - збереження масиву з об'єктами конструктора як рядка і відправка на сервер
         // з поверненням з веб апі шляху до файлу конструктора
+        /////////////////////////////////////////////////////////////////////////////////////
+        let returnedJsonFilePath = context.DtoPageStructureUrl;
+        let JsonConstructorItemsString = JSON.stringify(JsonConstructorItems);
+        console.log("JsonConstructorItemsString", JsonConstructorItemsString);
+        let formData = new FormData();
+        formData.append('JsonConstructorItems', JsonConstructorItemsString);
+    
+        if (context.DtoId === 0) {
+            try {
+                returnedJsonFilePath = await $.ajax({
+                    url: 'https://26.162.95.213:7100/api/TourName/PostJsonConstructorFile', // Замініть на ваш URL API
+                    method: 'POST',
+                    contentType: false, // Указывает тип содержимого, которое будет передано на сервер.
+                    processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
+                    data: formData
+                });
+            } catch (error) {
+                console.error('Помилка при отриманні даних', error);
+                alert(error.responseText);
+            }
+        } else {
+            formData.append('oldConstructorFilePath', context.DtoPageStructureUrl);
+            try {
+                returnedJsonFilePath = await $.ajax({
+                    url: 'https://26.162.95.213:7100/api/TourName/PutJsonConstructorFile', // Замініть на ваш URL API
+                    method: 'PUT',
+                    contentType: false, // Указывает тип содержимого, которое будет передано на сервер.
+                    processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
+                    data: formData
+                });
+            } catch (error) {
+                console.error('Помилка при отриманні даних', error);
+                alert(error.responseText);
+            }
+        }
+         // 3 Етап - збереження основних даних туру
         let DTO = JSON.stringify({
             Id: context.DtoId,
             Name: DtoTourName,
@@ -316,43 +352,9 @@ function TourNameEditForm() {
                 alert(error.responseText);
             }
         }
-        /////////////////////////////////////////////////////////////////////////////////////
-        let returnedJsonFilePath = context.DtoPageStructureUrl;
-        let JsonConstructorItemsString = JSON.stringify(JsonConstructorItems);
-        console.log("JsonConstructorItemsString", JsonConstructorItemsString);
-        let formData = new FormData();
-        formData.append('JsonConstructorItems', JsonConstructorItemsString);
+        
     
-        if (context.DtoId === 0) {
-            try {
-                returnedJsonFilePath = await $.ajax({
-                    url: 'https://26.162.95.213:7100/api/TourName/PostJsonConstructorFile', // Замініть на ваш URL API
-                    method: 'POST',
-                    contentType: false, // Указывает тип содержимого, которое будет передано на сервер.
-                    processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
-                    data: formData
-                });
-            } catch (error) {
-                console.error('Помилка при отриманні даних', error);
-                alert(error.responseText);
-            }
-        } else {
-            formData.append('oldConstructorFilePath', context.DtoPageStructureUrl);
-            try {
-                returnedJsonFilePath = await $.ajax({
-                    url: 'https://26.162.95.213:7100/api/TourName/PutJsonConstructorFile', // Замініть на ваш URL API
-                    method: 'PUT',
-                    contentType: false, // Указывает тип содержимого, которое будет передано на сервер.
-                    processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
-                    data: formData
-                });
-            } catch (error) {
-                console.error('Помилка при отриманні даних', error);
-                alert(error.responseText);
-            }
-        }
-    
-        // 3 Етап - збереження основних даних туру
+       
         handleReset(e);
         context.GetLast200TourNames();
     }

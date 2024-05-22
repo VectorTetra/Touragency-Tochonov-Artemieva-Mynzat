@@ -14,7 +14,16 @@ function MainPageContentBlock(props) {
 				},
 				statusCode: {
 					200: function (data) {
-						const last11Tours = data.slice(-11); // Отримуємо останні 10 елементів
+						// Сортуємо об'єкти за arrivalDate
+						data.sort((a, b) => new Date(a.arrivalDate) -  new Date(b.arrivalDate) );
+						
+						// Видаляємо дублікати за tourNameId
+						const uniqueTours = data.filter((tour, index, self) => 
+							index === self.findIndex(t => t.tourNameId === tour.tourNameId)
+						);
+	
+						// Отримуємо останні 11 елементів
+						const last11Tours = uniqueTours.slice(-11); 
 						setTours(last11Tours);
 					},
 					204: function () {

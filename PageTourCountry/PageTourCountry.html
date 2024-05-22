@@ -21,7 +21,7 @@
 
 <body>
 
-	<div id="app"></div>
+
 	<!-- ============================================================================================ -->
 	<!-- =================================== Хедер головної сторінки ================================ -->
 
@@ -99,7 +99,7 @@
 
 	<script type="text/babel" src="../PageTourCountry/jsx-pageTourCountry/TourList.jsx"></script>
 
-	
+
 	<!-- ================== =============== ОСНОВНИЙ СКРИПТ РЕНДЕРУ ========== ====================== -->
 
 	<script type="text/babel">
@@ -154,12 +154,14 @@
 
 				root.render(
 					<React.StrictMode>
-						<TourList countryName={countryName} continentName={continentName} transportTypeId={transportTypeId}/>
+						<TourList countryName={countryName} continentName={continentName} transportTypeId={transportTypeId} />
 					</React.StrictMode>
 				);
 			}
 		)
 	</script>
+
+	<div id="app"></div>
 </body>
 
 </html>

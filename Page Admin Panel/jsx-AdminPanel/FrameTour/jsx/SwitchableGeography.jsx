@@ -2,15 +2,15 @@ function SwitchableGeography(props) {
     //console.log("SwitchableList props: ", props);
     const context = React.useContext(window.FrameTourContext);
     const [AvailableCountries, setAvailableCountries] = React.useState(props.availableCountries);
-    const [WishListCountries, setWishListCountries] = React.useState(context.DtoCountries);
+    const [WishListCountries, setWishListCountries] = React.useState([]);
     const [selectedAvailableCountry, setSelectedAvailableCountry] = React.useState(null);
     const [selectedWishListCountry, setSelectedWishListCountry] = React.useState(null);
     const [AvailableSettlements, setAvailableSettlements] = React.useState([]);
-    const [WishListSettlements, setWishListSettlements] = React.useState(context.DtoSettlements);
+    const [WishListSettlements, setWishListSettlements] = React.useState([]);
     const [selectedAvailableSettlement, setSelectedAvailableSettlement] = React.useState(null);
     const [selectedWishListSettlement, setSelectedWishListSettlement] = React.useState(null);
     const [AvailableHotels, setAvailableHotels] = React.useState([]);
-    const [WishListHotels, setWishListHotels] = React.useState(context.DtoHotels);
+    const [WishListHotels, setWishListHotels] = React.useState([]);
     const [selectedAvailableHotel, setSelectedAvailableHotel] = React.useState(null);
     const [selectedWishListHotel, setSelectedWishListHotel] = React.useState(null);
 
@@ -112,39 +112,46 @@ function SwitchableGeography(props) {
             setSelectedWishListHotel(null);
         }
     };
-    const sortAvailableSettlements = () => {
-        let results = AvailableSettlements;
-        results.sort((a, b) => {
-            const countryComparison = a.countryName.localeCompare(b.countryName);
-            if (countryComparison === 0) {
-                return a.name.localeCompare(b.name);
-            }
-            return countryComparison;
-        });
-        setAvailableSettlements(results);
-    };
-    // React.useEffect(() => {
-    //     setWishListCountries(context.DtoCountries);
-    //     console.log(context.DtoCountries);
-    // },[context.DtoCountries]);
-
-    // React.useEffect(() => {
-    //     setWishListSettlements(context.DtoSettlements);
-    //     console.log(context.DtoSettlements);
-    // },[context.DtoSettlements]);
-
-    // React.useEffect(() => {
-    //     setWishListHotels(context.DtoHotels);
-    //     console.log(context.DtoHotels);
-    // },[context.DtoHotels]);
+   
+    React.useEffect(() => {
+        // setWishListCountries(context.DtoCountries);
+        // setWishListSettlements(context.DtoSettlements);
+        // setWishListHotels(context.DtoHotels);
+        // console.log(context.DtoCountries);
+        if(context.DtoId === 0){
+            setWishListCountries([]);
+            setWishListSettlements([]);
+            setWishListHotels([]);
+        }
+        else{
+            $.ajax({
+                url: 'https://26.162.95.213:7100/api/TourName', // Замініть на ваш URL API
+                method: 'GET',
+                contentType: "application/json",
+                data: { SearchParameter: 'GetById',Id: context.DtoId },
+                statusCode: {
+                    200: function (data) {
+                        setWishListCountries(data[0].countries);
+                        setWishListSettlements(data[0].settlements);
+                        setWishListHotels(data[0].hotels);
+                    },
+                    204: function () {
+                        setWishListCountries([]);
+                        setWishListSettlements([]);
+                        setWishListHotels([]);
+                    }
+                },
+                error: function (error) {
+                    console.error('Помилка при отриманні даних', error);
+                    alert(error.responseText);
+                }
+            });
+        }
+    }, [context.DtoId]);
 
     React.useEffect(() => {
         try {
-            //console.log('SwitchableGeography useEffect 1');
             let idArr = WishListCountries.length > 0 ? WishListCountries.map(a => a.id) : [];
-            //console.log('SwitchableGeography useEffect 2');
-            //console.log('idArr', idArr);
-            //console.log('WishListCountries.length', WishListCountries.length);
 
             if (idArr.length > 0) {
                 // Створіть масив для зберігання результатів всіх запитів
@@ -182,14 +189,10 @@ function SwitchableGeography(props) {
                     const filteredAvailableCountries = WishListCountries.length > 0 ? props.availableCountries.filter(wishListCountry => WishListCountries.every(result => result.id !== wishListCountry.id)) : props.availableCountries;
                     const filteredWishListSettlements = results.length > 0 ? WishListSettlements.filter(wishListSettlement => results.some(result => result.id === wishListSettlement.id)) : [];
                     const filteredAvailableSettlements = results.length > 0 ? results.filter(result => !filteredWishListSettlements.some(hotel => hotel.id === result.id)) : [];
-                    // Після завершення всіх запитів і сортування встановіть значення AvailableSettlements
-                    // console.log('filteredAvailableSettlements', filteredAvailableSettlements);
-                    // console.log('filteredWishListSettlements', filteredWishListSettlements);
-                    //console.log('filteredAvailableCountries', filteredAvailableCountries);
+
                     setAvailableCountries(filteredAvailableCountries);
                     setAvailableSettlements(filteredAvailableSettlements);
                     setWishListSettlements(filteredWishListSettlements);
-                    //console.log('AvailableSettlements', results);
                 });
             } else {
                 setAvailableSettlements([]);
@@ -205,10 +208,6 @@ function SwitchableGeography(props) {
         for (let i = 0; i < selCountries.options.length; i++) {
             values.push(Number(selCountries.options[i].value));
         }
-        //console.log('SwitchableGeography #selectedCountriesSelect values',values);
-
-        //console.log('SwitchableGeography #selectedSettlementsSelect values', document.getElementById('selectedSettlementsSelect').options);
-        //console.log('SwitchableGeography #selectedHotelsSelect values', document.getElementById('selectedHotelsSelect').options);
     }, [WishListCountries]);
 
     React.useEffect(() => {
@@ -250,12 +249,9 @@ function SwitchableGeography(props) {
                     });
                     const filteredWishListHotels = results.length > 0 ? WishListHotels.filter(wishListHotel => results.some(result => result.id === wishListHotel.id)) : [];
                     const filteredAvailableHotels = results.length > 0 ? results.filter(result => !filteredWishListHotels.some(hotel => hotel.id === result.id)) : [];
-                    //console.log('filteredAvailableHotels', filteredAvailableHotels);
-                    //console.log('filteredWishListHotels', filteredWishListHotels);
+
                     setAvailableHotels(filteredAvailableHotels);
                     setWishListHotels(filteredWishListHotels);
-                    //sortAvailableSettlements();
-                    //console.log('setAvailableHotels', results);
                 });
             }
             else {
@@ -272,287 +268,6 @@ function SwitchableGeography(props) {
         const filteredAvailableHotels = AvailableHotels.length > 0 ? AvailableHotels.filter(result => !WishListHotels.some(hotel => hotel.id === result.id)) : [];
         setAvailableHotels(filteredAvailableHotels);
     }, [WishListHotels]);
-
-
-    //     React.useEffect(() => {
-    //         //setWishListHotels(context.DtoHotelIds);
-    //         try {
-    //             if (context.DtoHotelIds.length > 0) {
-    //                 // Створіть масив для зберігання результатів всіх запитів
-    //                 let results = [];
-
-    //                 // Використовуйте Promise.all для одночасного виконання всіх запитів
-    //                 Promise.all(context.DtoHotelIds.map(async (item) => {
-    //                     try {
-    //                         const response = await $.ajax({
-    //                             url: 'https://26.162.95.213:7100/api/Hotel',
-    //                             method: 'GET',
-    //                             contentType: 'application/json',
-    //                             data: { SearchParameter: 'GetById', Id: item },
-    //                             statusCode: {
-    //                                 200: function (data) {
-    //                                     results.push(...data);
-    //                                 },
-    //                                 204: function () {
-    //                                 }
-    //                             }
-    //                         });
-    //                         //results.push(...response);
-    //                     } catch (error) {
-    //                         console.error('Помилка при отриманні даних', error);
-    //                         alert(error.responseText);
-    //                     }
-    //                 })).then(() => {
-    //                     results.sort((a, b) => {
-    //                         const countryComparison = a.countryName.localeCompare(b.countryName);
-    //                         if (countryComparison === 0) {
-    //                             const settlementComparison = a.name.localeCompare(b.settlementName);
-    //                             if (settlementComparison === 0) {
-    //                                 return a.name.localeCompare(b.name);
-    //                             }
-    //                             return settlementComparison;
-    //                         }
-    //                         return countryComparison;
-    //                     });
-    //                     setWishListHotels(results);
-    //                 });
-    //             } else {
-    //                 setWishListHotels([]);  
-    //             }
-    //         } catch (error) {
-    //             alert(error.responseText);
-    //         }
-    //     }, [context.DtoHotelIds]);
-
-    //     React.useEffect(() => {
-    //         //setWishListCountries(context.DtoCountryIds);
-    //         try {
-    //            if (context.DtoSettlementIds.length > 0) {
-    //                // Створіть масив для зберігання результатів всіх запитів
-    //                let results = [];
-
-    //                // Використовуйте Promise.all для одночасного виконання всіх запитів
-    //                Promise.all(context.DtoSettlementIds.map(async (item) => {
-    //                    try {
-    //                        const response = await $.ajax({
-    //                            url: 'https://26.162.95.213:7100/api/Settlement',
-    //                            method: 'GET',
-    //                            contentType: 'application/json',
-    //                            data: { SearchParameter: 'GetById', Id: item },
-    //                            statusCode: {
-    //                                200: function (data) {
-    //                                    results.push(...data);
-    //                                },
-    //                                204: function () {
-    //                                }
-    //                            }
-    //                        });
-    //                        //results.push(...response);
-    //                    } catch (error) {
-    //                        console.error('Помилка при отриманні даних', error);
-    //                        alert(error.responseText);
-    //                    }
-    //                })).then(() => {
-    //                    results.sort((a, b) => {
-    //                        const countryComparison = a.countryName.localeCompare(b.countryName);
-    //                        if (countryComparison === 0) {
-    //                            return a.name.localeCompare(b.name);
-    //                        }
-    //                        return countryComparison;
-    //                    });
-    //                    setWishListSettlements(results);
-    //                });
-    //            } else {
-    //                setWishListSettlements([]);  
-    //            }
-    //        } catch (error) {
-    //            alert(error.responseText);
-    //        }
-    //    }, [context.DtoSettlementIds]);
-
-    //     React.useEffect(() => {
-    //         //setWishListCountries(context.DtoCountryIds);
-    //         try {
-    //             if (context.DtoCountryIds.length > 0) {
-    //                 // Створіть масив для зберігання результатів всіх запитів
-    //                 let results = [];
-
-    //                 // Використовуйте Promise.all для одночасного виконання всіх запитів
-    //                 Promise.all(context.DtoCountryIds.map(async (item) => {
-    //                     try {
-    //                         const response = await $.ajax({
-    //                             url: 'https://26.162.95.213:7100/api/Country',
-    //                             method: 'GET',
-    //                             contentType: 'application/json',
-    //                             data: { SearchParameter: 'GetById', Id: item },
-    //                             statusCode: {
-    //                                 200: function (data) {
-    //                                     results.push(...data);
-    //                                 },
-    //                                 204: function () {
-    //                                 }
-    //                             }
-    //                         });
-    //                         //results.push(...response);
-    //                     } catch (error) {
-    //                         console.error('Помилка при отриманні даних', error);
-    //                         alert(error.responseText);
-    //                     }
-    //                 })).then(() => {
-    //                     results.sort((a, b) => {
-    //                         const countryComparison = a.name.localeCompare(b.name);
-    //                         return countryComparison;
-    //                     });
-    //                     setWishListCountries(results);
-    //                 });
-    //             } else {
-    //                 setWishListCountries([]);  
-    //             }
-    //         } catch (error) {
-    //             alert(error.responseText);
-    //         }
-    //     }, [context.DtoCountryIds]);
-
-    // React.useEffect(() => {
-    //     Promise.all([() => {
-    //         try {
-    //             if (context.DtoCountryIds.length > 0) {
-    //                 // Створіть масив для зберігання результатів всіх запитів
-    //                 let results1 = [];
-
-    //                 // Використовуйте Promise.all для одночасного виконання всіх запитів
-    //                 Promise.all(context.DtoCountryIds.map(async (item) => {
-    //                     try {
-    //                         const response1 = await $.ajax({
-    //                             url: 'https://26.162.95.213:7100/api/Country',
-    //                             method: 'GET',
-    //                             contentType: 'application/json',
-    //                             data: { SearchParameter: 'GetById', Id: item },
-    //                             statusCode: {
-    //                                 200: function (data) {
-    //                                     results1.push(...data);
-    //                                 },
-    //                                 204: function () {
-    //                                 }
-    //                             }
-    //                         });
-    //                         //results1.push(...response);
-    //                     } catch (error) {
-    //                         console.error('Помилка при отриманні даних', error);
-    //                         alert(error.responseText);
-    //                     }
-    //                 })).then(() => {
-    //                     results1.sort((a, b) => {
-    //                         const countryComparison = a.name.localeCompare(b.name);
-    //                         return countryComparison;
-    //                     });
-    //                     setWishListCountries(results1);
-    //                 });
-    //             } else {
-    //                 setWishListCountries([]);
-    //             }
-    //         } catch (error) {
-    //             alert(error.responseText);
-    //         }
-    //     }]).then(() => {
-    //         try {
-    //             if (context.DtoSettlementIds.length > 0) {
-    //                 // Створіть масив для зберігання результатів всіх запитів
-    //                 let results2 = [];
-
-    //                 // Використовуйте Promise.all для одночасного виконання всіх запитів
-    //                 Promise.all(context.DtoSettlementIds.map(async (item) => {
-    //                     try {
-    //                         const response2 = await $.ajax({
-    //                             url: 'https://26.162.95.213:7100/api/Settlement',
-    //                             method: 'GET',
-    //                             contentType: 'application/json',
-    //                             data: { SearchParameter: 'GetById', Id: item },
-    //                             statusCode: {
-    //                                 200: function (data) {
-    //                                     results2.push(...data);
-    //                                 },
-    //                                 204: function () {
-    //                                 }
-    //                             }
-    //                         });
-    //                         //results2.push(...response);
-    //                     } catch (error) {
-    //                         console.error('Помилка при отриманні даних', error);
-    //                         alert(error.responseText);
-    //                     }
-    //                 })).then(() => {
-    //                     results2.sort((a, b) => {
-    //                         const countryComparison = a.countryName.localeCompare(b.countryName);
-    //                         if (countryComparison === 0) {
-    //                             return a.name.localeCompare(b.name);
-    //                         }
-    //                         return countryComparison;
-    //                     });
-    //                     setWishListSettlements(results2);
-    //                 });
-    //             } else {
-    //                 setWishListSettlements([]);
-    //             }
-    //         } catch (error) {
-    //             alert(error.responseText);
-    //         }
-    //     }).then(() => {
-    //         try {
-    //             if (context.DtoHotelIds.length > 0) {
-    //                 // Створіть масив для зберігання результатів всіх запитів
-    //                 let results3 = [];
-
-    //                 // Використовуйте Promise.all для одночасного виконання всіх запитів
-    //                 Promise.all(context.DtoHotelIds.map(async (item) => {
-    //                     try {
-    //                         const response3 = await $.ajax({
-    //                             url: 'https://26.162.95.213:7100/api/Hotel',
-    //                             method: 'GET',
-    //                             contentType: 'application/json',
-    //                             data: { SearchParameter: 'GetById', Id: item },
-    //                             statusCode: {
-    //                                 200: function (data) {
-    //                                     results3.push(...data);
-    //                                 },
-    //                                 204: function () {
-    //                                 }
-    //                             }
-    //                         });
-    //                         //results3.push(...response);
-    //                     } catch (error) {
-    //                         console.error('Помилка при отриманні даних', error);
-    //                         alert(error.responseText);
-    //                     }
-    //                 })).then(() => {
-    //                     results3.sort((a, b) => {
-    //                         const countryComparison = a.countryName.localeCompare(b.countryName);
-    //                         if (countryComparison === 0) {
-    //                             const settlementComparison = a.name.localeCompare(b.settlementName);
-    //                             if (settlementComparison === 0) {
-    //                                 return a.name.localeCompare(b.name);
-    //                             }
-    //                             return settlementComparison;
-    //                         }
-    //                         return countryComparison;
-    //                     });
-    //                     setWishListHotels(results3);
-    //                 });
-    //             } else {
-    //                 setWishListHotels([]);
-    //             }
-    //         } catch (error) {
-    //             alert(error.responseText);
-    //         }
-
-    //     });
-
-
-
-    // }, [context.DtoHotelIds, context.DtoSettlementIds, context.DtoCountryIds]);
-
-
-
 
 
     return (
