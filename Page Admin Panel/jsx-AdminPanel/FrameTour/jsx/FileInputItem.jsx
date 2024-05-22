@@ -1,5 +1,6 @@
 function FileInputItem(props) {
 	const [imageUrls, setImageUrls] = React.useState([]);
+	const [oldImagesUrls, setOldImagesUrls] = React.useState("null");
 	const fileInputRef = React.useRef(null);
 	const handleButtonClick = () => {
 		fileInputRef.current.click();
@@ -8,6 +9,7 @@ function FileInputItem(props) {
 		return '_' + Math.random().toString(36).substr(2, 9);
 	};
 	const handleFileChange = (event) => {
+		setOldImagesUrls("null");
 		const files = event.target.files;
 		if (files.length > 5) {
 			alert("Не можна завантажувати більше 5 файлів одночасно!");
@@ -21,10 +23,10 @@ function FileInputItem(props) {
 		for (let i = 0; i < files.length; i++) {
 			const file = files[i];
 			const reader = new FileReader();
-			console.log(files.length);
+			//console.log(files.length);
 			reader.onload = () => {
 				const dataUrl = reader.result;
-				console.log(files.length);
+				//console.log(files.length);
 				// Проверяем, есть ли данные изображения в массиве urls
 				if (!urls.includes(dataUrl)) {
 					if (urls.length < 5) {
@@ -47,7 +49,12 @@ function FileInputItem(props) {
 		}
 		//event.target.value = null;
 	};
-
+	React.useEffect(() => {
+		if (props.item !== null && props.item !== undefined) {
+			setImageUrls(props.item.value);
+			setOldImagesUrls(JSON.stringify(props.item.value));
+		}
+	}, []);
 	// function deleteItemFromConstructor(e) {
 	//     e.preventDefault();
 	//     const id = e.currentTarget.dataset.id;
@@ -79,21 +86,20 @@ function FileInputItem(props) {
 
 	return (
 		<div id={"constructor" + props.id} data-id={"div" + props.id} style={{ display: "flex", margin: "0 0 10px 0", flexWrap: "wrap", justifyContent: "center" }}>
-			<input type="file" id={"file"+props.id} name={"gallery" + props.id} className="constructorInput" accept="image/*" multiple style={{ display: 'none' }} ref={fileInputRef} onChange={handleFileChange} />
+			<input type="file" data-oldImages={oldImagesUrls} id={"file"+props.id} name={"gallery" + props.id} className="constructorInput" accept="image/*" multiple style={{ display: 'none' }} ref={fileInputRef} onChange={handleFileChange} />
 			<button className="buttonFeedback" type="button" onClick={handleButtonClick} style={{ width: "80vw" }}>Завантажити фото (не більше 5)</button>
 			<button data-id={props.id} onClick={props.deleteItem} className="delete-button" style={{ position: "relative", top: "0px", right: "0px" }}>
 				<span style={{ fontSize: "10vh", fontWeight: "bolder", position: "relative" }}>×</span>
 			</button>
 			<div style={{ marginTop: '20px' }} className="feedbackframe-image-container">
 				{imageUrls.map((url, index) => {
-					//const id = generateID();
 					return (
 						
 						<div id={"imageContainer" + url.id} key={url.id}  data-id={url.id} className="image-container-item">
-							{/* <img src={url.dataUrl} alt={`Зображення ${props.id + "_" + index}`} style={{ height: "17vh", width: "auto" }} className="image" /> */}
-							<React.Suspense fallback={<Loading />}>
+							<img src={url.dataUrl} alt={`Зображення ${props.id + "_" + index}`} style={{ height: "17vh", width: "auto" }} className="image" />
+							{/* <React.Suspense fallback={<Loading />}>
 								<SuspenseImage src={url.dataUrl} alt={`Зображення ${props.id + "_" + index}`} style={{ height: "17vh", width: "auto" }} className="image" />
-							</React.Suspense>
+							</React.Suspense> */}
 							{/* <button data-id={url.id} onClick={(e) => { e.preventDefault(); handleRemoveImage(e) }} className="delete-button">×</button> */}
 						</div>
 					)

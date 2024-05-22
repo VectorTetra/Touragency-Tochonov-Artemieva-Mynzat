@@ -65,7 +65,7 @@ function PeopleSubTabEditForm(props) {
 			formData.append('clientId', clientId);
 			formData.append('FormFile', files[0]);
 			await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Client/UploadAvatarImage', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Client/UploadAvatarImage', // Замініть на ваш URL API
 				method: 'PUT',
 				contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
 				processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -73,7 +73,7 @@ function PeopleSubTabEditForm(props) {
 				statusCode: {
 					200: function (data) {
 						avatarUrl = data;
-						avatarUrl = "https://26.162.95.213:7099" + avatarUrl;
+						avatarUrl = "https://26.162.95.213:7100" + avatarUrl;
 					}
 				},
 				error: function (error) {
@@ -84,7 +84,7 @@ function PeopleSubTabEditForm(props) {
 		}
 		let requestArray = null;
 		await $.ajax({
-			url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: clientId },
@@ -109,7 +109,7 @@ function PeopleSubTabEditForm(props) {
 		request.TouristNickname = touristNickname;
 		request.AvatarImagePath = avatarUrl;
 		await $.ajax({
-			url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 			method: 'PUT',
 			contentType: "application/json",
 			data: JSON.stringify(request),

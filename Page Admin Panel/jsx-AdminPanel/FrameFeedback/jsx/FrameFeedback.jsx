@@ -16,7 +16,7 @@ function FrameFeedback(props) {
 	const Get200Last = () => {
 		if (jsonUserData.isClient === false) {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'Get200Last' },
@@ -37,7 +37,7 @@ function FrameFeedback(props) {
 		}
 		else {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'GetByCompositeSearch', ClientId: jsonUserData.clientId },
@@ -59,7 +59,7 @@ function FrameFeedback(props) {
 	}
 	const GetById = async (ReviewId) => {
 		// await $.ajax({
-		// 	url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+		// 	url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
 		// 	method: 'GET',
 		// 	contentType: "application/json",
 		// 	data: { SearchParameter: 'GetById', Id: ReviewId },
@@ -101,7 +101,7 @@ function FrameFeedback(props) {
 		});
 		let responsedId = null;
 		await $.ajax({
-			url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
 			method: 'POST',
 			contentType: "application/json",
 			data: request1,
@@ -123,7 +123,7 @@ function FrameFeedback(props) {
 				formData.append('FormFiles', files[i]);
 			}
 			await $.ajax({
-				url: 'https://26.162.95.213:7099/api/ReviewImage/UploadReviewImage', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/ReviewImage/UploadReviewImage', // Замініть на ваш URL API
 				method: 'POST',
 				contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
 				processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -164,7 +164,7 @@ function FrameFeedback(props) {
 		});
 		let responsedId = null;
 		await $.ajax({
-			url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
 			method: 'PUT',
 			contentType: "application/json",
 			data: request1,
@@ -186,7 +186,7 @@ function FrameFeedback(props) {
 				formData.append('FormFiles', files[i]);
 			}
 			await $.ajax({
-				url: 'https://26.162.95.213:7099/api/ReviewImage/UploadReviewImage', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/ReviewImage/UploadReviewImage', // Замініть на ваш URL API
 				method: 'PUT',
 				contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
 				processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -205,7 +205,7 @@ function FrameFeedback(props) {
 			//document.getElementById('ReviewImageIdsLengthLocal').value === "0"
 			if ($("#ReviewImageIdsLengthLocal").val() === "0") {
 				await $.ajax({
-					url: 'https://26.162.95.213:7099/api/ReviewImage/DeleteReviewImage/' + responsedId, // Замініть на ваш URL API
+					url: 'https://26.162.95.213:7100/api/ReviewImage/DeleteReviewImage/' + responsedId, // Замініть на ваш URL API
 					method: 'DELETE',
 					statusCode: {
 						200: function (data1) {
@@ -225,7 +225,7 @@ function FrameFeedback(props) {
 		console.log("Reviews", Reviews);
 		if (jsonUserData.isClient === true) {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Tour', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Tour', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: {

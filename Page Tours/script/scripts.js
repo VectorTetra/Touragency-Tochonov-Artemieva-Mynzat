@@ -39,6 +39,7 @@
 //Скрипты для обработки загрузки цены тура через AJAX
 function loadPage(pageName) {
     var xhttp = new XMLHttpRequest();
+    console.log('External');
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("content").innerHTML = this.responseText;
@@ -67,9 +68,9 @@ function loadPage(pageName) {
     xhttp.send();
 }
 
-document.getElementById("priceButton").addEventListener("click", function () {
-    loadPage("PriceTour");
-});
+// document.getElementById("priceButton").addEventListener("click", function () {
+//     loadPage("PriceTour");
+// });
 
 document.getElementById("photoButton").addEventListener("click", function () {
     loadPage("PhotoItalian");

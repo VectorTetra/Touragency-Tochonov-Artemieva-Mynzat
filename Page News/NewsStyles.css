@@ -46,10 +46,13 @@
 .side-bar {
     position: fixed;
     margin-left: 15px;
-    height: 100vh;
+    /* height: 100vh; */
     left: 77%;
     transition: top 0.3s;
     /* z-index: -1; */
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
 }
 .side-bar:hover {
     /* z-index: 0; */

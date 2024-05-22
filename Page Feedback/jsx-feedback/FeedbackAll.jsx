@@ -3,7 +3,7 @@ function FeedbackAll(props) {
     React.useEffect(() => {
         if(props.urlParamNameCountry === null) {
             $.ajax({
-                url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'Get200Last' },
@@ -24,7 +24,7 @@ function FeedbackAll(props) {
         }
         else {
             $.ajax({
-                url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetByCountryName', CountryName: props.urlParamNameCountry},

@@ -6,7 +6,7 @@ function PeopleSubTabCaption(props) {
 	const Get200LastClients = () => {
 		if (JSON.parse(localStorage.getItem('userData')).isClient === true) {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'GetById', Id: JSON.parse(localStorage.getItem('userData')).clientId },
@@ -29,7 +29,7 @@ function PeopleSubTabCaption(props) {
 		}
 		else {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'Get200Last' },
@@ -52,7 +52,7 @@ function PeopleSubTabCaption(props) {
 	}
 	const GetClientById = (id) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: id },
@@ -72,7 +72,7 @@ function PeopleSubTabCaption(props) {
 	}
 	const GetClientsByCompositeSearch = (Firstname, Lastname, Middlename, TouristNickname, Email, Phone) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByCompositeSearch', Firstname: Firstname, Lastname: Lastname, Middlename: Middlename, TouristNickname: TouristNickname, Email: Email, Phone: Phone },

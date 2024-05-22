@@ -1,10 +1,10 @@
 function TourList(props)
 {
-    const tab = React.useContext(window.TuorTabContext);
+    const context = React.useContext(window.FrameTourContext);
     return(
         <div className="tourList">
             {
-                tab.tour.map(tour=> 
+                context.TourNames.map(tour=> 
                     <TourListItem key={tour.id} tour={tour}></TourListItem>
                 )
             }

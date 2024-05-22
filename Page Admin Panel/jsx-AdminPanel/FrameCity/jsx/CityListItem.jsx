@@ -5,7 +5,7 @@ function CityListItem(props) {
 		e.preventDefault();
 		try {
 			const response = await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'GetById', Id: props.city.id },
@@ -27,7 +27,7 @@ function CityListItem(props) {
 		e.preventDefault();
 		if(!confirm('Ви впевнені, що хочете видалити місто ' + props.city.name + ' ?')) return;
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement/' + props.city.id, // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement/' + props.city.id, // Замініть на ваш URL API
 			method: 'DELETE',
 			success: function(data) {
 				context.Get200Last();

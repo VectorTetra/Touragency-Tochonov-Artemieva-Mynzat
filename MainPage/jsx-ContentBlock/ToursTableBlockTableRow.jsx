@@ -4,7 +4,7 @@ function ToursTableBlockTableRow(props) {
 	// React.useEffect(async () => {
 	// 	try {
 	// 		const response = await $.ajax({
-	// 			url: 'https://26.162.95.213:7099/api/TourName', // Замініть на ваш URL API
+	// 			url: 'https://26.162.95.213:7100/api/TourName', // Замініть на ваш URL API
 	// 			method: 'GET',
 	// 			contentType: "application/json",
 	// 			data: { SearchParameter: 'GetById', Id: props.tourNameId },
@@ -41,7 +41,7 @@ function ToursTableBlockTableRow(props) {
 			</td>
 			<td>
 				<div className="TableRowRouteCell">
-					<a href='../Page Tours/ToursItalian.html' className="TableRowRouteCellAnchor">
+					<a href={'../Page Tours/ToursItalian.html?id=' + props.tourNameId} className="TableRowRouteCellAnchor">
 						{/* {
 							<div>{item}</div>
 						} */}

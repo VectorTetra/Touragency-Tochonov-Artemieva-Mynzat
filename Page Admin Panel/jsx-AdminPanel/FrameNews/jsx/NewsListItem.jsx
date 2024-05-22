@@ -17,7 +17,7 @@ function NewsListItem(props) {
         const id = props.newsItem.id;
         try {
             await $.ajax({
-                url: 'https://26.162.95.213:7099/api/News/' + id, // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/News/' + id, // Замініть на ваш URL API
                 method: 'DELETE',
                 success: function (data) {
                     context.Get200Last();

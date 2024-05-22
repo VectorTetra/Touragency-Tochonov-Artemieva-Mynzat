@@ -13,7 +13,7 @@ function TouragentsSubTabEditForm(props) {
 	const [positions, setPositions] = React.useState([]);
 	React.useEffect(() => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Position', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Position', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
@@ -90,7 +90,7 @@ function TouragentsSubTabEditForm(props) {
 			AccountId: accountId
 		};
 		await $.ajax({
-			url: 'https://26.162.95.213:7099/api/TouragencyEmployee', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/TouragencyEmployee', // Замініть на ваш URL API
 			method: 'PUT',
 			contentType: "application/json",
 			data: JSON.stringify(request),

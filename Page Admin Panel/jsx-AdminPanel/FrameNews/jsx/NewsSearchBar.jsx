@@ -38,7 +38,7 @@ function NewsSearchBar(props) {
 		console.log("NewsIsImportant",NewsIsImportant);
 		if (NewsCaption === "" && NewsText === "" && NewsPublishDateDiapazoneStart === null && NewsPublishDateDiapazoneEnd === null && NewsIsVisible === false && NewsIsImportant === false) {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'Get200Last' },
@@ -58,7 +58,7 @@ function NewsSearchBar(props) {
 		}
 		else {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: {

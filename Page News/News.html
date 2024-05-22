@@ -84,7 +84,7 @@
 		const GetLastActiveToQuantinyPrioritizeIncludeImportant7Items = async () => {
 			try {
 				const response = await $.ajax({
-					url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+					url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
 					method: 'GET',
 					contentType: "application/json",
 					data: {
@@ -139,11 +139,25 @@
 			var headerHeight = document.querySelector('#mainPageHeader').offsetHeight;
 			var navHeight = document.querySelector('nav').offsetHeight;
 			var sidebar = document.querySelector('.side-bar');
+			var footer3 = document.querySelector('#mainPageFooter3');
+			console.log('window.pageYOffset: ', window.pageYOffset);
+			console.log('window.document.documentElement.scrollHeight: ', document.documentElement.scrollHeight);
+			console.log('sidebar.offsetHeight: ', sidebar.offsetHeight);
+			if(document.documentElement.scrollHeight - sidebar.offsetHeight - window.pageYOffset < footer3.offsetHeight + 50){
+				sidebar.style.height= window.outerHeight - footer3.offsetHeight - 100 + 'px';
+				sidebar.style.overflowY = 'hidden';
+				
+			} 
+			else{
+				sidebar.style.height= 'auto';
+				sidebar.style.overflowY = 'hidden';
+			}
 			if (window.pageYOffset > headerHeight + navHeight) {
 				sidebar.style.top = '0';
 			} else {
 				sidebar.style.top = headerHeight + navHeight + 'px'; // or whatever offset you want when the header is visible
 			}
+			
 		};
 
 	</script>

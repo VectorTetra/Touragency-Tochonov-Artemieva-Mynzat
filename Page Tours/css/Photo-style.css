@@ -1,13 +1,11 @@
-/* Position the image container (needed to position the left and right arrows) */
   .containerPhoto {
     position: relative;
+    margin-top: 10px;
   }
   
-  /* Hide the images by default */
   .mySlides {
-    /* display: none; */
     text-align: center;
-    display: flex; /* Используем flexbox для выравнивания по центру */
+    display: flex; 
   }
 
   .mySlides img{
@@ -16,12 +14,10 @@
     margin: auto;
   }
   
-  /* Add a pointer when hovering over the thumbnail images */
   .cursor {
     cursor: pointer;
   }
   
-  /* Next & previous buttons */
   .prev1,
   .next1 {
     cursor: pointer;
@@ -38,7 +34,6 @@
     -webkit-user-select: none;
   }
   
-  /* Position the "next button" to the right */
   .next1 {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -62,39 +57,38 @@
     top: 100;
   }
   
-  /* Container for image text */
   .caption-container {
-    margin-bottom: 5px;
     text-align: center;
     background-color: #3f63d1;
-    padding: 3px;
+    padding: 5px;
     font-size: 20px;
     color: white;
   }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+
+  .caption-container p{
+    padding: 5px;
   }
-  
-  /* Количество фото в строке */
-  .column {
-    float: left;
-    width: calc((100% - (4 * 10px)) / 5); /* Вычисляем ширину с учетом отступов */
-    margin: 0 2px; /* Устанавливаем отступы между элементами */
-    border-radius: 2px;
-    border: solid 2px rgb(167, 129, 30);
-    /* box-sizing: border-box; */ /* Учитываем рамку в расчете ширины */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+    
+  .cursor{
+    display: flex;
+    flex: 0 0 18%;
     opacity: 0.6;
-  }
+    border-radius: 0px;
+    border: solid 3px rgb(167, 129, 30);
+    box-sizing: border-box;
+    /* margin: 0 2px; */
+    margin-top: 10px;
+    object-fit: cover;
+   }
   
   .active,
-  .demo:hover {
+  .cursor:hover {
     opacity: 1;
   }

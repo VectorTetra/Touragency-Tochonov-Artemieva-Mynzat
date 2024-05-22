@@ -6,7 +6,7 @@ function HotelAppart(props) {
         const id = $(e.target).data('id'); // Отримуємо значення data-id
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetById', Id: id },
@@ -36,7 +36,7 @@ function HotelAppart(props) {
         const id = $(e.target).data('id');
         try {
             await $.ajax({
-                url: 'https://26.162.95.213:7099/api/Hotel/' + id, // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/Hotel/' + id, // Замініть на ваш URL API
                 method: 'DELETE',
                 success: function (data) {
                     context.Get200Last();

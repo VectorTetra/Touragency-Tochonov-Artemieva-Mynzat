@@ -35,7 +35,7 @@ function PeopleSubTabSearchBar(props) {
 		event.preventDefault();
 		if(inputFirstnameValue === "" && inputLastnameValue === "" && inputMiddlenameValue === "" && inputTouristNickname === "" && inputClientPhone === "" && inputClientEmail === "") {
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'Get200Last' },
@@ -56,7 +56,7 @@ function PeopleSubTabSearchBar(props) {
 		}
 		else{
 			$.ajax({
-				url: 'https://26.162.95.213:7099/api/Client', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Client', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: { SearchParameter: 'GetByCompositeSearch',

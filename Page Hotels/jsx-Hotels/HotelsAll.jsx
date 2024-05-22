@@ -3,7 +3,7 @@ function HotelsAll(props) {
     const Get10TourNames = async () => {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7099/api/TourName', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/TourName', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetAll' }
@@ -33,7 +33,7 @@ function HotelsAll(props) {
     const GetByTourName = async (tourName) => {
         try {
             const response = await $.ajax({
-                url: 'https://26.162.95.213:7099/api/TourName', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/TourName', // Замініть на ваш URL API
                 method: 'GET',
                 contentType: "application/json",
                 data: { SearchParameter: 'GetByName', Name: tourName },

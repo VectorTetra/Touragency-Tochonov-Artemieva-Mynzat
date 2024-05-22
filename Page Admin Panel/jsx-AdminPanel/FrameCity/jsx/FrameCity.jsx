@@ -8,7 +8,7 @@ function FrameCity(props) {
 	const [dtoTourNameIds, setDtoTourNameIds] = React.useState([]);
 	const GetAll = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
@@ -29,7 +29,7 @@ function FrameCity(props) {
 	}
 	const Get200Last = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'Get200Last' },
@@ -49,7 +49,7 @@ function FrameCity(props) {
 	}
 	const GetById = (id) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: id },
@@ -69,7 +69,7 @@ function FrameCity(props) {
 	}
 	const GetByName = (inputName) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByName', Name: inputName },
@@ -89,7 +89,7 @@ function FrameCity(props) {
 	}
 	const GetByCompositeSearch = (inputName, inputCountryName) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByCompositeSearch', Name: inputName, CountryName: inputCountryName },
@@ -116,7 +116,7 @@ function FrameCity(props) {
 			TourNameIds: []
 		});
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'POST',
 			contentType: "application/json",
 			data: request,
@@ -138,7 +138,7 @@ function FrameCity(props) {
 			TourNameIds: dtoTourNameIds
 		});
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Settlement', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Settlement', // Замініть на ваш URL API
 			method: 'PUT',
 			contentType: "application/json",
 			data: request,

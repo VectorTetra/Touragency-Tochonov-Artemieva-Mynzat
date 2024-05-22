@@ -5,7 +5,7 @@ function MainPageContentBlock(props) {
 	const Get11LastActiveTours = async () => {
 		try {
 			const response = await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Tour', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Tour', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: {
@@ -36,7 +36,7 @@ function MainPageContentBlock(props) {
 	const GetLastActiveToQuantinyPrioritizeIncludeImportant7Items = async () => {
 		try {
 			const response = await $.ajax({
-				url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: {
@@ -66,7 +66,7 @@ function MainPageContentBlock(props) {
 	const GetLast4Reviews = async () => {
 		try {
 			const response = await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Review', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Review', // Замініть на ваш URL API
 				method: 'GET',
 				contentType: "application/json",
 				data: {

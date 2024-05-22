@@ -17,7 +17,7 @@ function TouragentsSubTabListItem({person}){
 		if(!confirm(`Ви впевнені, що хочете видалити цього турагента ${person.lastname} ${person.firstname} ${person.middlename} ?`)) return;
 
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/TouragencyEmployee/' + person.id, // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/TouragencyEmployee/' + person.id, // Замініть на ваш URL API
 			method: 'DELETE',
 			success: function(data) {
 				context.Get200LastTouragents();

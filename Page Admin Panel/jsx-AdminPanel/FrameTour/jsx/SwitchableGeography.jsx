@@ -123,13 +123,28 @@ function SwitchableGeography(props) {
         });
         setAvailableSettlements(results);
     };
+    // React.useEffect(() => {
+    //     setWishListCountries(context.DtoCountries);
+    //     console.log(context.DtoCountries);
+    // },[context.DtoCountries]);
+
+    // React.useEffect(() => {
+    //     setWishListSettlements(context.DtoSettlements);
+    //     console.log(context.DtoSettlements);
+    // },[context.DtoSettlements]);
+
+    // React.useEffect(() => {
+    //     setWishListHotels(context.DtoHotels);
+    //     console.log(context.DtoHotels);
+    // },[context.DtoHotels]);
+
     React.useEffect(() => {
         try {
-            console.log('SwitchableGeography useEffect 1');
+            //console.log('SwitchableGeography useEffect 1');
             let idArr = WishListCountries.length > 0 ? WishListCountries.map(a => a.id) : [];
-            console.log('SwitchableGeography useEffect 2');
-            console.log('idArr', idArr);
-            console.log('WishListCountries.length', WishListCountries.length);
+            //console.log('SwitchableGeography useEffect 2');
+            //console.log('idArr', idArr);
+            //console.log('WishListCountries.length', WishListCountries.length);
 
             if (idArr.length > 0) {
                 // Створіть масив для зберігання результатів всіх запитів
@@ -139,7 +154,7 @@ function SwitchableGeography(props) {
                 Promise.all(idArr.map(async (item) => {
                     try {
                         const response = await $.ajax({
-                            url: 'https://26.162.95.213:7099/api/Settlement',
+                            url: 'https://26.162.95.213:7100/api/Settlement',
                             method: 'GET',
                             contentType: 'application/json',
                             data: { SearchParameter: 'GetByCountryId', CountryId: item },
@@ -170,11 +185,11 @@ function SwitchableGeography(props) {
                     // Після завершення всіх запитів і сортування встановіть значення AvailableSettlements
                     // console.log('filteredAvailableSettlements', filteredAvailableSettlements);
                     // console.log('filteredWishListSettlements', filteredWishListSettlements);
-                    console.log('filteredAvailableCountries', filteredAvailableCountries);
+                    //console.log('filteredAvailableCountries', filteredAvailableCountries);
                     setAvailableCountries(filteredAvailableCountries);
                     setAvailableSettlements(filteredAvailableSettlements);
                     setWishListSettlements(filteredWishListSettlements);
-                    console.log('AvailableSettlements', results);
+                    //console.log('AvailableSettlements', results);
                 });
             } else {
                 setAvailableSettlements([]);
@@ -190,10 +205,10 @@ function SwitchableGeography(props) {
         for (let i = 0; i < selCountries.options.length; i++) {
             values.push(Number(selCountries.options[i].value));
         }
-        console.log('SwitchableGeography #selectedCountriesSelect values',values);
+        //console.log('SwitchableGeography #selectedCountriesSelect values',values);
 
-        console.log('SwitchableGeography #selectedSettlementsSelect values', document.getElementById('selectedSettlementsSelect').options);
-        console.log('SwitchableGeography #selectedHotelsSelect values', document.getElementById('selectedHotelsSelect').options);
+        //console.log('SwitchableGeography #selectedSettlementsSelect values', document.getElementById('selectedSettlementsSelect').options);
+        //console.log('SwitchableGeography #selectedHotelsSelect values', document.getElementById('selectedHotelsSelect').options);
     }, [WishListCountries]);
 
     React.useEffect(() => {
@@ -204,7 +219,7 @@ function SwitchableGeography(props) {
                 Promise.all(idArr.map(async (item) => {
                     try {
                         const response = await $.ajax({
-                            url: 'https://26.162.95.213:7099/api/Hotel',
+                            url: 'https://26.162.95.213:7100/api/Hotel',
                             method: 'GET',
                             contentType: 'application/json',
                             data: { SearchParameter: 'GetByCompositeSearch', SettlementId: item },
@@ -235,12 +250,12 @@ function SwitchableGeography(props) {
                     });
                     const filteredWishListHotels = results.length > 0 ? WishListHotels.filter(wishListHotel => results.some(result => result.id === wishListHotel.id)) : [];
                     const filteredAvailableHotels = results.length > 0 ? results.filter(result => !filteredWishListHotels.some(hotel => hotel.id === result.id)) : [];
-                    console.log('filteredAvailableHotels', filteredAvailableHotels);
-                    console.log('filteredWishListHotels', filteredWishListHotels);
+                    //console.log('filteredAvailableHotels', filteredAvailableHotels);
+                    //console.log('filteredWishListHotels', filteredWishListHotels);
                     setAvailableHotels(filteredAvailableHotels);
                     setWishListHotels(filteredWishListHotels);
                     //sortAvailableSettlements();
-                    console.log('setAvailableHotels', results);
+                    //console.log('setAvailableHotels', results);
                 });
             }
             else {
@@ -258,6 +273,7 @@ function SwitchableGeography(props) {
         setAvailableHotels(filteredAvailableHotels);
     }, [WishListHotels]);
 
+
     //     React.useEffect(() => {
     //         //setWishListHotels(context.DtoHotelIds);
     //         try {
@@ -269,7 +285,7 @@ function SwitchableGeography(props) {
     //                 Promise.all(context.DtoHotelIds.map(async (item) => {
     //                     try {
     //                         const response = await $.ajax({
-    //                             url: 'https://26.162.95.213:7099/api/Hotel',
+    //                             url: 'https://26.162.95.213:7100/api/Hotel',
     //                             method: 'GET',
     //                             contentType: 'application/json',
     //                             data: { SearchParameter: 'GetById', Id: item },
@@ -319,7 +335,7 @@ function SwitchableGeography(props) {
     //                Promise.all(context.DtoSettlementIds.map(async (item) => {
     //                    try {
     //                        const response = await $.ajax({
-    //                            url: 'https://26.162.95.213:7099/api/Settlement',
+    //                            url: 'https://26.162.95.213:7100/api/Settlement',
     //                            method: 'GET',
     //                            contentType: 'application/json',
     //                            data: { SearchParameter: 'GetById', Id: item },
@@ -365,7 +381,7 @@ function SwitchableGeography(props) {
     //                 Promise.all(context.DtoCountryIds.map(async (item) => {
     //                     try {
     //                         const response = await $.ajax({
-    //                             url: 'https://26.162.95.213:7099/api/Country',
+    //                             url: 'https://26.162.95.213:7100/api/Country',
     //                             method: 'GET',
     //                             contentType: 'application/json',
     //                             data: { SearchParameter: 'GetById', Id: item },
@@ -408,7 +424,7 @@ function SwitchableGeography(props) {
     //                 Promise.all(context.DtoCountryIds.map(async (item) => {
     //                     try {
     //                         const response1 = await $.ajax({
-    //                             url: 'https://26.162.95.213:7099/api/Country',
+    //                             url: 'https://26.162.95.213:7100/api/Country',
     //                             method: 'GET',
     //                             contentType: 'application/json',
     //                             data: { SearchParameter: 'GetById', Id: item },
@@ -448,7 +464,7 @@ function SwitchableGeography(props) {
     //                 Promise.all(context.DtoSettlementIds.map(async (item) => {
     //                     try {
     //                         const response2 = await $.ajax({
-    //                             url: 'https://26.162.95.213:7099/api/Settlement',
+    //                             url: 'https://26.162.95.213:7100/api/Settlement',
     //                             method: 'GET',
     //                             contentType: 'application/json',
     //                             data: { SearchParameter: 'GetById', Id: item },
@@ -491,7 +507,7 @@ function SwitchableGeography(props) {
     //                 Promise.all(context.DtoHotelIds.map(async (item) => {
     //                     try {
     //                         const response3 = await $.ajax({
-    //                             url: 'https://26.162.95.213:7099/api/Hotel',
+    //                             url: 'https://26.162.95.213:7100/api/Hotel',
     //                             method: 'GET',
     //                             contentType: 'application/json',
     //                             data: { SearchParameter: 'GetById', Id: item },

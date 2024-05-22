@@ -6,7 +6,7 @@ function CityEditForm(props) {
 
 	React.useEffect(() => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },

@@ -10,7 +10,7 @@ function FrameNews(props) {
 
     const Get200Last = () => {
         $.ajax({
-            url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+            url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
             method: 'GET',
             contentType: "application/json",
             data: { SearchParameter: 'Get200Last' },
@@ -31,7 +31,7 @@ function FrameNews(props) {
     }
     const GetById = (id) => {
         $.ajax({
-            url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+            url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
             method: 'GET',
             contentType: "application/json",
             data: { SearchParameter: 'GetById', Id: id },
@@ -51,7 +51,7 @@ function FrameNews(props) {
     }
     const GetByCompositeSearch = (Caption, Text, DateStart, DateEnd, IsVisible, IsImportant) => {
         $.ajax({
-            url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+            url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
             method: 'GET',
             contentType: "application/json",
             data: {
@@ -84,7 +84,7 @@ function FrameNews(props) {
             const formData = new FormData();
             formData.append('FormFile', files[0]);
             await $.ajax({
-                url: 'https://26.162.95.213:7099/api/News/UploadNewsImage', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/News/UploadNewsImage', // Замініть на ваш URL API
                 method: 'POST',
                 contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
                 processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -92,7 +92,7 @@ function FrameNews(props) {
                 statusCode: {
                     200: function (data) {
                         newsPhotoUrl = data;
-                        newsPhotoUrl = "https://26.162.95.213:7099" + newsPhotoUrl;
+                        newsPhotoUrl = "https://26.162.95.213:7100" + newsPhotoUrl;
                     }
                 },
                 error: function (error) {
@@ -111,7 +111,7 @@ function FrameNews(props) {
             IsImportant: IsImportant
         });
         await $.ajax({
-            url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+            url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
             method: 'POST',
             contentType: "application/json",
             data: request,
@@ -132,7 +132,7 @@ function FrameNews(props) {
             formData.append('newsId', dtoId);
             formData.append('FormFile', files[0]);
             await $.ajax({
-                url: 'https://26.162.95.213:7099/api/News/UploadNewsImage', // Замініть на ваш URL API
+                url: 'https://26.162.95.213:7100/api/News/UploadNewsImage', // Замініть на ваш URL API
                 method: 'PUT',
                 contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
                 processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -140,7 +140,7 @@ function FrameNews(props) {
                 statusCode: {
                     200: function (data) {
                         newsPhotoUrl = data;
-                        newsPhotoUrl = "https://26.162.95.213:7099" + newsPhotoUrl;
+                        newsPhotoUrl = "https://26.162.95.213:7100" + newsPhotoUrl;
                     }
                 },
                 error: function (error) {
@@ -159,7 +159,7 @@ function FrameNews(props) {
             IsImportant: IsImportant
         });
         await $.ajax({
-            url: 'https://26.162.95.213:7099/api/News', // Замініть на ваш URL API
+            url: 'https://26.162.95.213:7100/api/News', // Замініть на ваш URL API
             method: 'PUT',
             contentType: "application/json",
             data: request,

@@ -11,7 +11,7 @@ class ToursTableBlockList extends React.Component{
 					this.props.tourList.map(item=>
 						<ToursTableBlockTableRow departureDate={item.departureDate}
 						arrivalDate={item.arrivalDate}
-						tourName={item.tourName} route={item.route}/>
+						tourName={item.tourName} route={item.route} tourNameId={item.tourNameId}/>
 					)
 				}
 			</table>

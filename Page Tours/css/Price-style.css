@@ -22,7 +22,7 @@ td {
     text-align: center;
 }
 
-.children {
+/* .children {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -42,8 +42,8 @@ td {
 .children2 {
     padding: 10px;
     /* margin: 10px; */
-    font-size: 18px;
-}
+    /* font-size: 18px;
+} */ 
 
 
 .dropdown {

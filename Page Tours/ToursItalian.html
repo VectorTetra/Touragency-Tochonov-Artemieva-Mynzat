@@ -4,9 +4,6 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Тур Італія</title>
-	<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 	<script src="../libs/react.production.min.js"></script>
 	<script src="../libs/react-dom.production.min.js"></script>
 	<script src="../libs/babel.min.js"></script>
@@ -20,9 +17,10 @@
 	<link rel="stylesheet" href="./css/Price-style.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"></script>
 	<script src="https://cdn.jsdelivr.net/npm/pikaday/js/i18n/uk.js"></script>
 	<script src="./script/scripts.js" type="text/javascript"></script>
+	<script src="./script/scriptPrice.js" type="text/javascript"></script>
+
 
 </head>
 
@@ -61,7 +59,24 @@
 
 	<!-- ============================================================================================ -->
 	<!-- =========================== Тури =========================== -->
-
+	<!-- 0. Компонент, сторінки Фото -->
+	<script type="text/babel" src="./jsx-ToursItalian/PhotoItalianAll.jsx"></script>
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PhotoItalianBig.jsx"></script>
+	<!-- 2. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PhotoTitle.jsx"></script>
+	<!-- 3. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PhotoItalianSmall.jsx"></script>
+	<!-- 0. Компонент, сторінки Тури -->
+	<script type="text/babel" src="./jsx-ToursItalian/PriceTourAll.jsx"></script>
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PriceTourMenu.jsx"></script>
+	<!-- 1. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PriceTourBody.jsx"></script>
+	<!-- 2. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/PriceWithSublist.jsx"></script>
+	<!-- 3. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/ToursChildren.jsx"></script>
 	<!-- 0. Компонент, сторінки Тури -->
 	<script type="text/babel" src="./jsx-ToursItalian/TourItalianAll.jsx"></script>
 	<!-- 1. Компонент, питання -->
@@ -73,13 +88,13 @@
 	<!-- 4. Компонент, питання -->
 	<script type="text/babel" src="./jsx-ToursItalian/TourProgramm.jsx"></script>
 	<!-- 5. Компонент, питання -->
-	<script type="text/babel" src="./jsx-ToursItalian/ToursChildren.jsx"></script>
-	<!-- 6. Компонент, питання -->
 	<script type="text/babel" src="./jsx-ToursItalian/ToursFuter.jsx"></script>
+	<!-- 6. Компонент, питання -->
+	<script type="text/babel" src="./jsx-ToursItalian/TourTabControl.jsx"></script>
 
 
 	<!-- ============================================================================================ -->
-<!-- ================================= Спільні компоненти ================================ -->
+	<!-- ================================= Спільні компоненти ================================ -->
 	<!-- 0. Компонент, Кнопка перемотки сторінки до хедеру -->
 	<script type="text/babel" src="../SharedItems/jsx/BackToTopButton.jsx"></script>
 	<!-- 0. Компонент, img з лінивим завантаженням -->
@@ -94,44 +109,115 @@
 		let headerData;
 		let navbarItems;
 		let tours;
+		let tourDetails;
+		let returnedTourData = {};
+		let plannedTours = [];
 
-		Promise.all([
-			fetch('../MainPage/json/mainPageHeaderInfo.json').
-				then(resp => resp.json()).
-				then((data => {
-					//=======================> Reading header data from JSON file <================================
-					headerData = data.headerData;
-				})),
-			fetch('../MainPage/json/mainPageNavbarItems.json').
-				then(resp => resp.json()).
-				then((data => {
-					//=======================> Reading navbarItems from JSON file <================================
-					navbarItems = data.navbarItems;
-				})),
-			fetch('./json/ToursItalian.json').
-				then(resp => resp.json()).
-				then((data => {
-					//=======================> Reading header data from JSON file <================================
-					tours = data.tours;
-					console.log(tours);
-				}))
-		]).then(
-			() => {
+		const fetchData = async () => {
+			try {
+				const urlParams = new URLSearchParams(window.location.search);
+				let id = urlParams.get('id');
+				if (!id) {
+					window.location.href = '../MainPage/index.html';
+					return;
+				}
+				id = parseInt(id);
+				const today = new Date();
+				const nextYear = new Date();
+				nextYear.setFullYear(today.getFullYear() + 1);
+
+				const formattedToday = today.toISOString();
+				const formattedNextYear = nextYear.toISOString();
+				await Promise.all([
+					fetch('../MainPage/json/mainPageHeaderInfo.json')
+						.then(resp => resp.json())
+						.then((data) => {
+							headerData = data.headerData;
+						}),
+					fetch('../MainPage/json/mainPageNavbarItems.json')
+						.then(resp => resp.json())
+						.then((data) => {
+							navbarItems = data.navbarItems;
+						}),
+					fetch('./json/ToursItalian.json').
+						then(resp => resp.json()).
+						then((data => {
+							//=======================> Reading header data from JSON file <================================
+							tours = data.tours;
+							console.log(tours);
+						})),
+					$.ajax({
+						url: 'https://26.162.95.213:7100/api/TourName', // Замініть на ваш URL API
+						method: 'GET',
+						contentType: "application/json",
+						data: { SearchParameter: 'GetById', Id: id },
+						statusCode: {
+							200: function (data) {
+								console.log('Дані успішно отримано', data);
+								returnedTourData = data[0];
+							},
+							204: function () {
+								window.location.href = '../MainPage/index.html';
+							}
+						},
+						error: function (error) {
+							console.error('Помилка при отриманні даних', error.responseText);
+							alert(error.responseText);
+							//window.location.href = '../MainPage/index.html';
+						}
+					}),
+					$.ajax({
+						url: 'https://26.162.95.213:7100/api/Tour', // Замініть на ваш URL API
+						method: 'GET',
+						contentType: "application/json",
+						data: {
+							SearchParameter: 'GetByCompositeSearch',
+							TourNameId: id,
+							ArrivalDate: formattedToday,
+							DepartureDate: formattedNextYear,
+							TourStateId: 1
+						},
+						statusCode: {
+							200: function (data) {
+								console.log('Дані запланованих турів успішно отримано', data);
+								plannedTours = data;
+							},
+							204: function () {
+								window.location.href = '../MainPage/index.html';
+							}
+						},
+						error: function (error) {
+							console.error('Помилка при отриманні даних', error.responseText);
+							alert(error.responseText);
+							//window.location.href = '../MainPage/index.html';
+						}
+					})
+				]);
+
 				const rootNode = document.getElementById("app");
 				const root = ReactDOM.createRoot(rootNode);
+
 				root.render(
 					<React.StrictMode>
 						<div>
-							<MainPageHeader headerData={headerData} />
-							<MainPageNavbar navbarItems={navbarItems} />
-							<TourItalianAll tours={tours} />
+							{headerData && <MainPageHeader headerData={headerData} />}
+							{navbarItems && <MainPageNavbar navbarItems={navbarItems} />}
+							<TourItalianAll tours={tours} tourData={returnedTourData} plannedTours={plannedTours} />
 							<BackToTopButton />
 						</div>
 					</React.StrictMode>
 				);
+			} catch (error) {
+				console.error('Помилка при отриманні даних', error);
+				alert(error.responseText);
+				//window.location.href = '../MainPage/index.html';
 			}
-		)
+		};
+
+		fetchData();
 	</script>
+
+
 </body>
 
 </html>

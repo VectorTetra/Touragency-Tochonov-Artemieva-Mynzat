@@ -74,3 +74,38 @@
 	font-size: 3.5vh; 
 	height: 7vh;
 }
+.tourListItem{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 20px;
+}
+.tourListItemContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.tourListItemFormButtonBar{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 50px;
+}
+.tourNameFontSize{
+	font-size: 4vh;
+}
+.flagContainer img {
+    height: auto;
+    width: 4vw;
+    margin-right: 15px;
+	max-height: 3vw;
+	object-fit: cover;
+}
+.flagContainer{
+	display: flex;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}

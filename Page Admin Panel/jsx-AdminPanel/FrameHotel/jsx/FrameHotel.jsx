@@ -20,7 +20,7 @@ function FrameHotel(props) {
 	const [countries, setCountries] = React.useState([]);
 	const GetAll = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
@@ -41,7 +41,7 @@ function FrameHotel(props) {
 	}
 	const Get200Last = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'Get200Last' },
@@ -61,7 +61,7 @@ function FrameHotel(props) {
 	}
 	const GetById = (id) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetById', Id: id },
@@ -81,7 +81,7 @@ function FrameHotel(props) {
 	}
 	const GetByCompositeSearch = (inputName, inputSettlementName, inputCountryName) => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByCompositeSearch', Name: inputName, SettlementName: inputSettlementName, CountryName: inputCountryName },
@@ -104,7 +104,7 @@ function FrameHotel(props) {
 		
 		try {
 			await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
 				method: 'POST',
 				contentType: "application/json",
 				data: request,
@@ -123,7 +123,7 @@ function FrameHotel(props) {
 				formData.append('hotelId', hotelId);
 				formData.append('file', document.getElementById("hotelImageInput").files[0]);
 				await $.ajax({
-					url: 'https://26.162.95.213:7099/api/HotelImage/UploadImage', // Замініть на ваш URL API
+					url: 'https://26.162.95.213:7100/api/HotelImage/UploadImage', // Замініть на ваш URL API
 					method: 'POST',
 					contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
 					processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -131,7 +131,7 @@ function FrameHotel(props) {
 					statusCode: {
 						200: function (data1) {
 							imageUrl = data1;
-							imageUrl = "https://26.162.95.213:7099" + imageUrl;
+							imageUrl = "https://26.162.95.213:7100" + imageUrl;
 						}
 					},
 					error: function (error) {
@@ -145,7 +145,7 @@ function FrameHotel(props) {
 					Id: 0
 				});
 				await $.ajax({
-					url: 'https://26.162.95.213:7099/api/HotelImage', // Замініть на ваш URL API
+					url: 'https://26.162.95.213:7100/api/HotelImage', // Замініть на ваш URL API
 					method: 'POST',
 					contentType: "application/json",
 					data: request3,
@@ -171,7 +171,7 @@ function FrameHotel(props) {
 		console.log(request);
 		try {
 			await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Hotel', // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Hotel', // Замініть на ваш URL API
 				method: 'PUT',
 				contentType: "application/json",
 				data: request,
@@ -193,7 +193,7 @@ function FrameHotel(props) {
 				formData.append('hotelId', hotelId);
 				formData.append('file', document.getElementById("hotelImageInput").files[0]);
 				await $.ajax({
-					url: 'https://26.162.95.213:7099/api/HotelImage/UploadImage', // Замініть на ваш URL API
+					url: 'https://26.162.95.213:7100/api/HotelImage/UploadImage', // Замініть на ваш URL API
 					method: 'PUT',
 					contentType: false, // Указывает тип содержимого, которое будет передано на сервер. 
 					processData: false, // Логическое значение, устанавливающее, должны ли данные, передающиеся с запросом преобразовываться в строку или нет
@@ -201,7 +201,7 @@ function FrameHotel(props) {
 					statusCode: {
 						200: function (data1) {
 							image = data1;
-							image.imageUrl = "https://26.162.95.213:7099" + image.imageUrl;
+							image.imageUrl = "https://26.162.95.213:7100" + image.imageUrl;
 							console.log("Виконано PUT HotelImage/UploadImage");
 						}
 					},
@@ -217,7 +217,7 @@ function FrameHotel(props) {
 				});
 				if (image.id === 0) {
 					await $.ajax({
-						url: 'https://26.162.95.213:7099/api/HotelImage', // Замініть на ваш URL API
+						url: 'https://26.162.95.213:7100/api/HotelImage', // Замініть на ваш URL API
 						method: 'POST',
 						contentType: "application/json",
 						data: request3,
@@ -234,7 +234,7 @@ function FrameHotel(props) {
 				}
 				else {
 					await $.ajax({
-						url: 'https://26.162.95.213:7099/api/HotelImage', // Замініть на ваш URL API
+						url: 'https://26.162.95.213:7100/api/HotelImage', // Замініть на ваш URL API
 						method: 'PUT',
 						contentType: "application/json",
 						data: request3,
@@ -258,7 +258,7 @@ function FrameHotel(props) {
 	}
 	const GetAllFoodServices = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/HotelService', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/HotelService', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByHotelServiceTypeId', HotelServiceTypeId: 1 },
@@ -278,7 +278,7 @@ function FrameHotel(props) {
 	};
 	const GetAllOtherServices = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/HotelService', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/HotelService', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetByHotelServiceTypeId', HotelServiceTypeId: 2 },
@@ -298,7 +298,7 @@ function FrameHotel(props) {
 	};
 	const GetAllBedConfigurations = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/BedConfiguration', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/BedConfiguration', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },
@@ -318,7 +318,7 @@ function FrameHotel(props) {
 	};
 	const GetAllCountries = () => {
 		$.ajax({
-			url: 'https://26.162.95.213:7099/api/Country', // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/Country', // Замініть на ваш URL API
 			method: 'GET',
 			contentType: "application/json",
 			data: { SearchParameter: 'GetAll' },

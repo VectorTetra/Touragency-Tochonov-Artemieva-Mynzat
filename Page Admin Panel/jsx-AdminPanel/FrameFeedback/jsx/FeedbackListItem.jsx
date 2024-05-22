@@ -29,7 +29,7 @@ function FeedbackListItem(props) {
 		console.log('DeleteReview props', props);
 		if (!confirm('Ви впевнені, що хочете видалити цей відгук?')) return;
 		await $.ajax({
-			url: 'https://26.162.95.213:7099/api/ReviewImage/DeleteReviewImage/' + props.item.id, // Замініть на ваш URL API
+			url: 'https://26.162.95.213:7100/api/ReviewImage/DeleteReviewImage/' + props.item.id, // Замініть на ваш URL API
 			method: 'DELETE',
 			statusCode: {
 				200: function (data1) {
@@ -43,7 +43,7 @@ function FeedbackListItem(props) {
 		const id = props.item.id;
 		try {
 			await $.ajax({
-				url: 'https://26.162.95.213:7099/api/Review/' + id, // Замініть на ваш URL API
+				url: 'https://26.162.95.213:7100/api/Review/' + id, // Замініть на ваш URL API
 				method: 'DELETE',
 				success: function (data) {
 					context.Get200Last();
