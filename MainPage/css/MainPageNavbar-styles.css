@@ -50,23 +50,25 @@ nav {
 }
 
 .submenu {
-	transition-duration: 1s;
-	display: none;
-	position: absolute;
-	top: 100%;
-	background-color: #fff;
-	list-style-type: none; 
-	padding: 5px;
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
-	margin-top: 1px;
-	width: 15vw;
-	
+    display: none;
+    position: absolute;
+    top: 95%;
+    background-color: #fff;
+    list-style-type: none; 
+    padding: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 1px;
+    width: 15vw;
+    opacity: 0; /* Початкове значення прозорості */
+    pointer-events: none; /* Щоб уникнути взаємодії з підменю під час приховування */
+    transition: opacity 0.5s ease-in-out; /* Анімація зникнення */
 }
 
 .menu-item:hover .submenu, .button:hover .submenu {
-	transition-duration: 1s;
-	display: block;
+    display: block;
+    opacity: 1; /* Показуємо підменю при наведенні */
+    pointer-events: auto; /* Розблоковуємо взаємодію з підменю */
 }
 
 .submenu li {
