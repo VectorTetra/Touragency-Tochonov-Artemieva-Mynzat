@@ -3,7 +3,7 @@ class ToursNavPanel extends React.Component {
         super(props);
     }
     render(){
-        const { SetTab, data, currentTab } = this.props;
+        const { SetTab, data, currentTab,tourData } = this.props;
         return (
             <div>
                 <hr />
@@ -11,7 +11,7 @@ class ToursNavPanel extends React.Component {
                     {data.link.map(link => (
                         console.log("ToursNavPanel SetTab prop",this.props.SetTab),
                         (link.id === "feedbackLink") ?
-                            <a key={link.id} id={link.id} className={link.className} href={link.href} onClick={() => loadPage(link.onclick)}>
+                            <a key={link.id} id={link.id} className={link.className} href={link.href +"?tourNameId=" + tourData.id} onClick={() => loadPage(link.onclick)}>
                                 {link.text}
                             </a>
                         :

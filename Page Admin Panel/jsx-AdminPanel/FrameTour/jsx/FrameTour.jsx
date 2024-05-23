@@ -19,8 +19,8 @@ function FrameTour(props) {
     const [DtoNightRidesCount, setDtoNightRidesCount] = React.useState(0);
     const [JsonConstructorItems, setJsonConstructorItems] = React.useState([]);
     const [TourNames, setTourNames] = React.useState(null);
-    const GetLast200TourNames = () => {
-        $.ajax({
+    const GetLast200TourNames = async () => {
+        await $.ajax({
             url: 'https://26.162.95.213:7100/api/TourName', // Замініть на ваш URL API
             method: 'GET',
             contentType: "application/json",
@@ -41,8 +41,8 @@ function FrameTour(props) {
     };
 
     React.useEffect(() => {
-        GetLast200TourNames();
-        $.ajax({
+         GetLast200TourNames();
+         $.ajax({
             url: 'https://26.162.95.213:7100/api/Country', // Замініть на ваш URL API
             method: 'GET',
             contentType: "application/json",
@@ -60,7 +60,7 @@ function FrameTour(props) {
                 alert(error.responseText);
             }
         });
-        $.ajax({
+         $.ajax({
             url: 'https://26.162.95.213:7100/api/TransportType', // Замініть на ваш URL API
             method: 'GET',
             contentType: "application/json",

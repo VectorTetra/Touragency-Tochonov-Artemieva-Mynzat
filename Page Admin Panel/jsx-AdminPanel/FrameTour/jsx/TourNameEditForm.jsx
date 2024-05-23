@@ -75,27 +75,7 @@ function TourNameEditForm() {
     }
 
     function deleteItemFromConstructor(item) {
-       // console.log(item.id);
         $(`#constructor${item.id}`).remove();
-        // $(".constructorInput").each(function () {
-        //     if (this.type === "file") {
-        //         //console.log("file");
-        //         //console.log(this.files.length);
-        //         for (var i = 0; i < this.files.length; ++i) {
-        //             //console.log(this.files[i].name);
-        //         }
-        //     } else {
-        //         //console.log($(this).val());
-        //     }
-        // });
-        //setPageStructureItems(newCollection);
-        // let itemToDelete = pageStructureItems.filter(i => (i.id === item.id));
-        // let index = pageStructureItems.indexOf(itemToDelete[0]);
-        // let newCollection = pageStructureItems;
-        // newCollection.splice(index, 1);
-        // setPageStructureItems(newCollection);
-        // console.log(newCollection);
-        
     }
     function handleInputChange(event) {
         switch (event.target.name) {

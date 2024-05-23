@@ -1,39 +1,39 @@
 //скрипт для прокручивания календаря с текущего месяца
-    document.addEventListener('DOMContentLoaded', function () {
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        const scrollable = document.querySelector('.scrollable');
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const prevButton = document.querySelector('.prev');
+    //     const nextButton = document.querySelector('.next');
+    //     const scrollable = document.querySelector('.scrollable');
 
-        const scrollWidth = scrollable.scrollWidth;
-        const visibleWidth = scrollable.clientWidth;
-        const currentDate = new Date();
-        const currentMonth = currentDate.getMonth() + 1; // Получаем текущий месяц (от 0 до 11)
+    //     const scrollWidth = scrollable.scrollWidth;
+    //     const visibleWidth = scrollable.clientWidth;
+    //     const currentDate = new Date();
+    //     const currentMonth = currentDate.getMonth() + 1; // Получаем текущий месяц (от 0 до 11)
 
-        // Определяем, на какой позиции должен находиться текущий месяц
-        let currentMonthPosition = (currentMonth - 1) * 220; // Предполагаем, что каждый месяц имеет ширину 180px
+    //     // Определяем, на какой позиции должен находиться текущий месяц
+    //     let currentMonthPosition = (currentMonth - 1) * 220; // Предполагаем, что каждый месяц имеет ширину 180px
 
-        // Прокручиваем таблицу к текущему месяцу
-        scrollable.scrollTo({
-            left: currentMonthPosition,
-            behavior: 'smooth'
-        });
+    //     // Прокручиваем таблицу к текущему месяцу
+    //     scrollable.scrollTo({
+    //         left: currentMonthPosition,
+    //         behavior: 'smooth'
+    //     });
 
-        // Прокрутка влево
-        prevButton.addEventListener('click', function () {
-            scrollable.scrollLeft -= visibleWidth; // Прокручиваем на ширину видимой области
-            if (scrollable.scrollLeft < 0) {
-                scrollable.scrollLeft = 0; // Не позволяет прокрутиться за пределы начала таблицы
-            }
-        });
+    //     // Прокрутка влево
+    //     prevButton.addEventListener('click', function () {
+    //         scrollable.scrollLeft -= visibleWidth; // Прокручиваем на ширину видимой области
+    //         if (scrollable.scrollLeft < 0) {
+    //             scrollable.scrollLeft = 0; // Не позволяет прокрутиться за пределы начала таблицы
+    //         }
+    //     });
 
-        // Прокрутка вправо
-        nextButton.addEventListener('click', function () {
-            scrollable.scrollLeft += visibleWidth; // Прокручиваем на ширину видимой области
-            if (scrollable.scrollLeft > scrollWidth - visibleWidth) {
-                scrollable.scrollLeft = scrollWidth - visibleWidth; // Не позволяет прокрутиться за пределы конца таблицы
-            }
-        });
-    });
+    //     // Прокрутка вправо
+    //     nextButton.addEventListener('click', function () {
+    //         scrollable.scrollLeft += visibleWidth; // Прокручиваем на ширину видимой области
+    //         if (scrollable.scrollLeft > scrollWidth - visibleWidth) {
+    //             scrollable.scrollLeft = scrollWidth - visibleWidth; // Не позволяет прокрутиться за пределы конца таблицы
+    //         }
+    //     });
+    // });
 
 
 //Скрипты для обработки загрузки цены тура через AJAX
@@ -72,9 +72,9 @@ function loadPage(pageName) {
 //     loadPage("PriceTour");
 // });
 
-document.getElementById("photoButton").addEventListener("click", function () {
-    loadPage("PhotoItalian");
-});
+// document.getElementById("photoButton").addEventListener("click", function () {
+//     loadPage("PhotoItalian");
+// });
 
 
 

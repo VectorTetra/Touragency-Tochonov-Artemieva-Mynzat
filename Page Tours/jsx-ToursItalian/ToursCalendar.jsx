@@ -53,7 +53,7 @@
 //                 });
 //             }, 0);
 //         });
-        
+
 //         picker.show();
 //         const pickerElement = document.querySelector('.pika-single');
 
@@ -114,6 +114,7 @@ function ToursCalendar(props) {
     const calendarContainerRef = React.useRef(null);
 
     React.useEffect(() => {
+        console.log("props.plannedTours", props.plannedTours);
         const today = new Date();
         const nextYear = new Date();
         nextYear.setFullYear(today.getFullYear() + 1);
@@ -121,7 +122,18 @@ function ToursCalendar(props) {
 
         function isDateEnabled(date) {
             const formattedDate = date.toISOString().split('T')[0];
-            return arrivalDates.includes(formattedDate);
+            const tourWithDate = props.plannedTours.find(item => item.arrivalDate.split('T')[0] === formattedDate);
+            return tourWithDate && tourWithDate.freeSeats > 5;
+        }
+        function isDateHaveZeroFreeSeats(date) {
+            const formattedDate = date.toISOString().split('T')[0];
+            const tourWithDate = props.plannedTours.find(item => item.arrivalDate.split('T')[0] === formattedDate);
+            return tourWithDate && tourWithDate.freeSeats === 0;
+        }
+        function isDateLimitedFreeSeats(date) {
+            const formattedDate = date.toISOString().split('T')[0];
+            const tourWithDate = props.plannedTours.find(item => item.arrivalDate.split('T')[0] === formattedDate);
+            return tourWithDate && (tourWithDate.freeSeats > 0 && tourWithDate.freeSeats <= 5);
         }
 
         if (calendarContainerRef.current) {
@@ -152,7 +164,14 @@ function ToursCalendar(props) {
                     if (isDateEnabled(date)) {
                         dayElem.classList.add('enabled-date');
                     }
-                    if (!isDateEnabled(date)) {
+                    else if (isDateHaveZeroFreeSeats(date)) {
+                        dayElem.classList.add('zero-free-seats');
+
+                    }
+                    else if (isDateLimitedFreeSeats(date)) {
+                        dayElem.classList.add('limited-free-seats');
+
+                    } else {
                         dayElem.classList.add('disabled-date');
                     }
                 },
@@ -169,9 +188,22 @@ function ToursCalendar(props) {
     }, [props.plannedTours]);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: '100%' }}>
-            <div ref={calendarContainerRef} style={{ transform: 'scale(0.8)', transformOrigin: 'center' }}>
-                <input type="text" id="calendarInput" style={{ display: 'none' }} /> {/* Приховуємо поле вводу, якщо не потрібно */}
+        <div>
+            <div style={{ display: 'flex', justifyContent: 'center', width: '100%', height: '100%' }}>
+                <div ref={calendarContainerRef} style={{ transform: 'scale(0.8)', transformOrigin: 'center' }}>
+                    <input type="text" id="calendarInput" style={{ display: 'none' }} /> {/* Приховуємо поле вводу, якщо не потрібно */}
+                </div>
+            </div>
+            <div style={{display:"flex", justifyContent:"space-evenly", margin:"20px 0 20px 0"}}>
+                <div>
+                    <span className="calendar-legend-item enabled-date">00</span> - Доступні дати
+                </div>
+                <div>
+                    <span className="calendar-legend-item limited-free-seats">00</span> - Закінчуються вільні місця
+                </div>
+                <div>
+                    <span className="calendar-legend-item zero-free-seats">00</span> - Вільних місць немає
+                </div>
             </div>
         </div>
     );

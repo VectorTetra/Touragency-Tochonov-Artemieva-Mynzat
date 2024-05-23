@@ -291,35 +291,30 @@ hr {
     color: #ff0000 !important;
     font-weight: 900 !important;
 }
-/* .flatpickr-calendar {
-    font-size: 0.8em; 
-    transform: scale(0.8);
-    transform-origin: top left; 
-    width: 100%;
-}
 
-.flatpickr-day {
-    padding: 0.5em; 
-}
-
-.flatpickr-month {
-    height: auto; 
-}
-
-.flatpickr-weekdays, .flatpickr-days {
-    margin: 0.5em;
-}
-
-.flatpickr-prev-month, .flatpickr-next-month {
-    width: 1.5em;
-    height: 1.5em; 
-} */
-/* .flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover {
-    cursor: not-allowed;
-    color: rgba(57, 57, 57,1);
-    opacity: 0.5;
-} */
 .disabled-date {
-    opacity: 0.5 !important; /* Налаштуйте прозорість за вашими потребами */
+    opacity: 0.5 !important;
+    /* Налаштуйте прозорість за вашими потребами */
     color: #0056b3 !important;
+}
+
+.zero-free-seats {
+    background-color: #ff0000 !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+}
+
+.limited-free-seats {
+    background-color: #ffcc00 !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+}
+
+.calendar-legend-item {
+    /* background-color: #7ffd00 !important;
+        color: #ff0000 !important;
+        font-weight: 900 !important; */
+    color: transparent !important;
+    padding: 10px;
+    border-radius: 50%;
 }

@@ -7,10 +7,10 @@ function PhotoItalianBig(props) {
     }
 
     function showSlides(n) {
+        
         var i;
         var slides = document.getElementsByClassName("mySlides");
         if (n > slides.length) { n = 1 }
-
         if (n < 1) { n = slides.length }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
@@ -20,7 +20,8 @@ function PhotoItalianBig(props) {
     }
 
     React.useEffect(() => {
-        showSlides(slideIndex);
+        if (props.data.photoB.length > 0)
+        {showSlides(slideIndex);}
     }, []);
 
     return (
@@ -32,8 +33,8 @@ function PhotoItalianBig(props) {
                     <img src={image.url} />
                 </div>
             ))}
-            <a className="prev1" onClick={() => plusSlides(-1)}>❮</a>
-            <a className="next1" onClick={() => plusSlides(1)}>❯</a>
+            {props.data.photoB.length > 0 && <a className="prev1" onClick={() => plusSlides(-1)}>❮</a>}
+            {props.data.photoB.length > 0 && <a className="next1" onClick={() => plusSlides(1)}>❯</a>}
         </div>
 
     );

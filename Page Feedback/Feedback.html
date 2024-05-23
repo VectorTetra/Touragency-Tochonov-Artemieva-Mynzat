@@ -115,12 +115,13 @@
 
 				let urlParams = new URLSearchParams(window.location.search);
 				let nameCountry = urlParams.get('nameCountry');
+				let tourNameId = urlParams.get('tourNameId');
 				root.render(
 					<React.StrictMode>
 						<div>
 							<MainPageHeader headerData={headerData} />
 							<MainPageNavbar navbarItems={navbarItems} />
-							<FeedbackAll feedbacks={feedbacks} urlParamNameCountry={nameCountry} />
+							<FeedbackAll feedbacks={feedbacks} urlParamNameCountry={nameCountry} urlParamTourNameId={tourNameId}/>
 							<BackToTopButton />
 						</div>
 					</React.StrictMode>

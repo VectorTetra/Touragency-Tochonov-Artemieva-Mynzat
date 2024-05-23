@@ -18,6 +18,7 @@ function PhotoItalianSmall(props) {
     }
 
     React.useEffect(() => {
+        if(props.data.photoS.length > 0)
         showSlides(slideIndex);
     }, []);
 

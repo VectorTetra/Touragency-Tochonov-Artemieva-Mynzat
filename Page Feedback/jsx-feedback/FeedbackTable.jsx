@@ -33,7 +33,7 @@ function FeedbackTable(props) {
                             <div className="left">Поїздка: {new Date(item.arrivalDate).toLocaleDateString('uk-UA')} - {new Date(item.departureDate).toLocaleDateString('uk-UA')}</div>
                             <div className="right">
                                 <strong>
-                                    Тур: <a href={"../Page%20Tours/ToursItalian.html?tourNameId=" + item.tourNameId} target="_blank">{item.tourName}</a>
+                                    Тур: <a href={"../Page%20Tours/ToursItalian.html?id=" + item.tourNameId} target="_blank">{item.tourName}</a>
                                 </strong>
                             </div>
                             {drawStars(item.rating)}
@@ -44,8 +44,10 @@ function FeedbackTable(props) {
                             </div>
                         </div>
                         <div className="children2">
-                            <div
-                                className="left2">{item.reviewText}
+                            <div className="left2">
+                                {item.reviewText.split('\n').map((paragraph, index) => (
+                                    <p key={index} style={{margin:"0 0 20px 0"}}>{paragraph}</p>
+                                ))}
                             </div>
                         </div>
 
