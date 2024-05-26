@@ -147,8 +147,8 @@ a{
     -webkit-box-orient: vertical;
 }
 .reviewStar{
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 }
 @media (945px < width < 1100px) and (not (pointer: coarse)) {
 	#reviews-block-caption, #news-block-caption, #toursTable-block-caption {

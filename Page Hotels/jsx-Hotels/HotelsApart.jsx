@@ -26,6 +26,10 @@ function HotelsApart(props) {
             <div className="hotelConteinerLogo">
                 <h2><a href={props.tour.tourUrl} target="_blank">{props.tour.name}</a></h2>
             </div>
+            <div className="buttonContainer">
+                <button onClick={handlePrev} disabled={currentIndex === 0}>◀</button>
+                <button onClick={handleNext} disabled={currentIndex + numberHotelsToShow >= props.tour.hotels.length}>▶</button>
+            </div>
             <div className="containerHotel">
                 {hotelsToShow.map(hotel => (
                     <div className="blockHotel">
@@ -38,7 +42,7 @@ function HotelsApart(props) {
                         <div>
                             <h3>{hotel.name}</h3>
                             <p style={{ "color": "grey" }}>{hotel.settlementName} , {hotel.countryName}</p>
-                            <div style={{ height: "200px", overflowY: "auto" }}>
+                            <div style={{ height: "auto", overflowY: "auto" }}>
                                 {hotel.description.split('\n').map((paragraph, index) => (
                                     <p style={{ textAlign: "left", margin: "0", paddingRight: "10px" }} key={index}>{paragraph}<br></br></p>
 
@@ -65,10 +69,7 @@ function HotelsApart(props) {
                     </div>
                 ))}
             </div>
-            <div className="buttonContainer">
-                <button onClick={handlePrev} disabled={currentIndex === 0}>◀</button>
-                <button onClick={handleNext} disabled={currentIndex + numberHotelsToShow >= props.tour.hotels.length}>▶</button>
-            </div>
+            
         </div>
     );
 }

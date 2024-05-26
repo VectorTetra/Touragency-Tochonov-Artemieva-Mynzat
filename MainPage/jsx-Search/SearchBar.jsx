@@ -30,7 +30,7 @@ function SearchBar(props) {
             {/* Цей div використовується замість  SearchBarSubmitButton*/}
             <div>
                 <span></span><br />
-                <input type="submit" value="Знайти тур" />
+                <input type="submit" id="searchBarSubmit" className="searchBarSubmit" value="Знайти тур" />
             </div>
 
         </div>

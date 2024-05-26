@@ -2,6 +2,7 @@ function MainPageContentBlock(props) {
 	const [tours, setTours] = React.useState([]);
 	const [news, setNews] = React.useState([]);
 	const [reviews, setReviews] = React.useState([]);
+	const [isDataLoaded, setIsDataLoaded] = React.useState(false);
 	const Get11LastActiveTours = async () => {
 		try {
 			const response = await $.ajax({
@@ -15,15 +16,15 @@ function MainPageContentBlock(props) {
 				statusCode: {
 					200: function (data) {
 						// Сортуємо об'єкти за arrivalDate
-						data.sort((a, b) => new Date(a.arrivalDate) -  new Date(b.arrivalDate) );
-						
+						data.sort((a, b) => new Date(a.arrivalDate) - new Date(b.arrivalDate));
+
 						// Видаляємо дублікати за tourNameId
-						const uniqueTours = data.filter((tour, index, self) => 
+						const uniqueTours = data.filter((tour, index, self) =>
 							index === self.findIndex(t => t.tourNameId === tour.tourNameId)
 						);
-	
+
 						// Отримуємо останні 11 елементів
-						const last11Tours = uniqueTours.slice(-11); 
+						const last11Tours = uniqueTours.slice(-11);
 						setTours(last11Tours);
 					},
 					204: function () {
@@ -106,16 +107,19 @@ function MainPageContentBlock(props) {
 		await Get11LastActiveTours();
 		await GetLastActiveToQuantinyPrioritizeIncludeImportant7Items();
 		await GetLast4Reviews();
+		setIsDataLoaded(true);
 	}, []);
 	return (
-		<div id="content-block-container">
-			<React.Suspense fallback={<div>Loading...</div>}>
-				<NewsBlock newsList={news} />
-				<ToursTableBlock tourList={tours} />
-				<TouristsReviewsBlock reviewList={reviews} />
-			</React.Suspense>
-		</div>
-	);
+        isDataLoaded ? (
+            <div id="content-block-container">
+                <NewsBlock newsList={news} />
+                <ToursTableBlock tourList={tours} />
+                <TouristsReviewsBlock reviewList={reviews} />
+            </div>
+        ) : (
+            <Loading width="60px" height="60px" />
+        )
+    );
 };
 /* Чтобы использовать перенаправление рефов в классовом компоненте, нужно экспортировать forwardRef*/
 // export default forwardRef((props, ref) => <MainComponent

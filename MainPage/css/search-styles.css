@@ -1,9 +1,23 @@
 
 
+.searchBarSubmit{
+   
+}
 input {
     width: auto;
     height: 35px;
     margin: 5px;
+    border-radius: 5px;
+}
+
+select {
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background-color: rgb(153, 255, 0) !important;
+    color: black !important;
+    border-radius: 10px !important;
+    font-weight: 600;
 }
 
 

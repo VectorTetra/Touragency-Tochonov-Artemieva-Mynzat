@@ -118,7 +118,12 @@ function ToursCalendar(props) {
         const today = new Date();
         const nextYear = new Date();
         nextYear.setFullYear(today.getFullYear() + 1);
-        const arrivalDates = props.plannedTours.map(item => item.arrivalDate.split('T')[0]);
+
+        props.plannedTours.map(item => {
+            let newDate = new Date(item.arrivalDate);
+            newDate.setUTCHours(0, 0, 0, 0);
+            item.arrivalDate = newDate.toISOString();
+        });
 
         function isDateEnabled(date) {
             const formattedDate = date.toISOString().split('T')[0];
@@ -194,7 +199,7 @@ function ToursCalendar(props) {
                     <input type="text" id="calendarInput" style={{ display: 'none' }} /> {/* Приховуємо поле вводу, якщо не потрібно */}
                 </div>
             </div>
-            <div style={{display:"flex", justifyContent:"space-evenly", margin:"20px 0 20px 0"}}>
+            <div style={{ display: "flex", justifyContent: "space-evenly", margin: "20px 0 20px 0" }}>
                 <div>
                     <span className="calendar-legend-item enabled-date">00</span> - Доступні дати
                 </div>

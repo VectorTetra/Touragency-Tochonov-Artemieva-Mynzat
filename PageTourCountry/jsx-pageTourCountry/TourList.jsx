@@ -63,6 +63,8 @@ function TourList(props) {
                 statusCode: {
                     200: function (data) {
                         const last11Tours = data.slice(-11); // Отримуємо останні 10 елементів
+                        // Сортуємо об'єкти за arrivalDate
+						last11Tours.sort((a, b) => new Date(a.arrivalDate) - new Date(b.arrivalDate));
                         setTours(last11Tours);
                     },
                     204: function () {
